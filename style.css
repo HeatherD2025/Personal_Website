@@ -1,6 +1,5 @@
 body {
-  background: radial-gradient(
-    circle,
+  background: radial-gradient(circle,
     rgb(106, 106, 243) 20%,
     indigo 80%,
     purple
