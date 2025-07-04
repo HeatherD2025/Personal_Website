@@ -1,24 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
 import ReactiveButton from "reactive-button";
-import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
+// import ReCAPTCHA from "react-google-recaptcha";
+import NavBar from "../components/Navbar";
+import SingleSelection from "../components/singleSelection";
 
 export default function ContactForm() {
-  const fadeInAnimationVariants = {
-    initial: (direction) => ({
-      opacity: 0,
-      y: 100 * direction,
-    }),
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        delay: 0.2,
-      },
-    },
-  };
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -27,28 +16,28 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [recaptchaError, setRecaptchaError] = useState("");
+  // const [recaptchaError, setRecaptchaError] = useState("");
 
-  const recaptchaRef = useRef(null);
+  // const recaptchaRef = useRef(null);
 
-//   useEffect(() => {
-//     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-//   }, []);
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prev) => ({ ...prev, [name]: value }));
-//   };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setRecaptchaError("please verify you're not a robot");
-      return;
-    }
-    setRecaptchaError("");
-    setLoading(true);
+    // const token = recaptchaRef.current?.getValue();
+    // if (!token) {
+    //   setRecaptchaError("please verify you're not a robot");
+    //   return;
+    // }
+    // setRecaptchaError("");
+    // setLoading(true);
 
     try {
       emailjs.send(
@@ -63,7 +52,7 @@ export default function ContactForm() {
       );
       alert("Message sent successfully!");
       setFormData({ fullName: "", email: "", phone: "", message: "" });
-      recaptchaRef.current.reset();
+      // recaptchaRef.current.reset();
     } catch (err) {
       console.error(err);
       alert("Failed to send message. Please try again later");
@@ -74,17 +63,17 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="background" style={{ minHeight: "100vh" }}>
-        <div className="backgroundAccent" style={{ minHeight: "100vh" }}>
+      {/* <div className="background" style={{ minHeight: "100vh" }}>
+        <div className="backgroundAccent" style={{ minHeight: "100vh" }}> */}
           <NavBar />
-          <motion.div
+          {/* <motion.div
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             custom={-1}
-          >
-            <h2
+          > */}
+            {/* <h2
               style={{
                 textAlign: "center",
                 paddingTop: "150px",
@@ -92,37 +81,16 @@ export default function ContactForm() {
               }}
             >
               We'd Love To Hear From You!
-            </h2>
+            </h2> */}
 
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{
-                minHeight: "calc(100vh - 90px)",
-                paddingBottom: "400px",
-                width: "100%",
-              }}
-            >
-              <div
-                className="container py-4 py-md-5"
-                style={{ paddingTop: "300px" }}
-              >
-                <Card
-                  style={{
-                    padding: "30px",
-                    width: "100%",
-                    maxWidth: "600px",
-                    margin: "0 auto",
-                    marginTop: "2rem",
-                  }}
-                >
+                <div className="card">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label
                         htmlFor="fullName"
                         className="form-label"
-                        style={{ fontSize: "12px" }}
                       >
-                        FIRST AND LAST NAME
+                        NAME
                       </label>
                       <input
                         type="text"
@@ -132,16 +100,14 @@ export default function ContactForm() {
                         value={formData.fullName}
                         onChange={handleChange}
                         required
-                        style={{ fontSize: "12px" }}
                       />
                     </div>
                     <div className="mb-3">
                       <label
                         htmlFor="email"
                         className="form-label"
-                        style={{ fontSize: "12px" }}
                       >
-                        EMAIL ADDRESS
+                        EMAIL
                       </label>
                       <input
                         type="email"
@@ -151,14 +117,12 @@ export default function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        style={{ fontSize: "12px" }}
                       />
                     </div>
                     <div className="mb-3">
                       <label
                         htmlFor="phone"
                         className="form-label"
-                        style={{ fontSize: "12px" }}
                       >
                         PHONE NUMBER
                       </label>
@@ -169,15 +133,12 @@ export default function ContactForm() {
                         className="form-control"
                         value={formData.phone}
                         onChange={handleChange}
-                        required
-                        style={{ fontSize: "12px" }}
                       />
                     </div>
                     <div className="mb-3">
                       <label
                         htmlFor="message"
                         className="form-label"
-                        style={{ fontSize: "12px" }}
                       >
                         MESSAGE
                       </label>
@@ -188,11 +149,10 @@ export default function ContactForm() {
                         rows={7}
                         value={formData.message}
                         onChange={handleChange}
-                        required
-                        style={{ fontSize: "12px" }}
                       />
+                      <SingleSelection />
                     </div>
-                    <div className="mb-3 text-center">
+                    {/* <div className="mb-3 text-center">
                       {" "}
                       <ReCAPTCHA
                         ref={recaptchaRef}
@@ -201,35 +161,20 @@ export default function ContactForm() {
                       {recaptchaError && (
                         <div className="text-danger mt-1">{recaptchaError}</div>
                       )}
-                    </div>
+                    </div> */}
 
-                    <div className="text-center">
-                      <ReactiveButton
-                        rounded
-                        buttonState={loading ? "loading" : "idle"}
-                        idleText={"SUBMIT"}
-                        loadingText={"Loading"}
+                    <div>
+                      <button
                         variant="secondary"
-                        className="button3"
+                        className="submitButton"
                         type="submit"
-                        style={{
-                          justifyContent: "left",
-                          width: "80px",
-                          fontSize: "12px",
-                          backgroundColor: "#558e89",
-                          marginTop: "5px",
-                        }}
-                      ></ReactiveButton>
+                      >SUBMIT</button>
                     </div>
-                  </form>
-                </Card>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+                   </form>
+                  </div>
 
-      <Footer />
+        {/* </div>
+      </div> */}
     </>
   );
 }

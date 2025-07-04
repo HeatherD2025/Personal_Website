@@ -1,39 +1,80 @@
 body {
-  background: 
-  rgb(32, 29, 42);
+  background: rgb(29, 33, 42);
+  height: 500vh;
 }
-h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+
+.quoteContainer {
+  position: relative;
+  padding: 40px;
+  margin: 130px 0px 40px 0px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.quoteContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  opacity: 0.1;
+  backdrop-filter: blur(5px);
+  z-index: -1; 
+}
+
+.landingQuote {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 40px;
+  font-weight: 100;
+  color: rgb(211, 213, 247);
+  margin: 5vh;
+  position: relative;
+  z-index: 1;
+}
+
+.quoteEmphasis {
+  font-family: Arial, Helvetica, sans-serif ;
   font-size: 40px;
   color: rgb(211, 213, 247);
+  margin-top: 20vh;
+
 }
-h2 {
+
+.quoteAuthor {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 18px;
+  color: rgb(211, 213, 247);
   display: flex;
-  justify-content: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 30px;
-  color: rgb(211, 213, 247);
 }
-h3 {
-  display: block;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: rgb(211, 213, 247);
+
+.card {
+  width: 60vw;
+  height: 70vh;
+  padding: 40px 20px 20px 20px;
+  justify-self: anchor-center;
 }
-p {
+
+.checkboxSection {
   display: contents;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 15px;
-  color: rgb(211, 213, 247);
-  float: left;
 }
-nav {
+
+.checkbox {
+  padding: 10px 10px 10px 40px;
+}
+
+.submitButton {
+  width: 12vw;
+  height: 4.5vh;
+  background-color: gray;
+  border: none;
+  padding: 1vh 4vw 1vh 4vw;
+}
+
+
+
+/* nav {
   background-color: rgb(34, 32, 46);
   padding-left: 30px;
   padding-right: 30px;
@@ -45,27 +86,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-form {
-  margin: 30px;
-}
-.main {
-  background-color:
-    rgb(32, 29, 42);
-  padding: 150px 100px 100px 100px;
-  margin-left: 80px;
-  margin-right: 80px;
-  height: 1200px;
-}
-a {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 20px;
-  color: rgb(235, 216, 247);
-  margin: 0, 100px;
-}
+} */
+
+
 .mainImage {
   max-width: 45vw;
   max-height: 100%;
@@ -73,17 +96,6 @@ a {
   margin-left: 20px;
   margin-right: 20px;
   overflow: clip;
-}
-.myImages {
-  width: 150px;
-  margin: 0px 0px 20px 0px;
-}
-.quote {
-  display: inline-block;
-  color: rgb(235, 216, 247);
-  font-size: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
 }
 .aboutMe {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -123,20 +135,8 @@ a {
   flex-direction: column;
   align-content: center;
 }
-.formGroup {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  margin: 20px;
-}
-.formControl {
-  width: 250px;
-}
-.formControlLong {
-  width: 250px;
-  height: 75px;
-}
+
+
 .label {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
