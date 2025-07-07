@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import ContactForm from "./pages/ContactForm";
 import About from "./pages/About";
 
-export default function App() {
+function App() {
   return (
    <>
      <main>
@@ -15,5 +15,7 @@ export default function App() {
       </Routes>
      </main>
    </>
-  );
+  )
 }
+
+export default App
