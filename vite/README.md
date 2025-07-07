@@ -1,1 +1,0 @@
-This is my personal website offering some background information on my interests and projects.  If there was an operation to emplain here, I would
