@@ -5,6 +5,8 @@ import emailjs from "@emailjs/browser";
 // import ReCAPTCHA from "react-google-recaptcha";
 import NavBar from "../components/Navbar";
 import SingleSelection from "../components/singleSelection";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 export default function ContactForm() {
 
@@ -17,7 +19,7 @@ export default function ContactForm() {
 
   const [loading, setLoading] = useState(false);
   // const [recaptchaError, setRecaptchaError] = useState("");
-
+  const [value, setValue] = useState()
   // const recaptchaRef = useRef(null);
 
   useEffect(() => {
@@ -83,9 +85,10 @@ export default function ContactForm() {
               We'd Love To Hear From You!
             </h2> */}
 
-                <div className="card">
+
+               <div className="container">
                   <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
+                    {/* <div className="mb-3">
                       <label
                         htmlFor="fullName"
                         className="form-label"
@@ -151,7 +154,82 @@ export default function ContactForm() {
                         onChange={handleChange}
                       />
                       <SingleSelection />
+                    </div> */}
+                    <div className="row">
+                      <div className="col-25">
+                        <label htmlFor="fullName">NAME</label>
+                      </div>
+                      <div className="col-75">
+                        <input
+                          type="text"
+                          id="fullName"
+                          name="fullName"
+                          value={formData.fullName}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
                     </div>
+
+                    <div className="row">
+                      <div className="col-25">
+                        <label htmlFor="email">EMAIL</label>
+                      </div>
+                      <div className="col-75">
+                        <input
+                          type="text"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+
+                    <div className="row">
+                      <div className="col-25">
+                        <label htmlFor="phone">PHONE NUMBER</label>
+                      </div>
+                      <div className="col-75">
+                        <PhoneInput
+                          defaultCountry="US"
+                          type="phone"
+                          id="phone"
+                          name="phone"
+                          value={value}
+                          onChange={setValue}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col-25">
+                        <label htmlFor="message">MESSAGE</label>
+                      </div>
+                      <div className="col-75">
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={7}
+                          value={formData.message}
+                          onChange={handleChange}
+                          style={{height: "8em"}}
+                        />
+                          <SingleSelection />
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <button
+                        variant="secondary"
+                        className="submitButton"
+                        type="submit"
+                      >SUBMIT</button>
+                    </div>
+
+
                     {/* <div className="mb-3 text-center">
                       {" "}
                       <ReCAPTCHA
@@ -163,13 +241,13 @@ export default function ContactForm() {
                       )}
                     </div> */}
 
-                    <div>
+                    {/* <div>
                       <button
                         variant="secondary"
                         className="submitButton"
                         type="submit"
                       >SUBMIT</button>
-                    </div>
+                    </div> */}
                    </form>
                   </div>
 

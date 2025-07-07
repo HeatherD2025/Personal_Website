@@ -34,6 +34,15 @@ function SingleSelection() {
               checked={selectedOption === 'afternoon'}
               onChange={handleOptionChange}
             />
+                      <label className="checkbox">NO PREFERENCE</label>
+            <input 
+              type="radio"
+              id="noPreference"
+              name="TOD"
+              value="noPreference"
+              checked={selectedOption === 'noPreference'}
+              onChange={handleOptionChange}
+            />
         </div>
     </>
   )
