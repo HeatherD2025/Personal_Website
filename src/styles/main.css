@@ -1,33 +1,44 @@
-body {
-  background: rgb(29, 33, 42);
-  height: 500vh;
+.background {
+  position: relative;
+  height: 200vh;
+  background-image: url("/src/assets/images/space.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; /* or contain depending on desired result */
+  background-color: black;
+  z-index: 0;
+}
+
+.mainBody {
+  position: relative;
+  padding-top: 4rem;
+  height: 100%;
+  z-index: 1; /* Ensure it sits on top of the background */
 }
 
 .quoteContainer {
   position: relative;
-  padding: 5em;
-  margin: 5rem 0rem 5rem 0rem;
+  padding: 4em;
+  margin-top: 25vh;
+  max-width: 100%;
+  z-index: 2;
   overflow: hidden;
-  z-index: 0;
 }
 
 .quoteContainer::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: aliceblue;
-  opacity: 0.1;
-  backdrop-filter: blur(5em);
-  z-index: -1; 
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  z-index: -1;
 }
 
 .landingQuote {
   font-family: Arial, Helvetica, sans-serif ;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
   color: rgb(211, 213, 247);
   margin: 5vh;
   position: relative;
@@ -37,35 +48,31 @@ body {
 .quoteEmphasis {
   font-family: Arial, Helvetica, sans-serif ;
   font-size: 3rem;
-  color: rgb(211, 213, 247);
+  color: rgb(106, 91, 165);
   margin-top: 20vh;
-
 }
 
 .quoteAuthor {
   font-family: Arial, Helvetica, sans-serif ;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: rgb(211, 213, 247);
   display: flex;
-  justify-content: right;
-}
-
-.checkboxSection {
-  display: contents;
 }
 
 .checkbox {
-  padding: 10px 10px 10px 40px;
+  padding: 1rem 4rem 1rem 1rem;
 }
 
 .submitButton {
-  width: 12vw;
-  height: 4.5vh;
+  width: 8em;
+  height: 3em;
   background-color: gray;
   border: none;
-  padding: 1vh 4vw 1vh 4vw;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-
 
 input[type=text], select, textarea{
   width: 100%;
@@ -75,19 +82,54 @@ input[type=text], select, textarea{
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  background-color: rgba(244, 225, 225, 0.20);
+  backdrop-filter: blur(12px);
 }
 
-/* Style the label to display next to the inputs */
+input[type=phone], select, textarea{
+  width: 100%;
+  height: 2em;
+  padding: 1em;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: rgba(244, 225, 225, 0.20);
+  backdrop-filter: blur(12px);
+}
+
 label {
   padding: 1em 1em 1em 0em;
   display: inline-block;
 }
 
-/* Style the container */
 .container {
+  margin-top: 10em;
   border-radius: 1em;
-  background-color: #f2f2f2;
+  background-color: rgba(244, 225, 225, 0.20);
+  backdrop-filter: blur(12px);
   padding: 2em;
+  max-width: 60em;
+  color: white;
+}
+
+.quoteContainer {
+  position: relative;
+  padding: 4em;
+  margin-top: 25vh;
+  max-width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.quoteContainer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  z-index: -1;
 }
 
 /* Floating column for labels: 25% width */

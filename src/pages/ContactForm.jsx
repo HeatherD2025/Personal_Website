@@ -69,9 +69,9 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* <div className="background" style={{ minHeight: "100vh" }}>
-        <div className="backgroundAccent" style={{ minHeight: "100vh" }}> */}
-          <NavBar />
+   <div className="background">
+      <div className="mainBody">
+        <NavBar />
           {/* <motion.div
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -89,76 +89,9 @@ export default function ContactForm() {
               We'd Love To Hear From You!
             </h2> */}
 
-
+          <div className="formContainer">
                <div className="container">
                   <form onSubmit={handleSubmit}>
-                    {/* <div className="mb-3">
-                      <label
-                        htmlFor="fullName"
-                        className="form-label"
-                      >
-                        NAME
-                      </label>
-                      <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        className="form-control"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        htmlFor="email"
-                        className="form-label"
-                      >
-                        EMAIL
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        htmlFor="phone"
-                        className="form-label"
-                      >
-                        PHONE NUMBER
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="form-control"
-                        value={formData.phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label
-                        htmlFor="message"
-                        className="form-label"
-                      >
-                        MESSAGE
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        className="form-control"
-                        rows={7}
-                        value={formData.message}
-                        onChange={handleChange}
-                      />
-                      <SingleSelection />
-                    </div> */}
                     <div className="row">
                       <div className="col-25">
                         <label htmlFor="fullName">NAME</label>
@@ -221,10 +154,17 @@ export default function ContactForm() {
                           onChange={handleChange}
                           style={{height: "8em"}}
                         />
-                          <SingleSelection />
+                      </div>
+                      <div className="row">
+                        <div className="col-25">
+                          <label
+                            htmlFor="email"
+                            className="form-label"
+                          >TIME PREFERRED</label>
+                        </div>
+                        <SingleSelection />
                       </div>
                     </div>
-
                     <div className="row">
                       <button
                         variant="secondary"
@@ -254,9 +194,9 @@ export default function ContactForm() {
                     </div> */}
                    </form>
                   </div>
-
-        {/* </div>
-      </div> */}
+             </div>
+        </div>
+      </div>
     </>
   );
 }
