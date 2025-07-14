@@ -1,16 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput from "react-phone-number-input";
 import NavBar from "../components/Navbar";
 import SingleSelection from "../components/singleSelection";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function ContactForm() {
-
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
@@ -18,7 +17,7 @@ export default function ContactForm() {
   });
 
   const [recaptchaError, setRecaptchaError] = useState("");
-  const [value, setValue] = useState(); // Phone input
+  const [value, setValue] = useState(); // Phone input value
   const [loading, setLoading] = useState(false);
   const recaptchaRef = useRef();
 
@@ -32,51 +31,46 @@ export default function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    console.log("form submitted");
+    setLoading(true);
 
-  if (!formData.TOD) {
-  alert("Please select a preferred time.");
-  return;
-}
-
-  try {
-    const token = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-
-    if (!token) {
-      setRecaptchaError("Captcha verification failed. Please try again.");
-      setLoading: false;
+    if (!formData.TOD) {
+      alert("Please select a preferred time.");
+      setLoading(false);
       return;
     }
 
-    setRecaptchaError("");
+    try {
+      console.log("executing reCaptcha...");
+      // const token = await recaptchaRef.current.executeAsync();
+      // recaptchaRef.current.reset();
 
-    const result = await emailjs.send(
+      // if (!token) {
+      //   setRecaptchaError("Captcha verification failed. Please try again.");
+      //   setLoading(false);
+      //   return;
+      // }
+
+      console.log("Sending email via emailjs...");
+
+      const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    {
-      full_name: formData.fullName,
-      email_address: formData.email,
-      phone_number: value,
-      message: formData.message,
-      TOD: formData.TOD || "", // You might need to wire SingleSelection input properly
-      "g-recaptcha-response": token,
-    }
-  );
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: value || formData.phone,
+          message: formData.message,
+          TOD: formData.TOD,
+          // Remove "g-recaptcha-response": token,
+        }
+      );
 
-  console.log("Email sent:", result);
-  alert("Message sent successfully!")
-
-    // EmailJS - send as fallback or logging
-    await emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      data
-    );
-
-    setFormData({
-        fullName: "",
+      console.log("EmailJS: success")
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
         email: "",
         phone: "",
         message: "",
@@ -88,106 +82,118 @@ export default function ContactForm() {
       console.error("EmailJS error:", err);
       alert("Failed to send message. Please try again later.");
     } finally {
+      console.log("Resetting loading...")
       setLoading(false);
     }
   };
 
   return (
     <>
-   <div className="background">
-      <div className="mainBody">
-        <NavBar />
+      <div className="background">
+        <div className="mainBody">
+          <NavBar />
           <div className="formContainer">
-               <div className="container">
-                  <form onSubmit={handleSubmit}>
-                      <div className="row">
-                        <div className="col-25">
-                          <label htmlFor="fullName">NAME</label>
-                        </div>
-                            <div className="col-75">
-                              <input
-                                type="text"
-                                id="fullName"
-                                name="fullName"
-                                value={formData.fullName}
-                                onChange={handleChange}
-                                required
-                              />
-                            </div>
-                      </div>
-
-                      <div className="row">
-                        <div className="col-25">
-                          <label htmlFor="email">EMAIL</label>
-                        </div>
-                            <div className="col-75">
-                              <input
-                                type="text"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                              />
-                            </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-25">
-                          <label htmlFor="phone">PHONE NUMBER</label>
-                        </div>
-                            <div className="col-75">
-                              <PhoneInput
-                                defaultCountry="US"
-                                type="phone"
-                                id="phone"
-                                name="phone"
-                                value={value}
-                                onChange={setValue}
-                              />
-                            </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-25">
-                          <label htmlFor="message">MESSAGE</label>
-                        </div>
-                            <div className="col-75">
-                              <textarea
-                                id="message"
-                                name="message"
-                                rows={7}
-                                value={formData.message}
-                                onChange={handleChange}
-                                style={{height: "8em"}}
-                              />
-                            </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-25">
-                          <label htmlFor="email" className="form-label">TIME PREFERRED</label>
-                        </div>
-                            <SingleSelection  
-                              value={formData.TOD}
-                              onChange={(e) => setFormData((prev) => ({ ...prev, TOD: e.target.value }))}
-                            />
-                      </div>      
-                      <div className="row">
-                        <button
-                          variant="secondary"
-                          className="submitButton"
-                          type="submit"
-                        >SUBMIT</button>
-                      </div>
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                        size="invisible"
-                      />
-                      {recaptchaError && (
-                        <div className="text-danger mt-1">{recaptchaError}</div>
-                      )}
-                   </form>
+            <div className="container">
+              <form onSubmit={handleSubmit}>
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="name">NAME</label>
                   </div>
-             </div>
+                  <div className="col-75">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="email">EMAIL</label>
+                  </div>
+                  <div className="col-75">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="phone">PHONE NUMBER</label>
+                  </div>
+                  <div className="col-75">
+                    <PhoneInput
+                      defaultCountry="US"
+                      id="phone"
+                      name="phone"
+                      value={value}
+                      onChange={setValue}
+                    />
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="message">MESSAGE</label>
+                  </div>
+                  <div className="col-75">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={7}
+                      value={formData.message}
+                      onChange={handleChange}
+                      style={{ height: "8em" }}
+                    />
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-25">
+                    <label className="form-label">TIME PREFERRED</label>
+                  </div>
+                  <SingleSelection
+                    value={formData.TOD}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        TOD: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+
+                <div className="row">
+                  <button
+                    className="submitButton"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
+                </div>
+
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  size="invisible"
+                />
+                {recaptchaError && (
+                  <div className="text-danger mt-1">{recaptchaError}</div>
+                )}
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </>
