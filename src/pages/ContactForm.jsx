@@ -43,48 +43,48 @@ export default function ContactForm() {
 
     try {
       console.log("executing reCaptcha...");
-      // const token = await recaptchaRef.current.executeAsync();
-      // recaptchaRef.current.reset();
+      const token = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset();
 
-      // if (!token) {
-      //   setRecaptchaError("Captcha verification failed. Please try again.");
-      //   setLoading(false);
-      //   return;
-      // }
+      if (!token) {
+        setRecaptchaError("Captcha verification failed. Please try again.");
+        setLoading(false);
+        return;
+      }
 
       console.log("Sending email via emailjs...");
 
-      // const result = await emailjs.send(
-      //   import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      //   import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      //   {
-      //     name: formData.name,
-      //     email: formData.email,
-      //     phone: value || formData.phone,
-      //     message: formData.message,
-      //     TOD: formData.TOD,
-      //     "g-recaptcha-response": token,
-      //   }
-      // );
-console.log("Sending Email with:", {
-  serviceID: 'service_erp3z7s',
-  templateID: 'template_wuf7md7',
-  publicKey: '8D3Im9XhR2Lvt98-f',
-});
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: value || formData.phone,
+          message: formData.message,
+          TOD: formData.TOD,
+          "g-recaptcha-response": token,
+        }
+      );
+// console.log("Sending Email with:", {
+//   serviceID: 'service_erp3z7s',
+//   templateID: 'template_wuf7md7',
+//   publicKey: '8D3Im9XhR2Lvt98-f',
+// });
 
 
-      emailjs.send(
-  'service_erp3z7s',        // ✅ Service ID
-  'template_wuf7md7',       // ✅ Template ID
-  {
-    name: formData.name,
-    email: formData.email,
-    phone: value || formData.phone,
-    message: formData.message,
-    TOD: formData.TOD,
-  },
-  'S1im1QcIjNjPdEvq7'        // ✅ Public Key
-);
+//       emailjs.send(
+//   'service_erp3z7s',        // ✅ Service ID
+//   'template_wuf7md7',       // ✅ Template ID
+//   {
+//     name: formData.name,
+//     email: formData.email,
+//     phone: value || formData.phone,
+//     message: formData.message,
+//     TOD: formData.TOD,
+//   },
+//   'S1im1QcIjNjPdEvq7'        // ✅ Public Key
+// );
 
       console.log("EmailJS: success")
       alert("Message sent successfully!");
