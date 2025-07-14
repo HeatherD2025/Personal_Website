@@ -1,28 +1,18 @@
 import React from "react";
 import { useState } from "react";
 
-function SingleSelection() {
-  const [selectedOption, setSelectedOption] = useState(null)
-
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
+function SingleSelection({value, onChange}) {
 
   return (
     <>
-      {/* <label
-        htmlFor="email"
-        className="form-label"
-      >PREFERRED TIME OF CONTACT</label> */}
         <div className="col-75">
             <input 
               type="radio"
               id="morning"
               name="TOD"
               value="morning"
-              checked={selectedOption === 'morning'}
-              onChange={handleOptionChange}
+              checked={value === 'morning'}
+              onChange={onChange}
               />
           <label className="checkbox">MORNING</label>
             <input 
@@ -30,8 +20,8 @@ function SingleSelection() {
               id="afternoon"
               name="TOD"
               value="afternoon"
-              checked={selectedOption === 'afternoon'}
-              onChange={handleOptionChange}
+              checked={value === 'afternoon'}
+              onChange={onChange}
             />
             <label className="checkbox">AFTERNOON</label>
             <input 
@@ -39,8 +29,8 @@ function SingleSelection() {
               id="noPreference"
               name="TOD"
               value="noPreference"
-              checked={selectedOption === 'noPreference'}
-              onChange={handleOptionChange}
+              checked={value === 'noPreference'}
+              onChange={onChange}
             />
             <label className="checkbox">NO PREFERENCE</label>
         </div>

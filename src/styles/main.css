@@ -41,7 +41,7 @@
   font-weight: 300;
   color: rgb(211, 213, 247);
   margin: 5vh;
-  position: relative;
+  position: static;
   z-index: 1;
 }
 
