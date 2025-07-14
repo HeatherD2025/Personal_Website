@@ -22,6 +22,8 @@ export default function ContactForm() {
   const recaptchaRef = useRef();
 
 
+console.log("Loaded ENV VARS:", import.meta.env);
+
   console.log("EMAILJS ENV CONFIG:", {
   serviceID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
   templateID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
