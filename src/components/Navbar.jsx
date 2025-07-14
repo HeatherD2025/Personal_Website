@@ -14,6 +14,7 @@ export default function NavBar() {
       <nav
         className="navbar"
       >
+        <div className="navItems">
             <ListGroup.Item
               className="navItem"
               action
@@ -35,7 +36,7 @@ export default function NavBar() {
             >
               CONTACT
             </ListGroup.Item>
-       
+        </div>
       </nav>
     </header>
     </>

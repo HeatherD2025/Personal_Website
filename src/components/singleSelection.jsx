@@ -11,12 +11,11 @@ function SingleSelection() {
 
   return (
     <>
-      <label
+      {/* <label
         htmlFor="email"
         className="form-label"
-      >PREFERRED TIME OF CONTACT</label>
-        <div className="checkboxSection">
-          <label className="checkbox">MORNING</label>
+      >PREFERRED TIME OF CONTACT</label> */}
+        <div className="col-75">
             <input 
               type="radio"
               id="morning"
@@ -25,7 +24,7 @@ function SingleSelection() {
               checked={selectedOption === 'morning'}
               onChange={handleOptionChange}
               />
-          <label className="checkbox">AFTERNOON</label>
+          <label className="checkbox">MORNING</label>
             <input 
               type="radio"
               id="afternoon"
@@ -34,7 +33,7 @@ function SingleSelection() {
               checked={selectedOption === 'afternoon'}
               onChange={handleOptionChange}
             />
-                      <label className="checkbox">NO PREFERENCE</label>
+            <label className="checkbox">AFTERNOON</label>
             <input 
               type="radio"
               id="noPreference"
@@ -43,6 +42,7 @@ function SingleSelection() {
               checked={selectedOption === 'noPreference'}
               onChange={handleOptionChange}
             />
+            <label className="checkbox">NO PREFERENCE</label>
         </div>
     </>
   )
