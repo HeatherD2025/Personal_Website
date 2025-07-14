@@ -28,9 +28,15 @@ export default function ContactForm() {
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 });
 
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+useEffect(() => {
+  console.log("EMAILJS ENV CONFIG:", {
+    serviceID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    recaptcha: import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+  });
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+}, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
