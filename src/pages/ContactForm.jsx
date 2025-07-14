@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ReactiveButton from "reactive-button";
 import emailjs from "@emailjs/browser";
-import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import PhoneInput from 'react-phone-number-input'
 import NavBar from "../components/Navbar";
 import SingleSelection from "../components/singleSelection";
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function ContactForm() {
 
@@ -19,12 +17,11 @@ export default function ContactForm() {
     TOD: "",
   });
 
-  const [loading, setLoading] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState("");
-  const [value, setValue] = useState()
+  const [value, setValue] = useState(); // Phone input
+  const [loading, setLoading] = useState(false);
   const recaptchaRef = useRef();
 
-  
   useEffect(() => {
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
@@ -37,6 +34,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
+
   if (!formData.TOD) {
   alert("Please select a preferred time.");
   return;
@@ -54,27 +52,21 @@ export default function ContactForm() {
 
     setRecaptchaError("");
 
-    const data = {
+    const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    {
       full_name: formData.fullName,
       email_address: formData.email,
       phone_number: value,
       message: formData.message,
       TOD: formData.TOD || "", // You might need to wire SingleSelection input properly
-      token,
-    };
-
-    // Send to backend
-    const response = await fetch("/.netlify/functions/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error("Server error. Try again later.");
+      "g-recaptcha-response": token,
     }
+  );
+
+  console.log("Email sent:", result);
+  alert("Message sent successfully!")
 
     // EmailJS - send as fallback or logging
     await emailjs.send(
@@ -83,23 +75,22 @@ export default function ContactForm() {
       data
     );
 
-    alert("Message sent successfully!");
     setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-      TOD: "",
-    });
-    setValue("");
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+        TOD: "",
+      });
+      setValue("");
 
-  } catch (err) {
-    console.error("Form submission failed:", err);
-    alert("Something went wrong. Please try again later.");
-  } finally {
-    setLoading(false);
-  }
-};
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      alert("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
