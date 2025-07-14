@@ -21,6 +21,13 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const recaptchaRef = useRef();
 
+
+  console.log("EMAILJS ENV CONFIG:", {
+  serviceID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+});
+
   useEffect(() => {
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
