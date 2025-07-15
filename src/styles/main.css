@@ -42,8 +42,13 @@
   position: absolute;
   width: 100%;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    to right,
+    rgba(30, 30, 60, 0.5),
+    rgba(60, 60, 90, 0.5)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
   z-index: -1;
 }
 
@@ -159,8 +164,6 @@ label {
   }
 }
 
-
-
 .mainImage {
   max-width: 45vw;
   max-height: 100%;
@@ -172,11 +175,20 @@ label {
 
 button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 8vw, 10rem);
+}
+
+.submitButton {
+  display: flex;
   flex-wrap: wrap;
   justify-self: center;
   margin-right: 201px;
 }
-button:hover {
+
+.submitButton:hover {
   cursor: pointer;
 }
 /* tablet */
