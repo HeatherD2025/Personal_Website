@@ -70,13 +70,6 @@ export default function Home() {
                 - Albert Einstein
               </motion.span>
             </motion.h3>
-           {/* <h3 className="landingQuote">
-            Success comes from 
-            <span className="quoteEmphasis"> curiosity, concentration, perseverance </span> 
-            and 
-            <span className="quoteEmphasis"> self criticism</span>.
-            <span className="quoteAuthor"> - Albert Einstein</span>
-           </h3> */}
          </div>
       </div>
     </div>

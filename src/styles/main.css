@@ -4,7 +4,7 @@
   background-image: url("/src/assets/images/space.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover; /* or contain depending on desired result */
+  background-size: cover; 
   background-color: black;
   z-index: 0;
 }
@@ -13,13 +13,25 @@
   position: relative;
   padding-top: 4rem;
   height: 100%;
-  z-index: 1; /* Ensure it sits on top of the background */
+  z-index: 1; 
+}
+
+/* styling for landing page */
+.landingQuote {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(211, 213, 247);
+  margin: 5vh;
+  position: static;
+  z-index: 1;
+  max-width: 50em;
 }
 
 .quoteContainer {
   position: relative;
   padding: 4em;
-  margin-top: 25vh;
+  margin-top: 14vh;
   max-width: 100%;
   z-index: 2;
   overflow: hidden;
@@ -35,31 +47,42 @@
   z-index: -1;
 }
 
-.landingQuote {
-  font-family: Arial, Helvetica, sans-serif ;
-  font-size: 2rem;
-  font-weight: 300;
-  color: rgb(211, 213, 247);
-  margin: 5vh;
-  position: static;
-  z-index: 1;
-  max-width: 50em;
-}
-
 .quoteEmphasis {
-  font-family: Arial, Helvetica, sans-serif ;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
   color: rgb(106, 91, 165);
   margin-top: 20vh;
 }
 
 .quoteAuthor {
-  font-family: Arial, Helvetica, sans-serif ;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   color: rgb(211, 213, 247);
   display: flex;
 }
 
+/* styling for about me page*/
+.aboutMeContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.aboutParagraph {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(211, 213, 247);
+  font-size: 1.5rem;
+  padding: 2em;
+}
+
+.myPhoto {
+  height: 75vh;
+  aspect-ratio: auto;
+  padding: 1em;
+}
+
+/* styling for submission form */
 .checkbox {
   padding: 1rem 4rem 1rem 1rem;
 }
@@ -102,25 +125,6 @@ label {
   color: white;
 }
 
-.quoteContainer {
-  position: relative;
-  padding: 4em;
-  margin-top: 25vh;
-  max-width: 100%;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.quoteContainer::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  z-index: -1;
-}
-
 /* Floating column for labels: 25% width */
 .col-25 {
   float: left;
@@ -140,6 +144,10 @@ label {
   content: "";
   display: table;
   clear: both;
+}
+
+.recaptchaContainer {
+  
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
