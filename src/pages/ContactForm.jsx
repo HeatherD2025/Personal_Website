@@ -81,25 +81,6 @@ const result = await emailjs.send(
   },
   'S1im1QcIjNjPdEvq7'
 );
-// console.log("Sending Email with:", {
-//   serviceID: 'service_erp3z7s',
-//   templateID: 'template_wuf7md7',
-//   publicKey: '8D3Im9XhR2Lvt98-f',
-// });
-
-
-//       emailjs.send(
-//   'service_erp3z7s',        // ✅ Service ID
-//   'template_wuf7md7',       // ✅ Template ID
-//   {
-//     name: formData.name,
-//     email: formData.email,
-//     phone: value || formData.phone,
-//     message: formData.message,
-//     TOD: formData.TOD,
-//   },
-//   'S1im1QcIjNjPdEvq7'        // ✅ Public Key
-// );
 
       console.log("EmailJS: success")
       alert("Message sent successfully!");
@@ -216,15 +197,16 @@ const result = await emailjs.send(
                     {loading ? "Sending..." : "Submit"}
                   </button>
                 </div>
-
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                  size="invisible"
-                />
-                {recaptchaError && (
-                  <div className="text-danger mt-1">{recaptchaError}</div>
-                )}
+                <div className="recaptchaContainer">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    size="invisible"
+                  />
+                  {recaptchaError && (
+                    <div className="text-danger mt-1">{recaptchaError}</div>
+                  )}
+                </div>
               </form>
             </div>
           </div>

@@ -32,6 +32,13 @@ export default function NavBar() {
             <ListGroup.Item
               className="navItem"
               action
+              onClick={() => navigate("/projects")}
+            >
+              PROJECTS
+            </ListGroup.Item>
+            <ListGroup.Item
+              className="navItem"
+              action
               onClick={() => navigate("/contactform")}
             >
               CONTACT
