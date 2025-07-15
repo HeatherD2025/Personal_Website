@@ -47,7 +47,6 @@ useEffect(() => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("form submitted");
     setLoading(true);
 
     if (!formData.TOD) {
@@ -67,11 +66,11 @@ useEffect(() => {
         return;
       }
 
-      console.log("Sending email via emailjs...");
-
 const result = await emailjs.send(
-  'service_erp3z7s',
-  'template_wuf7md7',
+  // 'service_erp3z7s',
+  // 'template_wuf7md7',
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   {
     name: formData.name,
     email: formData.email,
@@ -79,7 +78,8 @@ const result = await emailjs.send(
     message: formData.message,
     TOD: formData.TOD,
   },
-  'S1im1QcIjNjPdEvq7'
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  // 'S1im1QcIjNjPdEvq7'
 );
 
       console.log("EmailJS: success")
@@ -187,16 +187,6 @@ const result = await emailjs.send(
                     }
                   />
                 </div>
-
-                <div className="row">
-                  <button
-                    className="submitButton"
-                    type="submit"
-                    disabled={loading}
-                  >
-                    {loading ? "Sending..." : "Submit"}
-                  </button>
-                </div>
                 <div className="recaptchaContainer">
                   <ReCAPTCHA
                     ref={recaptchaRef}
@@ -206,6 +196,15 @@ const result = await emailjs.send(
                   {recaptchaError && (
                     <div className="text-danger mt-1">{recaptchaError}</div>
                   )}
+                </div>
+                <div className="row">
+                  <button
+                    className="submitButton"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
                 </div>
               </form>
             </div>
