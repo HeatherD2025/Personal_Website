@@ -1,51 +1,51 @@
-import React from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
+  const handleNavClick = (path) => {
+    navigate(path);
+    setIsOpen(false); // close menu on nav click (mobile)
+  };
+
   return (
-    <>
-    <header>
-      <nav
-        className="navbar"
+    <nav className="navbar">
+      <div className="navbarInner">
+      {/* Hamburger menu button */}
+      <div
+        className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle navigation menu"
+        role="button"
+        tabIndex={0}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") setIsOpen(!isOpen);
+        }}
       >
-        <div className="navItems">
+        ☰
+      </div>
+
+      {/* Navigation links container */}
+      <div className={`navItems ${isOpen ? "open" : ""}`}>
+        {["/", "/about", "/projects", "/contactform"].map((path, idx) => {
+          const labels = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
+          return (
             <ListGroup.Item
+              key={path}
               className="navItem"
               action
-              onClick={() => navigate("/")}
+              onClick={() => handleNavClick(path)}
             >
-              HOME
+              {labels[idx]}
             </ListGroup.Item>
-            <ListGroup.Item
-              className="navItem"
-              action
-              onClick={() => navigate("/about")}
-            >
-              ABOUT
-            </ListGroup.Item>
-            <ListGroup.Item
-              className="navItem"
-              action
-              onClick={() => navigate("/projects")}
-            >
-              PROJECTS
-            </ListGroup.Item>
-            <ListGroup.Item
-              className="navItem"
-              action
-              onClick={() => navigate("/contactform")}
-            >
-              CONTACT
-            </ListGroup.Item>
-        </div>
-      </nav>
-    </header>
-    </>
+          );
+        })}
+       </div>
+      </div>
+    </nav>
   );
 }

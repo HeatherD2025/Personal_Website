@@ -67,8 +67,6 @@ useEffect(() => {
       }
 
 const result = await emailjs.send(
-  // 'service_erp3z7s',
-  // 'template_wuf7md7',
     import.meta.env.VITE_EMAILJS_SERVICE_ID,
     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   {
@@ -79,7 +77,6 @@ const result = await emailjs.send(
     TOD: formData.TOD,
   },
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-  // 'S1im1QcIjNjPdEvq7'
 );
 
       console.log("EmailJS: success")
