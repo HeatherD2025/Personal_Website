@@ -1,30 +1,34 @@
-/* Base navbar styles */
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100%;
-  height: 4rem;
-  background: linear-gradient(
-    to right,
-    rgba(30, 30, 60, 0.5),
-    rgba(60, 60, 90, 0.5)
-  );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  z-index: 10;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: center; /* center contents */
-  align-items: center;
+  margin: auto;
+  background-color: #100310;
+  padding-bottom: 2.5rem;
 }
 
 .navbarInner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
 }
+
+.navbarBrand {
+  font-family: 'JetBrains Mono', monospace;
+  color: #FFF;
+  padding-top: 2.38rem;
+  padding-left: 7.87rem;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 
 /* Hamburger icon (hidden desktop, visible mobile) */
 .hamburger {
@@ -34,66 +38,47 @@
   display: none;
 }
 
-/* Nav items container */
 .navItems {
-  display: flex;
-  justify-content: space-evenly; /* or center + gap */
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-  color: white;
-  padding: 0 1rem;
-}
-
-/* Individual nav item */
-.navItem {
+  color: #FFF;
+  font-family: 'JetBrains Mono', monospace;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.5em 1.5em;
-  margin: 0;
-  text-align: center;
-  border-radius: 6px;
-  color: white;
-  background: none;
-  border: none;
-  max-width: 8em;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  gap: 1.5rem;
+  padding-top: 2.38rem;
+  padding-right: 7.87rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: 5.44rem;
+  height: 1.5rem;
 }
 
 .navItem:hover {
-  background-color: rgba(106, 91, 165, 0.3);
+  background-color: rgba(138, 56, 245, 1);
   box-shadow: 0 0 10px rgba(200, 180, 255, 1);
-  transform: scale(1.05);
 }
 
 /* MOBILE STYLES */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 
   .navItems {
-    position: fixed;
-    top: 4rem;
-    right: -100%; /* hidden offscreen */
-    width: 60%;
-    height: 100vh;
-    background-color: rgba(0, 0, 50, 0.95);
-    flex-direction: column;
-    padding: 2rem;
-    gap: 2rem; /* more spacing on mobile */
-    transition: right 0.3s ease;
-  }
-
-  /* Show nav on toggle */
-  .navItems.open {
+    display: none;
+    position: absolute;
+    top: 5.5rem; /* Below navbar */
     right: 0;
+    background-color: #000;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
   }
 
-  .navItem {
-    padding: 1rem 0;
-    font-size: 1.5rem;
+  .navItems.open {
+    display: flex;
   }
 }
