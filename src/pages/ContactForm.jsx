@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-number-input";
 import NavBar from "../components/Navbar";
-import SingleSelection from "../components/singleSelection";
+// import SingleSelection from "../components/singleSelection";
 import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -174,7 +174,7 @@ const result = await emailjs.send(
                   <div className="col-25">
                     <label className="form-label">TIME PREFERRED</label>
                   </div>
-                  <SingleSelection
+                  {/* <SingleSelection
                     value={formData.TOD}
                     onChange={(e) =>
                       setFormData((prev) => ({
@@ -182,7 +182,7 @@ const result = await emailjs.send(
                         TOD: e.target.value,
                       }))
                     }
-                  />
+                  /> */}
                 </div>
                 <div className="recaptchaContainer">
                   <ReCAPTCHA

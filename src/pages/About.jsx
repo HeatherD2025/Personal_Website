@@ -1,5 +1,4 @@
 import NavBar from "../components/Navbar";
-import myPortrait from "../assets/images/myPortrait.png";
 
 export default function About() {
 
@@ -17,12 +16,11 @@ export default function About() {
                       I’m now focused on building creative, user-first applications with responsive design across all known dimensions.
 
                       <ul>
-                        <li>🎓 Graduate of Fullstack Academy's immersive web development program (JavaScript, React, Node.js, Express, SQL)</li>
-                        <li>🛠️ Background in event operations, team leadership, and client-focused communication</li>
-                        <li>🌌 Passionate about science, technology, and turning complex ideas into intuitive interfaces</li>
-                        <li>💡 Driven to design responsive, accessible web experiences that work everywhere</li>
-                        <li>🤝 Collaborative mindset with a creative eye and strategic approach</li>
-                        <li>🚀 Always learning, always building—ready to contribute to exciting, mission-driven teams</li>
+                        <li>Graduate of Fullstack Academy's immersive web development program (JavaScript, React, Node.js, Express, SQL)</li>
+                        <li>Background in event operations, team leadership, and client-focused communication</li>
+                        <li>Passionate about science, technology, and turning complex ideas into intuitive interfaces</li>
+                        <li>Driven to design responsive, accessible web experiences that work everywhere</li>
+                        <li>Collaborative mindset with a creative eye and strategic approach</li>
                       </ul>
                       Whether you’re building tools for Earth or beyond, I’d love to be part of your next mission. Let’s create something extraordinary—together.
                      </p>
