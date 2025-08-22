@@ -33,9 +33,9 @@ export default function Home() {
 
           <div className="accentLine3"></div>
           <div className="accentBox2"></div>
+          <div className="floatingAccentBox2"></div>
         </div>
       </div>
-      <div className="floatingAccentBox2"></div>
     </div>
     </>
   );
