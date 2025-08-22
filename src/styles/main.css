@@ -25,6 +25,10 @@
   z-index: 10;
   height: 35.75rem;
   width: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .accentLine1 {
@@ -124,12 +128,23 @@
 }
 
 .floatingAccentBox2 {
-  position: absolute;
+
+  grid-column: 6 / span 1;  /* align with a specific column */
+  grid-row: 1;              /* place in a specific row if needed */
+  width: 2.63rem;
+  aspect-ratio: 1 / 1;
+  z-index: 5;
+  margin-top: 50.81rem;
+
+  /* Offset it slightly without breaking layout */
+  transform: translate(4rem, 0rem);
+
+  /* position: absolute;
   height: 2.63rem;
   width: 2.63rem;
-  z-index: 8;
-  top: 50.81rem;
-  left: 50.5rem;
+  z-index: 8; */
+  /* top: 50.81rem;
+  left: 20.5rem; */
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
