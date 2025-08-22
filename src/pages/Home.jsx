@@ -1,7 +1,9 @@
 import NavBar from "../components/Navbar";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import ContactForm from "../components/ContactForm";
 import "../styles/main.css";
 import myPortrait from "../assets/images/myPortrait.jpg";
-import React from "react";
 
 export default function Home() {
   return (
@@ -35,6 +37,9 @@ export default function Home() {
           <div className="accentBox2"></div>
           <div className="floatingAccentBox2"></div>
         </div>
+        <About />
+        <Projects />
+        <ContactForm />
       </div>
     </div>
     </>

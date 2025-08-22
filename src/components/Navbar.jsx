@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
 
-  const handleNavClick = (path) => {
-    navigate(path);
+  const handleNavClick = () => {
     setIsOpen(false); // close menu on nav click (mobile)
   };
+
+  const navItems= [
+    { label: "about-me", href: "#about" },
+    { label: "projects", href: "#projects" },
+    { label: "contactForm", href: "#contactForm"},
+  ];
 
   return (
     <nav className="navbar">
@@ -39,19 +42,16 @@ export default function NavBar() {
 
           {/* Navigation links container */}
           <div className={`navItems ${isOpen ? "open" : ""}`}>
-            {["/about", "/projects", "/contactform"].map((path, idx) => {
-              const labels = ["about-me", "projects", "cv"];
-              return (
-                <ListGroup.Item
-                  key={path}
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
                   className="navItem"
-                  action
-                  onClick={() => handleNavClick(path)}
+                  href={item.href}
+                  onClick={handleNavClick}
                 >
-                  {labels[idx]}
-                </ListGroup.Item>
-              );
-            })}
+                  {item.label}
+                </a>
+              ))}
           </div>
         </div>
       </div>
