@@ -18,7 +18,9 @@ export default function NavBar() {
       <div className="navbarInner">
 
         {/* left side- my name */}
-        <div className="navbarBrand">Heather DeLiso</div>
+        <div className="navbarBrand">
+          <div className="floatingAccentBox1"></div>Heather DeLiso
+        </div>
 
         {/* right side - hamburger and nav items */}
         <div className="navbarRight">

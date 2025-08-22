@@ -7,6 +7,7 @@
   margin: auto;
   background-color: #100310;
   padding-bottom: 2.5rem;
+  z-index: 9;
 }
 
 .navbarInner {
@@ -19,14 +20,22 @@
 .navbarBrand {
   font-family: 'JetBrains Mono', monospace;
   color: #FFF;
+  display: flex;
+  align-items: center;
   padding-top: 2.38rem;
+  gap: 1em;
   padding-left: 7.87rem;
+}
+
+.floatingAccentBox1 {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  background-color: #FFF; 
 }
 
 .navbarRight {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
 }
 
 
