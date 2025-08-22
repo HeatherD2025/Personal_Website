@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 .background, #root, body {
   height: 209.75rem;
   background-color: #100310;

@@ -101,7 +101,7 @@ const result = await emailjs.send(
 
   return (
     <>
-      <div className="background">
+     <section id="contactForm" className="section">
         <div className="mainBody">
           <NavBar />
           <div className="formContainer">
@@ -207,7 +207,7 @@ const result = await emailjs.send(
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

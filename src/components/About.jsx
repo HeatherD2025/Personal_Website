@@ -4,12 +4,10 @@ export default function About() {
 
     return (
         <>
-          <div className="background"> 
+          <section id="about" className="section">
             <div className="mainBody">
-              <NavBar />
               <div className="quoteContainer">
                 <div className="aboutMeContainer">
-                   <img className="myPhoto" src={myPortrait}></img>
                    <div className="aboutParagraph">
                      <p>Hi, I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
                       After 12+ years leading teams and coordinating events, I made the leap into web development through an immersive Fullstack Academy bootcamp. 
@@ -28,7 +26,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </>
     )
 }

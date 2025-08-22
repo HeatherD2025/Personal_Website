@@ -20,6 +20,7 @@
 .navbarBrand {
   font-family: 'JetBrains Mono', monospace;
   color: #FFF;
+  transition: color 0.2s ease, background-color 0.2s ease;
   display: flex;
   align-items: center;
   padding-top: 2.38rem;
@@ -49,6 +50,7 @@
 
 .navItems {
   color: #FFF;
+  transition: color 0.2s ease, background-color 0.2s ease;
   font-family: 'JetBrains Mono', monospace;
   display: inline-flex;
   align-items: center;
@@ -66,8 +68,13 @@
 }
 
 .navItem:hover {
-  background-color: rgba(138, 56, 245, 1);
-  box-shadow: 0 0 10px rgba(200, 180, 255, 1);
+  background-color: #100310 !important;
+  text-decoration: underline !important;
+}
+
+.navItem.active {
+  color: #8A38F5;
+  text-decoration: underline !important;
 }
 
 /* MOBILE STYLES */

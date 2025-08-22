@@ -4,6 +4,7 @@ export default function Projects() {
 
     return (
         <>
+        <section id="projects" className="section">
           <div className="background"> 
             <div className="mainBody">
               <NavBar />
@@ -12,6 +13,7 @@ export default function Projects() {
               </div>
             </div>
           </div>
+         </section>
         </>
     )
 }
