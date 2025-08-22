@@ -10,18 +10,33 @@ export default function Home() {
     <div className="background">
       <div className="pageGrid">
        <NavBar />
-        <div className="heroSection"></div>
-          <div className="mainContent">
-            <h5>I'm Heather and I don't know what to put here</h5>
-            <p>
-              Always learning, always building—ready to contribute to exciting,
-             mission-driven teams
-            </p>
+        <div className="linkBox">
+           <div className="accentLine1"></div>
+           <i className="fa-brands fa-github"></i>
+           <i className="fa-brands fa-linkedin"></i>
+           <i className="fa-regular fa-envelope"></i>
+        </div>
+        <div className="mainLandingText">
+            <p className="mainHeader">I'm Heather and I don't know what to put here</p>
+            <div className="mainContent">
+              <p>
+                Always learning, always building—ready to contribute to exciting,
+               mission-driven teams
+              </p>
+              <div className="accentLine2"></div>
+            </div>
+        </div>
+          <div className="myPhotoWrapper">
+            <img className="myPhoto" src={myPortrait}></img>
           </div>
-          <img className="myPhoto" src={myPortrait}></img>
+          <div className="accentBox1"></div>
+
+          <div className="accentLine3"></div>
+          <div className="accentBox2"></div>
         </div>
       </div>
-      </div>
+      <div className="floatingAccentBox2"></div>
+    </div>
     </>
   );
 }
