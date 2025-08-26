@@ -5,14 +5,20 @@ export default function About() {
     return (
         <>
           <section id="about" className="section">
-            <div className="mainBody">
-              <div className="quoteContainer">
-                <div className="aboutMeContainer">
-                   <div className="aboutParagraph">
-                     <p>Hi, I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
-                      After 12+ years leading teams and coordinating events, I made the leap into web development through an immersive Fullstack Academy bootcamp. 
-                      I’m now focused on building creative, user-first applications with responsive design across all known dimensions.
+            <div className="aboutMeHeaderContainer">
+              <div className="aboutMeHeader">about-me
+                <div className="accentLine4"></div>
+              </div>
+              <div className="floatingAccentBox3"></div>
+            </div>
 
+            <div className="aboutMeMain">
+              <div className="accentBox4"></div>
+              <div className="aboutParagraph">
+              <div>I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
+                After 12+ years leading teams and coordinating events, I made the leap into web development through an immersive Fullstack Academy bootcamp. 
+                I’m now focused on building creative, user-first applications with responsive design across all known dimensions.
+              </div>
                       <ul>
                         <li>Graduate of Fullstack Academy's immersive web development program (JavaScript, React, Node.js, Express, SQL)</li>
                         <li>Background in event operations, team leadership, and client-focused communication</li>
@@ -21,11 +27,8 @@ export default function About() {
                         <li>Collaborative mindset with a creative eye and strategic approach</li>
                       </ul>
                       Whether you’re building tools for Earth or beyond, I’d love to be part of your next mission. Let’s create something extraordinary—together.
-                     </p>
-                   </div>
-                </div>
-              </div>
             </div>
+           </div>
           </section>
         </>
     )

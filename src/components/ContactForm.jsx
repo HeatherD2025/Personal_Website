@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-number-input";
-import NavBar from "../components/Navbar";
+import NavBar from "./Navbar";
 // import SingleSelection from "../components/singleSelection";
 import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
