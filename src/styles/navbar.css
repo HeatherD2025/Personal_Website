@@ -32,6 +32,15 @@
   padding-left: 7.87rem;
 }
 
+.homeButton {
+  text-decoration: none;
+}
+
+.navbarBrand:hover {
+  text-decoration: underline;
+  color: #8A38F5;
+}
+
 .floatingAccentBox1 {
   width: 1.5rem;
   aspect-ratio: 1/1;
@@ -69,11 +78,14 @@
   gap: 0.25rem;
   width: 5.44rem;
   height: 1.5rem;
+  text-decoration: none;
+  color: #FFF
 }
 
 .navItem:hover {
   background-color: #100310 !important;
   text-decoration: underline !important;
+  color: #8A38F5;
 }
 
 .navItem.active {

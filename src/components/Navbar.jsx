@@ -12,7 +12,7 @@ export default function NavBar() {
   const navItems= [
     { label: "about-me", href: "#about" },
     { label: "projects", href: "#projects" },
-    { label: "contactForm", href: "#contactForm"},
+    { label: "contact", href: "#contactForm"},
   ];
 
   return (
@@ -21,9 +21,11 @@ export default function NavBar() {
       <div className="navbarInner">
 
         {/* left side- my name */}
-        <div className="navbarBrand">
-          <div className="floatingAccentBox1"></div>Heather DeLiso
-        </div>
+        <a className="homeButton" href="#home">
+          <div className="navbarBrand">
+            <div className="floatingAccentBox1"></div>Heather DeLiso
+          </div>
+        </a>
 
         {/* right side - hamburger and nav items */}
         <div className="navbarRight">
