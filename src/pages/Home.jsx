@@ -1,11 +1,22 @@
+import React from "react";
 import NavBar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import ContactForm from "../components/ContactForm";
 import "../styles/main.css";
 import myPortrait from "../assets/images/myPortrait.jpg";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
+  const handleNavClick = (path) => {
+    navigate(path);
+  };
+
+
   return (
     <>
     <div className="container">
@@ -15,9 +26,15 @@ export default function Home() {
             <section id="home" className="section"></section>
               <div className="linkBox">
                 <div className="accentLine1"></div>
-                  <i className="fa-brands fa-github"></i>
-                  <i className="fa-brands fa-linkedin"></i>
-                  <i className="fa-regular fa-envelope"></i>
+                  <a href="https://github.com/HeatherD2025" target="">
+                    <i className="fa-brands fa-github contactIcons"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/heatherdeliso/" target="">
+                    <i className="fa-brands fa-linkedin contactIcons"></i>
+                  </a>
+                  <a key={path} action onClick={() => handleNavClick(path)} target="">
+                    <i className="fa-regular fa-envelope contactIcons"></i>
+                  </a>
                 </div>
                 <div className="mainLandingText">
                 <p className="mainHeader">I'm Heather and I don't know what to put here</p>

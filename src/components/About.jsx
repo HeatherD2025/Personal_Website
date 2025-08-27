@@ -12,8 +12,11 @@ export default function About() {
               <div className="floatingAccentBox3"></div>
             </div>
 
-            <div className="aboutMeMain">
+            <div className="aboutMeMain">   
+
               <div className="accentBox4"></div>
+              <div className="floatingAccentBox4"></div>
+              
               <div className="aboutParagraph">
               <div>I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
                 After 12+ years leading teams and coordinating events, I made the leap into web development through an immersive Fullstack Academy bootcamp. 

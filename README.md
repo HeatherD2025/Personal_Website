@@ -1,1 +1,1 @@
-This is my personal website offering some background information on my interests and projects.  If there was an operation to emplain here, I would
+A site I built and designed to introduce myself, my current and past projects, as well as my cv.  Prospective employers may reach me via phone or email (provided on my cv) or send me a message using the email envelope icon.

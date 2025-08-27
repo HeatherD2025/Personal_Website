@@ -18,12 +18,12 @@
 }
 
 .navbarBrand {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: #FFF;
+  color: #fff;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: flex;
   align-items: center;
@@ -38,20 +38,19 @@
 
 .navbarBrand:hover {
   text-decoration: underline;
-  color: #8A38F5;
+  color: #8a38f5;
 }
 
 .floatingAccentBox1 {
   width: 1.5rem;
   aspect-ratio: 1/1;
-  background-color: #FFF; 
+  background-color: #fff;
 }
 
 .navbarRight {
   display: flex;
   align-items: center;
 }
-
 
 /* Hamburger icon (hidden desktop, visible mobile) */
 .hamburger {
@@ -62,9 +61,9 @@
 }
 
 .navItems {
-  color: #FFF;
+  color: #fff;
   transition: color 0.2s ease, background-color 0.2s ease;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   display: inline-flex;
   align-items: center;
   gap: 1.5rem;
@@ -79,17 +78,17 @@
   width: 5.44rem;
   height: 1.5rem;
   text-decoration: none;
-  color: #FFF
+  color: #fff;
 }
 
 .navItem:hover {
   background-color: #100310 !important;
   text-decoration: underline !important;
-  color: #8A38F5;
+  color: #8a38f5;
 }
 
 .navItem.active {
-  color: #8A38F5;
+  color: #8a38f5;
   text-decoration: underline !important;
 }
 
