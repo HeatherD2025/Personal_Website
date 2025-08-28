@@ -34,6 +34,8 @@
 
 .homeButton {
   text-decoration: none;
+  background: none;
+  border: none;
 }
 
 .navbarBrand:hover {
@@ -72,10 +74,12 @@
 }
 
 .navItem {
+  background: none;
+  border: none;
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  width: 5.44rem;
+  width: 6.44rem;
   height: 1.5rem;
   text-decoration: none;
   color: #fff;

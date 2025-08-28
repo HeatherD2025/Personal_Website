@@ -1,62 +1,100 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
 import ListGroup from "react-bootstrap/ListGroup";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function NavBar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/home";
+
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = () => {
-    setIsOpen(false); // close menu on nav click (mobile)
-  };
-
-  const navItems= [
-    { label: "about-me", href: "#about" },
-    { label: "projects", href: "#projects" },
-    { label: "contact", href: "#contactForm"},
+  const navItems = [
+    { label: "about-me", id: "about" },
+    { label: "projects", id: "projects" },
+    { label: "cv", id: "cv" },
   ];
 
   return (
     <nav className="navbar">
       <div className="container">
-      <div className="navbarInner">
+        <div className="navbarInner">
 
-        {/* left side- my name */}
-        <a className="homeButton" href="#home">
-          <div className="navbarBrand">
-            <div className="floatingAccentBox1"></div>Heather DeLiso
-          </div>
-        </a>
+          {/* left side - my name. If home, use hash anchor, if not, use route */}
+          {isHome ? (
+            <button
+              className="homeButton"
+              onClick={() => {
+                const el = document.getElementById("home");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                  setIsOpen(false);
+                }
+              }}
+            >
+              <div className="navbarBrand">
+                <div className="floatingAccentBox1"></div>
+                Heather DeLiso
+              </div>
+            </button>
+          ) : (
+            <button
+              className="homeButton"
+              onClick={() => navigate("/home")}
+            >
+              <div className="navbarBrand">
+                <div className="floatingAccentBox1"></div>
+                Heather DeLiso
+              </div>
+            </button>
+          )}
 
-        {/* right side - hamburger and nav items */}
-        <div className="navbarRight">
-          <div
-            className="hamburger"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle navigation menu"
-            role="button"
-            tabIndex={0}
-            onKeyPress={(e) => {
-              if (e.key === "Enter") setIsOpen(!isOpen);
-            }}
-          >
-            ☰
-          </div>
+          {/* right side - hamburger and nav items */}
+          <div className="navbarRight">
+            <div
+              className="hamburger"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation menu"
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") setIsOpen(!isOpen);
+              }}
+            >
+              ☰
+            </div>
 
-          {/* Navigation links container */}
-          <div className={`navItems ${isOpen ? "open" : ""}`}>
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
+          {/* hide hash anchor buttons if not at home */}
+            <div className={`navItems ${isOpen ? "open" : ""}`}>
+              {isHome ? (
+                navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    className="navItem"
+                    onClick={() => {
+                      const el = document.getElementById(item.id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth" });
+                        setIsOpen(false);
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </button>
+                ))
+              ) : (
+                <button
                   className="navItem"
-                  href={item.href}
-                  onClick={handleNavClick}
+                  onClick={() => {
+                    navigate("/home");
+                  }}
                 >
-                  {item.label}
-                </a>
-              ))}
+                </button>
+              )}
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </nav>
   );
