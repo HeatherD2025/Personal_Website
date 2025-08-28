@@ -5,6 +5,7 @@ export default function Projects() {
     return (
         <>
         <section id="projects" className="section">
+         <div className="sectionSpacer"></div>
           <div className="background"> 
             <div className="mainBody">
               <NavBar />

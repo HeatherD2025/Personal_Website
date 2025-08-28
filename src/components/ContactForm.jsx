@@ -102,6 +102,7 @@ const result = await emailjs.send(
   return (
     <>
      <section id="contactForm" className="section">
+      <div className="sectionSpacer"></div>
         <div className="mainBody">
           <NavBar />
           <div className="formContainer">

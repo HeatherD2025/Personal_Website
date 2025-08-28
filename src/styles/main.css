@@ -164,6 +164,10 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 
+.sectionSpacer {
+  height: 2rem;
+}
+
 
 /* about-me section */
 .accentBox3 {

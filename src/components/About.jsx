@@ -5,6 +5,7 @@ export default function About() {
     return (
         <>
           <section id="about" className="section">
+            <div className="sectionSpacer"></div>
             <div className="aboutMeHeaderContainer">
               <div className="aboutMeHeader">about-me
                 <div className="accentLine4"></div>
@@ -16,7 +17,7 @@ export default function About() {
 
               <div className="accentBox4"></div>
               <div className="floatingAccentBox4"></div>
-              
+
               <div className="aboutParagraph">
               <div>I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
                 After 12+ years leading teams and coordinating events, I made the leap into web development through an immersive Fullstack Academy bootcamp. 
