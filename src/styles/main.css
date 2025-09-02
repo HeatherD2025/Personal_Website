@@ -62,7 +62,6 @@ html {
   padding-top: 20.06rem;
   height: 2rem;
 }
-
 .mainHeader {
   font-size: 1.5rem;
   align-self: stretch;
@@ -72,7 +71,6 @@ html {
   color: #FFF;
   font-family: "JetBrains Mono";
 }
-
 .mainContent {
   padding-top: 1rem;
   font-size: 1rem;
@@ -80,7 +78,6 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-
 .accentLine2 {
   margin-top: 1.25rem;
   width: 20.3125rem;
@@ -98,11 +95,9 @@ html {
   padding: 10px;
   grid-row: 1 / 2;
 }
-
 .myPhoto {
   width: 100%;
 }
-
 .accentBox1 {
   max-height: 13.125rem;
   aspect-ratio: 1/1;
@@ -120,7 +115,7 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 
- /* section divider accent line and boxes */
+ /* top section divider accent line and boxes */
 .accentLine3 {
   margin-top: 52.06rem;
   grid-column: 6 / span  6;
@@ -130,12 +125,14 @@ html {
   background: #8A38F5;
   z-index: 8;
 }
-
 .accentBox2 {
   max-height: 2.63rem;
   aspect-ratio: 1/1;
   grid-column: 7 / span 1;
   grid-row: 1 / 2;
+  transform: translate(-.05rem, .07rem);
+  flex-shrink: 0;
+  flex-grow: 0;
   z-index: 8;
   margin-top: 49.44rem;
   background-image: 
@@ -143,11 +140,10 @@ html {
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
     linear-gradient(to left, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%);
-  background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
 }
-
 .floatingAccentBox2 {
   grid-column: 6 / span 1;
   grid-row: 1;             
@@ -155,20 +151,75 @@ html {
   aspect-ratio: 1 / 1;
   z-index: 5;
   margin-top: 50.81rem;
-  transform: translate(4rem, 0rem);
+  transform: translate(4rem, 0.01rem);
+    flex-shrink: 0;
+  flex-grow: 0;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
     linear-gradient(to left, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%);
-  background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
 }
 
  /* between section spacer */
 .sectionSpacer {
-  height: 5rem;
+  height: 2rem;
+}
+
+.betweenSectionContainer {
+  display: grid;
+}
+/* between section accents */
+.betweenSectionAccentLine {
+  margin-top: -15rem;
+  grid-column-start: 5;
+  grid-column: 6 / span  6;
+  grid-row: 1 / 2;
+  width: 29rem;
+  height: 0.0625rem;
+  background: #8A38F5;
+  z-index: 8;
+}
+.betweenSectionAccentBox {
+  max-height: 2.63rem;
+  aspect-ratio: 1/1;
+  grid-column: 7 / span 1;
+  grid-row: 1 / 2;
+  z-index: 8;
+  margin-top: -15rem;
+  transform: translate(14.8rem, -1.15rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-image: 
+    linear-gradient(to right, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%), 
+    linear-gradient(to left, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%);
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
+}
+.betweenSectionFloatingAccentBox {
+  grid-column: 6 / span 1;
+  grid-row: 1;             
+  width: 2.63rem;
+  aspect-ratio: 1 / 1;
+  z-index: 9;
+  margin-top: -15rem;
+  transform: translate(21.2rem, 0rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-image: 
+    linear-gradient(to right, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%), 
+    linear-gradient(to left, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%);
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
 }
 
 
@@ -177,6 +228,8 @@ html {
 .aboutMeHeaderSection {
   display: grid;
   grid-column: 9 / span 5 !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .aboutMeHeader {
   grid-column-start: 10 !important;
@@ -193,8 +246,8 @@ html {
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
-  margin-left: .75rem;
-  margin-right: .75rem;
+  margin-left: .25rem;
+  margin-right: .25rem;
   margin-bottom: 2rem;
   grid-column: 11 / span 5 !important;
   transform: translate(4rem, 2.3rem);
@@ -212,7 +265,7 @@ html {
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
   grid-column-end: 14 !important;
-  transform: translate(4.25rem, -1.46rem);
+  transform: translate(3.75rem, -1.46rem);
 }
 
 /* about me main */
@@ -258,17 +311,54 @@ transform: translate(0rem, -31rem);
   grid-column: 2 / span 14;
 }
 
-/* .aboutSection {
-  grid-column: 8 / span 3;
-} */
 
-.projectsSection {
 
+/* projectsSection  */
+
+/* header */
+.projectsHeaderSection {
+  display: grid;
+  grid-column: 2 / span 5 !important;
+}
+.projectsHeader {
+  grid-column-start: 1 !important;
+  transform: translate(7.4rem, 0rem);
+  color: #FFF;
+  font-family: "JetBrains Mono";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.accentLine5 {
+  width: 11.875rem;
+  height: 0.0625rem;
+  background: #8A38F5;
+  z-index: 8;
+  margin-bottom: 2rem;
+  grid-column: 2 / span 6 !important;
+  transform: translate(0rem, 2.3rem);
+}
+.floatingAccentBox5 {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  z-index: 8;
+  background-image: 
+    linear-gradient(to right, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%), 
+    linear-gradient(to left, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%);
+  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
+  grid-column-end: 4 !important;
+  transform: translate(2.76rem, -1.46rem);
 }
 
-.contactSection {
 
-}
+
+
+/* contact Section */
 
 
 @media (max-width: 768px) {

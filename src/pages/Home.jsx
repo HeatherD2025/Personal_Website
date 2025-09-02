@@ -69,7 +69,7 @@ export default function Home() {
               </div>
 
             {/* Section separater */}
-            <div className="sectionSpace"></div>
+            {/* <div className="sectionSpace"></div> */}
 
               {/* Projects section */}
               <div className="full-width-grid">
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
 
             {/* Section separater */}
-            <div className="sectionSpace"></div>
+            {/* <div className="sectionSpace"></div> */}
 
               {/* Contact Form section */}
               <div className="full-width-grid">
