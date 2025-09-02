@@ -1,8 +1,5 @@
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   width: 100%;
   margin: auto;
   background-color: #100310;
@@ -10,11 +7,22 @@
   z-index: 9;
 }
 
+.navbarGrid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1440px;
+  width: 100%;
+}
+
+
 .navbarInner {
+  grid-column: 2 / span 14; /* or adjust based on layout */
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  align-items: flex-end;
 }
 
 .navbarBrand {
@@ -26,10 +34,8 @@
   color: #fff;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: flex;
-  align-items: center;
   padding-top: 2.38rem;
   gap: 1em;
-  padding-left: 7.87rem;
 }
 
 .homeButton {
@@ -49,11 +55,6 @@
   background-color: #fff;
 }
 
-.navbarRight {
-  display: flex;
-  align-items: center;
-}
-
 /* Hamburger icon (hidden desktop, visible mobile) */
 .hamburger {
   font-size: 2rem;
@@ -66,17 +67,13 @@
   color: #fff;
   transition: color 0.2s ease, background-color 0.2s ease;
   font-family: "JetBrains Mono", monospace;
-  display: inline-flex;
-  align-items: center;
   gap: 1.5rem;
-  padding-top: 2.38rem;
-  padding-right: 7.87rem;
 }
 
 .navItem {
   background: none;
   border: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.25rem;
   width: 6.44rem;

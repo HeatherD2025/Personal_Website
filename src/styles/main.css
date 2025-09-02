@@ -1,3 +1,4 @@
+/* base page layout containers, grid, scroll-behavior */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
@@ -26,6 +27,7 @@ html {
   position: relative;
 }
 
+/* Leftmost contact links */
 .linkBox {
   z-index: 10;
   height: 35.75rem;
@@ -52,6 +54,8 @@ html {
   background: #8A38F5;
 }
 
+
+/* main intro section */
 .mainLandingText {
   grid-column: 2 / span 8;
   grid-row: 1 / 2;
@@ -70,7 +74,7 @@ html {
 }
 
 .mainContent {
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -84,8 +88,9 @@ html {
   background: #8A38F5;
 }
 
+ /* my photo section */
 .myPhotoWrapper {
-  grid-column: 11 / span 7;
+  grid-column: 10 / span 6;
   margin-top: 12.25rem;
   max-width: 400px;
   aspect-ratio: 1 / 1;
@@ -96,7 +101,6 @@ html {
 
 .myPhoto {
   width: 100%;
-  object-fit: cover;
 }
 
 .accentBox1 {
@@ -106,18 +110,17 @@ html {
   grid-row: 1 / 2;
   z-index: 8;
   margin-top: 30.5rem;
-  margin-bottom: 10.75rem;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
     linear-gradient(to left, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%);
   background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px;
-  
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
 }
 
+ /* section divider accent line and boxes */
 .accentLine3 {
   margin-top: 52.06rem;
   grid-column: 6 / span  6;
@@ -146,13 +149,12 @@ html {
 }
 
 .floatingAccentBox2 {
-  grid-column: 6 / span 1;  /* align with a specific column */
-  grid-row: 1;              /* place in a specific row if needed */
+  grid-column: 6 / span 1;
+  grid-row: 1;             
   width: 2.63rem;
   aspect-ratio: 1 / 1;
   z-index: 5;
   margin-top: 50.81rem;
-  /* Offset it slightly without breaking layout */
   transform: translate(4rem, 0rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
@@ -164,23 +166,21 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 
+ /* between section spacer */
 .sectionSpacer {
-  height: 2rem;
+  height: 5rem;
 }
 
 
 /* about-me section */
-.accentBox3 {
-  max-width: 27.5rem;
-  aspect-ratio: 1/1;
-  border: 1px, solid, #FFF; 
-  grid-column: 1 / span  3;
+/* header */
+.aboutMeHeaderSection {
+  display: grid;
+  grid-column: 9 / span 5 !important;
 }
-
 .aboutMeHeader {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 2.62rem;
+  grid-column-start: 10 !important;
+  transform: translate(7.4rem, 0rem);
   color: #FFF;
   font-family: "JetBrains Mono";
   font-size: 2.25rem;
@@ -188,28 +188,20 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-
-.aboutMeHeaderContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2rem;;
-  margin-top: 2rem;
-}
-
 .accentLine4 {
-  grid-row: 1 / 2;
   width: 11.875rem;
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
   margin-left: .75rem;
   margin-right: .75rem;
+  margin-bottom: 2rem;
+  grid-column: 11 / span 5 !important;
+  transform: translate(4rem, 2.3rem);
 }
-
 .floatingAccentBox3 {
   height: 1.5rem;
   aspect-ratio: 1/1;
-  grid-column: 2 / 12; 
   z-index: 8;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
@@ -219,23 +211,20 @@ html {
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-  margin-top: 1.5rem;
+  grid-column-end: 14 !important;
+  transform: translate(4.25rem, -1.46rem);
 }
 
-
+/* about me main */
 .accentBox4 {
   max-width: 27.5rem;
-  aspect-ratio: 1/1;
+  height: 25.5rem;
   border: 1px, solid, #fff;
-  margin-left: 1rem;
+  margin-left: 5.87rem;
 }
-
 .floatingAccentBox4 {
   height: 6.25rem;
   aspect-ratio: 1/1;
-  margin-left: 25rem;
-  z-index: 8;
-  transform: translate(.45rem, -4.55rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -244,17 +233,24 @@ html {
   background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-  margin-top: 1.5rem;
+  margin-left: 30.5rem;
+  transform: translate(-.2rem, -3.1rem);
 }
 
-.aboutMeMain {
-
+.full-width-grid {
+  grid-column: 1 /-1;
 }
 
 .aboutParagraph {
-  font-family: 'JetBrains Mono', monospace;
-  color: #FFF;
-  margin-left: 45.62rem;
+margin-left: 40rem;
+margin-right: 7.87rem;
+color: #FFF;
+font-family: "JetBrains Mono";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+transform: translate(0rem, -31rem);
 }
 
 .sectionSpace {
