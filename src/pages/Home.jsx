@@ -15,9 +15,13 @@ export default function Home() {
     <>
       <div className="container">
         <div className="background">
+          <NavBar />
           <div className="pageGrid">
-            <NavBar />
+
+           {/* Home page header section */}
             <section id="home" className="section"></section>
+
+           {/* Fixed links on left */}
             <div className="linkBox">
               <div className="accentLine1"></div>
               <a href="https://github.com/HeatherD2025" target=" ">
@@ -30,6 +34,9 @@ export default function Home() {
                 <i className="fa-regular fa-envelope contactIcons"></i>
               </Link>
             </div>
+
+
+            {/* Main header and photo */}
             <div className="mainLandingText">
               <p className="mainHeader">
                 I'm Heather and I don't know what to put here
@@ -42,26 +49,42 @@ export default function Home() {
                 <div className="accentLine2"></div>
               </div>
             </div>
-            {/* end of main text box  */}
             <div className="myPhotoWrapper">
               <img className="myPhoto" src={myPortrait}></img>
             </div>
-            <div className="accentBox1"></div>
+            {/* end of main */}
 
+            {/* Accent elements*/}
+            <div className="accentBox1"></div>
             <div className="accentLine3"></div>
             <div className="accentBox2"></div>
             <div className="floatingAccentBox2"></div>
-            <div className="sectionSpace">
-              <div className="aboutContainer">
+
+            {/* Section separater */}
+            <div className="sectionSpace"></div>
+
+              {/* About section */}
+              <div className="full-width-grid">
                 <About />
               </div>
-              <div className="projectsContainer">
+
+            {/* Section separater */}
+            <div className="sectionSpace"></div>
+
+              {/* Projects section */}
+              <div className="full-width-grid">
                 <Projects />
               </div>
-              <div className="contactContainer">
+
+            {/* Section separater */}
+            <div className="sectionSpace"></div>
+
+              {/* Contact Form section */}
+              <div className="full-width-grid">
                 <ContactForm />
               </div>
-            </div>
+
+            
           </div>
         </div>
       </div>

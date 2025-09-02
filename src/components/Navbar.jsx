@@ -18,7 +18,7 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="container">
+      <div className="navbarGrid">
         <div className="navbarInner">
 
           {/* left side - my name. If home, use hash anchor, if not, use route */}
@@ -51,7 +51,7 @@ export default function NavBar() {
           )}
 
           {/* right side - hamburger and nav items */}
-          <div className="navbarRight">
+
             <div
               className="hamburger"
               onClick={() => setIsOpen(!isOpen)}
@@ -89,11 +89,11 @@ export default function NavBar() {
                   onClick={() => {
                     navigate("/home");
                   }}
+                  style={{gridColumn: "1 / -1" }}
                 >
                 </button>
               )}
             </div>
-          </div>
         </div>
       </div>
     </nav>
