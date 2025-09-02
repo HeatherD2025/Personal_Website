@@ -8,7 +8,6 @@ export default function About() {
           <section id="about" className="section">
             <div className="sectionSpacer"></div>
 
-
                 <div className="aboutMeHeaderSection">
                     <div className="aboutMeHeader">about-me</div>
                       <div className="accentLine4"></div>
@@ -32,8 +31,6 @@ export default function About() {
                        </ul>
                       Whether you’re building tools for Earth or beyond, I’d love to be part of your next mission. Let’s create something extraordinary—together.
                     </div>
-                  {/* </div>  */}
-             {/* </div> */}
           </section>
         </>
     )
