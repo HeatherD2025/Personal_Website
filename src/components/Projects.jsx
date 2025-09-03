@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
 import postgresql from "../assets/images/projects/OPSG/postgresqlLogo.png";
 import prisma from "../assets/images/projects/OPSG/prismalogo.png";
 import react from "../assets/images/projects/OPSG/reactlogo.png"
 
 export default function Projects() {
+  const navigate = useNavigate();
 
     return (
         <>
@@ -23,8 +25,8 @@ export default function Projects() {
               </div>
 
           <div className="mainBody">
-
-              <div className="firstProjectContainer">
+             <a onClick={() => navigate("/ProjectDetail")}>
+              <div className="firstProjectContainer" >
                   <img className="firstProjectImage" src={OPSG} ></img>
 
                 <div className="firstDividerLine"></div>
@@ -38,6 +40,7 @@ export default function Projects() {
                   </div>  
                 </div>
               </div>
+            </a>
           </div>
          </section>
         </>
