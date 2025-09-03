@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../components/Navbar";
+// import NavBar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import CV from "../components/CV";
@@ -15,26 +15,11 @@ export default function Home() {
     <>
       <div className="container">
         <div className="background">
-          <NavBar />
+          {/* <NavBar /> */}
           <div className="pageGrid">
 
            {/* Home page header section */}
             <section id="home" className="section"></section>
-
-           {/* Fixed links on left */}
-            <div className="linkBox">
-              <div className="accentLine1"></div>
-              <a href="https://github.com/HeatherD2025" target=" ">
-                <i className="fa-brands fa-github contactIcons"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/heatherdeliso/" target=" ">
-                <i className="fa-brands fa-linkedin contactIcons"></i>
-              </a>
-              <Link to="/contactForm" target="">
-                <i className="fa-regular fa-envelope contactIcons"></i>
-              </Link>
-            </div>
-
 
             {/* Main header and photo */}
             <div className="mainLandingText">

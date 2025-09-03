@@ -101,7 +101,7 @@ const result = await emailjs.send(
 
   return (
     <>
-        <div className="mainBody">
+        <div className="container">
           <NavBar />
           <div className="formContainer">
             <div className="container">

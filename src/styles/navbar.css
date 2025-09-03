@@ -91,7 +91,45 @@
 .navItem.active {
   color: #8a38f5;
   text-decoration: underline !important;
+  gap: 0.25rem;
+  width: 6.44rem;
+  height: 1.5rem;
 }
+a.navItem {
+  gap: 0.25rem;
+  width: 6.44rem;
+  height: 1.5rem;
+}
+
+/* Leftmost contact links */
+.linkBox {
+  z-index: 1;
+  margin-left: 1rem;
+  margin-top: 30rem;
+  height: 35.75rem;
+  width: 1.5rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactIcons {
+  color: #FFF;
+}
+
+.contactIcons:hover {
+  color: #8A38F5;;
+}
+
+.accentLine1 {
+  width: 0.0625rem;
+  height: 27.5rem;
+  grid-column: 1 / 2;
+  background: #8A38F5;
+}
+
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {

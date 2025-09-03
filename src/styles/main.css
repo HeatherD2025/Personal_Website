@@ -28,7 +28,7 @@ html {
 }
 
 /* Leftmost contact links */
-.linkBox {
+/* .linkBox {
   z-index: 10;
   height: 35.75rem;
   width: 1.5rem;
@@ -52,7 +52,7 @@ html {
   height: 27.5rem;
   grid-column: 1 / 2;
   background: #8A38F5;
-}
+} */
 
 
 /* main intro section */
@@ -401,6 +401,14 @@ transform: translate(0rem, -31rem);
   font-weight: 400;
   line-height: normal;
 }
+
+a {
+  text-decoration: none;
+}
+a * {
+  text-decoration: none;
+}
+
 .toolIcons {
   display: flex;
   align-items: center;
