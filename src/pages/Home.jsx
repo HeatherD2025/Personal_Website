@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import ContactForm from "../components/ContactForm";
+import CV from "../components/CV";
 import "../styles/main.css";
 import myPortrait from "../assets/images/myPortrait.jpg";
 import { useNavigate } from "react-router-dom";
@@ -81,7 +81,7 @@ export default function Home() {
 
               {/* Contact Form section */}
               <div className="full-width-grid">
-                <ContactForm />
+                <CV />
               </div>
 
             
