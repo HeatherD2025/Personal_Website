@@ -27,32 +27,11 @@ html {
   position: relative;
 }
 
-/* Leftmost contact links */
-/* .linkBox {
-  z-index: 10;
-  height: 35.75rem;
-  width: 1.5rem;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+ /* between section spacer */
+.sectionSpacer {
+  grid-row: 10;
+  grid-column: 2 / span 14;
 }
-
-.contactIcons {
-  color: #FFF;
-}
-
-.contactIcons:hover {
-  color: #8A38F5;;
-}
-
-.accentLine1 {
-  width: 0.0625rem;
-  height: 27.5rem;
-  grid-column: 1 / 2;
-  background: #8A38F5;
-} */
 
 
 /* main intro section */
@@ -86,8 +65,14 @@ html {
 }
 
  /* my photo section */
+.photoAndBoxWrapper {
+  position: absolute;
+  grid-column-start: 10;
+  flex-basis: auto;
+  flex-shrink: 0;
+}
 .myPhotoWrapper {
-  grid-column: 10 / span 6;
+  display: flex;
   margin-top: 12.25rem;
   max-width: 400px;
   aspect-ratio: 1 / 1;
@@ -101,10 +86,10 @@ html {
 .accentBox1 {
   max-height: 13.125rem;
   aspect-ratio: 1/1;
-  grid-column: 14 / span 3;
   grid-row: 1 / 2;
   z-index: 8;
-  margin-top: 30.5rem;
+  flex-shrink: 0;
+  transform: translate(16rem, -6.6rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -115,7 +100,7 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 
- /* top section divider accent line and boxes */
+ /* top section divider accent line (boxes on left) */
 .accentLine3 {
   margin-top: 52.06rem;
   grid-column: 6 / span  6;
@@ -124,6 +109,7 @@ html {
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
+  margin-bottom: 3rem;
 }
 .accentBox2 {
   max-height: 2.63rem;
@@ -131,9 +117,6 @@ html {
   grid-column: 7 / span 1;
   grid-row: 1 / 2;
   transform: translate(-.05rem, .07rem);
-  flex-shrink: 0;
-  flex-grow: 0;
-  z-index: 8;
   margin-top: 49.44rem;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
@@ -145,15 +128,12 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 .floatingAccentBox2 {
-  grid-column: 6 / span 1;
-  grid-row: 1;             
+  position: absolute;
+  grid-column: 6 / span 1;         
   width: 2.63rem;
   aspect-ratio: 1 / 1;
-  z-index: 5;
   margin-top: 50.81rem;
   transform: translate(4rem, 0.01rem);
-    flex-shrink: 0;
-  flex-grow: 0;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -164,17 +144,13 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 
- /* between section spacer */
-.sectionSpacer {
-  height: 2rem;
-}
-
+ /* between section accents (boxes on right)*/
 .betweenSectionContainer {
   display: grid;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
 }
-/* between section accents */
 .betweenSectionAccentLine {
-  margin-top: -15rem;
   grid-column-start: 5;
   grid-column: 6 / span  6;
   grid-row: 1 / 2;
@@ -187,10 +163,8 @@ html {
   max-height: 2.63rem;
   aspect-ratio: 1/1;
   grid-column: 7 / span 1;
-  grid-row: 1 / 2;
   z-index: 8;
-  margin-top: -15rem;
-  transform: translate(14.8rem, -1.15rem);
+  transform: translate(14.8rem, -4rem);
   flex-shrink: 0;
   flex-grow: 0;
   background-image: 
@@ -208,7 +182,6 @@ html {
   width: 2.63rem;
   aspect-ratio: 1 / 1;
   z-index: 9;
-  margin-top: -15rem;
   transform: translate(21.2rem, 0rem);
   flex-shrink: 0;
   flex-grow: 0;
@@ -223,17 +196,86 @@ html {
 }
 
 
-/* about-me section */
-/* header */
-.aboutMeHeaderSection {
+/* between sections accents (boxes on left) */
+.betweenSectionContainer2 {
   display: grid;
-  grid-column: 9 / span 5 !important;
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+}
+.betweenSectionAccentLine2 {
+  grid-column-start: 5;
+  grid-column: 6 / span  6;
+  grid-row: 1 / 2;
+  width: 29rem;
+  height: 0.0625rem;
+  background: #8A38F5;
+  z-index: 8;
+}
+.betweenSectionAccentBox2 {
+  max-height: 2.63rem;
+  aspect-ratio: 1/1;
+  grid-column: 5 / span 1;
+  transform: translate(11.25rem, -1.25rem);
+  z-index: 8;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-image: 
+    linear-gradient(to right, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%), 
+    linear-gradient(to left, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%);
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
+}
+.betweenSectionFloatingAccentBox2 {
+  grid-column: 4 / span 1;
+  grid-row: 1;             
+  width: 2.63rem;
+  aspect-ratio: 1 / 1;
+  z-index: 9;
+  transform: translate(19.9rem, -2.55rem);
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-image: 
+    linear-gradient(to right, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%), 
+    linear-gradient(to left, #FFF 50%, transparent 50%), 
+    linear-gradient(to bottom, #FFF 50%, transparent 50%);
+  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
+}
+
+
+
+
+/* about-me section */
+.aboutMeContainer {
+  grid-column: 1 / -1;
+  display: contents;
+}
+.full-width-grid {
+  grid-column: 1 /-1;
+}
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+/* about-me header */
+.aboutMeHeaderWrapper {
+  grid-column: 9 / span 6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .aboutMeHeader {
-  grid-column-start: 10 !important;
-  transform: translate(7.4rem, 0rem);
   color: #FFF;
   font-family: "JetBrains Mono";
   font-size: 2.25rem;
@@ -245,17 +287,14 @@ html {
   width: 11.875rem;
   height: 0.0625rem;
   background: #8A38F5;
-  z-index: 8;
-  margin-left: .25rem;
-  margin-right: .25rem;
-  margin-bottom: 2rem;
-  grid-column: 11 / span 5 !important;
-  transform: translate(4rem, 2.3rem);
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 1.75rem;
 }
 .floatingAccentBox3 {
   height: 1.5rem;
   aspect-ratio: 1/1;
-  z-index: 8;
+  margin-top: 1.75rem;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -264,20 +303,30 @@ html {
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-  grid-column-end: 14 !important;
-  transform: translate(3.75rem, -1.46rem);
 }
 
-/* about me main */
+/* about-me main body */
+.boxWrapper {
+  grid-column: 2 / span 6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 .accentBox4 {
+  position: relative;
+  width: 100%;
   max-width: 27.5rem;
-  height: 25.5rem;
-  border: 1px, solid, #fff;
-  margin-left: 5.87rem;
+  aspect-ratio: 5 / 4.5;
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
 .floatingAccentBox4 {
-  height: 6.25rem;
+  position: absolute;
+  bottom: -13%;
+  right: -3%;
+  width: 6.25rem;
   aspect-ratio: 1/1;
+  box-sizing: border-box;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -286,43 +335,44 @@ html {
   background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-  margin-left: 30.5rem;
-  transform: translate(-.2rem, -3.1rem);
 }
-
-.full-width-grid {
-  grid-column: 1 /-1;
-}
-
 .aboutParagraph {
-margin-left: 40rem;
-margin-right: 7.87rem;
-color: #FFF;
-font-family: "JetBrains Mono";
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-transform: translate(0rem, -31rem);
+  grid-column: 9 / span 6;
+  color: #FFF;
+  font-family: "JetBrains Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 38rem;
 }
-
-.sectionSpace {
-  grid-row: 10;
-  grid-column: 2 / span 14;
-}
-
 
 
 /* projectsSection  */
-
-/* header */
-.projectsHeaderSection {
+.projectsContainer {
+  grid-column: 1 / -1;
+  display: contents;
+}
+.full-width-grid {
+  grid-column: 1 /-1;
+}
+.projectsGrid {
   display: grid;
-  grid-column: 2 / span 5 !important;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+/* projects header */
+.projectsHeaderWrapper {
+  grid-column: 2 / span 6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .projectsHeader {
-  grid-column-start: 1 !important;
-  transform: translate(7.4rem, 0rem);
   color: #FFF;
   font-family: "JetBrains Mono";
   font-size: 2.25rem;
@@ -334,15 +384,14 @@ transform: translate(0rem, -31rem);
   width: 11.875rem;
   height: 0.0625rem;
   background: #8A38F5;
-  z-index: 8;
-  margin-bottom: 2rem;
-  grid-column: 2 / span 6 !important;
-  transform: translate(0rem, 2.3rem);
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 1.75rem;
 }
 .floatingAccentBox5 {
   height: 1.5rem;
   aspect-ratio: 1/1;
-  z-index: 8;
+  margin-top: 1.75rem;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -351,19 +400,25 @@ transform: translate(0rem, -31rem);
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-  grid-column-end: 4 !important;
-  transform: translate(2.76rem, -1.46rem);
 }
 
 
 /* projects main section */
+.projectsWrapper {
+  grid-column: 2 / span 13;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .firstProjectContainer {
-  width: 20.3125rem;
-  height: 30.1875rem;
+  max-width: 20.3125rem;
+  width: 100%;
+  max-height: 30.1875rem;
+  height: 100%;
   flex-shrink: 0;
   border: solid 1px #FFF;
-  margin-left: 7.87rem;
-  margin-top: 5.87rem;
+  margin-top: 2rem;
 }
 .firstProjectImage {
  z-index: 0;

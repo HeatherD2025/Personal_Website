@@ -20,22 +20,20 @@
 
 .navbarInner {
   grid-column: 2 / span 14; /* or adjust based on layout */
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two parts: left for brand and right for nav links */
+  justify-items: start;  /* Align items to the left side */
+  align-items: center; 
 }
 
 .navbarBrand {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   color: #fff;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: flex;
   padding-top: 2.38rem;
-  gap: 1em;
+  gap: 0.75em;
 }
 
 .homeButton {
@@ -55,7 +53,37 @@
   background-color: #fff;
 }
 
-/* Hamburger icon (hidden desktop, visible mobile) */
+/* Right side nav links (hamburger icon + nav items) */
+.navItems {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  padding-top: 2.38rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem; 
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: #100310;
+  color: #8a38f5;
+  text-decoration: underline;
+}
+
+.navItem.active {
+  color: #8a38f5;
+  text-decoration: underline;
+}
+
 .hamburger {
   font-size: 2rem;
   color: white;
@@ -63,73 +91,33 @@
   display: none;
 }
 
-.navItems {
-  color: #fff;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  font-family: "JetBrains Mono", monospace;
-  gap: 1.5rem;
-}
-
-.navItem {
-  background: none;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  width: 6.44rem;
-  height: 1.5rem;
-  text-decoration: none;
-  color: #fff;
-}
-
-.navItem:hover {
-  background-color: #100310 !important;
-  text-decoration: underline !important;
-  color: #8a38f5;
-}
-
-.navItem.active {
-  color: #8a38f5;
-  text-decoration: underline !important;
-  gap: 0.25rem;
-  width: 6.44rem;
-  height: 1.5rem;
-}
-a.navItem {
-  gap: 0.25rem;
-  width: 6.44rem;
-  height: 1.5rem;
-}
-
-/* Leftmost contact links */
 .linkBox {
-  z-index: 1;
-  margin-left: 1rem;
-  margin-top: 30rem;
-  height: 35.75rem;
-  width: 1.5rem;
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-left: 1rem;
+  margin-top: 30rem;
+  height: 35.75rem;
+  width: 1.5rem;
+  z-index: 1;
 }
 
 .contactIcons {
   color: #FFF;
+  margin: 0.5rem 0; /* Added margin for spacing between icons */
 }
 
 .contactIcons:hover {
-  color: #8A38F5;;
+  color: #8A38F5;
 }
 
 .accentLine1 {
   width: 0.0625rem;
   height: 27.5rem;
-  grid-column: 1 / 2;
   background: #8A38F5;
 }
-
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
@@ -140,7 +128,7 @@ a.navItem {
   .navItems {
     display: none;
     position: absolute;
-    top: 5.5rem; /* Below navbar */
+    top: 5.5rem;
     right: 0;
     background-color: #000;
     flex-direction: column;
