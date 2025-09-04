@@ -4,18 +4,25 @@ import "../styles/main.css";
 export default function About() {
 
     return (
-        <>
-          <section id="about" className="section">
-            <div className="sectionSpacer"></div>
+      <>
+        <section id="about" className="section">
+          <div className="sectionSpacer"></div>
 
-                <div className="aboutMeHeaderSection">
+            <div className="aboutMeContainer">
+
+               <div className="aboutGrid">
+                <div className="aboutMeHeaderWrapper">
                     <div className="aboutMeHeader">about-me</div>
                       <div className="accentLine4"></div>
                       <div className="floatingAccentBox3"></div>
                 </div>
+            
+                {/* main section */}
+                <div className="boxWrapper">
+                  <div className="accentBox4"></div>
+                  <div className="floatingAccentBox4"></div>
+                </div>
 
-                <div className="accentBox4"></div>
-                <div className="floatingAccentBox4"></div>
                   <div className="aboutParagraph">
                       <div>
                         I’m a fullstack developer with a background in design, operations, and hospitality—and a lifelong curiosity about science, technology, and how things work.
@@ -30,7 +37,14 @@ export default function About() {
                         <li>Collaborative mindset with a creative eye and strategic approach</li>
                        </ul>
                       Whether you’re building tools for Earth or beyond, I’d love to be part of your next mission. Let’s create something extraordinary—together.
-                    </div>
+                  </div>
+              </div>
+                  <div className="betweenSectionContainer">
+                    <div className="betweenSectionAccentLine"></div>
+                    <div className="betweenSectionAccentBox"></div>
+                    <div className="betweenSectionFloatingAccentBox"></div>
+                  </div>
+            </div>
           </section>
         </>
     )

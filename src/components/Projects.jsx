@@ -10,37 +10,79 @@ export default function Projects() {
     return (
         <>
         <section id="projects" className="section">
-         <div className="sectionSpacer"></div>
-                     {/* Between section accent elements*/}
-          <div className="betweenSectionContainer">
-            <div className="betweenSectionAccentLine"></div>
-            <div className="betweenSectionAccentBox"></div>
-            <div className="betweenSectionFloatingAccentBox"></div>
-          </div>
 
-              <div className="projectsHeaderSection">
+          <div className="projectsContainer">
+
+            <div className="projectsGrid">
+              <div className="projectsHeaderWrapper">
                 <div className="projectsHeader">projects</div>
                   <div className="accentLine5"></div>
                   <div className="floatingAccentBox5"></div>
               </div>
 
-          <div className="mainBody">
-             <a onClick={() => navigate("/ProjectDetail")}>
-              <div className="firstProjectContainer" >
-                  <img className="firstProjectImage" src={OPSG} ></img>
+             {/* main section */}
+              <div className="projectsWrapper">
+                <a onClick={() => navigate("/ProjectDetail")}>
+                  <div className="firstProjectContainer" >
+                    <img className="firstProjectImage" src={OPSG} ></img>
 
-                <div className="firstDividerLine"></div>
-                <div className="firstInfoContainer">
-                  <div className="firstProjectTitle">On Point Solutions Group</div>
-                  <div className="firstProjectDescription">Medical credentialing company site and bill payment portal</div>
-                  <div className="toolIcons">
-                     <img className="toolIcon1" src={react} alt="react logo"></img>
-                     <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
-                     <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
-                  </div>  
-                </div>
+                    <div className="firstDividerLine"></div>
+
+                    <div className="firstInfoContainer">
+
+                      <div className="firstProjectTitle">On Point Solutions Group</div>
+                      <div className="firstProjectDescription">Medical credentialing company site and bill payment portal</div>
+                      
+                      <div className="toolIcons">
+                        <img className="toolIcon1" src={react} alt="react logo"></img>
+                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                      </div>  
+                    </div>
+                  </div>
+                </a>
+
+                <a onClick={() => navigate("/ProjectDetail")}>
+                  <div className="firstProjectContainer" >
+                      <img className="firstProjectImage" src={OPSG} ></img>
+
+                    <div className="firstDividerLine"></div>
+                    <div className="firstInfoContainer">
+                      <div className="firstProjectTitle">Quarky</div>
+                      <div className="firstProjectDescription">News, discussion, and podcasts - all centered around science</div>
+                      <div className="toolIcons">
+                        <img className="toolIcon1" src={react} alt="react logo"></img>
+                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                      </div>  
+                    </div>
+                  </div>
+                </a>
+
+                <a onClick={() => navigate("/ProjectDetail")}>
+                  <div className="firstProjectContainer" >
+                      <img className="firstProjectImage" src={OPSG} ></img>
+
+                    <div className="firstDividerLine"></div>
+                    <div className="firstInfoContainer">
+                      <div className="firstProjectTitle">On Point Solutions Group</div>
+                      <div className="firstProjectDescription">Medical credentialing company site and bill payment portal</div>
+                      <div className="toolIcons">
+                        <img className="toolIcon1" src={react} alt="react logo"></img>
+                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                      </div>  
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
+            </div>
+
+                  <div className="betweenSectionContainer2">
+                    <div className="betweenSectionAccentLine2"></div>
+                    <div className="betweenSectionAccentBox2"></div>
+                    <div className="betweenSectionFloatingAccentBox2"></div>
+                  </div>
           </div>
          </section>
         </>

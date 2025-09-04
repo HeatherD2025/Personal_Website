@@ -1,6 +1,6 @@
-import NavBar from "./Navbar";
 
-export default function ProjectDetail() {
+
+export default function OPSGProjectDetail() {
 
 return (
    <>
