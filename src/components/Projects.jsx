@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
-import postgresql from "../assets/images/projects/OPSG/postgresqlLogo.png";
-import prisma from "../assets/images/projects/OPSG/prismalogo.png";
-import react from "../assets/images/projects/OPSG/reactlogo.png"
+import postgresql from "../assets/images/icons/postgresqlLogo.png";
+import prisma from "../assets/images/icons/prismalogo.png";
+import react from "../assets/images/icons/reactlogo.png"
 
 export default function Projects() {
   const navigate = useNavigate();
+  const scrollToTop =() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  };
 
     return (
         <>
@@ -22,11 +25,16 @@ export default function Projects() {
 
              {/* main section */}
               <div className="projectsWrapper">
-                <a onClick={() => navigate("/ProjectDetail")}>
+                <a onClick={() => {
+                  navigate("/OPSGProjectDetail");
+                  scrollToTop();
+                }}>
+
+                  
                   <div className="firstProjectContainer" >
                     <img className="firstProjectImage" src={OPSG} ></img>
 
-                    <div className="firstDividerLine"></div>
+                    <divclassName="firstDividerLine"></div>
 
                     <div className="firstInfoContainer">
 
@@ -34,9 +42,9 @@ export default function Projects() {
                       <div className="firstProjectDescription">Medical credentialing company site and bill payment portal</div>
                       
                       <div className="toolIcons">
-                        <img className="toolIcon1" src={react} alt="react logo"></img>
-                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
-                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                        <img className="toolIcon" src={react} alt="react logo"></img>
+                        <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon" src={postgresql} alt="postgresql logo"></img>
                       </div>  
                     </div>
                   </div>
@@ -51,9 +59,9 @@ export default function Projects() {
                       <div className="firstProjectTitle">Quarky</div>
                       <div className="firstProjectDescription">News, discussion, and podcasts - all centered around science</div>
                       <div className="toolIcons">
-                        <img className="toolIcon1" src={react} alt="react logo"></img>
-                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
-                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                        <img className="toolIcon" src={react} alt="react logo"></img>
+                        <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon" src={postgresql} alt="postgresql logo"></img>
                       </div>  
                     </div>
                   </div>
@@ -68,21 +76,22 @@ export default function Projects() {
                       <div className="firstProjectTitle">On Point Solutions Group</div>
                       <div className="firstProjectDescription">Medical credentialing company site and bill payment portal</div>
                       <div className="toolIcons">
-                        <img className="toolIcon1" src={react} alt="react logo"></img>
-                        <img className="toolIcon2" src={prisma} alt="prisma logo"></img>
-                        <img className="toolIcon3" src={postgresql} alt="postgresql logo"></img>
+                        <img className="toolIcon" src={react} alt="react logo"></img>
+                        <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                        <img className="toolIcon" src={postgresql} alt="postgresql logo"></img>
                       </div>  
                     </div>
                   </div>
                 </a>
               </div>
-            </div>
 
-                  <div className="betweenSectionContainer2">
+              <div className="betweenSectionContainer">
                     <div className="betweenSectionAccentLine2"></div>
                     <div className="betweenSectionAccentBox2"></div>
                     <div className="betweenSectionFloatingAccentBox2"></div>
-                  </div>
+              </div>
+
+            </div>
           </div>
          </section>
         </>

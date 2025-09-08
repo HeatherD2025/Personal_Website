@@ -35,15 +35,15 @@ export default function Home() {
             {/* Main header and photo */}
               <div className="mainLandingText">
                 <p className="mainHeader">
-                  I'm Heather and I don't know what to put here
+                  I'm Heather and I'm a nerd
                 </p>
-                <div className="mainContent">
-                  <p>
-                    Always learning, always building—ready to contribute to
+                
+                  <p className="mainContent">
+                    Always learning, always building — ready to contribute to
                     exciting, mission-driven teams
                   </p>
                   <div className="accentLine2"></div>
-                </div>
+    
               </div>
               <div className="photoAndBoxWrapper">
                 <div className="myPhotoWrapper">
@@ -54,10 +54,11 @@ export default function Home() {
             {/* end of main */}
 
             {/* Accent elements below main*/}
+            <div className="betweenSectionContainerTop">
               <div className="accentLine3"></div>
               <div className="accentBox2"></div>
               <div className="floatingAccentBox2"></div>
-
+            </div>
 
             {/* Section separater */}
             <div className="sectionSpacer"></div>
