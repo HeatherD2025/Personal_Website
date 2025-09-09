@@ -1,0 +1,20 @@
+form {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  color: #fff;
+}
+.formContainer {
+  max-width: 70%;
+  margin-top: 10rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: solid 1px #8A38F5;
+  color: #FFF;
+  padding: 20px;
+}
+.contactFormGreeting {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}

@@ -27,20 +27,21 @@ export default function About() {
             
                 {/* main section */}
                 <div className="boxWrapper">
-                  <div className="accentBox4"></div>
-                  <div className="floatingAccentBox4"></div>
+                  <div className="accentBox4">                    
+                    <div className="floatingAccentBox4"></div>
+                  </div>
                 </div>
 
                   <div className="aboutParagraphWrapper">
                       <div className="aboutParagraph">
-                        I was a curious kid - passionate about technology and science with a knack for visualizing functionality and design. 
+                        I was a curious kid - passionate about technology and science with a knack for visualizing functionality and aesthetic. 
                         Naturally inquisitive and excited to understand cause-and-effect processes, I've always had a persistant drive to learn something new. 
                         After 12+ years leading teams and coordinating events, I was craving a new challenge, so I made the leap into web development 
                         through an immersive Fullstack Academy bootcamp. Now, as a fullstack developer with a background in design, operations, and hospitality,
                         I'm focused on building user-first applications with responsive design. Ready to join a new team helping create the extraordinary!
                       </div>
                        <div className="bulletPointWrapper">
-                          <div className="bulletPoint">Graduate of Fullstack Academy's immersive web development program (JavaScript, React, Node.js, Express, SQL)</div>
+                          <div className="bulletPoint">Graduate of Fullstack Academy's immersive web development program</div>
                             <div className="toolsContainer">
                               <img className="toolIcon" src={html} alt="html logo"></img>
                               <img className="toolIcon" src={css} alt="css logo"></img>
