@@ -34,7 +34,7 @@ export default function Projects() {
                   <div className="firstProjectContainer" >
                     <img className="firstProjectImage" src={OPSG} ></img>
 
-                    <divclassName="firstDividerLine"></div>
+                    <div className="firstDividerLine"></div>
 
                     <div className="firstInfoContainer">
 

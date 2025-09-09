@@ -35,16 +35,20 @@ html {
 
 
 /* main intro section */
+/* .mainWrapper {
+  grid-template-columns: repeat(14, 1fr);
+  grid-column: 2 / span 14; 
+  display: grid;
+  max-width: 1440px;
+} */
 .mainLandingText {
-  grid-column: 2 / span 7;
-  grid-row: 1 / 2;
+  grid-column: 2 / span 8;
   padding-top: 20.06rem;
   height: 2rem;
 }
 .mainHeader {
-  grid-column: 2 / span 3;
   font-size: 1.5rem;
-  align-self: stretch;
+  /* align-self: stretch; */
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -59,6 +63,7 @@ html {
   line-height: normal;
 }
 .accentLine2 {
+  /* display: grid; */
   margin-top: 1.25rem;
   width: 20.3125rem;
   height: 0.0625rem;
@@ -67,30 +72,34 @@ html {
 
  /* my photo section */
 .photoAndBoxWrapper {
-  position: absolute;
-  grid-column-start: 10;
-  flex-basis: auto;
-  flex-shrink: 0;
+ grid-column: 11 / span 6;
 }
 .myPhotoWrapper {
-  display: flex;
-  margin-top: 12.25rem;
-  max-width: 400px;
+  /* display: grid; */
+  position: relative;
+  /* grid-column: 12 / span 4; */
+  margin-top: 10.25rem;
+  max-width: 26rem;
   aspect-ratio: 1 / 1;
   border: 1px, solid, #FFF; 
   padding: 10px;
-  grid-row: 1 / 2;
+  /* grid-row: 1 / 2; */
+  background-image: url("../assets//images/myPortrait.jpg");
+  background-size: cover;
 }
 .myPhoto {
   width: 100%;
+  position: relative;
 }
 .accentBox1 {
+  position: relative;
   max-height: 13.125rem;
   aspect-ratio: 1/1;
-  grid-row: 1 / 2;
+  grid-column: 13 / span 3;
   z-index: 8;
   flex-shrink: 0;
-  transform: translate(16rem, -6.6rem);
+  bottom: 12.75%;
+  left: 62%;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -104,6 +113,7 @@ html {
  /* first section divider accent after intro (boxes on left) */
  .betweenSectionContainerTop {
   grid-column: 6 / span  6;
+  transform: translateY(-5rem);
  }
 .accentLine3 {
   grid-column: 6 / span  6;
@@ -112,15 +122,13 @@ html {
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
-  margin-top: 30.06rem;
-  margin-bottom: 3rem;
 }
 .accentBox2 {
   max-height: 2.63rem;
   aspect-ratio: 1/1;
   grid-column: 7 / span 1;
   grid-row: 1 / 2;
-  transform: translate(6.5rem, -5.65rem);
+  transform: translate(6.5rem, -2.65rem);
   z-index: 8;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
@@ -137,7 +145,7 @@ html {
   width: 2.63rem;
   aspect-ratio: 1 / 1;
   z-index: 1;
-  transform: translate(5.25rem, -7rem);
+  transform: translate(5.25rem, -4rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -155,7 +163,7 @@ html {
   max-width: 2000px;
   grid-column-start: 6;
   grid-column-end: 10;
-  margin-top: 12rem;
+  margin-top: 9.5rem;
 } 
 .betweenSectionAccentLine {
   grid-column: 6 / span  6;
@@ -201,7 +209,6 @@ html {
 /* third between sections accents (boxes on left) */
 .betweenSectionAccentLine2 {
   grid-column: 6 / span  6;
-  margin-top: 5rem;
   width: 30rem;
   margin: auto;
   height: 0.0625rem;
@@ -263,7 +270,7 @@ html {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 1rem;
+  margin-top: 2.6rem;
   margin-bottom: 2rem;
   position: relative;
 }
@@ -300,9 +307,8 @@ html {
 
 /* about-me main body */
 .boxWrapper {
-  grid-column: 2 / span 6;
   position: relative;
-  display: flex;
+  grid-column: 2 / span 6;
 }
 .accentBox4 {
   position: relative;
@@ -314,11 +320,12 @@ html {
 }
 .floatingAccentBox4 {
   position: absolute;
-  bottom: -13%;
-  right: 3.5%;
-  width: 6.25rem;
+  top: 87.5%;
+  left: 89%;
+  width: 22.7%;
   aspect-ratio: 1/1;
   box-sizing: border-box;
+
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -428,15 +435,14 @@ html {
   height: 100%;
   flex-shrink: 0;
   border: solid 1px #FFF;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .firstProjectImage {
- z-index: 0;
- width: 20.3125rem;
+  z-index: 0;
+  width: 20.3125rem;
 }
 .firstDividerLine {
   width: 20.3125rem;
-  height: 0.0625rem;
   flex-shrink: 0;
   border: solid 1px #FFF;
 }
@@ -455,7 +461,7 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 1.19rem;
+  margin-top: 1rem;
 }
 .firstProjectDescription {
   color: #FFF;
@@ -489,7 +495,6 @@ a:hover {
 }
 
 /* contact Section */
-
 
 @media (max-width: 768px) {
   .pageGrid {
@@ -597,6 +602,6 @@ button {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 

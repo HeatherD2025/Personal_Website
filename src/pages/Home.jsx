@@ -1,7 +1,6 @@
 import React from "react";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import CV from "../components/CV";
 import "../styles/main.css";
 import myPortrait from "../assets/images/myPortrait.jpg";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -33,24 +32,26 @@ export default function Home() {
             <section id="home" className="section"></section>
 
             {/* Main header and photo */}
+            {/* <div className="mainWrapper"> */}
               <div className="mainLandingText">
-                <p className="mainHeader">
+                <div className="mainHeader">
                   I'm Heather and I'm a nerd
-                </p>
+                </div>
                 
-                  <p className="mainContent">
+                  <div className="mainContent">
                     Always learning, always building — ready to contribute to
                     exciting, mission-driven teams
-                  </p>
+                  </div>
                   <div className="accentLine2"></div>
     
               </div>
               <div className="photoAndBoxWrapper">
                 <div className="myPhotoWrapper">
-                  <img className="myPhoto" src={myPortrait}></img>
+                  <div className="myPhoto"></div>
                 </div>
                 <div className="accentBox1"></div>
               </div>
+         
             {/* end of main */}
 
             {/* Accent elements below main*/}
@@ -72,12 +73,6 @@ export default function Home() {
               <div className="full-width-grid">
                 <Projects />
               </div>
-
-              {/* Contact Form section */}
-              <div className="full-width-grid">
-                <CV />
-              </div>
-
             
           </div>
         </div>
