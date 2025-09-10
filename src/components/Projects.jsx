@@ -87,8 +87,6 @@ export default function Projects() {
 
               <div className="betweenSectionContainer">
                     <div className="betweenSectionAccentLine2"></div>
-                    <div className="betweenSectionAccentBox2"></div>
-                    <div className="betweenSectionFloatingAccentBox2"></div>
               </div>
 
             </div>

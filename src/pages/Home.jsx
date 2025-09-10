@@ -55,14 +55,15 @@ export default function Home() {
             {/* end of main */}
 
             {/* Accent elements below main*/}
-            <div className="betweenSectionContainerTop">
-              <div className="accentLine3"></div>
-              <div className="accentBox2"></div>
-              <div className="floatingAccentBox2"></div>
-            </div>
+            {/* <div className="betweenSectionContainerTop"> */}
+              <div className="accentLine3">
+                <div className="accentBox2"></div>
+                <div className="floatingAccentBox2"></div>
+              </div>
+            {/* </div> */}
 
             {/* Section separater */}
-            <div className="sectionSpacer"></div>
+            {/* <div className="sectionSpacer"></div> */}
 
               {/* About section */}
               <div className="full-width-grid">

@@ -18,20 +18,21 @@ html {
 .pageGrid {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  gap: 1rem; 
+  /* grid-template-rows: repeat(2, 1fr); */
+  /* gap: 1rem;  */
   margin: 0 auto; 
   padding: 0 1rem; 
   font-family: 'JetBrains Mono', monospace;
   color: #FFF;
-  height: 209.75rem;
+  /* height: 209.75rem; */
   position: relative;
 }
 
  /* between section spacer */
-.sectionSpacer {
+/* .sectionSpacer {
   grid-row: 10;
   grid-column: 2 / span 14;
-}
+} */
 
 
 /* main intro section */
@@ -44,6 +45,7 @@ html {
 .mainLandingText {
   grid-column: 2 / span 8;
   padding-top: 20.06rem;
+  margin-top: 2rem;
   height: 2rem;
 }
 .mainHeader {
@@ -73,6 +75,7 @@ html {
  /* my photo section */
 .photoAndBoxWrapper {
  grid-column: 11 / span 6;
+   margin-top: 2rem;
 }
 .myPhotoWrapper {
   /* display: grid; */
@@ -111,24 +114,25 @@ html {
 }
 
  /* first section divider accent after intro (boxes on left) */
- .betweenSectionContainerTop {
+ /* .betweenSectionContainerTop {
   grid-column: 6 / span  6;
   transform: translateY(-5rem);
- }
+ } */
 .accentLine3 {
+  position: relative;
   grid-column: 6 / span  6;
-  grid-row: 1 / 2;
-  width: 30rem;
+  grid-row: 2/20;
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
 }
 .accentBox2 {
+  position: relative;
   max-height: 2.63rem;
+  left: 12%;
+  bottom: 2000%;
   aspect-ratio: 1/1;
-  grid-column: 7 / span 1;
-  grid-row: 1 / 2;
-  transform: translate(6.5rem, -2.65rem);
+  grid-row: 2/20;
   z-index: 8;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
@@ -141,11 +145,13 @@ html {
 }
 .floatingAccentBox2 {
   position: absolute;
-  grid-column: 6 / span 1;         
+  grid-column: 6 / span 1;
+  grid-row: 2/20;         
   width: 2.63rem;
   aspect-ratio: 1 / 1;
   z-index: 1;
-  transform: translate(5.25rem, -4rem);
+  bottom: 0%;
+  left: 15.5%;
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -159,27 +165,29 @@ html {
  /* second between section accents (boxes on right)*/
 
 .betweenSectionContainer {
-  display: grid;
-  max-width: 2000px;
-  grid-column-start: 6;
-  grid-column-end: 10;
-  margin-top: 9.5rem;
+  grid-column: 6 / span 6;
+  grid-row: 10/10;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 } 
 .betweenSectionAccentLine {
+  position: relative;
   grid-column: 6 / span  6;
   margin-top: 5rem;
-  width: 30rem;
   margin: auto;
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
 }
 .betweenSectionAccentBox {
+  position: relative;
   max-height: 2.63rem;
   aspect-ratio: 1/1;
-  grid-column: 9 / span 1;
+  left: 80.5%;
+  top: -2000%;
+  /* right: -73.5%; */
+  /* grid-column: 9 / span 1; */
   z-index: 8;
-  transform: translate(2.35rem, -1.25rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -190,11 +198,13 @@ html {
   background-position: top left, top right, bottom left, top left;
 }
 .betweenSectionFloatingAccentBox {
+  position: absolute;
   grid-column: 11 / span 1;           
   width: 2.63rem;
   aspect-ratio: 1 / 1;
+  right: 15.75%;
+  bottom: -4200%;
   z-index: 8;
-  transform: translate(-5.15rem, -2.55rem);
   background-image: 
     linear-gradient(to right, #FFF 50%, transparent 50%), 
     linear-gradient(to bottom, #FFF 50%, transparent 50%), 
@@ -206,15 +216,16 @@ html {
 }
 
 
-/* third between sections accents (boxes on left) */
+/* after projects footer line */
 .betweenSectionAccentLine2 {
   grid-column: 6 / span  6;
-  width: 30rem;
-  margin: auto;
   height: 0.0625rem;
   background: #8A38F5;
   z-index: 8;
 }
+
+
+/* third between sections accents (boxes on left)
 .betweenSectionAccentBox2 {
   width: 2.63rem;
   aspect-ratio: 1/1;
@@ -244,7 +255,7 @@ html {
   background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
-}
+} */
 
 
 /* about-me section */
@@ -260,6 +271,7 @@ html {
   grid-template-columns: repeat(16, 1fr);
   gap: 1rem;
   align-items: start;
+  margin-top: 5rem;
 }
 
 /* about-me header */
@@ -349,11 +361,15 @@ html {
   margin-bottom: 1rem;
 }
 .bulletPointWrapper {
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 .bulletPoint {
   padding-top: .5rem;
   padding-bottom: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .toolsContainer {
   display: flex;
@@ -361,7 +377,6 @@ html {
   gap: 1.5rem;
   aspect-ratio: 1/1;
   height: 3rem;
-  margin: auto;
 }
 
 
@@ -386,8 +401,8 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 .projectsHeader {
   color: #FFF;
