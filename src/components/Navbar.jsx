@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import CVDownload from "../components/CVDownload";
 
 export default function NavBar() {
   const location = useLocation();
@@ -12,12 +13,17 @@ export default function NavBar() {
   const navItems = [
     { label: "about-me", id: "about" },
     { label: "projects", id: "projects" },
-    { label: "cv", id: "cv" },
+    { label: "cv", id: "cv-download" },
   ];
 
   const scrollToTop =() => {
     window.scrollTo({top: 0, behavior: "smooth"});
   };
+
+  // cv download helper code
+    const downloadCV = () => {
+      window.location.href = "https://drive.google.com/uc?export=download&id=1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts";
+    };
 
   return (
     <nav className="navbar">
@@ -82,6 +88,10 @@ export default function NavBar() {
                       el.scrollIntoView({ behavior: "smooth" });
                       setIsOpen(false);
                     }
+                    if (item.id === "cv-download") {
+                      downloadCV();
+                      setIsOpen(false);
+                    }
                   }}
                 >
                   {item.label}
@@ -101,7 +111,6 @@ export default function NavBar() {
                         targetSection.scrollIntoView({ behavior: "smooth" });
                         setIsOpen(false);
                       }
-                      // scrollToTop();
                     }} // Close the menu when clicked
                   >
                     {item.label}
