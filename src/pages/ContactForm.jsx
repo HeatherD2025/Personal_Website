@@ -8,6 +8,11 @@ import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function ContactForm() {
+
+  const scrollToTop =() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

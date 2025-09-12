@@ -84,11 +84,7 @@ export default function Projects() {
                   </div>
                 </a>
               </div>
-
-              <div className="betweenSectionContainer">
-                    <div className="betweenSectionAccentLine2"></div>
-              </div>
-
+                <div className="betweenSectionAccentLine2"></div>
             </div>
           </div>
          </section>
