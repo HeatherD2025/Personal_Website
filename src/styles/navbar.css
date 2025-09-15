@@ -55,6 +55,7 @@
 }
 
 .navItem {
+  display: block;
   background: none;
   border: none;
   text-decoration: none;
@@ -96,6 +97,21 @@
   height: 35.75rem;
   width: 1.5rem;
   z-index: 1;
+}
+
+.downloadIcon {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 1rem;
+  margin: 0;
+}
+
+.downloadIcon:hover {
+  background-color: #100310;
+  color: #8a38f5;
 }
 
 .contactIcons {

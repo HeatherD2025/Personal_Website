@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import CVDownload from "../components/CVDownload";
 
 export default function NavBar() {
   const location = useLocation();
@@ -22,7 +21,7 @@ export default function NavBar() {
 
   // cv download helper code
     const downloadCV = () => {
-      window.location.href = "https://drive.google.com/uc?export=download&id=1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts";
+      window.location.href = "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
     };
 
   return (
@@ -83,18 +82,25 @@ export default function NavBar() {
                   key={item.id}
                   className="navItem"
                   onClick={() => {
+                     if (item.id === "cv-download") {
+                      downloadCV();
+                      setIsOpen(false);
+                    } else {
                     const el = document.getElementById(item.id);
                     if (el) {
                       el.scrollIntoView({ behavior: "smooth" });
                       setIsOpen(false);
                     }
-                    if (item.id === "cv-download") {
-                      downloadCV();
-                      setIsOpen(false);
-                    }
-                  }}
+                   }
+                 }}
                 >
-                  {item.label}
+                  {item.label === 'cv' ? (
+                    <>
+                      cv <i className="fa-solid fa-download"></i>
+                    </>
+                  ) : (
+                    item.label
+                  )}
                 </button>
               ))
             ) : (
