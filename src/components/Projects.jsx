@@ -50,7 +50,7 @@ export default function Projects() {
                   </div>
                 </a>
 
-                <a onClick={() => navigate("/ProjectDetail")}>
+                <a onClick={() => navigate("/QuarkyProjectDetail", scrollToTop())}>
                   <div className="firstProjectContainer" >
                       <img className="firstProjectImage" src={OPSG} ></img>
 
