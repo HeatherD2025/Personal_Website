@@ -32,7 +32,7 @@ export default function Home() {
             <section id="home" className="section"></section>
 
             {/* Main header and photo */}
-            {/* <div className="mainWrapper"> */}
+            <div className="mainWrapper">
               <div className="mainLandingText">
                 <div className="mainHeader">
                   I'm Heather and I'm a nerd
@@ -51,24 +51,29 @@ export default function Home() {
                 </div>
                 <div className="accentBox1"></div>
               </div>
+            </div>
          
             {/* end of main */}
 
             {/* Accent elements below main*/}
+            <div className="accentWrapper">
               <div className="accentLine3">
-                <div className="accentBox2"></div>
-                <div className="floatingAccentBox2"></div>
+                <div className="betweenAccents1Boxes">
+                  <div className="accentBox2"></div>
+                  <div className="floatingAccentBox2"></div>
+                </div>
               </div>
+            </div>
 
               {/* About section */}
-              <div className="full-width-grid">
+              {/* <div className="full-width-grid"> */}
                 <About />
-              </div>
+              {/* </div> */}
 
               {/* Projects section */}
-              <div className="full-width-grid">
+              {/* <div className="full-width-grid"> */}
                 <Projects />
-              </div>
+              {/* </div> */}
             
           </div>
         </div>
