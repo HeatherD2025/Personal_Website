@@ -1,90 +1,98 @@
-/* base page layout containers, grid, scroll-behavior */
+/* Base Layout */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
 
-.background,
+body,
 #root,
-body {
-  height: 209.75rem;
+.background {
+  min-height: 100vh;
   background-color: #100310;
-  margin: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  color: #fff;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 .container {
-  max-width: 1440px;
+  width: min(90%, 1440px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .pageGrid {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   margin: 0 auto;
   padding: 0 1rem;
-  font-family: "JetBrains Mono", monospace;
-  color: #fff;
   position: relative;
 }
 
-
-/* main intro section */
-.mainLandingText {
-  grid-column: 2 / span 8;
-  padding-top: 20.06rem;
-  margin-top: 2rem;
-  height: 2rem;
-}
-.mainHeader {
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  font-family: "JetBrains Mono";
-}
-.mainContent {
-  padding-top: 1rem;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.accentLine2 {
-  margin-top: 1.25rem;
-  width: 20.3125rem;
-  height: 0.0625rem;
-  background: #8a38f5;
+section {
+  /* display: block; */
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-/* my photo section */
+/*  Intro Section  */
+.mainWrapper {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.mainLandingText,
 .photoAndBoxWrapper {
-  grid-column: 11 / span 6;
-  margin-top: 2rem;
+  flex: 1 1 300px;
+  max-width: 600px;
 }
+
+.mainHeader {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mainContent {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.accentLine2 {
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #8a38f5;
+  margin-top: 1rem;
+}
+
 .myPhotoWrapper {
-  position: relative;
-  margin-top: 10.25rem;
-  max-width: 26rem;
-  aspect-ratio: 1 / 1;
+  width: 250px;
+  height: 250px;
   border: 1px, solid, #fff;
   padding: 10px;
-  background-image: url("../assets//images/myPortrait.jpg");
-  background-size: cover;
 }
+
 .myPhoto {
   width: 100%;
-  position: relative;
+  height: 100%;
+  background-image: url('../assets/images/myPortrait.jpg');
+  background-size: cover;
+  background-position: center;
 }
+
 .accentBox1 {
-  position: relative;
-  max-height: 13.125rem;
-  aspect-ratio: 1/1;
-  grid-column: 13 / span 3;
-  z-index: 8;
-  flex-shrink: 0;
-  bottom: 12.75%;
-  left: 62%;
+  width: 3rem;
+  height: 3rem;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -96,21 +104,15 @@ body {
 
 /* first section divider accent after intro (boxes on left) */
 .accentLine3 {
-  position: relative;
-  grid-column: 6 / span 6;
-  grid-row: 2/20;
   height: 0.0625rem;
   background: #8a38f5;
+  width: 25%;
   z-index: 8;
 }
 .accentBox2 {
-  position: relative;
   max-height: 2.63rem;
-  left: 12%;
-  bottom: 2000%;
   aspect-ratio: 1/1;
-  grid-row: 2/20;
-  z-index: 8;
+  z-index: 0 !important;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -120,14 +122,9 @@ body {
   background-position: top left, top right, bottom left, top left;
 }
 .floatingAccentBox2 {
-  position: absolute;
-  grid-column: 6 / span 1;
-  grid-row: 2/20;
   width: 2.63rem;
   aspect-ratio: 1 / 1;
-  z-index: 1;
-  bottom: 0%;
-  left: 15.5%;
+  z-index: 1 !important;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -137,411 +134,249 @@ body {
   background-position: top left, top right, bottom left, top left;
 }
 
-/* second between section accents (boxes on right)*/
-.betweenSectionContainer {
-  grid-column: 6 / span 6;
-  grid-row: 10/10;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-}
-.betweenSectionAccentLine {
-  position: relative;
-  grid-column: 6 / span 6;
-  margin-top: 5rem;
-  margin: auto;
-  height: 0.0625rem;
-  background: #8a38f5;
-  z-index: 8;
-}
-.betweenSectionAccentBox {
-  position: relative;
-  max-height: 2.63rem;
-  aspect-ratio: 1/1;
-  left: 80.5%;
-  top: -2000%;
-  z-index: 8;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
-.betweenSectionFloatingAccentBox {
-  position: absolute;
-  grid-column: 11 / span 1;
-  width: 2.63rem;
-  aspect-ratio: 1 / 1;
-  right: 15.75%;
-  bottom: -4200%;
-  z-index: 8;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
-
-/* after projects footer line */
-.betweenSectionAccentLine2 {
-  grid-column: 6 / span 6;
-  height: 0.0625rem;
-  background: #8a38f5;
-  z-index: 8;
-  margin-top: 5rem;
-}
-
-/* about-me section */
+/* -------------------- About Section -------------------- */
 .aboutMeContainer {
-  grid-column: 1 / -1;
-  display: contents;
-}
-.aboutGrid {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  gap: 1rem;
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 5rem;
 }
 
-/* about-me header */
 .aboutMeHeaderWrapper {
-  grid-column: 9 / span 6;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 2.6rem;
+  gap: 1rem;
   margin-bottom: 2rem;
-  position: relative;
 }
+
 .aboutMeHeader {
-  color: #fff;
-  font-family: "JetBrains Mono";
   font-size: 2.25rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
+
+.accentLine2 {
+margin-top: 1.5rem;
+}
+
 .accentLine4 {
-  position: relative;
-  width: 11.875rem;
+  max-width: 10rem;
   height: 0.0625rem;
-  background: #8a38f5;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 1.75rem;
+  background-color: #8a38f5;
 }
+
 .floatingAccentBox3 {
-  height: 1.5rem;
+  width: 1.5rem;
   aspect-ratio: 1/1;
-  margin-top: 1.75rem;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
+  background-image: 
+    linear-gradient(to right, #fff 50%, transparent 50%), 
+    linear-gradient(to bottom, #fff 50%, transparent 50%), 
+    linear-gradient(to left, #fff 50%, transparent 50%), 
     linear-gradient(to bottom, #fff 50%, transparent 50%);
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
 }
 
-/* about-me main body */
-.boxWrapper {
-  position: relative;
-  grid-column: 2 / span 6;
+.boxWrapper,
+.aboutParagraphWrapper {
+  flex: 1 1 400px;
+  max-width: 600px;
 }
-.accentBox4 {
-  position: relative;
-  width: 100%;
-  max-width: 27.5rem;
-  aspect-ratio: 5 / 4.5;
+
+.aboutParagraphWrapper {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.toolsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.toolIcon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+
+
+/* -------------------- Projects Section -------------------- */
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.projectContainer {
+  flex: 1 1 300px;
+  max-width: 20rem;
   border: 1px solid #fff;
   box-sizing: border-box;
 }
-.floatingAccentBox4 {
-  position: absolute;
-  top: 87.5%;
-  left: 89%;
-  width: 22.7%;
-  aspect-ratio: 1/1;
-  box-sizing: border-box;
 
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
-.aboutParagraphWrapper {
-  grid-column: 9 / span 7;
-  color: #fff;
-  font-family: "JetBrains Mono";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  max-width: 38rem;
-}
-.aboutParagraph {
-  margin-bottom: 1rem;
-}
-.bulletPointWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.bulletPoint {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.toolsContainer {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  aspect-ratio: 1/1;
-  height: 3rem;
-}
-
-/* projectsSection  */
-.projectsContainer {
-  grid-column: 1 / -1;
-  display: contents;
-}
-.full-width-grid {
-  grid-column: 1 /-1;
-}
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  gap: 1rem;
-  align-items: start;
-}
-
-/* projects header */
-.projectsHeaderWrapper {
-  grid-column: 2 / span 6;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-.projectsHeader {
-  color: #fff;
-  font-family: "JetBrains Mono";
-  font-size: 2.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.accentLine5 {
-  width: 11.875rem;
-  height: 0.0625rem;
-  background: #8a38f5;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 1.75rem;
-}
-.floatingAccentBox5 {
-  height: 1.5rem;
-  aspect-ratio: 1/1;
-  margin-top: 1.75rem;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
-
-/* projects main section */
-.projectsWrapper {
-  grid-column: 2 / span 14;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.firstProjectContainer {
-  max-width: 20.3125rem;
+.projectImage {
   width: 100%;
-  max-height: 30.1875rem;
-  height: 100%;
-  flex-shrink: 0;
-  border: solid 1px #fff;
-  margin-top: 1.5rem;
+  height: auto;
+  object-fit: cover;
 }
-.firstProjectImage {
-  z-index: 0;
-  width: 20.3125rem;
-}
-.firstDividerLine {
-  width: 20.3125rem;
-  flex-shrink: 0;
-  border: solid 1px #fff;
-}
+
 .firstInfoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding: 0.75rem;
 }
-.firstProjectTitle {
-  color: #8a38f5;
-  font-family: "JetBrains Mono";
+
+.projectTitle {
   font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 1rem;
-}
-.firstProjectDescription {
-  color: #fff;
-  font-family: "JetBrains Mono";
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: #8a38f5;
+  margin-bottom: 0.5rem;
 }
 
-a {
-  text-decoration: none;
-}
-a * {
-  text-decoration: none;
-}
-a:hover {
-  cursor: pointer;
+.projectDescription {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-.toolIcons {
-  display: flex;
-  align-items: center;
-  transform: translate(-0.1rem, -2.2rem);
-  gap: 0.75rem;
-  aspect-ratio: 1/1;
-}
-.toolIcon {
+.toolIconsb img,
+.toolIconb {
   width: 1.5rem;
-  aspect-ratio: 1/1;
+  height: 1.5rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
 }
 
-/* contact Section */
-
+/* -------------------- Mobile Responsive -------------------- */
 @media (max-width: 768px) {
-  .pageGrid {
-    grid-template-columns: repeat(4, 1fr); /* or a stacked layout */
+  .mainWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .photoAndBoxWrapper {
+    order: 1;
+    scale: 130%;
+    margin-right: 3rem;
+    margin-top: 1.5rem;;
+  }
+  .mainLandingText {
+    order: 2;
+    margin-bottom: -5rem;
+  }
+  .mainHeader {
+    margin-right: 7rem;
+    font-size: x-large;
+    margin-top: -2rem;
+  }
+  .accentLine2 {
+    height: 0.1rem;
   }
 
-  .mainContent {
-    grid-column: 1 / -1; /* full width on mobile */
+  .accentBox1 {
+    transform: translate(315%, -35%);
+    scale: 150%;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%),
+    linear-gradient(to left, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
   }
-}
-
-/* styling for submission form */
-.checkbox {
-  padding: 1rem 4rem 1rem 1rem;
-}
-
-.submitButton {
-  width: 8em;
-  height: 3em;
-  background-color: gray;
-  border: none;
-  position: relative;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  width: 100%;
-  height: 2em;
-  padding: 1em;
-  border: 1px solid #4f4f4f;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-  background-color: rgba(244, 225, 225, 0.2);
-  backdrop-filter: blur(12px);
-}
-
-label {
-  padding: 1em 1em 1em 0em;
-  display: inline-block;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.recaptchaContainer {
-  display: none;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type="submit"] {
+  .accentWrapper {
+    position: relative;
     width: 100%;
-    margin-top: 0;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+  .accentLine3 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 0.1rem;
+  }
+  .accentBox2 {
+    transform: translate(200%, -100%);
+  }
+  .floatingAccentBox2 {
+    transform: translate(150%, -150%);
+  }
+
+
+  /*  About me section - mobile */
+
+  .aboutMeHeader {
+    font-size: x-large;
+    font-weight: 400;
+  }
+  .accentLine4 {
+    width: 8rem;
+    height: 0.1rem;
+    margin-top: 1.25rem;
+  }
+  .floatingAccentBox3 {
+    transform: translate(-50%, 50%);
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%),
+    linear-gradient(to left, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
+
+  .aboutMeContainer,
+  .projectsContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .boxWrapper,
+  .aboutParagraphWrapper,
+  .projectContainer {
+    max-width: 100%;
+  }
+
+  .toolsContainer {
+    justify-content: flex-start;
+  }
+  
+  .accentWrapper2 {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+  .betweenSectionAccentLine {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 0.1rem;
+  }
+  .betweenSectionAccentBox {
+    transform: translate(200%, -100%);
+  }
+  .betweenSectionFloatingAccentBox {
+    transform: translate(150%, -150%);
+  }
+  
+
+
+  .betweenSectionAccentLine2 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;;
+    width: 100%;
+    height: .1rem;
+    color: #8a38f5;
   }
 }
-
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: clamp(1rem, 8vw, 10rem);
-}
-
-.submitButton {
-  display: flex;
-  flex-wrap: wrap;
-  justify-self: center;
-  margin-right: 201px;
-}
-
-.submitButton:hover {
-  cursor: pointer;
-}
-
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */

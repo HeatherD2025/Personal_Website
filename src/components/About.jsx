@@ -59,7 +59,7 @@ export default function About() {
                        </div>
                   </div>
               
-                  <div className="betweenSectionContainer">
+                  <div className="accentWrapper2">
                     <div className="betweenSectionAccentLine">
                      <div className="betweenSectionAccentBox"></div>
                      <div className="betweenSectionFloatingAccentBox"></div>
