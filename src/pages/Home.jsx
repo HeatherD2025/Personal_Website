@@ -20,30 +20,26 @@ export default function Home() {
         }, 100);
       }
     }
-  }, [location])  //re-run this on navigation change
+  }, [location]); //re-run this on navigation change
 
   return (
     <>
       <div className="container">
         <div className="background">
           <div className="pageGrid">
-
-           {/* Home page header section */}
+            {/* Home page header section */}
             <section id="home" className="section"></section>
 
             {/* Main header and photo */}
             <div className="mainWrapper">
               <div className="mainLandingText">
-                <div className="mainHeader">
-                  I'm Heather and I'm a nerd
+                <div className="mainHeader">I'm Heather and I'm a nerd</div>
+
+                <div className="mainContent">
+                  Always learning, always building — ready to contribute to
+                  exciting, mission-driven teams
                 </div>
-                
-                  <div className="mainContent">
-                    Always learning, always building — ready to contribute to
-                    exciting, mission-driven teams
-                  </div>
-                  <div className="accentLine2"></div>
-    
+                <div className="accentLine2"></div>
               </div>
               <div className="photoAndBoxWrapper">
                 <div className="myPhotoWrapper">
@@ -52,29 +48,41 @@ export default function Home() {
                 <div className="accentBox1"></div>
               </div>
             </div>
-         
+
             {/* end of main */}
 
             {/* Accent elements below main*/}
             <div className="accentWrapper">
               <div className="accentLine3">
-                <div className="betweenAccents1Boxes">
-                  <div className="accentBox2"></div>
-                  <div className="floatingAccentBox2"></div>
-                </div>
+                {/* <div className="betweenAccents1Boxes"> */}
+                <div className="accentBox2"></div>
+                <div className="floatingAccentBox2"></div>
+                {/* </div> */}
               </div>
             </div>
 
-              {/* About section */}
-              {/* <div className="full-width-grid"> */}
-                <About />
-              {/* </div> */}
+            {/* About section */}
+            {/* <div className="full-width-grid"> */}
+            <About />
+            {/* </div> */}
 
-              {/* Projects section */}
-              {/* <div className="full-width-grid"> */}
-                <Projects />
-              {/* </div> */}
-            
+            <div className="accentWrapper">
+              <div className="accentLine3">
+                {/* <div className="betweenAccents1Boxes"> */}
+                <div className="accentBox2"></div>
+                <div className="floatingAccentBox2"></div>
+                {/* </div> */}
+              </div>
+            </div>
+
+            {/* Projects section */}
+            {/* <div className="full-width-grid"> */}
+            <Projects />
+            {/* </div> */}
+
+          </div>
+          <div className="footerContainer">
+            <div className="footer"></div>
           </div>
         </div>
       </div>

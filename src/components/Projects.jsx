@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../styles/main.css";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
 import QuarkyImg from "../assets/images/projects/Quarky/QuarkyImg.png";
 import postgresql from "../assets/images/icons/postgresqlLogo.png";
@@ -14,13 +15,16 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="section">
-        <div className="projectsContainer">
+        <div className="sectionSpacer"></div>
+
           <div className="projectsGrid">
-            <div className="projectsHeaderWrapper">
-              <div className="projectsHeader">projects</div>
-              <div className="accentLine5"></div>
-              <div className="floatingAccentBox5"></div>
+            <div className="headerWrapper">
+              <div className="mainHeader2">projects</div>
+              <div className="accentLine4"></div>
+              <div className="floatingAccentBox3"></div>
             </div>
+
+            <div className="projectsContainer">
 
             {/* bottom project links */}
             <div className="projectsWrapper">

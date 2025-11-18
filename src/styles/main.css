@@ -43,7 +43,7 @@ section {
 /*  Intro Section  */
 .mainWrapper {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ section {
 
 .mainLandingText,
 .photoAndBoxWrapper {
-  flex: 1 1 300px;
+  /* flex: 1 1 300px; */
   max-width: 600px;
 }
 
@@ -61,6 +61,10 @@ section {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.mainHeader2 {
+  font-size: 2rem;
 }
 
 .mainContent {
@@ -85,7 +89,7 @@ section {
 .myPhoto {
   width: 100%;
   height: 100%;
-  background-image: url('../assets/images/myPortrait.jpg');
+  background-image: url("../assets/images/myPortrait.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -144,12 +148,12 @@ section {
   margin-top: 5rem;
 }
 
-.aboutMeHeaderWrapper {
+/* .aboutMeHeaderWrapper {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-}
+} */
 
 .aboutMeHeader {
   font-size: 2.25rem;
@@ -157,7 +161,7 @@ section {
 }
 
 .accentLine2 {
-margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .accentLine4 {
@@ -169,10 +173,9 @@ margin-top: 1.5rem;
 .floatingAccentBox3 {
   width: 1.5rem;
   aspect-ratio: 1/1;
-  background-image: 
-    linear-gradient(to right, #fff 50%, transparent 50%), 
-    linear-gradient(to bottom, #fff 50%, transparent 50%), 
-    linear-gradient(to left, #fff 50%, transparent 50%), 
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%),
+    linear-gradient(to left, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%);
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
@@ -203,8 +206,6 @@ margin-top: 1.5rem;
   margin-right: 0.5rem;
 }
 
-
-
 /* -------------------- Projects Section -------------------- */
 .projectsContainer {
   display: flex;
@@ -213,41 +214,39 @@ margin-top: 1.5rem;
   justify-content: center;
   align-items: flex-start;
 }
-
-.projectContainer {
-  flex: 1 1 300px;
-  max-width: 20rem;
-  border: 1px solid #fff;
-  box-sizing: border-box;
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.projectImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.projectsHeader {
+  font-size: 2.25rem;
+  font-weight: 400;
 }
 
-.firstInfoContainer {
-  padding: 0.75rem;
+.accentLine5 {
+  margin-top: 1.5rem;
 }
 
-.projectTitle {
-  font-size: 1.25rem;
-  color: #8a38f5;
-  margin-bottom: 0.5rem;
-}
-
-.projectDescription {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.toolIconsb img,
-.toolIconb {
+.floatingAccentBox5 {
   width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
-  margin-right: 0.5rem;
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%),
+    linear-gradient(to left, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%);
+  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+}
+
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  height: 0.0625rem;
+  background-color: #8a38f5;
 }
 
 /* -------------------- Mobile Responsive -------------------- */
@@ -260,28 +259,41 @@ margin-top: 1.5rem;
     order: 1;
     scale: 130%;
     margin-right: 3rem;
-    margin-top: 1.5rem;;
+    margin-top: 1.5rem;
   }
   .mainLandingText {
     order: 2;
-    margin-bottom: -5rem;
+    /* margin-bottom: -5rem; */
   }
   .mainHeader {
     margin-right: 7rem;
     font-size: x-large;
     margin-top: -2rem;
   }
+
+  .mainHeader2 {
+    font-size: x-large;
+  }
+
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* margin-bottom: 2rem; */
+  }
+
   .accentLine2 {
     height: 0.1rem;
+    margin-bottom: 3rem;
   }
 
   .accentBox1 {
     transform: translate(315%, -35%);
     scale: 150%;
     background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
     background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
     background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
     background-position: top left, top right, bottom left, top left;
@@ -290,10 +302,11 @@ margin-top: 1.5rem;
     position: relative;
     width: 100%;
     height: 1rem;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin-left: 25%;
+    margin-top: 2rem;
   }
   .accentLine3 {
     position: absolute;
@@ -308,13 +321,7 @@ margin-top: 1.5rem;
     transform: translate(150%, -150%);
   }
 
-
   /*  About me section - mobile */
-
-  .aboutMeHeader {
-    font-size: x-large;
-    font-weight: 400;
-  }
   .accentLine4 {
     width: 8rem;
     height: 0.1rem;
@@ -323,31 +330,30 @@ margin-top: 1.5rem;
   .floatingAccentBox3 {
     transform: translate(-50%, 50%);
     background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
     background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
     background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
     background-position: top left, top right, bottom left, top left;
   }
 
-  .aboutMeContainer,
-  .projectsContainer {
+  .aboutMeContainer {
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    margin: 0;
+    /* margin-top: 3rem; */
   }
 
   .boxWrapper,
-  .aboutParagraphWrapper,
-  .projectContainer {
+  .aboutParagraphWrapper {
     max-width: 100%;
   }
 
   .toolsContainer {
     justify-content: flex-start;
   }
-  
+
   .accentWrapper2 {
     position: relative;
     width: 100%;
@@ -357,26 +363,15 @@ margin-top: 1.5rem;
     align-items: center;
     margin-left: 25%;
   }
-  .betweenSectionAccentLine {
-    position: absolute;
-    left: 0;
-    width: 50%;
+  .footerContainer {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+  }
+  .footer {
+    width: 90%;
     height: 0.1rem;
-  }
-  .betweenSectionAccentBox {
-    transform: translate(200%, -100%);
-  }
-  .betweenSectionFloatingAccentBox {
-    transform: translate(150%, -150%);
-  }
-  
-
-
-  .betweenSectionAccentLine2 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;;
-    width: 100%;
-    height: .1rem;
-    color: #8a38f5;
+    background-color: #8a38f5;
+    margin-bottom: 2rem;
   }
 }
