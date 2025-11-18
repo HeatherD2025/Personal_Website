@@ -21,8 +21,8 @@ export default function About() {
             <div className="aboutMeContainer">
 
                <div className="aboutGrid">
-                <div className="aboutMeHeaderWrapper">
-                    <div className="aboutMeHeader">about-me</div>
+                <div className="headerWrapper">
+                    <div className="mainHeader2">about-me</div>
                       <div className="accentLine4"></div>
                       <div className="floatingAccentBox3"></div>
                 </div>

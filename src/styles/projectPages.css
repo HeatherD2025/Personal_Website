@@ -2,20 +2,20 @@
 .projectsContainer {
   /* display: grid;
   grid-template-columns: repeat(16, 1fr); */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 0 auto;
   padding: 0 1rem;
-  align-items: start;
+  align-items: start; */
 }
 
 .projectsHeaderWrapper {
   /* grid-column: 2 / span 14; */
-  display: flex;
+  /* display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; */
 }
 
 .projectsHeader {
@@ -76,8 +76,6 @@
 }
 
 .toolIcons img,
-.toolIcon,
-.toolIcon,
 .toolIcon {
   width: 1.5rem;
   height: 1.5rem;
@@ -88,15 +86,17 @@
 /* Mobile Projects Section */
 @media (max-width: 768px) {
   .projectsContainer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
-
+  .projectContainer {
+    margin-bottom: 1rem;
+  }
   .projectsWrapper {
+    max-width: 100%;
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  .projectContainer {
-    max-width: 100%;
-  }
 }
