@@ -3,6 +3,7 @@ import postgresql from "../assets/images/icons/postgresqlLogo.png";
 import prisma from "../assets/images/icons/prismalogo.png";
 import react from "../assets/images/icons/reactlogo.png";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
+import Projects from "../components/Projects";
 
 export default function OPSGProjectDetail() {
   const scrollToTop = () => {
@@ -13,15 +14,17 @@ export default function OPSGProjectDetail() {
     <>
       <div className="container">
         <div className="background">
-          <div className="projectsContainer">
+          <div className="pageGrid">
+          
             <div className="projectDetailHeaderWrapper">
-              <div className="projectDetailHeaderLeft">projects</div>
-              <div className="verticalDividerLine"></div>
-              <div className="projectDetailHeaderRight">
+               <div className="projectDetailHeaderLeft">projects</div>
+               <div className="verticalDividerLine"></div>
+               <div className="projectDetailHeaderRight">
                 On Point Solutions Group
               </div>
             </div>
 
+          <div className="OPSG-Container">
             <div className="projectTitle2">On Point Solutions Group</div>
             <div className="projectDescription2">
               On Points Solutions Group is a medical staff credientialing
@@ -38,11 +41,9 @@ export default function OPSGProjectDetail() {
               view site
             </a>
             <div className="accentLine6"></div>
-                <div className="accentBox5">
                   <img className="firstSiteImage" src={OPSG}></img>
-                </div>
 
-            <div className="toolIcons">
+            <div className="toolIcons2">
               <img className="toolIcon" src={react} alt="react logo"></img>
               <img className="toolIcon" src={prisma} alt="prisma logo"></img>
               <img
@@ -88,9 +89,23 @@ export default function OPSGProjectDetail() {
               scaleable units.
             </div>
 
-            <div className="betweenSectionAccentLine2"></div>
+            <div className="projectDetailAccentWrapper">
+              <div className="accentLine3">
+                <div className="accentBox2"></div>
+                <div className="floatingAccentBox2"></div>
+              </div>
+            </div>
+            
+            <div className="allProjects">
+              <Projects/>
+            </div>
 
           </div>
+         </div>
+        <div className="footerContainer">
+            <div className="footer"></div>
+        </div>
+
         </div>
       </div>
     </>

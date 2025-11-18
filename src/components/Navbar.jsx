@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../styles/navbar.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import useIsMobile from "./useIsMobile";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function NavBar() {
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/home";
+  const isMobile = useIsMobile();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,14 +18,26 @@ export default function NavBar() {
     { label: "cv", id: "cv-download" },
   ];
 
-  const scrollToTop =() => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+  const hamburgerExtraNavItems = [
+    { label: "Github", id: "github" },
+    { label: "LinkedIn", id: "linked-in" },
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // cv download helper code
-    const downloadCV = () => {
-      window.location.href = "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
-    };
+  const downloadCV = () => {
+    window.location.href =
+      "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
+  };
+
+  // navigate outside links helper code
+  const navigateToGithub = () => {
+    (window.location.href = "https://github.com/HeatherD2025"),
+      (target = "_blank");
+  };
 
   return (
     <nav className="navbar">
@@ -77,59 +91,81 @@ export default function NavBar() {
 
           {/* Nav items */}
           <div className={`navItems ${isOpen ? "open" : ""}`}>
-            {isHome ? (
-              navItems.map((item) => (
-                <button
-                  key={item.id}
-                  className="navItem"
-                  onClick={() => {
-                     if (item.id === "cv-download") {
-                      downloadCV();
-                      setIsOpen(false);
-                    } else {
-                    const el = document.getElementById(item.id);
-                    if (el) {
-                      el.scrollIntoView({ behavior: "smooth" });
-                      setIsOpen(false);
-                    }
-                   }
-                 }}
-                >
-                  {item.label === 'cv' ? (
-                    <>
-                      cv <i className="fa-solid fa-download"></i>
-                    </>
-                  ) : (
-                    item.label
-                  )}
-                </button>
-              ))
-            ) : (
-              navItems.map((item) => {
-                const isActive = location.hash === `#${item.id}`;  
-                return (
-                  <Link
+            {isHome
+              ? navItems.map((item) => (
+                  <button
                     key={item.id}
-                    to={`/home#${item.id}`} // Links to the home page with the hash
-                    className={`navItem ${isActive ? 'active' : ''}`}
+                    className="navItem"
                     onClick={() => {
-                      const targetSection = document.getElementById(item.id);
-                      if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: "smooth" });
+                      if (item.id === "cv-download") {
+                        downloadCV();
                         setIsOpen(false);
+                      } else {
+                        const el = document.getElementById(item.id);
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                          setIsOpen(false);
+                        }
                       }
-                    }} // Close the menu when clicked
+                    }}
                   >
-                    {item.label === 'cv'? (
+                    {item.label === "cv" ? (
                       <>
                         cv <i className="fa-solid fa-download"></i>
                       </>
                     ) : (
                       item.label
                     )}
-                  </Link>
-                );
-              })
+                  </button>
+                ))
+              : navItems.map((item) => {
+                  const isActive = location.hash === `#${item.id}`;
+                  return (
+                    <Link
+                      key={item.id}
+                      to={`/home#${item.id}`} // Links to the home page with the hash
+                      className={`navItem ${isActive ? "active" : ""}`}
+                      onClick={() => {
+                        const targetSection = document.getElementById(item.id);
+                        if (targetSection) {
+                          targetSection.scrollIntoView({ behavior: "smooth" });
+                          setIsOpen(false);
+                        }
+                      }} // Close the menu when clicked
+                    >
+                      {item.label === "cv" ? (
+                        <>
+                          cv <i className="fa-solid fa-download"></i>
+                        </>
+                      ) : (
+                        item.label
+                      )}
+                    </Link>
+                  );
+                })}
+
+            {isMobile && (
+              <>
+                <a
+                  className="navItem"
+                  href="https://github.com/HeatherD2025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Github <i className="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                  className="navItem"
+                  href="https://www.linkedin.com/in/heatherdeliso/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  LinkedIn <i className="fa-brands fa-linkedin"></i>
+                </a>
+              </>
             )}
           </div>
         </div>
@@ -159,5 +195,3 @@ export default function NavBar() {
     </nav>
   );
 }
-
-

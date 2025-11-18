@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/main.css";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
 import QuarkyImg from "../assets/images/projects/Quarky/QuarkyImg.png";
@@ -7,7 +7,11 @@ import prisma from "../assets/images/icons/prismalogo.png";
 import react from "../assets/images/icons/reactlogo.png";
 
 export default function Projects() {
+  const location = useLocation();
+  const isOnOPSGPage = location.pathname === "/OPSGProjectDetail";
+  const isOnQuarkyPage = location.pathname === "/QuarkyPropjectDetail";
   const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -28,6 +32,9 @@ export default function Projects() {
 
             {/* bottom project links */}
             <div className="projectsWrapper">
+              {isOnOPSGPage ? (
+                <div></div>
+             ) : (
               <a
                 onClick={() => {
                   navigate("/OPSGProjectDetail");
@@ -64,8 +71,12 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-              </a>
+               </a>
+              )}
 
+              { isOnQuarkyPage ? (
+                <div></div>
+              ) : (
               <a
                 onClick={() => navigate("/QuarkyProjectDetail", scrollToTop())}
               >
@@ -98,7 +109,8 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-              </a>
+               </a>
+              )}
 
               <a onClick={() => navigate("/ProjectDetail")}>
                 <div className="projectContainer">

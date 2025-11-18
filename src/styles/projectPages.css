@@ -83,7 +83,7 @@
   margin-right: 0.5rem;
 }
 
-/* Mobile Projects Section */
+/* Mobile Homepage Projects Section */
 @media (max-width: 768px) {
   .projectsContainer {
     flex-direction: column;
@@ -99,4 +99,100 @@
     gap: 1.5rem;
   }
 
+
+  /* OPSG Project Page*/
+  .pageGrid {
+    /* display: flex !important;
+    flex-direction: column; */
+  }
+  .projectDetailHeaderWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    max-width: 100%;
+    height: 1rem;
+    margin-top: 10rem;
+  }
+  .projectDetailHeaderRight {
+    color: #8a38f5;
+  }
+  .verticalDividerLine {
+    height: 1rem;
+    width: 0.0625rem;
+    background-color: #fff;
+  }
+
+  .OPSG-Container {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .projectTitle2 {
+    font-size: x-large;
+    margin-bottom: 2rem;
+    order: 1
+  }
+  .projectDescription2 {
+    order: 2
+  }
+  .projectLink {
+    order: 3
+  }
+
+  .accentLine6 {
+    height: 0.0625rem;
+    width: 75%;
+    background-color: #8a38f5;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    order: 4
+  }
+  .toolIcons2 {
+    order: 5;
+    margin-bottom: 2rem;
+  }
+  .firstSiteImage {
+   height: auto;
+   width: 22rem;
+   margin: 0 auto;
+   order: 6;
+   border: 1px solid #fff;
+  }
+  .projectDescription3 {
+    order: 7;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .paragraphSpacer {
+    height: 1rem;
+  }
+  .projectDescription4 {
+    order: 8;
+  }
+
+  .projectDetailAccentWrapper {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-left: 25%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    order: 9;
+  }
+  .accentLine3 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 0.1rem;
+  }
+  .accentBox2 {
+    transform: translate(200%, -100%);
+  }
+  .floatingAccentBox2 {
+    transform: translate(150%, -150%);
+  }
+
+  .allProjects {
+    order: 10;
+  }
 }
