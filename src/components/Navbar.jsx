@@ -18,10 +18,10 @@ export default function NavBar() {
     { label: "cv", id: "cv-download" },
   ];
 
-  const hamburgerExtraNavItems = [
-    { label: "Github", id: "github" },
-    { label: "LinkedIn", id: "linked-in" },
-  ];
+  const hamNavItem = [
+    { id: "github" },
+    { id: "linked-in" },
+  ]
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -31,12 +31,6 @@ export default function NavBar() {
   const downloadCV = () => {
     window.location.href =
       "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
-  };
-
-  // navigate outside links helper code
-  const navigateToGithub = () => {
-    (window.location.href = "https://github.com/HeatherD2025"),
-      (target = "_blank");
   };
 
   return (
@@ -111,7 +105,7 @@ export default function NavBar() {
                   >
                     {item.label === "cv" ? (
                       <>
-                        cv <i className="fa-solid fa-download"></i>
+                       cv <i className="fa-solid fa-download"></i>
                       </>
                     ) : (
                       item.label
@@ -147,24 +141,28 @@ export default function NavBar() {
             {isMobile && (
               <>
                 <a
-                  className="navItem"
+                  className="hamNavItem"
                   href="https://github.com/HeatherD2025"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                 >
-                  Github <i className="fa-brands fa-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </a>
 
                 <a
-                  className="navItem"
+                  className="hamNavItem"
                   href="https://www.linkedin.com/in/heatherdeliso/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                 >
-                  LinkedIn <i className="fa-brands fa-linkedin"></i>
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
+
+                <Link to="/contactForm">
+                  <i className="hamNavItem fa-regular fa-envelope contactIcons"></i>
+                </Link>
               </>
             )}
           </div>

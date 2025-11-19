@@ -80,15 +80,14 @@ export default function Projects() {
               <a
                 onClick={() => navigate("/QuarkyProjectDetail", scrollToTop())}
               >
-                <div className="projectContainer">
-                  <img className="projectImage" src={QuarkyImg}></img>
+                {/* <div className="projectContainer"> */}
+                  {/* <img className="projectImage" src={QuarkyImg}></img> */}
 
                   <div className="firstDividerLine"></div>
                   <div className="firstInfoContainer">
-                    <div className="projectTitle">Quarky</div>
+                    <div className="projectTitle">coming soon</div>
                     <div className="projectDescription">
-                      News, discussion, and podcasts - all centered around
-                      science
+                      Quarky
                     </div>
                     <div className="toolIcons">
                       <img
@@ -108,17 +107,15 @@ export default function Projects() {
                       ></img>
                     </div>
                   </div>
-                </div>
+                {/* </div> */}
                </a>
               )}
 
-              <a onClick={() => navigate("/ProjectDetail")}>
+              {/* <a onClick={() => navigate("/ProjectDetail")}>
                 <div className="projectContainer">
-                  <img className="projectImage" src={OPSG}></img>
 
-                  <div className="firstDividerLine"></div>
                   <div className="firstInfoContainer">
-                    <div className="projectTitle">NEW PROJECT HERE</div>
+                    <div className="projectTitle">coming soon</div>
                     <div className="projectDescription">
                       wenflew fewofnewldewldnc newloejdl cl elwdnlwekw
                     </div>
@@ -141,7 +138,8 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </a> */}
+              
             </div>
             <div className="betweenSectionAccentLine2"></div>
           </div>

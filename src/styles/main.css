@@ -18,23 +18,25 @@ body,
 
 .container {
   width: min(90%, 1440px);
-  max-width: 100%;
   margin: 0 auto;
 }
 
-.pageGrid {
+/* .pageGrid {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  margin: 0 auto;
+  min-width: 1050px;
+  max-width: 1920px; 
+  margin: 0 auto; 
+  margin: 0rem 1rem 0rem .5rem;
   padding: 0 1rem;
-  position: relative;
-}
+   position: relative;
+} */
 
 section {
   /* display: block; */
   width: 100%;
-  max-width: 2000px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -45,16 +47,23 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .mainLandingText,
 .photoAndBoxWrapper {
   /* flex: 1 1 300px; */
   max-width: 600px;
+  display: flex; 
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+.photoAndBoxWrapper {
+  margin-left: 16rem;
 }
 
 .mainHeader {
@@ -80,8 +89,8 @@ section {
 }
 
 .myPhotoWrapper {
-  width: 250px;
-  height: 250px;
+  width: 600px;
+  height: 600px;
   border: 1px, solid, #fff;
   padding: 10px;
 }
@@ -91,12 +100,15 @@ section {
   height: 100%;
   background-image: url("../assets/images/myPortrait.jpg");
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 }
 
 .accentBox1 {
-  width: 3rem;
-  height: 3rem;
+  width: 15rem;
+  height: 15rem;
+  margin-top: -12rem;
+  margin-left: 95rem;
+  z-index: 15;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -107,16 +119,24 @@ section {
 }
 
 /* first section divider accent after intro (boxes on left) */
+.accentWrapper {
+  display: flex;
+  justify-content: center;
+}
 .accentLine3 {
   height: 0.0625rem;
   background: #8a38f5;
   width: 25%;
   z-index: 8;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .accentBox2 {
-  max-height: 2.63rem;
+  max-height: 3rem;
   aspect-ratio: 1/1;
   z-index: 0 !important;
+  margin-top: -2.9rem;
+  margin-left: 5rem;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -126,9 +146,11 @@ section {
   background-position: top left, top right, bottom left, top left;
 }
 .floatingAccentBox2 {
-  width: 2.63rem;
+  max-height: 3rem;
   aspect-ratio: 1 / 1;
-  z-index: 1 !important;
+  z-index: 10 !important;
+  margin-top: -1.5rem;
+  margin-left: 3.5rem;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),

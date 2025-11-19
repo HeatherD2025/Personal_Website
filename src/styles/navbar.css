@@ -4,16 +4,15 @@
 
 .navbar {
   position: fixed !important;
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 6rem;
   background-color: #100310;
   z-index: 9;
-  margin: 0 auto;
+
 }
 
 /* ---------- Desktop Grid Layout ---------- */
-.navbarGrid {
+/* .navbarGrid {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   gap: 1rem;
@@ -21,13 +20,17 @@
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem 1rem;
-}
+} */
 
 .navbarInner {
-  grid-column: 2 / span 14;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  gap: 60rem;
+  margin-left: 12rem;
+  /* grid-column: 2 / span 14; */
+  /* display: grid;
   grid-template-columns: auto 1fr;
-  align-items: center;
+  align-items: center; */
 }
 
 /* ---------- Branding ---------- */
@@ -38,7 +41,7 @@
   transition: color 0.2s ease, background-color 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 0.75em;
+  gap: 2.5rem;
 }
 
 .homeButton {
@@ -63,9 +66,9 @@
 .navItems {
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-end;
+  /* justify-content: flex-end;
   align-items: center;
-  margin-left: auto;
+  margin-left: auto; */
 }
 
 .navItem {
@@ -103,8 +106,8 @@
 /* ---------- Left-side Icon Column ---------- */
 .linkBox {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0rem;
+  left: 2rem;
   height: 35.75rem;
   width: 1.5rem;
   margin: 0 2rem;
@@ -183,7 +186,6 @@
   .navItems {
     display: none;
     flex-direction: column;
-    align-items: center;
     gap: 1.5rem;
     background-color: #100310;
     padding: 2rem 0;
@@ -218,11 +220,15 @@
     font-size: 1.75rem;
   }
 
-  .navItems {
-    gap: 1rem;
+  .navItems.open, .hamNavItems.open {
+    display: flex;
+    align-items: flex-start;
   }
 
-  .navItem {
-    padding: 0.75rem;
+  .navItem, .hamNavItem {
+    display: flex;
+    padding: 0.25rem;
+    color: #fff;
   }
+
 }

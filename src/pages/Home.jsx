@@ -24,9 +24,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="background">
-          <div className="pageGrid">
+          {/* <div className="pageGrid"> */}
             {/* Home page header section */}
             <section id="home" className="section"></section>
 
@@ -45,9 +45,10 @@ export default function Home() {
                 <div className="myPhotoWrapper">
                   <div className="myPhoto"></div>
                 </div>
+                </div>
                 <div className="accentBox1"></div>
               </div>
-            </div>
+
 
             {/* end of main */}
 
@@ -73,12 +74,12 @@ export default function Home() {
             {/* Projects section */}
             <Projects />
 
-          </div>
+          {/* </div> */}
           <div className="footerContainer">
             <div className="footer"></div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
