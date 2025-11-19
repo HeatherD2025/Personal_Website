@@ -47,6 +47,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-shrink: inherit;
   align-items: center;
   margin-top: 8rem;
   justify-content: center;
@@ -63,17 +64,18 @@ section {
   align-content: center;
 }
 .photoAndBoxWrapper {
-  margin-left: 16rem;
+  margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 .mainHeader {
-  font-size: 2rem;
+  font-size: x-large;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .mainHeader2 {
-  font-size: 2rem;
+  font-size: medium;
 }
 
 .mainContent {
@@ -82,15 +84,15 @@ section {
 }
 
 .accentLine2 {
-  width: 100%;
+  width: 80%;
   height: 0.0625rem;
   background-color: #8a38f5;
   margin-top: 1rem;
 }
 
 .myPhotoWrapper {
-  width: 600px;
-  height: 600px;
+  width: 25rem;
+  height: 25rem;
   border: 1px, solid, #fff;
   padding: 10px;
 }
@@ -100,14 +102,18 @@ section {
   height: 100%;
   background-image: url("../assets/images/myPortrait.jpg");
   background-size: cover;
+
   /* background-position: center; */
 }
 
 .accentBox1 {
-  width: 15rem;
-  height: 15rem;
-  margin-top: -12rem;
-  margin-left: 95rem;
+  position: absolute;
+  top: 65%;
+  aspect-ratio: 1/1;
+  width: 15vw;
+  height: 15vw;
+  margin-top: -10%;
+  margin-left: 75%;
   z-index: 15;
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
@@ -202,7 +208,30 @@ section {
   background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
 }
+.accentBox4 {
+  position: relative;
+  width: 100%;
+  max-width: 27.5rem;
+  aspect-ratio: 5 / 4.5;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.floatingAccentBox4 {
+  position: absolute;
+  top: 87.5%;
+  left: 89%;
+  width: 22.7%;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
 
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%),
+    linear-gradient(to left, #fff 50%, transparent 50%),
+    linear-gradient(to bottom, #fff 50%, transparent 50%);
+  background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-position: top left, top right, bottom left, top left;
+}
 .boxWrapper,
 .aboutParagraphWrapper {
   flex: 1 1 400px;
