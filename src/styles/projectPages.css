@@ -99,12 +99,7 @@
     gap: 1.5rem;
   }
 
-
   /* OPSG Project Page*/
-  .pageGrid {
-    /* display: flex !important;
-    flex-direction: column; */
-  }
   .projectDetailHeaderWrapper {
     display: flex;
     justify-content: flex-start;
@@ -146,6 +141,16 @@
     margin-bottom: 2rem;
     margin-top: 1rem;
     order: 4
+  }
+  .toolIcons,
+  .toolIcon {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
   }
   .toolIcons2 {
     order: 5;
