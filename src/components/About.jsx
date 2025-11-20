@@ -16,14 +16,14 @@ export default function About() {
     return (
       <>
         <section id="about" className="section">
-          <div className="sectionSpacer"></div>
+          {/* <div className="sectionSpacer"></div> */}
 
             <div className="aboutMeContainer">
 
-               <div className="aboutGrid">
-                <div className="headerWrapper">
-                    <div className="mainHeader2">about-me</div>
-                      <div className="accentLine4"></div>
+               {/* <div className="aboutGrid"> */}
+                <div className="aboutMeHeaderWrapper">
+                    <div className="aboutMeHeader">about-me</div>
+                      <div className="aboutMeHeaderAccentLine"></div>
                       <div className="floatingAccentBox3"></div>
                 </div>
             
@@ -57,16 +57,17 @@ export default function About() {
                               <img className="toolIcon" src={prisma} alt="prisma logo"></img>
                             </div>
                        </div>
-                  </div>
-              
-                  <div className="accentWrapper2">
-                    <div className="betweenSectionAccentLine">
-                     <div className="betweenSectionAccentBox"></div>
-                     <div className="betweenSectionFloatingAccentBox"></div>
                     </div>
-                  </div>
-                </div>
             </div>
+
+              <div className="accentWrapper2">
+                  <div className="betweenSectionAccentLine">
+                    <div className="betweenSectionAccentBox"></div>
+                    <div className="betweenSectionFloatingAccentBox"></div>
+                  </div>
+              </div>
+
+            {/* </div> */}
           </section>
         </>
     )

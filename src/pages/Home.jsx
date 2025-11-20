@@ -31,23 +31,27 @@ export default function Home() {
             <section id="home" className="section"></section>
 
             {/* Main header and photo */}
-            <div className="mainWrapper">
-              <div className="mainLandingText">
-                <div className="mainHeader">I'm Heather and I'm a nerd</div>
+            <div className="mainContainer">
 
-                <div className="mainContent">
-                  Always learning, always building — ready to contribute to
-                  exciting, mission-driven teams
+                <div className="mainWrapper">
+                  <div className="mainHeader">I'm Heather and I'm a nerd</div>
+
+                  <div className="mainContent">
+                    Always learning, always building — ready to contribute to
+                    exciting, mission-driven teams
+                  </div>
+
+                  <div className="mainAccentLine"></div>
                 </div>
-                <div className="accentLine2"></div>
-              </div>
-              <div className="photoAndBoxWrapper">
-                <div className="myPhotoWrapper">
-                  <div className="myPhoto"></div>
+
+                <div className="photoAndBoxWrapper">
+                  <div className="myPhotoWrapper">
+                    <div className="myPhoto"></div>
+
+                  <div className="photoAccentBox"></div>
+                   </div>
                 </div>
-                </div>
-                <div className="accentBox1"></div>
-              </div>
+            </div>
 
 
             {/* end of main */}

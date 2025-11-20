@@ -19,16 +19,17 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="section">
-        <div className="sectionSpacer"></div>
+        {/* <div className="sectionSpacer"></div> */}
 
-          <div className="projectsGrid">
-            <div className="headerWrapper">
-              <div className="mainHeader2">projects</div>
-              <div className="accentLine4"></div>
-              <div className="floatingAccentBox3"></div>
+        <div className="projectsContainer">
+          {/* <div className="projectsGrid"> */}
+            <div className="projectsHeaderWrapper">
+              <div className="projectsHeader">projects</div>
+              <div className="projectsHeaderAccentLine"></div>
+              <div className="floatingAccentBox3b"></div>
             </div>
 
-            <div className="projectsContainer">
+            <div className="allProjectsContainer">
 
             {/* bottom project links */}
             <div className="projectsWrapper">
@@ -142,8 +143,10 @@ export default function Projects() {
               
             </div>
             <div className="betweenSectionAccentLine2"></div>
-          </div>
+          {/* </div> */}
         </div>
+
+       </div>
       </section>
     </>
   );

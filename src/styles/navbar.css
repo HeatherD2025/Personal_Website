@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0% 7% 0% 7.5%;
-  flex-shrink: 2;
+  flex-shrink: 1;
   /* gap: 60rem; */
   /* margin-left: 32%; */
   /* grid-column: 2 / span 14; */
@@ -146,11 +146,8 @@
   background: #8a38f5;
 }
 
-/* ===========================================================
-   RESPONSIVE DESIGN
-   =========================================================== */
 
-/* ---------- Tablet (≤1024px) ---------- */
+/* Tablet (≤1024px) */
 @media (max-width: 1024px) {
   .navbarGrid {
     display: flex;
@@ -159,15 +156,19 @@
   }
 
   .navbarInner {
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    display: flex;
+    max-width: min-content;
+    margin: 0% 0% 0% 5%;
   }
 
   .navItems {
-    gap: 1rem;
+    gap: .5vw;
   }
 
   .linkBox {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 }
 

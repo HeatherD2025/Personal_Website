@@ -35,86 +35,110 @@ body,
 
 section {
   /* display: block; */
-  width: 100%;
-  max-width: 1920px;
+  /* width: 100%; */
+  /* max-width: 1920px; */
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
 }
 
 /*  Intro Section  */
-.mainWrapper {
-  display: flex;
+
+.mainContainer {
+  /* display: flex;
+  flex: 1 1 100px;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-shrink: inherit;
   align-items: center;
-  margin-top: 8rem;
+  margin: 5rem 5rem 0rem 5rem;
   justify-content: center;
-  gap: 5rem;
-}
-
-.mainLandingText,
-.photoAndBoxWrapper {
-  /* flex: 1 1 300px; */
-  max-width: 600px;
-  display: flex; 
+  gap: 20%; */
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-}
-.photoAndBoxWrapper {
-  margin-left: 10%;
-  margin-bottom: 10%;
+  flex-direction: row;
+  /* gap: 2rem; */
+  margin: 10% 0% 0% 8%;
 }
 
+ /* Wrapper for header, content and accent line in intro */
+
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 8% 10% 0% 0%;
+  justify-content: end;
+  justify-content: flex-start;
+}
 .mainHeader {
   font-size: x-large;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 2%;
 }
-
-.mainHeader2 {
-  font-size: medium;
-}
-
 .mainContent {
-  font-size: 1rem;
+  font-size: medium;
   line-height: 1.5rem;
+  margin-bottom: 2%;
 }
-
-.accentLine2 {
+.mainAccentLine {
   width: 80%;
   height: 0.0625rem;
   background-color: #8a38f5;
-  margin-top: 1rem;
 }
 
+
+/* wrapper for photo and accent box */
+
+.photoAndBoxWrapper {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+.mainWrapper {
+  /* max-width: 40%;
+  display: flex; 
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center; */
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+/* .photoAndBoxWrapper {
+  margin: 5% 0% 0% 0%;
+} */
 .myPhotoWrapper {
-  width: 25rem;
-  height: 25rem;
+  position: absolute;
+  width: 100%;
+  max-width: 25rem;
+  aspect-ratio: 1/1;
   border: 1px, solid, #fff;
+  box-sizing: border-box;
   padding: 10px;
+  background-size: contain;
 }
-
 .myPhoto {
+  position: relative;
   width: 100%;
   height: 100%;
   background-image: url("../assets/images/myPortrait.jpg");
   background-size: cover;
-
+  box-sizing: border-box;
   /* background-position: center; */
 }
-
-.accentBox1 {
+.photoAccentBox {
   position: absolute;
-  top: 65%;
+  top: 80%;
+  left: 78%;
+  width: 40%;
   aspect-ratio: 1/1;
-  width: 15vw;
+  box-sizing: border-box;
+  /* width: 15vw;
+  aspect-ratio: 1/1;
   height: 15vw;
   margin-top: -10%;
-  margin-left: 75%;
-  z-index: 15;
+  margin-left: 75%; */
+
   background-image: linear-gradient(to right, #fff 50%, transparent 50%),
     linear-gradient(to bottom, #fff 50%, transparent 50%),
     linear-gradient(to left, #fff 50%, transparent 50%),
@@ -124,18 +148,20 @@ section {
   background-position: top left, top right, bottom left, top left;
 }
 
-/* first section divider accent after intro (boxes on left) */
+/* section divider accent */
+
 .accentWrapper {
   display: flex;
   justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 3%;
 }
 .accentLine3 {
   height: 0.0625rem;
   background: #8a38f5;
   width: 25%;
   z-index: 8;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  /* margin-top: 10%; */
 }
 .accentBox2 {
   max-height: 3rem;
@@ -166,48 +192,51 @@ section {
   background-position: top left, top right, bottom left, top left;
 }
 
-/* -------------------- About Section -------------------- */
+/* About Section  */
 .aboutMeContainer {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 5rem;
+  margin-left: 8%;
 }
 
-/* .aboutMeHeaderWrapper {
+/* wrapper for header of section */
+
+.aboutMeHeaderWrapper {
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 8% 10% 0% 0%;
+  justify-content: end;
   gap: 1rem;
-  margin-bottom: 2rem;
-} */
-
+}
 .aboutMeHeader {
-  font-size: 2.25rem;
-  font-weight: 400;
+  font-size: xx-large;
+  font-weight: 600;
 }
-
-.accentLine2 {
-  margin-top: 1.5rem;
-}
-
-.accentLine4 {
-  max-width: 10rem;
+.aboutMeHeaderAccentLine {
   height: 0.0625rem;
+  width: 10%;
   background-color: #8a38f5;
 }
-
 .floatingAccentBox3 {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  border: 1px dashed rgb(255, 255, 255);
+  padding: 10px;
+  box-sizing: border-box
 }
+
+
+ /* accent boxes to the left of about me paragraph */
+
+.boxWrapper,
+.aboutParagraphWrapper {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
 .accentBox4 {
   position: relative;
   width: 100%;
@@ -232,15 +261,11 @@ section {
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-position: top left, top right, bottom left, top left;
 }
-.boxWrapper,
-.aboutParagraphWrapper {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
 
 .aboutParagraphWrapper {
   color: #fff;
-  font-size: 1rem;
+  font-size: medium;
+  margin-top: 2%;
 }
 
 .toolsContainer {
@@ -261,50 +286,187 @@ section {
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: 8%;
+}
+.projectsHeaderWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 8% 10% 0% 0%;
+  justify-content: start;
+  gap: 1rem;
+}
+.projectsHeader {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.projectsHeaderAccentLine {
+  height: 0.0625rem;
+  width: 10%;
+  background-color: #8a38f5;
+}
+
+.floatingAccentBox3b {
+  border: 1px dashed rgb(255, 255, 255);
+  padding: 10px;
+  box-sizing: border-box
+}
+
+
+.allProjectsContainer {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
 }
-.headerWrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.footerContainer {
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-
-.projectsHeader {
-  font-size: 2.25rem;
-  font-weight: 400;
-}
-
-.accentLine5 {
-  margin-top: 1.5rem;
-}
-
-.floatingAccentBox5 {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-}
-
 .footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: auto;
   max-width: 90%;
   height: 0.0625rem;
   background-color: #8a38f5;
 }
 
-/* -------------------- Mobile Responsive -------------------- */
+/* Tablet (≤1024px) */
+@media (max-width: 1024px){
+  .mainWrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .photoAndBoxWrapper {
+    order: 1;
+    scale: 90%;
+    margin-right: 45%;
+    margin-top: 1.5rem;
+  }
+  .mainLandingText {
+    order: 2;
+    /* margin-bottom: -5rem; */
+  }
+  .mainHeader {
+    /* margin-right: 7rem; */
+    font-size: x-large;
+    /* margin-top: -2rem; */
+  }
+
+  .mainHeader2 {
+    font-size: x-large;
+  }
+
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .accentLine2 {
+    height: 0.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .accentBox1 {
+    transform: translate(315%, -35%);
+    scale: 10%;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
+  .accentWrapper {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-left: 25%;
+    margin-top: 2rem;
+  }
+  .accentLine3 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 0.1rem;
+  }
+  .accentBox2 {
+    transform: translate(200%, -100%);
+  }
+  .floatingAccentBox2 {
+    transform: translate(150%, -150%);
+  }
+
+  /*  About me section - mobile */
+  .accentLine4 {
+    width: 8rem;
+    height: 0.1rem;
+    margin-top: 1.25rem;
+  }
+  .floatingAccentBox3 {
+    transform: translate(-50%, 50%);
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
+
+  .aboutMeContainer {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    /* margin-top: 3rem; */
+  }
+
+  .boxWrapper,
+  .aboutParagraphWrapper {
+    max-width: 100%;
+  }
+
+  .toolsContainer {
+    justify-content: flex-start;
+  }
+
+  .accentWrapper2 {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+.footerContainer {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.footer {
+  margin: auto;
+  max-width: 90%;
+  height: 0.0625rem;
+  background-color: #8a38f5;
+}
+}
+
+
+/*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
   .mainWrapper {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
   }
   .photoAndBoxWrapper {
     order: 1;
@@ -411,15 +573,14 @@ section {
     align-items: center;
     margin-left: 25%;
   }
-  .footerContainer {
-   display: flex;
-   justify-content: center;
-   width: 100%;
-  }
-  .footer {
-    width: 90%;
-    height: 0.1rem;
-    background-color: #8a38f5;
-    margin-bottom: 2rem;
-  }
+.footerContainer {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.footer {
+  margin: auto;
+  max-width: 90%;
+  height: 0.0625rem;
+  background-color: #8a38f5;
+}
 }
