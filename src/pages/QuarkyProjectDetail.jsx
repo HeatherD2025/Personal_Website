@@ -1,4 +1,4 @@
-import "../styles/projectPages.css";
+import "../styles/individualProjectPages.css";
 import postgresql from "../assets/images/icons/postgresqlLogo.png";
 import prisma from "../assets/images/icons/prismalogo.png";
 import react from "../assets/images/icons/reactlogo.png";
