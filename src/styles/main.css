@@ -324,19 +324,72 @@ section {
 .allProjectsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 51%;
   justify-content: center;
   align-items: flex-start;
 }
 .projectsWrapper {
-  margin-bottom: 30%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20%;
+  gap: 5rem;
 }
 
 .projectContainer {
+  max-width: 20.3125rem;
+  max-height: 30.1875rem;
+  flex-shrink: 0;
+  border: solid 1px #fff;
   gap: 2rem;
+  border: solid 1px #fff;
+}
+.projectImage {
+  width: 20.2rem;
+}
+/* .firstDividerLine {
+  width: 20.3125rem;
+  flex-shrink: 0;
+  border: solid 1px #fff;
+} */
+.firstInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.projectTitle {
+  color: #8a38f5;
+  font-family: "JetBrains Mono";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1rem;
 }
 .projectDescription {
+  color: #fff;
+  font-family: "JetBrains Mono";
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 4%;
+}
+.toolIcons {
+  display: flex;
+  align-items: center;
+  transform: translate(-0.1rem, -2.2rem);
+  gap: 0.75rem;
+  aspect-ratio: 1/1;
+
+}
+.toolIcon {
+  width: 1.5rem;
+    margin-bottom: 2rem;
+  aspect-ratio: 1/1;
 }
 
 .footerContainer {
@@ -486,7 +539,7 @@ section {
     width: 100%;
     height: 1rem;
     margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
   }
   .accentLine3 {
     position: absolute;
@@ -502,7 +555,7 @@ section {
     aspect-ratio: 1/1;
   }
   .floatingAccentBox2 {
-      position: absolute;
+    position: absolute;
     margin-top: 1.5rem;
     margin-left: -1rem;
     width: 23%;
@@ -517,7 +570,8 @@ section {
     align-items: center;
     justify-content: flex-start;
     gap: .5rem;
-    height: 1rem;
+    height: 2rem;
+    margin: 0;
   }
   .aboutMeHeader {
     font-size: x-large;
@@ -532,7 +586,6 @@ section {
   .aboutMeContainer {
     flex-direction: column;
     align-items: center;
-    margin: 0;
     /* margin-top: 3rem; */
   }
 
@@ -550,13 +603,93 @@ section {
   }
 
   .aboutParagraphWrapper {
-    margin: 0% 5% 0% 0%;
-    height: 10px !important;
+    margin: -120% 5% 0% 0%;
   }
   .toolsContainer {
     justify-content: flex-start;
   }
 
+
+
+  /* -------------------- Projects Section -------------------- */
+
+.projectsHeaderWrapper {
+  gap: .5rem;
+}
+
+.projectsHeader {
+  font-size: x-large;
+}
+.projectsHeaderAccentLine {
+    width: 5rem;
+    height: 0.1rem;
+    margin-top: 1.25rem;
+}
+.floatingAccentBox3b {
+  border: 1px dashed rgb(255, 255, 255);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.allProjectsContainer {
+  display: flex;
+  flex-direction: column;
+  /* width: 10%;
+  height: auto; */
+  /* justify-content: center; */
+}
+.projectsContainer {
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin: auto;
+  max-width: 20rem;
+}
+.projectsWrapper {
+  max-width: 100%;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; */
+}
+
+.projectContainer {
+  /* width: 200%;
+  border: solid 1px #fff; */
+    margin-bottom: 2rem;
+}
+
+.projectImage {
+  width: 100%;
+}
+.firstInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.projectTitle {
+  color: #8a38f5;
+  font-family: "JetBrains Mono";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1rem;
+}
+.projectDescription {
+  width: 100%;
+  margin-bottom: 0rem;
+}
+.toolIcons {
+  /* width: 2rem;
+  height: 2rem;
+  object-fit: contain; */
+}
+
+
+/*   second accent set below about section */
   .secondAccentWrapper {
     position: relative;
     width: 100%;
@@ -565,7 +698,11 @@ section {
     justify-content: center;
     align-items: center;
     margin-left: 25%;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
   }
+
+  
   .footerContainer {
     margin-top: 2%;
     margin-bottom: 2%;
