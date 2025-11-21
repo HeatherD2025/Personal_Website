@@ -142,7 +142,6 @@ export default function Projects() {
               </a> */}
               
             </div>
-            <div className="betweenSectionAccentLine2"></div>
           {/* </div> */}
         </div>
 

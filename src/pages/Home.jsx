@@ -68,7 +68,7 @@ export default function Home() {
             <About />
 
 
-            <div className="accentWrapper">
+            <div className="secondAccentWrapper">
               <div className="accentLine3">
                 <div className="accentBox2"></div>
                 <div className="floatingAccentBox2"></div>

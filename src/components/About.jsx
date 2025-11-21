@@ -60,12 +60,12 @@ export default function About() {
                     </div>
             </div>
 
-              <div className="accentWrapper2">
+              {/* <div className="secondAccentWrapper">
                   <div className="betweenSectionAccentLine">
                     <div className="betweenSectionAccentBox"></div>
                     <div className="betweenSectionFloatingAccentBox"></div>
                   </div>
-              </div>
+              </div> */}
 
             {/* </div> */}
           </section>
