@@ -14,7 +14,7 @@ export default function OPSGProjectDetail() {
     <>
       <div className="container">
         <div className="background">
-          <div className="pageGrid">
+          {/* <div className="pageGrid"> */}
           
             <div className="projectDetailHeaderWrapper">
                <div className="projectDetailHeaderLeft">projects</div>
@@ -96,17 +96,19 @@ export default function OPSGProjectDetail() {
               </div>
             </div>
             
+          </div>
+          
             <div className="allProjects">
               <Projects/>
             </div>
 
-          </div>
+          
          </div>
         <div className="footerContainer">
             <div className="footer"></div>
         </div>
 
-        </div>
+        {/* </div> */}
       </div>
     </>
   );

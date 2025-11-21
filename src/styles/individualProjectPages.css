@@ -1,81 +1,78 @@
-/* -------------------- Projects Section -------------------- */
-.projectsContainer {
-  /* display: grid;
-  grid-template-columns: repeat(16, 1fr); */
-  /* display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  align-items: start; */
-}
+/* Individual Projects Section */
 
-.projectsHeaderWrapper {
-  /* grid-column: 2 / span 14; */
-  /* display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem; */
-}
-
-.projectsHeader {
-  font-size: 2.25rem;
-}
-
-.accentLine5 {
-  flex-grow: 1;
-  height: 0.0625rem;
-  background-color: #8a38f5;
-}
-
-.floatingAccentBox5 {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-}
-
-/* Project cards container */
-.projectsWrapper {
+.projectDetailHeaderWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 18rem;
+  height: 1rem;
+  margin-top: 9rem;
+  margin-bottom: 3rem;
+}
+.projectDetailHeaderLeft {
+  color: #FFF;
+  font-family: "JetBrains Mono";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.verticalDividerLine {
+  border: .75px solid #FFF;
+  height: .75rem;
+  width: .0025rem;
+}
+.projectDetailHeaderRight {
+  color: #8A38F5;
+  font-family: "JetBrains Mono";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.projectContainer {
+.OPSG-Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 20rem;
-  flex-shrink: 0;
-  border: 1px solid #fff;
-  box-sizing: border-box;
+  flex-shrink: 1;
 }
 
-.projectImage {
+.projectTitle2 {
+  font-size: 1.5rem;
   width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.firstInfoContainer {
-  padding: 0.75rem;
-}
-
-.projectTitle {
-  font-size: 1.25rem;
   color: #8a38f5;
-  margin-bottom: 0.5rem;
 }
-
 .projectDescription2 {
   font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  max-width: 40%;
+  align-self: stretch;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.projectLink {
+  font-size: 1rem;
+  color: #FFF;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.accentLine6 {
+  height: 0.0625rem;
+  max-width: 40%;
+  margin: 2% 0% 2% 0%;
+  background: #8A38F5;
+}
+.firstSiteImage {
+  height: 25.5rem;
 }
 
-.toolIcons img,
+.toolIcons2,
 .toolIcon {
   width: 1.5rem;
   height: 1.5rem;
@@ -83,23 +80,8 @@
   margin-right: 0.5rem;
 }
 
-/* Mobile Homepage Projects Section */
+  /* OPSG Project Page */
 @media (max-width: 768px) {
-  .projectsContainer {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-  .projectContainer {
-    margin-bottom: 1rem;
-  }
-  .projectsWrapper {
-    max-width: 100%;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  /* OPSG Project Page*/
   .projectDetailHeaderWrapper {
     display: flex;
     justify-content: flex-start;

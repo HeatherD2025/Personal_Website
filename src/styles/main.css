@@ -50,17 +50,17 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: 5rem 5rem 0rem 5rem;
-  justify-content: center;
-  gap: 20%; */
+  margin: 5rem 5rem 0rem 5rem; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
+  /* margin-top: 10%; */
   /* gap: 2rem; */
   margin: 10% 0% 0% 8%;
 }
 
- /* Wrapper for header, content and accent line in intro */
+/* Wrapper for header, content and accent line in intro */
 
 .mainWrapper {
   width: 100%;
@@ -68,8 +68,8 @@ section {
   /* flex-direction: row; */
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 8% 10% 0% 0%;
-  justify-content: end;
+  margin-top: 8%;
+  justify-content: center;
   justify-content: flex-start;
 }
 .mainHeader {
@@ -88,11 +88,10 @@ section {
   background-color: #8a38f5;
 }
 
-
 /* wrapper for photo and accent box */
 
 .photoAndBoxWrapper {
-  flex: 1 1 400px;
+  flex: 1 1 250px;
   max-width: 600px;
 }
 .mainWrapper {
@@ -154,6 +153,12 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 30%;
+  margin-bottom: 3%;
+}
+.secondAccentWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 18%;
   margin-bottom: 3%;
 }
 .accentLine3 {
@@ -225,11 +230,10 @@ section {
 .floatingAccentBox3 {
   border: 1px dashed rgb(255, 255, 255);
   padding: 10px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-
- /* accent boxes to the left of about me paragraph */
+/* accent boxes to the left of about me paragraph */
 
 .boxWrapper,
 .aboutParagraphWrapper {
@@ -272,7 +276,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 5%;
 }
 
 .toolIcon {
@@ -290,54 +294,68 @@ section {
   gap: 2rem;
   margin-left: 8%;
 }
+
 .projectsHeaderWrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 8% 10% 0% 0%;
+  margin: 8% 10% 5% 0%;
   justify-content: start;
   gap: 1rem;
 }
+
 .projectsHeader {
   font-size: xx-large;
   font-weight: 600;
 }
-
 .projectsHeaderAccentLine {
   height: 0.0625rem;
   width: 10%;
   background-color: #8a38f5;
 }
-
 .floatingAccentBox3b {
   border: 1px dashed rgb(255, 255, 255);
   padding: 10px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-
 
 .allProjectsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 51%;
   justify-content: center;
   align-items: flex-start;
 }
+.projectsWrapper {
+  margin-bottom: 30%;
+}
+
+.projectContainer {
+  gap: 2rem;
+}
+.projectDescription {
+  margin-bottom: 4%;
+}
+
 .footerContainer {
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 .footer {
   margin: auto;
-  max-width: 90%;
+  max-width: 35%;
   height: 0.0625rem;
   background-color: #8a38f5;
 }
 
 /* Tablet (≤1024px) */
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
+  .container {
+    width: min(90%, 1024px);
+    margin: 0 auto;
+  }
   .mainWrapper {
     flex-direction: column;
     align-items: center;
@@ -346,8 +364,9 @@ section {
   .photoAndBoxWrapper {
     order: 1;
     scale: 90%;
-    margin-right: 45%;
-    margin-top: 1.5rem;
+    width: 10rem;
+    /* margin-right: 45%; */
+    margin-top: 10.5rem;
   }
   .mainLandingText {
     order: 2;
@@ -405,118 +424,69 @@ section {
   .floatingAccentBox2 {
     transform: translate(150%, -150%);
   }
-
-  /*  About me section - mobile */
-  .accentLine4 {
-    width: 8rem;
-    height: 0.1rem;
-    margin-top: 1.25rem;
-  }
-  .floatingAccentBox3 {
-    transform: translate(-50%, 50%);
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%);
-    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-    background-position: top left, top right, bottom left, top left;
-  }
-
-  .aboutMeContainer {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    /* margin-top: 3rem; */
-  }
-
-  .boxWrapper,
-  .aboutParagraphWrapper {
-    max-width: 100%;
-  }
-
-  .toolsContainer {
-    justify-content: flex-start;
-  }
-
-  .accentWrapper2 {
-    position: relative;
-    width: 100%;
-    height: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25%;
-  }
-.footerContainer {
-  margin-top: 2%;
-  margin-bottom: 2%;
 }
-.footer {
-  margin: auto;
-  max-width: 90%;
-  height: 0.0625rem;
-  background-color: #8a38f5;
-}
-}
+
 
 
 /*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
-  .mainWrapper {
+  .container {
+    width: min(90%, 768px);
+    margin: 0 auto;
+  }
+
+  .mainContainer {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
-  .photoAndBoxWrapper {
-    order: 1;
-    scale: 130%;
-    margin-right: 3rem;
-    margin-top: 1.5rem;
-  }
-  .mainLandingText {
+
+  .mainWrapper {
+    display: flex;
+    align-items: flex-start;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; */
+    margin-top: 5rem;
+    max-height: 13rem;
     order: 2;
-    /* margin-bottom: -5rem; */
+    gap: 1rem;
   }
   .mainHeader {
-    margin-right: 7rem;
     font-size: x-large;
-    margin-top: -2rem;
+    max-width: 20rem;
+    margin-left: 1rem;
+  }
+  .mainContent {
+    font-size: medium;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+    margin-left: 1rem;
+  }
+  .mainAccentLine {
+    margin-left: 1rem;
   }
 
-  .mainHeader2 {
-    font-size: x-large;
+  .photoAndBoxWrapper {
+    order: 1;
+    scale: 175%;
+    margin-right: 2rem;
+    margin-top: 40%;
+    max-height: 13rem;
+  }
+  .photoAccentBox {
+
   }
 
-  .headerWrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    /* margin-bottom: 2rem; */
-  }
 
-  .accentLine2 {
-    height: 0.1rem;
-    margin-bottom: 3rem;
-  }
-
-  .accentBox1 {
-    transform: translate(315%, -35%);
-    scale: 150%;
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%);
-    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-    background-position: top left, top right, bottom left, top left;
-  }
+  /* accent line and boxes below main intro section */
   .accentWrapper {
     position: relative;
     width: 100%;
     height: 1rem;
-    margin-left: 25%;
-    margin-top: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
   }
   .accentLine3 {
     position: absolute;
@@ -525,28 +495,39 @@ section {
     height: 0.1rem;
   }
   .accentBox2 {
-    transform: translate(200%, -100%);
+    position: absolute;
+    margin-top: 1.5rem;
+    margin-left: -4rem;
+    width: 23%;
+    aspect-ratio: 1/1;
   }
   .floatingAccentBox2 {
-    transform: translate(150%, -150%);
+      position: absolute;
+    margin-top: 1.5rem;
+    margin-left: -1rem;
+    width: 23%;
+    aspect-ratio: 1/1;
   }
 
+  
   /*  About me section - mobile */
-  .accentLine4 {
-    width: 8rem;
+  .aboutMeHeaderWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    height: 1rem;
+  }
+  .aboutMeHeader {
+    font-size: x-large;
+  }
+  .aboutMeHeaderAccentLine {
+    width: 5rem;
     height: 0.1rem;
     margin-top: 1.25rem;
   }
-  .floatingAccentBox3 {
-    transform: translate(-50%, 50%);
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%);
-    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-    background-position: top left, top right, bottom left, top left;
-  }
+
 
   .aboutMeContainer {
     flex-direction: column;
@@ -559,12 +540,24 @@ section {
   .aboutParagraphWrapper {
     max-width: 100%;
   }
+  .accentBox4 {
+    display: none;
+    height: 0rem;
+  }
+  .floatingAccentBox4 {
+    display: none;
+    height: 0rem;
+  }
 
+  .aboutParagraphWrapper {
+    margin: 0% 5% 0% 0%;
+    height: 10px !important;
+  }
   .toolsContainer {
     justify-content: flex-start;
   }
 
-  .accentWrapper2 {
+  .secondAccentWrapper {
     position: relative;
     width: 100%;
     height: 1rem;
@@ -573,14 +566,14 @@ section {
     align-items: center;
     margin-left: 25%;
   }
-.footerContainer {
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-.footer {
-  margin: auto;
-  max-width: 90%;
-  height: 0.0625rem;
-  background-color: #8a38f5;
-}
+  .footerContainer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .footer {
+    margin: auto;
+    max-width: 90%;
+    height: 0.0625rem;
+    background-color: #8a38f5;
+  }
 }
