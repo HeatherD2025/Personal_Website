@@ -510,6 +510,7 @@ section {
     font-size: x-large;
     max-width: 20rem;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
   .mainContent {
     font-size: medium;
@@ -523,13 +524,17 @@ section {
 
   .photoAndBoxWrapper {
     order: 1;
+    display: flex;
     scale: 175%;
     margin-right: 2rem;
     margin-top: 40%;
     max-height: 13rem;
   }
   .photoAccentBox {
-
+   max-width: 3rem;
+   margin-right: 1rem;
+   border: dashed;
+   background-image: none;
   }
 
 
@@ -621,9 +626,9 @@ section {
   font-size: x-large;
 }
 .projectsHeaderAccentLine {
-    width: 5rem;
-    height: 0.1rem;
-    margin-top: 1.25rem;
+  width: 5rem;
+  height: 0.1rem;
+  margin-top: 1.25rem;
 }
 .floatingAccentBox3b {
   border: 1px dashed rgb(255, 255, 255);
@@ -654,7 +659,7 @@ section {
 .projectContainer {
   /* width: 200%;
   border: solid 1px #fff; */
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .projectImage {
@@ -680,13 +685,9 @@ section {
 }
 .projectDescription {
   width: 100%;
-  margin-bottom: 0rem;
+  margin-bottom: 2rem;
 }
-.toolIcons {
-  /* width: 2rem;
-  height: 2rem;
-  object-fit: contain; */
-}
+
 
 
 /*   second accent set below about section */
@@ -704,11 +705,9 @@ section {
 
   
   .footerContainer {
-    margin-top: 2%;
-    margin-bottom: 2%;
   }
   .footer {
-    margin: auto;
+    margin-bottom: 5rem;
     max-width: 90%;
     height: 0.0625rem;
     background-color: #8a38f5;
