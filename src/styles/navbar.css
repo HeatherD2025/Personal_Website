@@ -161,10 +161,12 @@
     max-width: min-content;
     margin: 0% 0% 0% 5%;
   }
-
   .navItems {
-    gap: .5vw;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
   }
+
 
   .linkBox {
     display: flex;
@@ -176,11 +178,14 @@
 @media (max-width: 768px) {
   .navbarInner {
     padding: 0 1rem;
+    gap: 6rem;
   }
 
   .hamburger {
     display: flex;
-    padding-left: 12rem;
+    flex-direction: column;
+
+    transform: translateX(-290%);
   }
 
   .navItems {
@@ -188,9 +193,11 @@
     flex-direction: column;
     gap: 1.5rem;
     background-color: #100310;
-    padding: 2rem 0;
+    padding: 2rem;
+    margin-top: 25%;
     border-top: 1px solid #8a38f5;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    transform: translateX(-90%);
   }
 
   .navItems.open {
