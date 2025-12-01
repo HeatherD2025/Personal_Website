@@ -23,10 +23,10 @@ export default function Projects() {
 
         <div className="projectsContainer">
           {/* <div className="projectsGrid"> */}
-            <div className="projectsHeaderWrapper">
+            <div className="headerWrapper">
               <div className="projectsHeader">projects</div>
-              <div className="projectsHeaderAccentLine"></div>
-              <div className="floatingAccentBox3b"></div>
+              <div className="headerAccentLine"></div>
+              <div className="floatingAccentBox3"></div>
             </div>
 
             <div className="allProjectsContainer">
@@ -111,35 +111,6 @@ export default function Projects() {
                 {/* </div> */}
                </a>
               )}
-
-              {/* <a onClick={() => navigate("/ProjectDetail")}>
-                <div className="projectContainer">
-
-                  <div className="firstInfoContainer">
-                    <div className="projectTitle">coming soon</div>
-                    <div className="projectDescription">
-                      wenflew fewofnewldewldnc newloejdl cl elwdnlwekw
-                    </div>
-                    <div className="toolIcons">
-                      <img
-                        className="toolIcon"
-                        src={react}
-                        alt="react logo"
-                      ></img>
-                      <img
-                        className="toolIcon"
-                        src={prisma}
-                        alt="prisma logo"
-                      ></img>
-                      <img
-                        className="toolIcon"
-                        src={postgresql}
-                        alt="postgresql logo"
-                      ></img>
-                    </div>
-                  </div>
-                </div>
-              </a> */}
               
             </div>
           {/* </div> */}

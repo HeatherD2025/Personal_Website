@@ -10,31 +10,15 @@
   z-index: 9;
 }
 
-/* ---------- Desktop Grid Layout ---------- */
-/* .navbarGrid {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  gap: 1rem;
-  max-width: 2000px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1.5rem 1rem;
-} */
+/* Desktop */
 .navbarInner {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0% 7% 0% 7.5%;
   flex-shrink: 1;
-  /* gap: 60rem; */
-  /* margin-left: 32%; */
-  /* grid-column: 2 / span 14; */
-  /* display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center; */
 }
 
-/* ---------- Branding ---------- */
 .navbarBrand {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
@@ -52,7 +36,7 @@
   cursor: pointer;
 }
 
-.navbarBrand:hover {  
+.navbarBrand:hover {
   text-decoration: underline;
   color: #8a38f5;
 }
@@ -71,7 +55,6 @@
 }
 
 .navItem {
-  /* display: block; */
   background: none;
   border: none;
   text-decoration: none;
@@ -93,7 +76,7 @@
   text-decoration: underline;
 }
 
-/* ---------- Hamburger ---------- */
+/* Hamburger */
 .hamburger {
   font-size: 2rem;
   color: white;
@@ -102,7 +85,7 @@
   margin-left: auto;
 }
 
-/* ---------- Left-side Icon Column ---------- */
+/* Left-side Icon Column  */
 .linkBox {
   position: fixed;
   top: 0rem;
@@ -146,7 +129,6 @@
   background: #8a38f5;
 }
 
-
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
   .navbarGrid {
@@ -164,9 +146,7 @@
   .navItems {
     display: flex;
     gap: 1rem;
-    justify-content: flex-start;
   }
-
 
   .linkBox {
     display: flex;
@@ -184,7 +164,6 @@
   .hamburger {
     display: flex;
     flex-direction: column;
-
     transform: translateX(-290%);
   }
 
@@ -219,23 +198,53 @@
 
 /* ---------- Small Mobile (≤480px) ---------- */
 @media (max-width: 480px) {
-  .navbarBrand {
-    font-size: 1rem;
-  }
-
   .hamburger {
     font-size: 1.75rem;
+    margin-top: -18%;
+  }
+  .hamburger.open {
+  }
+  .navbarInner {
+    max-width: 25%;
+    gap: 21.5em;
+  }
+  .homeButton {
+    width: 80%;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 10%;
+  }
+  .navbarBrand {
+    font-size: small;
+    position: sticky;
+    text-wrap: nowrap;
+    margin-left: -35%;
+  }
+  .navbarBrand.open {
+  }
+  .navbarBrand:hover {
+    text-decoration: underline;
+    color: #8a38f5;
   }
 
-  .navItems.open, .hamNavItems.open {
+  .floatingAccentBox1 {
+    width: 5%;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+  }
+
+  .navItems.open,
+  .hamNavItems.open {
     display: flex;
     align-items: flex-start;
   }
 
-  .navItem, .hamNavItem {
+  .navItem,
+  .hamNavItem {
     display: flex;
     padding: 0.25rem;
     color: #fff;
   }
-
 }

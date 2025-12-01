@@ -1,3 +1,4 @@
+import "../styles/main.css";
 import "../styles/individualProjectPages.css";
 import postgresql from "../assets/images/icons/postgresqlLogo.png";
 import prisma from "../assets/images/icons/prismalogo.png";
@@ -53,7 +54,6 @@ export default function OPSGProjectDetail() {
               ></img>
             </div>
 
-            <div className="accentBox6"></div>
             <div className="projectDescription3">
               Our fullstack app was built with a <strong>PostgreSQL</strong>{" "}
               database and <strong>Prisma</strong> for data consistency. For
@@ -73,7 +73,6 @@ export default function OPSGProjectDetail() {
               extremely useful for forms and other contained elements.
             </div>
 
-            <div className="accentBox7"></div>
             <div className="projectDescription4">
               This experience reinforced the importance of delegation and goal
               management. Utilizing github project boards, our team assessed

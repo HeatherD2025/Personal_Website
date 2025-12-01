@@ -21,9 +21,9 @@ export default function About() {
             <div className="aboutMeContainer">
 
                {/* <div className="aboutGrid"> */}
-                <div className="aboutMeHeaderWrapper">
+                <div className="headerWrapper">
                     <div className="aboutMeHeader">about-me</div>
-                      <div className="aboutMeHeaderAccentLine"></div>
+                      <div className="headerAccentLine"></div>
                       <div className="floatingAccentBox3"></div>
                 </div>
             
@@ -37,7 +37,10 @@ export default function About() {
                   <div className="aboutParagraphWrapper">
                       <div className="aboutParagraph">
                         I was a curious kid - passionate about technology and science with a knack for visualizing functionality and aesthetic. 
-                        Naturally inquisitive and excited to understand cause-and-effect processes, I've always had a persistant drive to learn something new. 
+                        Naturally inquisitive and excited to understand cause-and-effect processes, I've always had a persistant drive to learn something new.
+
+                        <div className="paragraphSpacer"></div>
+
                         After 12+ years leading teams and coordinating events, I was craving a new challenge, so I made the leap into web development 
                         through an immersive Fullstack Academy bootcamp. Now, as a fullstack developer with a background in design, operations, and hospitality,
                         I'm focused on building user-first applications with responsive design. Ready to join a new team helping create the extraordinary!

@@ -47,7 +47,6 @@ export default function QuarkyProjectDetail() {
                 ></img>
               </div>
   
-              <div className="accentBox6"></div>
               <div className="projectDescription3">
                 Our fullstack app was built with a <strong>PostgreSQL</strong>{" "}
                 database and <strong>Prisma</strong> for data consistency. For
@@ -67,7 +66,6 @@ export default function QuarkyProjectDetail() {
                 extremely useful for forms and other contained elements.
               </div>
   
-              <div className="accentBox7"></div>
               <div className="projectDescription4">
                 This experience reinforced the importance of delegation and goal
                 management. Utilizing github project boards, our team assessed
@@ -82,14 +80,8 @@ export default function QuarkyProjectDetail() {
                 skills and prefer to design with column grids and utilize
                 scaleable units.
               </div>
-  
-              <div className="betweenSectionAccentLine4">
-                <div className="betweenSectionAccentBox3"></div>
-                <div className="betweenSectionFloatingAccentBox3"></div>
-              </div>
-  
-               
-  
+
+
             </div>
           </div>
         </div>

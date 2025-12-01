@@ -1,429 +1,396 @@
 /* Base Layout */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-}
+@media screen and (min-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
 
-body,
-#root,
-.background {
-  min-height: 100vh;
-  background-color: #100310;
-  margin: 0;
-  padding: 0;
-  font-family: "JetBrains Mono", monospace;
-  color: #fff;
-  overflow-x: hidden; /* prevent horizontal scroll */
-}
+  body,
+  #root,
+  .background {
+    min-height: 100vh;
+    background-color: #100310;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
 
-.container {
-  width: min(90%, 1440px);
-  margin: 0 auto;
-}
+  .container {
+    width: min(90%, 1440px);
+    margin: 0 auto;
+  }
 
-/* .pageGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  min-width: 1050px;
-  max-width: 1920px; 
-  margin: 0 auto; 
-  margin: 0rem 1rem 0rem .5rem;
-  padding: 0 1rem;
-   position: relative;
-} */
+  section {
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 
-section {
-  /* display: block; */
-  /* width: 100%; */
-  /* max-width: 1920px; */
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
+  /*  Intro Section  */
 
-/*  Intro Section  */
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10% 0% 0% 8%;
+  }
 
-.mainContainer {
-  /* display: flex;
-  flex: 1 1 100px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 5rem 5rem 0rem 5rem; */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  /* margin-top: 10%; */
-  /* gap: 2rem; */
-  margin: 10% 0% 0% 8%;
-}
+  /* Wrapper for header, content and accent line in intro */
 
-/* Wrapper for header, content and accent line in intro */
+  .mainWrapper {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 8%;
+    justify-content: center;
+    justify-content: flex-start;
+  }
+  .mainHeader {
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 2%;
+  }
+  .mainContent {
+    font-size: medium;
+    line-height: 1.5rem;
+    margin-bottom: 2%;
+  }
+  .mainAccentLine {
+    width: 80%;
+    height: 0.0625rem;
+    background-color: #8a38f5;
+  }
 
-.mainWrapper {
-  width: 100%;
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin-top: 8%;
-  justify-content: center;
-  justify-content: flex-start;
-}
-.mainHeader {
-  font-size: x-large;
-  font-weight: 600;
-  margin-bottom: 2%;
-}
-.mainContent {
-  font-size: medium;
-  line-height: 1.5rem;
-  margin-bottom: 2%;
-}
-.mainAccentLine {
-  width: 80%;
-  height: 0.0625rem;
-  background-color: #8a38f5;
-}
+  /* wrapper for photo and accent box */
 
-/* wrapper for photo and accent box */
+  .photoAndBoxWrapper {
+    flex: 1 1 250px;
+    max-width: 600px;
+  }
+  .mainWrapper {
+    flex: 1 1 400px;
+    max-width: 600px;
+    margin: 2% 0% 20% 0%;;
+  }
+  .myPhotoWrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 25rem;
+    aspect-ratio: 1/1;
+    border: 1px, solid, #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    background-size: contain;
+  }
+  .myPhoto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/myPortrait.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  .photoAccentBox {
+    position: absolute;
+    top: 80%;
+    left: 78%;
+    width: 40%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
 
-.photoAndBoxWrapper {
-  flex: 1 1 250px;
-  max-width: 600px;
-}
-.mainWrapper {
-  /* max-width: 40%;
-  display: flex; 
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center; */
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-/* .photoAndBoxWrapper {
-  margin: 5% 0% 0% 0%;
-} */
-.myPhotoWrapper {
-  position: absolute;
-  width: 100%;
-  max-width: 25rem;
-  aspect-ratio: 1/1;
-  border: 1px, solid, #fff;
-  box-sizing: border-box;
-  padding: 10px;
-  background-size: contain;
-}
-.myPhoto {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/images/myPortrait.jpg");
-  background-size: cover;
-  box-sizing: border-box;
-  /* background-position: center; */
-}
-.photoAccentBox {
-  position: absolute;
-  top: 80%;
-  left: 78%;
-  width: 40%;
-  aspect-ratio: 1/1;
-  box-sizing: border-box;
-  /* width: 15vw;
-  aspect-ratio: 1/1;
-  height: 15vw;
-  margin-top: -10%;
-  margin-left: 75%; */
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
 
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
+  /* section divider accent */
+  .accentWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 13%;
+    margin-bottom: 3%;
+  }
+  .accentLine3 {
+    height: 0.0625rem;
+    background: #8a38f5;
+    width: 25%;
+    z-index: 8;
+  }
+  .accentBox2 {
+    max-height: 3rem;
+    aspect-ratio: 1/1;
+    z-index: 0 !important;
+    margin-top: -2.9rem;
+    margin-left: 5rem;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
+  .floatingAccentBox2 {
+    max-height: 3rem;
+    aspect-ratio: 1 / 1;
+    z-index: 10 !important;
+    margin-top: -1.5rem;
+    margin-left: 3.5rem;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
 
-/* section divider accent */
+  /* About Section  */
+  .aboutMeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 8%;
+  }
+  .headerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 8% 10% 0% 0%;
+    justify-content: end;
+    gap: 1rem;
+  }
+  .aboutMeHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .headerAccentLine {
+    height: 0.0625rem;
+    width: 10%;
+    background-color: #8a38f5;
+  }
+  .floatingAccentBox3 {
+    border: 1px dashed rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+  }
 
-.accentWrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 30%;
-  margin-bottom: 3%;
-}
-.secondAccentWrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 18%;
-  margin-bottom: 3%;
-}
-.accentLine3 {
-  height: 0.0625rem;
-  background: #8a38f5;
-  width: 25%;
-  z-index: 8;
-  /* margin-top: 10%; */
-}
-.accentBox2 {
-  max-height: 3rem;
-  aspect-ratio: 1/1;
-  z-index: 0 !important;
-  margin-top: -2.9rem;
-  margin-left: 5rem;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
-.floatingAccentBox2 {
-  max-height: 3rem;
-  aspect-ratio: 1 / 1;
-  z-index: 10 !important;
-  margin-top: -1.5rem;
-  margin-left: 3.5rem;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 12px 1px, 1px 12px, 12px 1px, 1px 12px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
+  /* accent boxes to the left of about me paragraph */
 
-/* About Section  */
-.aboutMeContainer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2rem;
-  margin-left: 8%;
-}
+  .boxWrapper,
+  .aboutParagraphWrapper {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
 
-/* wrapper for header of section */
+  .accentBox4 {
+    position: relative;
+    width: 100%;
+    max-width: 27.5rem;
+    aspect-ratio: 5 / 4.5;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+  }
+  .floatingAccentBox4 {
+    position: absolute;
+    top: 87.5%;
+    left: 89%;
+    width: 22.7%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
 
-.aboutMeHeaderWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin: 8% 10% 0% 0%;
-  justify-content: end;
-  gap: 1rem;
-}
-.aboutMeHeader {
-  font-size: xx-large;
-  font-weight: 600;
-}
-.aboutMeHeaderAccentLine {
-  height: 0.0625rem;
-  width: 10%;
-  background-color: #8a38f5;
-}
-.floatingAccentBox3 {
-  border: 1px dashed rgb(255, 255, 255);
-  padding: 10px;
-  box-sizing: border-box;
-}
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
 
-/* accent boxes to the left of about me paragraph */
+  .aboutParagraphWrapper {
+    color: #fff;
+    font-size: medium;
+    margin-top: 2%;
+    margin-right: 2%;
+  }
 
-.boxWrapper,
-.aboutParagraphWrapper {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
+  .toolsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 5%;
+  }
 
-.accentBox4 {
-  position: relative;
-  width: 100%;
-  max-width: 27.5rem;
-  aspect-ratio: 5 / 4.5;
-  border: 1px solid #fff;
-  box-sizing: border-box;
-}
-.floatingAccentBox4 {
-  position: absolute;
-  top: 87.5%;
-  left: 89%;
-  width: 22.7%;
-  aspect-ratio: 1/1;
-  box-sizing: border-box;
+  .toolIcon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    margin-right: 0.5rem;
+  }
 
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%),
-    linear-gradient(to left, #fff 50%, transparent 50%),
-    linear-gradient(to bottom, #fff 50%, transparent 50%);
-  background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-position: top left, top right, bottom left, top left;
-}
+  /* -------------------- Projects Section -------------------- */
+  .projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 8%;
+  }
 
-.aboutParagraphWrapper {
-  color: #fff;
-  font-size: medium;
-  margin-top: 2%;
-}
+  .headerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 8% 10% 5% 0%;
+    justify-content: start;
+    gap: 1rem;
+  }
 
-.toolsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 5%;
-}
+  .projectsHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
 
-.toolIcon {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-  margin-right: 0.5rem;
-}
+  .allProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .projectsWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20%;
+    gap: 5rem;
+  }
 
-/* -------------------- Projects Section -------------------- */
-.projectsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2rem;
-  margin-left: 8%;
-}
-
-.projectsHeaderWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin: 8% 10% 5% 0%;
-  justify-content: start;
-  gap: 1rem;
-}
-
-.projectsHeader {
-  font-size: xx-large;
-  font-weight: 600;
-}
-.projectsHeaderAccentLine {
-  height: 0.0625rem;
-  width: 10%;
-  background-color: #8a38f5;
-}
-.floatingAccentBox3b {
-  border: 1px dashed rgb(255, 255, 255);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.allProjectsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-.projectsWrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 20%;
-  gap: 5rem;
-}
-
-.projectContainer {
-  max-width: 20.3125rem;
-  max-height: 30.1875rem;
-  flex-shrink: 0;
-  border: solid 1px #fff;
-  gap: 2rem;
-  border: solid 1px #fff;
-}
-.projectImage {
-  width: 20.2rem;
-}
-/* .firstDividerLine {
+  .projectContainer {
+    max-width: 20.3125rem;
+    max-height: 30.1875rem;
+    flex-shrink: 0;
+    border: solid 1px #fff;
+    gap: 2rem;
+    border: solid 1px #fff;
+  }
+  .projectImage {
+    width: 20.2rem;
+  }
+  /* .firstDividerLine {
   width: 20.3125rem;
   flex-shrink: 0;
   border: solid 1px #fff;
 } */
-.firstInfoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-.projectTitle {
-  color: #8a38f5;
-  font-family: "JetBrains Mono";
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 1rem;
-}
-.projectDescription {
-  color: #fff;
-  font-family: "JetBrains Mono";
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 4%;
-}
-.toolIcons {
-  display: flex;
-  align-items: center;
-  transform: translate(-0.1rem, -2.2rem);
-  gap: 0.75rem;
-  aspect-ratio: 1/1;
-
-}
-.toolIcon {
-  width: 1.5rem;
+  .firstInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .projectTitle {
+    color: #8a38f5;
+    font-family: "JetBrains Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  .projectDescription {
+    color: #fff;
+    font-family: "JetBrains Mono";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4%;
+  }
+  .toolIcons {
+    display: flex;
+    align-items: center;
+    transform: translate(-0.1rem, -2.2rem);
+    gap: 0.75rem;
+    aspect-ratio: 1/1;
+  }
+  .toolIcon {
+    width: 1.5rem;
     margin-bottom: 2rem;
-  aspect-ratio: 1/1;
-}
+    aspect-ratio: 1/1;
+  }
 
-.footerContainer {
-  margin-top: 2%;
-  margin-bottom: 5%;
-}
-.footer {
-  margin: auto;
-  max-width: 35%;
-  height: 0.0625rem;
-  background-color: #8a38f5;
+  .footerContainer {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  .footer {
+    margin: auto;
+    max-width: 35%;
+    height: 0.0625rem;
+    background-color: #8a38f5;
+  }
 }
 
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body,
+  #root,
+  .background {
+    min-height: 100vh;
+    background-color: #100310;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+  section {
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
   .container {
     width: min(90%, 1024px);
     margin: 0 auto;
   }
+
   .mainWrapper {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
   }
   .photoAndBoxWrapper {
     order: 1;
     scale: 90%;
     width: 10rem;
-    /* margin-right: 45%; */
+    margin-right: 4vw;
     margin-top: 10.5rem;
   }
   .mainLandingText {
     order: 2;
-    /* margin-bottom: -5rem; */
   }
   .mainHeader {
     /* margin-right: 7rem; */
@@ -439,7 +406,6 @@ section {
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* margin-bottom: 2rem; */
   }
 
   .accentLine2 {
@@ -479,10 +445,29 @@ section {
   }
 }
 
-
-
 /*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body,
+  #root,
+  .background {
+    min-height: 100vh;
+    background-color: #100310;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+  section {
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
   .container {
     width: min(90%, 768px);
     margin: 0 auto;
@@ -492,222 +477,236 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: flex-start; */
   }
 
   .mainWrapper {
     display: flex;
     align-items: flex-start;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; */
-    margin-top: 5rem;
+    margin-top: 25%;
+    margin-bottom: 20%;
     max-height: 13rem;
     order: 2;
     gap: 1rem;
   }
   .mainHeader {
+    order: 2;
     font-size: x-large;
-    max-width: 20rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    max-width: 50%;
+    margin-left: 5%;
+    margin-top: -2%;
   }
   .mainContent {
-    font-size: medium;
-    margin-bottom: 1rem;
-    max-width: 20rem;
-    margin-left: 1rem;
+    order: 3;
+    font-size: small;
+    max-width: 92%;
+    margin-left: 5%;
   }
   .mainAccentLine {
-    margin-left: 1rem;
+    height: 0.1rem;
+    width: 40%;
+    background: #8a38f5;
+    order: 4;
+    margin-left: 5%;
   }
 
   .photoAndBoxWrapper {
     order: 1;
     display: flex;
+    align-items: flex-start;
     scale: 175%;
-    margin-right: 2rem;
-    margin-top: 40%;
+    width: 48%;
+    margin-top: 50%;
     max-height: 13rem;
   }
-  .photoAccentBox {
-   max-width: 3rem;
-   margin-right: 1rem;
-   border: dashed;
-   background-image: none;
+  .myPhotoWrapper {
+    /* position: absolute; */
+    width: 110%;
+    order: 1;
+    max-width: 25rem;
+    aspect-ratio: 1/1;
+    border: 1px, solid, #fff;
+    box-sizing: border-box;
+    padding: 5px;
+    background-size: contain;
   }
-
-
-  /* accent line and boxes below main intro section */
-  .accentWrapper {
+  .myPhoto {
     position: relative;
     width: 100%;
-    height: 1rem;
-    margin-top: 8rem;
-    margin-bottom: 5rem;
+    height: 100%;
+    background-image: url("../assets/images/myPortrait.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  .photoAccentBox {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    min-width: 35%;
+    margin-right: 1rem;
+    border: dashed;
+    background-image: none;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+  }
+
+  /* Mobile section divider accent */
+  .accentWrapper {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .accentLine3 {
-    position: absolute;
-    left: 0;
-    width: 50%;
     height: 0.1rem;
+    background: #8a38f5;
+    position: relative;
+    z-index: 8;
   }
   .accentBox2 {
     position: absolute;
-    margin-top: 1.5rem;
-    margin-left: -4rem;
-    width: 23%;
+    height: auto;
     aspect-ratio: 1/1;
+    margin-top: 1.5rem;
+    margin-left: -1rem;
+    width: 20%;
+    border: dashed;
+    color: #fff;
   }
   .floatingAccentBox2 {
     position: absolute;
-    margin-top: 1.5rem;
-    margin-left: -1rem;
-    width: 23%;
     aspect-ratio: 1/1;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    width: 20%;
+    border: dashed;
+    color: #fff;
   }
 
-  
-  /*  About me section - mobile */
-  .aboutMeHeaderWrapper {
+  /*  Mobile about me section */
+  .aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    margin-left: 2%;
+  }
+  .headerWrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
     justify-content: flex-start;
-    gap: .5rem;
+    gap: 0.5rem;
     height: 2rem;
-    margin: 0;
+    margin: 5% 0% 10% 0%;
   }
   .aboutMeHeader {
     font-size: x-large;
   }
-  .aboutMeHeaderAccentLine {
-    width: 5rem;
+  .headerAccentLine {
     height: 0.1rem;
-    margin-top: 1.25rem;
+    margin-top: 1.75rem;
+    background: #8a38f5;
+    width: 25%;
   }
-
-
-  .aboutMeContainer {
-    flex-direction: column;
-    align-items: center;
-    /* margin-top: 3rem; */
+  .floatingAccentBox3 {
+    border: 1px dashed rgb(255, 255, 255);
+    width: 2rem;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
   }
 
   .boxWrapper,
   .aboutParagraphWrapper {
     max-width: 100%;
   }
-  .accentBox4 {
-    display: none;
-    height: 0rem;
+  .aboutParagraphWrapper {
+    font-size: small;
+  }
+  .aboutParagraphLineBreak {
+    padding: 2%;
   }
   .floatingAccentBox4 {
     display: none;
     height: 0rem;
   }
-
-  .aboutParagraphWrapper {
-    margin: -120% 5% 0% 0%;
+  .bulletPointWrapper {
+    margin: 5% 0% 5% 0%;
   }
   .toolsContainer {
+    order: 9;
     justify-content: flex-start;
+    margin: 5% 0% 15% 0%;
   }
 
-
-
-  /* -------------------- Projects Section -------------------- */
-
-.projectsHeaderWrapper {
-  gap: .5rem;
-}
-
-.projectsHeader {
-  font-size: x-large;
-}
-.projectsHeaderAccentLine {
-  width: 5rem;
-  height: 0.1rem;
-  margin-top: 1.25rem;
-}
-.floatingAccentBox3b {
-  border: 1px dashed rgb(255, 255, 255);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.allProjectsContainer {
-  display: flex;
-  flex-direction: column;
-  /* width: 10%;
-  height: auto; */
-  /* justify-content: center; */
-}
-.projectsContainer {
-  /* flex-direction: column; */
-  /* align-items: center; */
-  margin: auto;
-  max-width: 20rem;
-}
-.projectsWrapper {
-  max-width: 100%;
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; */
-}
-
-.projectContainer {
-  /* width: 200%;
-  border: solid 1px #fff; */
-  margin-bottom: 2rem;
-}
-
-.projectImage {
-  width: 100%;
-}
-.firstInfoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-.projectTitle {
-  color: #8a38f5;
-  font-family: "JetBrains Mono";
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 1rem;
-}
-.projectDescription {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-
-
-/*   second accent set below about section */
-  .secondAccentWrapper {
-    position: relative;
-    width: 100%;
-    height: 1rem;
+  /* Mobile projects section */
+  .projectsContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-left: 25%;
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    margin-left: 2%;
+  }
+  .projectsHeader {
+    font-size: x-large;
+  }
+  .allProjectsContainer {
+    display: flex;
+    flex-direction: column;
   }
 
-  
+  .projectContainer {
+    max-width: 98%;
+    flex-shrink: 0;
+    border: solid 1px #fff;
+    gap: 2rem;
+    border: solid 1px #fff;
+    margin-bottom: 15%;
+  }
+
+  .projectImage {
+    width: 100%;
+  }
+  .firstInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .projectTitle {
+    color: #8a38f5;
+    font-family: "JetBrains Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  .projectDescription {
+    color: #fff;
+    font-family: "JetBrains Mono";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .toolIcons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    aspect-ratio: 1/1;
+  }
+  .toolIcon {
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+  }
+
   .footerContainer {
+    margin-left: 8.5%;
   }
   .footer {
-    margin-bottom: 5rem;
+    margin: 10% 0% 8% 0%;
     max-width: 90%;
     height: 0.0625rem;
     background-color: #8a38f5;
