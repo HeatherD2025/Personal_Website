@@ -289,7 +289,7 @@ export default function ContactForm() {
               <div className="mb-3 text-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  sitekey={import.meta.env.RECAPTCHA_SITE_KEY}
                 />
                 {recaptchaError && (
                   <div className="text-danger mt-1">{recaptchaError}</div>
