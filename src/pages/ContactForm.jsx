@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInput from "react-phone-number-input";
 import "../styles/contactForm.css";
 import SingleSelection from "../components/singleSelection";
@@ -16,9 +16,71 @@ export default function ContactForm() {
     TOD: "",
   });
 
-  const [recaptchaError, setRecaptchaError] = useState("");
   const [value, setValue] = useState(); // Phone input value
   const [loading, setLoading] = useState(false);
+  const [recaptchaError, setRecaptchaError] = useState("");
+
+// NEWEST TEST CODE //
+useEffect(() => {
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+}, []);
+
+const handleChange = (e) => {
+const { name, value } = e.target;
+setFormData((prev) => ({ ...prev, [name]: value }));
+};
+
+const handleSubmit = async (e) => {
+e.preventDefault();
+setLoading(true);
+
+try {
+  // 1️⃣ Get reCAPTCHA v3 token
+  const token = await grecaptcha.execute(
+    import.meta.env.RECAPTCHA_SITE_KEY,
+    { action: "submit" }
+  );
+
+  // 2️⃣ Verify token with Netlify function
+  const verify = await fetch("/.netlify/functions/recaptcha-verify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token }),
+  }).then((res) => res.json());
+
+  if (!verify.success) {
+    setRecaptchaError("reCAPTCHA verification failed. Please try again.");
+    setLoading(false);
+    return;
+  }
+
+  // 3️⃣ Send email with EmailJS
+  await emailjs.send(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: value || formData.phone,
+      message: formData.message,
+      TOD: formData.TOD,
+    }
+  );
+
+  alert("Message sent successfully!");
+  setFormData({ name: "", email: "", phone: "", message: "", TOD: "" });
+  setValue("");
+  setRecaptchaError("");
+} catch (err) {
+  console.error("EmailJS / reCAPTCHA error:", err);
+  alert("Failed to send message. Please try again later.");
+} finally {
+  setLoading(false);
+}
+
+};
+// END OF NEWEST TEST CODE //
+
 
   // old code for recaptcha //
   //   const recaptchaRef = useRef();
@@ -101,87 +163,87 @@ export default function ContactForm() {
   //   };
 
   // TEST CODE //
-  const recaptchaRef = useRef(null);
+  // const recaptchaRef = useRef(null);
 
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+  // useEffect(() => {
+  //   emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  // }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({ ...prev, [name]: value }));
+  // };
 
-  async function handleSubmit(e) {
-    e.preventDefault();
+  // async function handleSubmit(e) {
+  //   e.preventDefault();
     // const token = recaptchaRef.current?.getValue();
     // if (!token) {
     //   setRecaptchaError("please verify you're not a robot");
     //   return;
     // }
     // setRecaptchaError("");
-    setLoading(true);
+    // setLoading(true);
 
     // TEST CODE //
 
     // Get ReCAPTCHA token //
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      setRecaptchaError("Please verify you are not a robot");
-      setLoading(false);
-      return;
-    }
-    setRecaptchaError("");
+    // const token = recaptchaRef.current?.getValue();
+    // if (!token) {
+    //   setRecaptchaError("Please verify you are not a robot");
+    //   setLoading(false);
+    //   return;
+    // }
+    // setRecaptchaError("");
 
     // use Netlify to verify my token
-    const verify = await fetch("/.netlify/functions/recaptcha-verify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ token }),
-    }).then((res) => res.json());
+    // const verify = await fetch("/.netlify/functions/recaptcha-verify", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ token }),
+    // }).then((res) => res.json());
 
-    if (!verify.success) {
-      setRecaptchaError("reCAPTCHA failed. Please try again");
-      recaptchaRef.current.reset();
-      setLoading(false);
-      return;
-    }
+    // if (!verify.success) {
+    //   setRecaptchaError("reCAPTCHA failed. Please try again");
+    //   recaptchaRef.current.reset();
+    //   setLoading(false);
+    //   return;
+    // }
 
     // END TEST CODE //
 
-    try {
-      emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          TOD: formData.TOD,
-        }
-      );
+  //   try {
+  //     emailjs.send(
+  //       import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  //       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  //       {
+  //         name: formData.name,
+  //         email: formData.email,
+  //         phone: formData.phone,
+  //         message: formData.message,
+  //         TOD: formData.TOD,
+  //       }
+  //     );
 
-      alert("Message sent successfully!");
+  //     alert("Message sent successfully!");
 
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-        TOD: "",
-      });
-      setValue("");
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       message: "",
+  //       TOD: "",
+  //     });
+  //     setValue("");
 
-      recaptchaRef.current.reset();
-    } catch (err) {
-      console.error("EmailJs error", err);
-      alert("Failed to send message. Please try again later");
-    } finally {
-      setLoading(false);
-    }
-  }
+  //     recaptchaRef.current.reset();
+  //   } catch (err) {
+  //     console.error("EmailJs error", err);
+  //     alert("Failed to send message. Please try again later");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
 
   return (
     <>
@@ -260,51 +322,34 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="col-25">
-                  <label className="form-label">TIME PREFERRED</label>
+                  <div className="row">
+                    <div className="col-25">
+                      <label className="form-label">TIME PREFERRED</label>
+                    </div>
+                    <SingleSelection
+                      value={formData.TOD}
+                      onChange={(e) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          TOD: e.target.value,
+                        }))
+                      }
+                    />
+                  </div>
+
+                {recaptchaError && (
+                  <div className="text-danger mt-1">{recaptchaError}</div>
+                )}
+                {/* </div>  */}
+                <div className="row">
+                  <button
+                    className="submitButton"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
                 </div>
-                <SingleSelection
-                  value={formData.TOD}
-                  onChange={(e) =>
-                    setFormData((prev) => ({
-                      ...prev,
-                      TOD: e.target.value,
-                    }))
-                  }
-                />
-              </div>
-
-              {/* <div className="recaptchaContainer">
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                  size="invisible"
-                />
-                {recaptchaError && (
-                  <div className="text-danger mt-1">{recaptchaError}</div>
-                )}
-              </div> */}
-
-              <div className="mb-3 text-center">
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                />
-                {recaptchaError && (
-                  <div className="text-danger mt-1">{recaptchaError}</div>
-                )}
-              </div>
-
-              <div className="row">
-                <button
-                  className="submitButton"
-                  type="submit"
-                  disabled={loading}
-                >
-                  {loading ? "Sending..." : "Submit"}
-                </button>
-              </div>
             </form>
           </div>
         </div>
