@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import "../styles/contactForm.css";
 
 function SingleSelection({value, onChange}) {
 
   return (
     <>
         <div className="col-75">
+          <div className="checkboxContainer">
             <input 
+              className="checkbox"
               type="radio"
               id="morning"
               name="TOD"
@@ -14,8 +17,12 @@ function SingleSelection({value, onChange}) {
               checked={value === 'morning'}
               onChange={onChange}
               />
-          <label className="checkbox">MORNING</label>
+            <label className="checkboxLabel">MORNING</label>
+          </div>
+
+          <div className="checkboxContainer">
             <input 
+              className="checkbox"
               type="radio"
               id="afternoon"
               name="TOD"
@@ -23,8 +30,12 @@ function SingleSelection({value, onChange}) {
               checked={value === 'afternoon'}
               onChange={onChange}
             />
-            <label className="checkbox">AFTERNOON</label>
+            <label className="checkboxLabel">AFTERNOON</label>
+          </div>
+
+          <div className="checkboxContainer">
             <input 
+              className="checkbox"
               type="radio"
               id="noPreference"
               name="TOD"
@@ -32,7 +43,9 @@ function SingleSelection({value, onChange}) {
               checked={value === 'noPreference'}
               onChange={onChange}
             />
-            <label className="checkbox">NO PREFERENCE</label>
+            <label className="checkboxLabel">NO PREFERENCE</label>
+          </div>
+
         </div>
     </>
   )

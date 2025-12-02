@@ -133,12 +133,9 @@
 @media (max-width: 1024px) {
   .navbarGrid {
     display: flex;
-
-    /* grid-template-columns: repeat(8, 1fr); */
   }
 
   .navbarInner {
-    /* padding: 0 1rem; */
     display: flex;
     max-width: min-content;
     margin: 0% 0% 0% 5%;
@@ -162,31 +159,45 @@
   }
 
   .hamburger {
-    display: flex;
-    flex-direction: column;
-    transform: translateX(-290%);
+    display: block;
+    margin-left: auto;
   }
 
   .navItems {
+    position: absolute;
+    top: 6rem; /* directly below the navbar */
+    right: 0; /* align menu to right side */
+    width: 70vw; /* or 100% if you prefer full width */
     display: none;
     flex-direction: column;
     gap: 1.5rem;
     background-color: #100310;
-    padding: 2rem;
-    margin-top: 25%;
-    border-top: 1px solid #8a38f5;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    transform: translateX(-90%);
+    padding: 2rem 1.5rem;
+    border-left: 1px solid #8a38f5;
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.5);
+    transform: translateX(0); /* 🔥 fixes your offscreen issue */
+    z-index: 9999;
   }
 
   .navItems.open {
     display: flex;
   }
 
+  /* .navItems.open,
+  .hamNavItems.open {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navItem,
+  .hamNavItem {
+    display: flex;
+    padding: 0.25rem;
+    color: #fff;
+  } */
   .navItem {
-    font-size: 1rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .floatingAccentBox1,
@@ -198,15 +209,61 @@
 
 /* ---------- Small Mobile (≤480px) ---------- */
 @media (max-width: 480px) {
+  .navbarInner {
+    padding: 0 1rem;
+    gap: 6rem;
+  }
+
   .hamburger {
+    display: block;
+    margin-left: 75%;
+  }
+
+  .navItems {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    width: 35vw; 
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #100310;
+    padding: 2rem 1.5rem;
+    border-left: 1px solid #8a38f5;
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  .navItems.open {
+    display: flex;
+    border: 1px solid #8a38f5;
+    margin-right: 4%;
+  }
+  .navItem {
+    width: 45%;
+    text-align: left;
+  }
+  .hamNavItem {
+    margin-left: 15%;
+    color: #fff;
+    padding-top: 10%;
+  }
+  .floatingAccentBox1,
+  .linkBox,
+  .accentLine1 {
+    display: none;
+  }
+}
+
+  /* .hamburger {
     font-size: 1.75rem;
     margin-top: -18%;
-  }
-  .hamburger.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
   }
   .navbarInner {
-    max-width: 25%;
-    gap: 21.5em;
+    max-width: 15%;
   }
   .homeButton {
     width: 80%;
@@ -222,19 +279,18 @@
     text-wrap: nowrap;
     margin-left: -35%;
   }
-  .navbarBrand.open {
-  }
   .navbarBrand:hover {
     text-decoration: underline;
     color: #8a38f5;
   }
-
   .floatingAccentBox1 {
     width: 5%;
     aspect-ratio: 1/1;
     background-color: #fff;
   }
-
+  .nav.navbar {
+    margin-right: 10px;
+  }
   .navItems.open,
   .hamNavItems.open {
     display: flex;
@@ -246,5 +302,5 @@
     display: flex;
     padding: 0.25rem;
     color: #fff;
-  }
+  } */
 }
