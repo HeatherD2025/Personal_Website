@@ -1,10 +1,10 @@
-/* Base Layout */
-@media screen and (min-width: 768px) {
+/* Standard Layout (≥1024) */
+@media screen and (min-width: 1024px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
   }
-
   body,
   #root,
   .background {
@@ -16,19 +16,17 @@
     color: #fff;
     overflow-x: hidden; /* prevent horizontal scroll */
   }
-
   .container {
     width: min(90%, 1440px);
     margin: 0 auto;
   }
-
   section {
     margin: 0 auto;
     padding: 0 1rem;
     box-sizing: border-box;
   }
 
-  /*  Intro Section  */
+  /* Standard - Intro section  */
 
   .mainContainer {
     display: flex;
@@ -38,12 +36,10 @@
     margin: 10% 0% 0% 8%;
   }
 
-  /* Wrapper for header, content and accent line in intro */
-
+  /* Standard - wrapper for header, content and accent line in intro */
   .mainWrapper {
     width: 100%;
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
     align-items: baseline;
     margin-top: 8%;
@@ -66,8 +62,7 @@
     background-color: #8a38f5;
   }
 
-  /* wrapper for photo and accent box */
-
+  /* Standard - wrapper for photo and accent box */
   .photoAndBoxWrapper {
     flex: 1 1 250px;
     max-width: 600px;
@@ -112,20 +107,20 @@
     background-position: top left, top right, bottom left, top left;
   }
 
-  /* section divider accent */
-  .accentWrapper {
+  /* Standard - section divider accent */
+  .dividerAccentWrapper {
     display: flex;
     justify-content: center;
     margin-top: 13%;
     margin-bottom: 3%;
   }
-  .accentLine3 {
+  .dividerAccentLine {
     height: 0.0625rem;
     background: #8a38f5;
     width: 25%;
     z-index: 8;
   }
-  .accentBox2 {
+  .dividerAccentBox {
     max-height: 3rem;
     aspect-ratio: 1/1;
     z-index: 0 !important;
@@ -139,7 +134,7 @@
     background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
     background-position: top left, top right, bottom left, top left;
   }
-  .floatingAccentBox2 {
+  .floatingDividerAccentBox {
     max-height: 3rem;
     aspect-ratio: 1 / 1;
     z-index: 10 !important;
@@ -154,7 +149,7 @@
     background-position: top left, top right, bottom left, top left;
   }
 
-  /* About Section  */
+  /* Standard - About section  */
   .aboutMeContainer {
     display: flex;
     flex-wrap: wrap;
@@ -187,14 +182,12 @@
     box-sizing: border-box;
   }
 
-  /* accent boxes to the left of about me paragraph */
-
+  /* Standard - accent boxes to the left of about me paragraph */
   .boxWrapper,
   .aboutParagraphWrapper {
     flex: 1 1 400px;
     max-width: 600px;
   }
-
   .accentBox4 {
     position: relative;
     width: 100%;
@@ -233,7 +226,6 @@
     gap: 0.5rem;
     margin-top: 5%;
   }
-
   .toolIcon {
     width: 2rem;
     height: 2rem;
@@ -241,7 +233,7 @@
     margin-right: 0.5rem;
   }
 
-  /* -------------------- Projects Section -------------------- */
+  /* Standard - Projects section */
   .projectsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +257,6 @@
     font-size: xx-large;
     font-weight: 600;
   }
-
   .allProjectsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -280,7 +271,6 @@
     margin-bottom: 20%;
     gap: 5rem;
   }
-
   .projectContainer {
     max-width: 20.3125rem;
     max-height: 30.1875rem;
@@ -292,11 +282,6 @@
   .projectImage {
     width: 20.2rem;
   }
-  /* .firstDividerLine {
-  width: 20.3125rem;
-  flex-shrink: 0;
-  border: solid 1px #fff;
-} */
   .firstInfoContainer {
     display: flex;
     flex-direction: column;
@@ -348,13 +333,16 @@
   }
 }
 
+/*___________________________________________________*/
+/*___________________________________________________*/
+
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
   }
-
   body,
   #root,
   .background {
@@ -366,87 +354,305 @@
     color: #fff;
     overflow-x: hidden; /* prevent horizontal scroll */
   }
+  .container {
+    width: min(90%, 1024px);
+    margin: 0 auto;
+  }
   section {
     margin: 0 auto;
     padding: 0 1rem;
     box-sizing: border-box;
   }
-  .container {
-    width: min(90%, 1024px);
-    margin: 0 auto;
+
+  /* Tablet - Intro Section */
+  .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 15% 15% 0% 8%;
   }
 
+  /* Tablet - wrapper for header, content and accent line in intro */
   .mainWrapper {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-  }
-  .photoAndBoxWrapper {
-    order: 1;
-    scale: 90%;
-    width: 10rem;
-    margin-right: 4vw;
-    margin-top: 10.5rem;
-  }
-  .mainLandingText {
-    order: 2;
+    margin-top: 20%;
   }
   .mainHeader {
-    /* margin-right: 7rem; */
     font-size: x-large;
-    /* margin-top: -2rem; */
+    font-weight: 600;
+    margin-bottom: 2%;
+  }
+  .mainContent {
+    font-size: medium;
+    line-height: 1.5rem;
+    margin-bottom: 2%;
+  }
+  .mainAccentLine {
+    width: 80%;
+    height: 0.0625rem;
+    background-color: #8a38f5;
   }
 
-  .mainHeader2 {
-    font-size: x-large;
+  /* Tablet - wrapper for photo and accent box */
+  .photoAndBoxWrapper {
+    flex: 1 1 250px;
+    max-width: 600px;
   }
-
-  .headerWrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  .mainWrapper {
+    flex: 1 1 400px;
+    max-width: 600px;
+    margin: 2% 0% 20% 0%;;
   }
-
-  .accentLine2 {
-    height: 0.1rem;
-    margin-bottom: 3rem;
+  .myPhotoWrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 25rem;
+    aspect-ratio: 1/1;
+    border: 1px, solid, #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    background-size: contain;
   }
+  .myPhoto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/myPortrait.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  .photoAccentBox {
+    position: absolute;
+    top: 80%;
+    left: 78%;
+    width: 40%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
 
-  .accentBox1 {
-    transform: translate(315%, -35%);
-    scale: 10%;
     background-image: linear-gradient(to right, #fff 50%, transparent 50%),
       linear-gradient(to bottom, #fff 50%, transparent 50%),
       linear-gradient(to left, #fff 50%, transparent 50%),
       linear-gradient(to bottom, #fff 50%, transparent 50%);
-    background-size: 8px 1px, 1px 8px, 8px 1px, 1px 8px;
+    background-size: 20px 1px, 1px 20px, 20px 1px, 1px 20px;
     background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
     background-position: top left, top right, bottom left, top left;
   }
-  .accentWrapper {
+
+  /* Tablet - section divider accent */
+  .dividerAccentWrapper {
     position: relative;
     width: 100%;
     height: 1rem;
     margin-left: 25%;
     margin-top: 2rem;
   }
-  .accentLine3 {
+  .dividerAccentLine {
     position: absolute;
     left: 0;
     width: 50%;
     height: 0.1rem;
   }
-  .accentBox2 {
+  .dividerAccentBox {
     transform: translate(200%, -100%);
   }
-  .floatingAccentBox2 {
+  .floatingDividerAccentBox {
     transform: translate(150%, -150%);
+  }
+
+/* Tablet - About section  */
+  .aboutMeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 8%;
+  }
+  .headerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 8% 10% 0% 0%;
+    justify-content: end;
+    gap: 1rem;
+  }
+  .aboutMeHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .headerAccentLine {
+    height: 0.0625rem;
+    width: 10%;
+    background-color: #8a38f5;
+  }
+  .floatingAccentBox3 {
+    border: 1px dashed rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Tablet - accent boxes to the left of about me paragraph */
+  .boxWrapper,
+  .aboutParagraphWrapper {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+  .accentBox4 {
+    position: relative;
+    width: 100%;
+    max-width: 27.5rem;
+    aspect-ratio: 5 / 4.5;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+  }
+  .floatingAccentBox4 {
+    position: absolute;
+    top: 87.5%;
+    left: 89%;
+    width: 22.7%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-position: top left, top right, bottom left, top left;
+  }
+
+  .aboutParagraphWrapper {
+    color: #fff;
+    font-size: medium;
+    margin-top: 2%;
+    margin-right: 2%;
+  }
+
+  .toolsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 5%;
+  }
+  .toolIcon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    margin-right: 0.5rem;
+  }
+
+  /*  Tablet - Projects section */
+  .projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 8%;
+  }
+
+  .headerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 8% 10% 5% 0%;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .projectsHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .allProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .projectsWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20%;
+    gap: 5rem;
+  }
+  .projectContainer {
+    max-width: 20.3125rem;
+    max-height: 30.1875rem;
+    flex-shrink: 0;
+    border: solid 1px #fff;
+    gap: 2rem;
+    border: solid 1px #fff;
+  }
+  .projectImage {
+    width: 20.2rem;
+  }
+  .firstInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .projectTitle {
+    color: #8a38f5;
+    font-family: "JetBrains Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  .projectDescription {
+    color: #fff;
+    font-family: "JetBrains Mono";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4%;
+  }
+  .toolIcons {
+    display: flex;
+    align-items: center;
+    transform: translate(-0.1rem, -2.2rem);
+    gap: 0.75rem;
+    aspect-ratio: 1/1;
+  }
+  .toolIcon {
+    width: 1.5rem;
+    margin-bottom: 2rem;
+    aspect-ratio: 1/1;
+  }
+
+  .footerContainer {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  .footer {
+    margin: auto;
+    max-width: 35%;
+    height: 0.0625rem;
+    background-color: #8a38f5;
   }
 }
 
-/*  Mobile Responsive (≤768px) */
+/*___________________________________________________*/
+/*___________________________________________________*/
+
+/* Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -519,7 +725,6 @@
     max-height: 13rem;
   }
   .myPhotoWrapper {
-    /* position: absolute; */
     width: 110%;
     order: 1;
     max-width: 25rem;
@@ -549,20 +754,20 @@
     box-sizing: border-box;
   }
 
-  /* Mobile section divider accent */
-  .accentWrapper {
+  /* Mobile - section divider accent */
+  .dividerAccentWrapper {
     display: flex !important;
     justify-content: center;
     margin-top: 10%;
     margin-bottom: 10%;
   }
-  .accentLine3 {
+  .dividerAccentLine {
     height: 0.1rem;
     background: #8a38f5;
     position: relative;
     z-index: 8;
   }
-  .accentBox2 {
+  .dividerAccentBox {
     position: absolute;
     height: auto;
     aspect-ratio: 1/1;
@@ -572,7 +777,7 @@
     border: dashed;
     color: #fff;
   }
-  .floatingAccentBox2 {
+  .floatingDividerAccentBox {
     position: absolute;
     aspect-ratio: 1/1;
     margin-top: 1.5rem;
@@ -582,7 +787,7 @@
     color: #fff;
   }
 
-  /*  Mobile about me section */
+  /* Mobile - About Me section */
   .aboutMeContainer {
     display: flex;
     flex-direction: column;
@@ -615,6 +820,7 @@
     box-sizing: border-box;
   }
 
+  /* Mobile - accent boxes to the left of about me paragraph */
   .boxWrapper,
   .aboutParagraphWrapper {
     max-width: 100%;
@@ -638,7 +844,7 @@
     margin: 5% 0% 15% 0%;
   }
 
-  /* Mobile projects section */
+  /* Mobile - Projects section */
   .projectsContainer {
     display: flex;
     flex-direction: column;
