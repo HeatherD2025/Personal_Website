@@ -1,6 +1,10 @@
 /* Individual Projects */
 @media screen and (min-width: 768px) {
 
+.container {
+    width: min(90%, 1440px);
+    margin: 0 auto;
+}
 .projectDetailHeaderWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -8,8 +12,10 @@
   align-items: center;
   width: 18rem;
   height: 1rem;
-  margin-top: 9rem;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  width:max-content
 }
 .projectDetailHeaderLeft {
   color: #FFF;
@@ -34,15 +40,17 @@
 }
 
 .OPSG-Container {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  flex-shrink: 1; */
-    width: min(90%, 1440px);
-  margin: 0 auto;
+  flex-shrink: 1;
+  width: min(90%, 1440px);
 }
-
+.OPSGHeader {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+}
 .projectTitle2 {
   font-size: 1.5rem;
   width: 100%;
@@ -52,12 +60,12 @@
   color: #fff;
   font-size: medium;
   max-width: 35vw;
-  margin-top: 2%;
-  margin-right: 2%;
+  margin: 2% 2% 2% 0%;
 }
 .projectLink {
   font-size: 1rem;
   color: #FFF;
+  margin-bottom: 2%;
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
@@ -68,19 +76,25 @@
 .accentLine6 {
   height: 0.0625rem;
   max-width: 40%;
-  margin: 2% 0% 2% 0%;
+  margin: 2% 0% 4% 0%;
   background: #8A38F5;
 }
-.firstSiteImage {
-  height: 25.5rem;
-}
-
 .toolIcons2,
 .toolIcon {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
   width: 1.5rem;
   height: 1.5rem;
   object-fit: contain;
-  margin-right: 0.5rem;
+  margin-bottom: 5%;
+}
+.firstSiteImage {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  margin-right: 5%;
+  height: 35.5rem;
 }
 }
 

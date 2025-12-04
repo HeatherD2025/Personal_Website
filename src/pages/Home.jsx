@@ -11,6 +11,10 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
@@ -25,65 +29,62 @@ export default function Home() {
   return (
     <>
       {/* <div className="container"> */}
-        <div className="background">
-          {/* <div className="pageGrid"> */}
-            {/* Home page header section */}
-            <section id="home" className="section"></section>
+      <div className="background">
+        {/* <div className="pageGrid"> */}
+        {/* Home page header section */}
+        <section id="home" className="section"></section>
 
-            {/* Main header and photo */}
-            <div className="mainContainer">
+        {/* Main header and photo */}
+        <div className="mainContainer">
+          <div className="mainWrapper">
+            <div className="mainHeader">I'm Heather and I'm a nerd</div>
 
-                <div className="mainWrapper">
-                  <div className="mainHeader">I'm Heather and I'm a nerd</div>
-
-                  <div className="mainContent">
-                    Always learning, always building — ready to contribute to
-                    exciting, mission-driven teams
-                  </div>
-
-                  <div className="mainAccentLine"></div>
-                </div>
-
-                <div className="photoAndBoxWrapper">
-                  <div className="myPhotoWrapper">
-                    <div className="myPhoto"></div>
-
-                  <div className="photoAccentBox"></div>
-                   </div>
-                </div>
+            <div className="mainContent">
+              Always learning, always building — ready to contribute to
+              exciting, mission-driven teams
             </div>
 
+            <div className="mainAccentLine"></div>
+          </div>
 
-            {/* end of main */}
+          <div className="photoAndBoxWrapper">
+            <div className="myPhotoWrapper">
+              <div className="myPhoto"></div>
 
-            {/* Accent elements below main*/}
-
-            <div className="dividerAccentWrapper">
-              <div className="dividerAccentLine">
-                <div className="dividerAccentBox"></div>
-                <div className="floatingDividerAccentBox"></div>
-              </div>
+              <div className="photoAccentBox"></div>
             </div>
-
-            {/* About section */}
-            <About />
-
-
-            <div className="dividerAccentWrapper">
-              <div className="dividerAccentLine">
-                <div className="dividerAccentBox"></div>
-                <div className="floatingDividerAccentBox"></div>
-              </div>
-            </div>
-
-            {/* Projects section */}
-            <Projects />
-
-          {/* </div> */}
-          <div className="footerContainer">
-            <div className="footer"></div>
           </div>
         </div>
+
+        {/* end of main */}
+
+        {/* Accent elements below main*/}
+
+        <div className="dividerAccentWrapper">
+          <div className="dividerAccentLine">
+            <div className="dividerAccentBox"></div>
+            <div className="floatingDividerAccentBox"></div>
+          </div>
+        </div>
+
+        {/* About section */}
+        <About />
+
+        <div className="dividerAccentWrapper">
+          <div className="dividerAccentLine">
+            <div className="dividerAccentBox"></div>
+            <div className="floatingDividerAccentBox"></div>
+          </div>
+        </div>
+
+        {/* Projects section */}
+        <Projects />
+
+        {/* </div> */}
+        <div className="footerContainer">
+          <div className="footer"></div>
+        </div>
+      </div>
       {/* </div> */}
     </>
   );

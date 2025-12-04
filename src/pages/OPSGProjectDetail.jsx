@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../styles/main.css";
 import "../styles/individualProjectPages.css";
 import postgresql from "../assets/images/icons/postgresqlLogo.png";
@@ -7,9 +8,9 @@ import OPSG from "../assets/images/projects/OPSG/OPSG.png";
 import Projects from "../components/Projects";
 
 export default function OPSGProjectDetail() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
 
   return (
     <>
@@ -26,33 +27,42 @@ export default function OPSGProjectDetail() {
             </div>
 
           <div className="OPSG-Container">
-            <div className="projectTitle2">On Point Solutions Group</div>
-            <div className="projectDescription2">
-              On Points Solutions Group is a medical staff credientialing
-              company. In collaboration with two other team members as a
-              fullstack bootcamp final project, we built and designed this site
-              to entice new clients and to offer secure access for existing
-              accounts to view and pay invoices through Intuit Quickbooks.
-            </div>
-            <a
-              className="projectLink"
-              href="https://onpointsolutions.netlify.app/#/"
-              target=" "
-            >
-              view site
-            </a>
-            <div className="accentLine6"></div>
-                  <img className="firstSiteImage" src={OPSG}></img>
 
-            <div className="toolIcons2">
-              <img className="toolIcon" src={react} alt="react logo"></img>
-              <img className="toolIcon" src={prisma} alt="prisma logo"></img>
-              <img
-                className="toolIcon"
-                src={postgresql}
-                alt="postgresql logo"
-              ></img>
+            <div className="OPSGHeader">
+
+                <div className="projectTitle2">On Point Solutions Group</div>
+
+                <div className="projectDescription2">
+                  On Points Solutions Group is a medical staff credientialing
+                  company. In collaboration with two other team members as a
+                  fullstack bootcamp final project, we built and designed this site
+                  to entice new clients and to offer secure access for existing
+                  accounts to view and pay invoices through Intuit Quickbooks.
+                </div>
+
+                <a
+                  className="projectLink"
+                  href="https://onpointsolutions.netlify.app/#/"
+                  target=" "
+                >
+                  view site
+                </a>
+                <div className="accentLine6"></div>
+                      
+
+                <div className="toolIcons2">
+                  <img className="toolIcon" src={react} alt="react logo"></img>
+                  <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                  <img
+                    className="toolIcon"
+                    src={postgresql}
+                    alt="postgresql logo"
+                  ></img>
+                </div>
+
             </div>
+
+              <img className="firstSiteImage" src={OPSG}></img>
 
             <div className="projectDescription3">
               Our fullstack app was built with a <strong>PostgreSQL</strong>{" "}
