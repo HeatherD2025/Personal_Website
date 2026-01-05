@@ -165,7 +165,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    margin: 8% 27.25% 0% 0%;
+    margin: 7% 27.25% 0% 0%;
     justify-content: end;
     gap: 1rem;
   }
@@ -217,6 +217,9 @@
     color: #fff;
     font-size: medium;
     margin-top: 2%;
+  }
+  .paragraphSpacer {
+    height: 1rem;
   }
 
   .toolsContainer {
