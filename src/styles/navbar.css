@@ -7,18 +7,17 @@
     height: 6rem;
     background-color: #100310;
     z-index: 9;
-    margin-top: 3%;
   }
   .navbarInner {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0% 7% 0% 7.5%;
+    margin: 0% 5% 0% 10%;
     flex-shrink: 1;
   }
   .navbarBrand {
     font-family: "JetBrains Mono", monospace;
-    font-size: xx-large;
+    font-size: large;
     color: #fff;
     transition: color 0.2s ease, background-color 0.2s ease;
     display: flex;
@@ -43,7 +42,7 @@
 
   /* Standard - right-side nav links */
   .navItems {
-    font-size: xx-large;
+    font-size: large;
     display: flex;
     gap: 1rem;
     justify-content: right;
@@ -110,7 +109,7 @@
   }
   .contactIcons {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .contactIcons:hover {
     color: #8a38f5;

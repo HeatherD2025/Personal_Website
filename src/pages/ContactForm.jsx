@@ -16,11 +16,10 @@ export default function ContactForm() {
     TOD: "",
   });
 
-  const [value, setValue] = useState(); // Phone input value
+  const [value, setValue] = useState(); 
   const [loading, setLoading] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState("");
 
-// NEWEST TEST CODE //
 useEffect(() => {
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 }, []);
@@ -35,13 +34,13 @@ e.preventDefault();
 setLoading(true);
 
 try {
-  // 1️⃣ Get reCAPTCHA v3 token
+  // Get reCAPTCHA v3 token
   const token = await grecaptcha.execute(
     import.meta.env.RECAPTCHA_SITE_KEY,
     { action: "submit" }
   );
 
-  // 2️⃣ Verify token with Netlify function
+  // Verify token with Netlify function
   const verify = await fetch("/.netlify/functions/recaptcha-verify", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -54,7 +53,7 @@ try {
     return;
   }
 
-  // 3️⃣ Send email with EmailJS
+  // Send email with EmailJS
   await emailjs.send(
     import.meta.env.VITE_EMAILJS_SERVICE_ID,
     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -79,7 +78,6 @@ try {
 }
 
 };
-// END OF NEWEST TEST CODE //
 
 
   // old code for recaptcha //

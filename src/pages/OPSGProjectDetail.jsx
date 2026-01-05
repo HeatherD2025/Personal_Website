@@ -26,93 +26,96 @@ export default function OPSGProjectDetail() {
               </div>
             </div>
 
-          <div className="OPSG-Container">
+            <div className="OPSG-Container">
+              <div className="OPSGIntroContainer">
 
-            <div className="OPSGHeader">
+                <div className="OPSGIntro">
 
-                <div className="projectTitle2">On Point Solutions Group</div>
+                    <div className="projectTitle2">On Point Solutions Group</div>
 
-                <div className="projectDescription2">
-                  On Points Solutions Group is a medical staff credientialing
-                  company. In collaboration with two other team members as a
-                  fullstack bootcamp final project, we built and designed this site
-                  to entice new clients and to offer secure access for existing
-                  accounts to view and pay invoices through Intuit Quickbooks.
+                    <div className="projectDescription2">
+                      On Points Solutions Group is a medical staff credientialing
+                      company. In collaboration with two other team members as a
+                      fullstack bootcamp final project, we built and designed this site
+                      to entice new clients and to offer secure access for existing
+                      accounts to view and pay invoices through Intuit Quickbooks.
+                    </div>
+
+                    <a
+                      className="projectLink"
+                      href="https://onpointsolutions.netlify.app/#/"
+                      target=" "
+                    >
+                      view site
+                    </a>
+                    <div className="accentLine6"></div>
+                          
+
+                    <div className="toolIcons2">
+                      <img className="toolIcon" src={react} alt="react logo"></img>
+                      <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                      <img
+                        className="toolIcon"
+                        src={postgresql}
+                        alt="postgresql logo"
+                      ></img>
+                    </div>
                 </div>
 
-                <a
-                  className="projectLink"
-                  href="https://onpointsolutions.netlify.app/#/"
-                  target=" "
-                >
-                  view site
-                </a>
-                <div className="accentLine6"></div>
-                      
-
-                <div className="toolIcons2">
-                  <img className="toolIcon" src={react} alt="react logo"></img>
-                  <img className="toolIcon" src={prisma} alt="prisma logo"></img>
-                  <img
-                    className="toolIcon"
-                    src={postgresql}
-                    alt="postgresql logo"
-                  ></img>
-                </div>
-
-            </div>
-
-              <img className="firstSiteImage" src={OPSG}></img>
-
-            <div className="projectDescription3">
-              Our fullstack app was built with a <strong>PostgreSQL</strong>{" "}
-              database and <strong>Prisma</strong> for data consistency. For
-              building out RESTful API endpoints <strong>Express</strong>{" "}
-              offered the right tools to handle our requests in a consistent and
-              scaleable fashion.
-                <div className="paragraphSpacer"></div>
-              <strong>React Router</strong> supports our
-              navigation with protected routes and allowed for lazy loading.
-              Hashing and salting through <strong>Bcrypt</strong> offered
-              security as well as adaptive options for future security
-              assurance. 
-                <div className="paragraphSpacer"></div>
-              State was managed with <strong>Redux</strong> for
-              predictable flow of data and ease of debugging. Throughout the
-              process of UI design, <strong>React-Bootstrap</strong> was
-              extremely useful for forms and other contained elements.
-            </div>
-
-            <div className="projectDescription4">
-              This experience reinforced the importance of delegation and goal
-              management. Utilizing github project boards, our team assessed
-              first, second, and third priority level elements to ensure
-              operational completion by our deadline with goals for future
-              improvements. 
-                <div className="paragraphSpacer"></div>
-              If I had the opportunity to create this site again,
-              Implementing a dark mode for accounts was a future element we did
-              not have time to complete, but would have offered an improved user
-              experience within accounts. I have since progressed in my css
-              skills and prefer to design with column grids and utilize
-              scaleable units.
-            </div>
-
-            <div className="projectDetailAccentWrapper">
-              <div className="accentLine3">
-                <div className="accentBox2"></div>
-                <div className="floatingAccentBox2"></div>
+                <img className="firstSiteImage" src={OPSG}></img>
+                
               </div>
-            </div>
-            
-          </div>
-          
-            <div className="allProjects">
-              <Projects/>
-            </div>
 
+
+                <div className="projectDescription3">
+                  Our fullstack app was built with a <strong>PostgreSQL</strong>{" "}
+                  database and <strong>Prisma</strong> for data consistency. For
+                  building out RESTful API endpoints <strong>Express</strong>{" "}
+                  offered the right tools to handle our requests in a consistent and
+                  scaleable fashion.
+                    <div className="paragraphSpacer"></div>
+                  <strong>React Router</strong> supports our
+                  navigation with protected routes and allowed for lazy loading.
+                  Hashing and salting through <strong>Bcrypt</strong> offered
+                  security as well as adaptive options for future security
+                  assurance. 
+                    <div className="paragraphSpacer"></div>
+                  State was managed with <strong>Redux</strong> for
+                  predictable flow of data and ease of debugging. Throughout the
+                  process of UI design, <strong>React-Bootstrap</strong> was
+                  extremely useful for forms and other contained elements.
+                </div>
+
+                <div className="projectDescription4">
+                  This experience reinforced the importance of delegation and goal
+                  management. Utilizing github project boards, our team assessed
+                  first, second, and third priority level elements to ensure
+                  operational completion by our deadline with goals for future
+                  improvements. 
+                    <div className="paragraphSpacer"></div>
+                  If I had the opportunity to create this site again,
+                  Implementing a dark mode for accounts was a future element we did
+                  not have time to complete, but would have offered an improved user
+                  experience within accounts. I have since progressed in my css
+                  skills and prefer to design with column grids and utilize
+                  scaleable units.
+                </div>
+
+                <div className="projectDetailAccentWrapper">
+                  <div className="accentLine3">
+                    <div className="accentBox2"></div>
+                    <div className="floatingAccentBox2"></div>
+                  </div>
+                </div>
+                
+            </div>
+              
+                <div className="allProjects">
+                  <Projects/>
+                </div>
           
          </div>
+
         <div className="footerContainer">
             <div className="footer"></div>
         </div>

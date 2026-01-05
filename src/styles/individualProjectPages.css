@@ -2,8 +2,7 @@
 @media screen and (min-width: 768px) {
 
 .container {
-    width: min(90%, 1440px);
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .projectDetailHeaderWrapper {
   display: flex;
@@ -15,12 +14,12 @@
   gap: 1rem;
   margin-top: 15%;
   margin-bottom: 5%;
-  width:max-content
+  width: max-content
 }
 .projectDetailHeaderLeft {
   color: #FFF;
   font-family: "JetBrains Mono";
-  font-size: 0.75rem;
+  font-size: large;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -33,7 +32,7 @@
 .projectDetailHeaderRight {
   color: #8A38F5;
   font-family: "JetBrains Mono";
-  font-size: 0.75rem;
+  font-size: large;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -44,15 +43,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   flex-shrink: 1;
-  width: min(90%, 1440px);
 }
-.OPSGHeader {
+.OPSGIntro {
   display: flex;
   flex-direction: column;
-  margin-right: 10%;
+}
+.OPSGIntroContainer {
+  display: flex;
+  flex-direction: row;
+
 }
 .projectTitle2 {
-  font-size: 1.5rem;
+  font-size: x-large;
   width: 100%;
   color: #fff;
 }
@@ -90,40 +92,52 @@
   margin-bottom: 5%;
 }
 .firstSiteImage {
-  position: fixed;
-  z-index: 3;
-  right: 0;
-  margin-right: 5%;
-  height: 35.5rem;
+  max-width: 50rem;
+  aspect-ratio: inherit;
+  margin: 0rem 0rem 0rem 5rem;
+  padding: 10px;
 }
 }
 
 
 
-/* Tablet (≤1024px) */
-@media (max-width: 1024px) {
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
 
   .projectDetailHeaderWrapper {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    gap: .5rem;
-    max-width: 100%;
+    width: 18rem;
     height: 1rem;
-    margin: 30% 5% 10% 5%;
+    gap: 1rem;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: max-content
   }
-  .projectDetailHeaderRight {
-    color: #8a38f5;
+    .projectDetailHeaderLeft {
+    color: #FFF;
+    font-family: "JetBrains Mono";
+    font-size: large;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
   .verticalDividerLine {
     height: 1rem;
     width: 0.0625rem;
     background-color: #fff;
   }
+  .projectDetailHeaderRight {
+    color: #8a38f5;
+  }
+
 
   .OPSG-Container {
     display: flex !important;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0% 5% 5% 5%;;
   }
@@ -212,6 +226,7 @@
 
 /*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
+
     .projectDetailHeaderWrapper {
     display: flex;
     justify-content: flex-start;

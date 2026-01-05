@@ -1,4 +1,3 @@
-import NavBar from "../components/Navbar";
 import "../styles/main.css";
 import html from "../assets/images/icons/html.png";
 import css from "../assets/images/icons/css.png";
@@ -21,7 +20,7 @@ export default function About() {
             <div className="aboutMeContainer">
 
                {/* <div className="aboutGrid"> */}
-                <div className="headerWrapper">
+                <div className="aboutMeHeaderWrapper">
                     <div className="aboutMeHeader">about-me</div>
                       <div className="headerAccentLine"></div>
                       <div className="floatingAccentBox3"></div>

@@ -33,18 +33,19 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    margin: 10% 0% 0% 8%;
+    margin: 10% 0% 0% 5%;
   }
 
   /* Standard - wrapper for header, content and accent line in intro */
   .mainWrapper {
     width: 100%;
+    max-width: 600px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-top: 8%;
     justify-content: center;
     justify-content: flex-start;
+    margin: 9rem 0rem 20rem 1rem;
   }
   .mainHeader {
     font-size: x-large;
@@ -66,16 +67,13 @@
   .photoAndBoxWrapper {
     flex: 1 1 250px;
     max-width: 600px;
+    margin: 0rem 3rem 0rem 0rem;
   }
-  .mainWrapper {
-    flex: 1 1 400px;
-    max-width: 600px;
-    margin: 2% 0% 20% 0%;;
-  }
+ 
   .myPhotoWrapper {
     position: absolute;
     width: 100%;
-    max-width: 25rem;
+    max-width: 30rem;
     aspect-ratio: 1/1;
     border: 1px, solid, #fff;
     box-sizing: border-box;
@@ -94,7 +92,7 @@
     position: absolute;
     top: 80%;
     left: 78%;
-    width: 40%;
+    width: 50%;
     aspect-ratio: 1/1;
     box-sizing: border-box;
 
@@ -157,28 +155,29 @@
     gap: 2rem;
     margin-left: 8%;
   }
-  .headerWrapper {
+  .aboutMeHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .aboutMeHeaderWrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    margin: 8% 10% 0% 0%;
+    margin: 8% 27.25% 0% 0%;
     justify-content: end;
     gap: 1rem;
   }
-  .aboutMeHeader {
-    font-size: xx-large;
-    font-weight: 600;
-  }
   .headerAccentLine {
     height: 0.0625rem;
-    width: 10%;
+    width: 11.5rem;
     background-color: #8a38f5;
   }
   .floatingAccentBox3 {
     border: 1px dashed rgb(255, 255, 255);
     padding: 10px;
+    aspect-ratio: 1/1;
     box-sizing: border-box;
   }
 
@@ -186,15 +185,16 @@
   .boxWrapper,
   .aboutParagraphWrapper {
     flex: 1 1 400px;
-    max-width: 600px;
+    max-width: 650px;
   }
   .accentBox4 {
     position: relative;
     width: 100%;
-    max-width: 27.5rem;
+    max-width: 30rem;
     aspect-ratio: 5 / 4.5;
     border: 1px solid #fff;
     box-sizing: border-box;
+    margin-left: 1.5rem;
   }
   .floatingAccentBox4 {
     position: absolute;
@@ -217,7 +217,6 @@
     color: #fff;
     font-size: medium;
     margin-top: 2%;
-    margin-right: 2%;
   }
 
   .toolsContainer {
@@ -239,10 +238,13 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2rem;
-    margin-left: 8%;
+    margin-left: 9.5rem;
   }
-
-  .headerWrapper {
+  .projectsHeader {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .projectsHeaderWrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -251,11 +253,6 @@
     margin: 8% 10% 5% 0%;
     justify-content: start;
     gap: 1rem;
-  }
-
-  .projectsHeader {
-    font-size: xx-large;
-    font-weight: 600;
   }
   .allProjectsContainer {
     display: flex;

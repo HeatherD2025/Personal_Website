@@ -23,7 +23,7 @@ export default function Projects() {
 
         <div className="projectsContainer">
           {/* <div className="projectsGrid"> */}
-            <div className="headerWrapper">
+            <div className="projectsHeaderWrapper">
               <div className="projectsHeader">projects</div>
               <div className="headerAccentLine"></div>
               <div className="floatingAccentBox3"></div>
