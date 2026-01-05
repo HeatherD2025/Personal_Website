@@ -9,6 +9,7 @@ import prisma from "../assets/images/icons/prismalogo.png";
 import react from "../assets/images/icons/reactlogo.png";
 import reactRedux from "../assets/images/icons/react-redux.png";
 import express from "../assets/images/icons/expressJs.png";
+import vite from "../assets/images/icons/vite.png";
 
 export default function About() {
 
@@ -44,6 +45,9 @@ export default function About() {
                         through an immersive Fullstack Academy bootcamp. Now, as a fullstack developer with a background in design, operations, and hospitality,
                         I'm focused on building user-first applications with responsive design. Ready to join a new team helping create the extraordinary!
                       </div>
+                      
+                       <div className="paragraphSpacer"></div>
+
                        <div className="bulletPointWrapper">
                           <div className="bulletPoint">Graduate of Fullstack Academy's immersive web development program</div>
                             <div className="toolsContainer">
@@ -57,6 +61,7 @@ export default function About() {
                               <img className="toolIcon" src={express} alt="expressJs logo"></img>
                               <img className="toolIcon" src={postgresql} alt="postregsql logo"></img>
                               <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                              <img className="toolIcon" src={vite} alt="vite logo"></img>
                             </div>
                        </div>
                     </div>
