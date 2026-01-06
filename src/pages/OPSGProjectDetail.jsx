@@ -38,11 +38,11 @@ export default function OPSGProjectDetail() {
                     <div className="projectTitle2">On Point Solutions Group</div>
 
                     <div className="projectDescription2">
-                      On Points Solutions Group is a medical staff credientialing
-                      company. In collaboration with two other team members as a
+                      On Points Solutions Group is a medical staff credentialing
+                      company. In collaboration with two other team members for our
                       fullstack bootcamp final project, we built and designed this site
-                      to entice new clients and to offer secure access for existing and new
-                      accounts to view and pay outstanding invoices through Intuit Quickbooks. 
+                      to attract new clients and to offer secure access for existing and new
+                      accounts to view and pay outstanding invoices through Intuit QuickBooks. 
                     </div>
 
                     <a
@@ -86,24 +86,24 @@ export default function OPSGProjectDetail() {
                     <div className="projectDescription3">
                       Our fullstack app was built with a <strong className="emphasizedText">PostgreSQL</strong>{" "}
                       database and <strong className="emphasizedText">Prisma</strong> for data consistency. For
-                      building out RESTful API endpoints <strong className="emphasizedText">Express</strong>{" "}
+                      building out RESTful API endpoints, <strong className="emphasizedText">Express</strong>{" "}
                       offered the right tools to handle our requests in a consistent and
-                      scaleable fashion.
+                      scalable fashion.
                         <div className="paragraphSpacer"></div>
                       <strong className="emphasizedText">React Router</strong> supports our
-                      navigation with protected routes and allowed for lazy loading.
-                      Hashing and salting through <strong className="emphasizedText">Bcrypt</strong> offered
-                      security as well as adaptive options for future security
+                      navigation with protected routes and allows for lazy loading.
+                      Hashing and salting through <strong className="emphasizedText">bcrypt</strong> provided
+                      security, as well as adaptive options for future security
                       assurance. 
                         <div className="paragraphSpacer"></div>
                       State was managed with <strong className="emphasizedText">Redux</strong> for
-                      predictable flow of data and ease of debugging. Throughout the
-                      process of UI design, <strong className="emphasizedText">React-Bootstrap</strong> was
-                      extremely useful for dashbord cards and other contained elements.
+                      predictable data flow and ease of debugging. Throughout the
+                      UI design process, <strong className="emphasizedText">React-Bootstrap</strong> was
+                      extremely useful for dashboard cards and other contained elements.
                         <div className="paragraphSpacer"></div>
                         This experience reinforced the importance of delegation and goal
-                      management. Utilizing github project boards, our team assessed
-                      first, second, and third priority level elements to ensure
+                      management. Utilizing GitHub project boards, our team assessed
+                      first-, second-, and third-priority level elements to ensure
                       operational completion by our deadline with goals for future
                       improvements.
                 </div>
@@ -152,7 +152,7 @@ export default function OPSGProjectDetail() {
         <div className="footerContainer">
             <div className="footer"></div>
         </div>
-        
+
         </div>
 
       </div>
