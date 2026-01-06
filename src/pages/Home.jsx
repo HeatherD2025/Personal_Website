@@ -28,10 +28,8 @@ export default function Home() {
 
   return (
     <>
-      {/* <div className="container"> */}
       <div className="background">
-        {/* <div className="pageGrid"> */}
-        {/* Home page header section */}
+
         <section id="home" className="section"></section>
 
         {/* Main header and photo */}
@@ -55,11 +53,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         {/* end of main */}
 
         {/* Accent elements below main*/}
-
         <div className="dividerAccentWrapper">
           <div className="dividerAccentLine">
             <div className="dividerAccentBox"></div>
@@ -80,12 +76,12 @@ export default function Home() {
         {/* Projects section */}
         <Projects />
 
-        {/* </div> */}
+
         <div className="footerContainer">
           <div className="footer"></div>
         </div>
       </div>
-      {/* </div> */}
+
     </>
   );
 }

@@ -1,8 +1,11 @@
 /* Individual Projects */
 @media screen and (min-width: 768px) {
 .projectSectionContainer {
-  width: min(90%, 1440px);
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10rem 2rem 2rem 2rem;
 }
 .projectDetailHeaderWrapper {
   display: flex;
@@ -12,7 +15,7 @@
   width: 18rem;
   height: 1rem;
   gap: 1rem;
-  margin: 10rem 0rem 2rem 3.25rem;
+  margin: 0rem 0rem 2rem 3rem;
   width: max-content
 }
 .projectDetailHeaderLeft {
@@ -90,12 +93,49 @@
   object-fit: contain;
   margin-bottom: 5%;
 }
-.firstSiteImage {
+.OPSGImage1 {
   max-width: 50rem;
   aspect-ratio: inherit;
-  margin: 0rem 0rem 5rem 5rem;
+  margin: 0rem 5rem 8rem 2rem;
   padding: 10px;
 }
+
+.OPSGIntroContainer2 {
+  display: flex;
+  flex-direction: row;
+  margin: 5rem 0rem 5rem 0rem;
+}
+.OPSGImage2 {
+  aspect-ratio: inherit;
+}
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+}
+.projectsHeaderWrapper2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 6rem 0rem 3rem 3rem;
+    justify-content: start;
+    gap: 1rem;
+  }
+.emphasizedText {
+  color: #8a38f5;
+}
+.firstInfoContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: 1.75rem;
+  }
 }
 
 

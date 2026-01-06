@@ -9,7 +9,9 @@ function SingleSelection({value, onChange}) {
         <div className="col-75">
           <div className="checkboxContainer">
             <input 
-              className="checkbox"
+              style={{
+                marginRight: ".5rem",
+              }}
               type="radio"
               id="morning"
               name="TOD"
@@ -22,7 +24,9 @@ function SingleSelection({value, onChange}) {
 
           <div className="checkboxContainer">
             <input 
-              className="checkbox"
+              style={{
+                marginRight: ".5rem",
+              }}
               type="radio"
               id="afternoon"
               name="TOD"
@@ -35,7 +39,9 @@ function SingleSelection({value, onChange}) {
 
           <div className="checkboxContainer">
             <input 
-              className="checkbox"
+              style={{
+                marginRight: ".5rem",
+              }}
               type="radio"
               id="noPreference"
               name="TOD"

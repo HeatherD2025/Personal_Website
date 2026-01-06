@@ -1,4 +1,4 @@
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   try {
     const { token } = JSON.parse(event.body);
 
@@ -37,4 +37,4 @@ exports.handler = async (event, context) => {
       })
     };
   }
-};
+}

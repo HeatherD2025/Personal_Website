@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/main.css";
 import OPSG from "../assets/images/projects/OPSG/OPSG.png";
-import QuarkyImg from "../assets/images/projects/Quarky/QuarkyImg.png";
 import vite from "../assets/images/icons/vite.png";
 import express from "../assets/images/icons/expressJs.png";
 import postgresql from "../assets/images/icons/postgresqlLogo.png";
@@ -22,10 +21,10 @@ export default function Projects() {
   return (
     <>
       <section id="projects" className="section">
-        {/* <div className="sectionSpacer"></div> */}
+  
 
         <div className="projectsContainer">
-          {/* <div className="projectsGrid"> */}
+
             <div className="projectsHeaderWrapper">
               <div className="projectsHeader">projects</div>
               <div className="headerAccentLine"></div>
@@ -80,11 +79,11 @@ export default function Projects() {
 
                   <div className="firstDividerLine"></div>
                   <div className="firstInfoContainer">
-                    <div className="projectTitle">coming soon</div>
-                    <div className="projectDescription">
+                    <div className="projectMiniTitle">coming soon</div>
+                    <div className="projecMinitDescription">
                       Quarky
                     </div>
-                    <div className="toolIcons">
+                    <div className="toolIconsMiniContainer">
                       <img
                         className="toolIcon"
                         src={react}
@@ -102,12 +101,12 @@ export default function Projects() {
                       ></img>
                     </div>
                   </div>
-                {/* </div> */}
+
                </a>
               )}
               
             </div>
-          {/* </div> */}
+
         </div>
 
        </div>
