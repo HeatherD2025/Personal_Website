@@ -1,120 +1,120 @@
 /* Individual Projects */
 @media screen and (min-width: 768px) {
-.projectSectionContainer {
+  .projectSectionContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     margin: 10rem 2rem 2rem 2rem;
-}
-.projectDetailHeaderWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 18rem;
-  height: 1rem;
-  gap: 1rem;
-  margin: 0rem 0rem 2rem 3rem;
-  width: max-content
-}
-.projectDetailHeaderLeft {
-  color: #FFF;
-  font-family: "JetBrains Mono";
-  font-size: large;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.verticalDividerLine {
-  border: .75px solid #FFF;
-  height: .75rem;
-  width: .0025rem;
-}
-.projectDetailHeaderRight {
-  color: #8A38F5;
-  font-family: "JetBrains Mono";
-  font-size: large;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+  }
+  .projectDetailHeaderWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 18rem;
+    height: 1rem;
+    gap: 1rem;
+    margin: 0rem 0rem 2rem 3rem;
+    width: max-content;
+  }
+  .projectDetailHeaderLeft {
+    color: #fff;
+    font-family: "JetBrains Mono";
+    font-size: large;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .verticalDividerLine {
+    border: 0.75px solid #fff;
+    height: 0.75rem;
+    width: 0.0025rem;
+  }
+  .projectDetailHeaderRight {
+    color: #8a38f5;
+    font-family: "JetBrains Mono";
+    font-size: large;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-.OPSG-Container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 85rem;
-  margin: 5rem 0rem 0rem 3.25rem;
-}
-.OPSGIntro {
-  display: flex;
-  flex-direction: column;
-}
-.OPSGIntroContainer {
-  display: flex;
-  flex-direction: row;
-}
-.projectTitle2 {
-  font-size: x-large;
-  width: 100%;
-  color: #fff;
-}
-.projectDescription2 {
-  color: #fff;
-  font-size: medium;
-  width: 32rem;
-  margin: 2rem 2rem 2rem 0rem;
-}
-.projectLink {
-  font-size: 1rem;
-  color: #FFF;
-  margin-bottom: 2rem;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-skip-ink: auto;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-}
-.accentLine6 {
-  height: 0.0625rem;
-  max-width: 40%;
-  margin: 0rem 0rem 2rem 0rem;
-  background: #8A38F5;
-}
-.toolIcons2,
-.toolIcon {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1em;
-  width: 1.5rem;
-  height: 1.5rem;
-  object-fit: contain;
-  margin-bottom: 5%;
-}
-.OPSGImage1 {
-  max-width: 50rem;
-  aspect-ratio: inherit;
-  margin: 0rem 5rem 8rem 2rem;
-  padding: 10px;
-}
+  .OPSG-Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85rem;
+    margin: 5rem 0rem 0rem 3.25rem;
+  }
+  .OPSGIntro {
+    display: flex;
+    flex-direction: column;
+  }
+  .OPSGIntroContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .projectTitle2 {
+    font-size: x-large;
+    width: 100%;
+    color: #fff;
+  }
+  .projectDescription2 {
+    color: #fff;
+    font-size: medium;
+    width: 32rem;
+    margin: 2rem 2rem 2rem 0rem;
+  }
+  .projectLink {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+  .accentLine6 {
+    height: 0.0625rem;
+    max-width: 40%;
+    margin: 0rem 0rem 2rem 0rem;
+    background: #8a38f5;
+  }
+  .toolIcons2,
+  .toolIcon {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    margin-bottom: 5%;
+  }
+  .OPSGImage1 {
+    max-width: 50rem;
+    aspect-ratio: inherit;
+    margin: 0rem 5rem 8rem 2rem;
+    padding: 10px;
+  }
 
-.OPSGIntroContainer2 {
-  display: flex;
-  flex-direction: row;
-  margin: 5rem 0rem 5rem 0rem;
-}
-.OPSGImage2 {
-  aspect-ratio: inherit;
-}
-.projectsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2rem;
-}
-.projectsHeaderWrapper2 {
+  .OPSGIntroContainer2 {
+    display: flex;
+    flex-direction: row;
+    margin: 5rem 0rem 5rem 0rem;
+  }
+  .OPSGImage2 {
+    aspect-ratio: inherit;
+  }
+  .projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .projectsHeaderWrapper2 {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -124,10 +124,10 @@
     justify-content: start;
     gap: 1rem;
   }
-.emphasizedText {
-  color: #8a38f5;
-}
-.firstInfoContainer2 {
+  .emphasizedText {
+    color: #8a38f5;
+  }
+  .firstInfoContainer2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -138,11 +138,8 @@
   }
 }
 
-
-
 /* Tablet (≤768px) */
 @media (max-width: 768px) {
-
   .projectDetailHeaderWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -153,10 +150,10 @@
     gap: 1rem;
     margin-top: 15%;
     margin-bottom: 5%;
-    width: max-content
+    width: max-content;
   }
-    .projectDetailHeaderLeft {
-    color: #FFF;
+  .projectDetailHeaderLeft {
+    color: #fff;
     font-family: "JetBrains Mono";
     font-size: large;
     font-style: normal;
@@ -172,18 +169,17 @@
     color: #8a38f5;
   }
 
-
   .OPSG-Container {
     display: flex !important;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0% 5% 5% 5%;;
+    margin: 0% 5% 5% 5%;
   }
   .projectTitle2 {
     font-size: large;
     margin-bottom: 1%;
-    order: 1
+    order: 1;
   }
   .projectDescription2 {
     order: 2;
@@ -200,7 +196,7 @@
     background-color: #8a38f5;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    order: 4
+    order: 4;
   }
   .toolIcons,
   .toolIcon {
@@ -218,11 +214,11 @@
     gap: 10%;
   }
   .firstSiteImage {
-   margin: 5% 0% 10% 0%;
-   height: auto;
-   width: 90%;
-   order: 6;
-   border: 1px solid #fff;
+    margin: 5% 0% 10% 0%;
+    height: auto;
+    width: 90%;
+    order: 6;
+    border: 1px solid #fff;
   }
   .projectDescription3 {
     order: 7;
@@ -265,13 +261,15 @@
 
 /*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
-
-    .projectDetailHeaderWrapper {
+  .projectDetailHeaderWrapper {
     display: flex;
     justify-content: flex-start;
-    gap: .5rem;
+    gap: 0.5rem;
     height: 1rem;
-    margin: 30% 0% 10% 2%;
+    width: 80%;
+    margin: 30% 0% 10% 5%;
+  }
+  .projectDetailerHeaderLeft {
   }
   .projectDetailHeaderRight {
     color: #8a38f5;
@@ -292,7 +290,7 @@
   .projectTitle2 {
     font-size: large;
     margin-bottom: 1%;
-    order: 1
+    order: 1;
   }
   .projectDescription2 {
     font-size: small;
@@ -303,7 +301,7 @@
     order: 3;
     margin: 2% 0% 2% 0%;
     text-decoration: none;
-    color: #8A38F5;
+    color: #8a38f5;
   }
   .projectLink:hover {
     text-decoration: underline;
@@ -315,7 +313,7 @@
     background-color: #8a38f5;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    order: 4
+    order: 4;
   }
   .toolIcons,
   .toolIcon {
@@ -333,11 +331,11 @@
     gap: 10%;
   }
   .firstSiteImage {
-   margin: 5% 0% 10% 0%;
-   height: auto;
-   width: 96%;
-   order: 6;
-   border: 1px solid #fff;
+    margin: 5% 0% 10% 0%;
+    height: auto;
+    width: 96%;
+    order: 6;
+    border: 1px solid #fff;
   }
   .projectDescription3 {
     order: 7;
@@ -367,6 +365,118 @@
     max-width: 100%;
   }
   .allProjects {
-    
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .mobileTestContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .projectDetailHeaderLeft {
+    margin: 0% 0% 0% 5%;
+  }
+  .verticalDividerLine {
+    height: 1rem;
+    width: 0.0625rem;
+    background-color: #fff;
+  }
+  .projectDetailHeaderRight {
+    color: #8a38f5;
+    margin: 0% 0% 0% 5%;
+  }
+
+  .OPSG-Container,
+  .OPSGIntroContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 90%;
+    margin: auto;
+  }
+  .projectTitle2 {
+    visibility: hidden;
+  }
+  .projectDescription2,
+  .projectDescription3 {
+    font-size: small;
+    max-width: 94%;
+    margin-bottom: 1rem;
+  }
+  .projectLink {
+    order: 3;
+    margin: 3% 0% 2% 0% !important;
+    text-decoration: none;
+    color: #8a38f5;
+  }
+  .projectLink:hover {
+    text-decoration: underline;
+  }
+
+  .accentLine6 {
+    height: 0.0625rem;
+    width: 75%;
+    background-color: #8a38f5;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    order: 4;
+  }
+  .toolIcon,
+  .toolIcons {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+  .toolIcons2 {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+  }
+  .OPSGImage1 {
+    margin: 5% 5% 10% 5%;
+    height: auto;
+    width: 96%;
+    border: 1px solid #fff;
+  }
+  .OPSGImage2 {
+    margin: 5% 5% 10% 5%;
+    height: auto;
+    width: 90% !important;
+    border: 1px solid #fff;
+  }
+  .projectDescription3 {
+    order: 7;
+    max-width: 90%;
+  }
+  .paragraphSpacer {
+    height: 1rem;
+  }
+  .projectDescription4 {
+    order: 8;
+    max-width: 90%;
+  }
+
+  .projectDetailAccentWrapper {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-left: 25%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    order: 9;
+  }
+  .projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .allProjects {
   }
 }

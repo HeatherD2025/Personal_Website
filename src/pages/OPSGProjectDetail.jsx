@@ -21,7 +21,7 @@ export default function OPSGProjectDetail() {
     <>
       <div className="projectSectionContainer">
         <div className="background">
-          
+          <div className="mobileTestContainer">
             <div className="projectDetailHeaderWrapper">
                <div className="projectDetailHeaderLeft">projects</div>
                <div className="verticalDividerLine"></div>
@@ -29,7 +29,7 @@ export default function OPSGProjectDetail() {
                 On Point Solutions Group
               </div>
             </div>
-
+        </div>
             <div className="OPSG-Container">
               <div className="OPSGIntroContainer">
 

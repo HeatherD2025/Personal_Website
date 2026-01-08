@@ -1005,7 +1005,7 @@
     font-size: x-large;
     max-width: 50%;
     margin-left: 5%;
-    margin-top: -2%;
+    margin-top: 2%;
   }
   .mainContent {
     order: 3;
@@ -1044,7 +1044,7 @@
     left: 70%;
     min-width: 35%;
     margin-right: 1rem;
-    border: dashed;
+    border: .5px dashed;
     background-image: none;
     aspect-ratio: 1/1;
     box-sizing: border-box;
@@ -1070,7 +1070,7 @@
     margin-top: 1.5rem;
     margin-left: -1rem;
     width: 20%;
-    border: dashed;
+    border: .5px dashed;
     color: #fff;
   }
   .floatingDividerAccentBox {
@@ -1079,7 +1079,7 @@
     margin-top: 1.5rem;
     margin-left: 1.5rem;
     width: 20%;
-    border: dashed;
+    border: .5px dashed;
     color: #fff;
   }
 
@@ -1108,7 +1108,7 @@
     width: 25%;
   }
   .floatingAccentBox3 {
-    border: 1px dashed rgb(255, 255, 255);
+    border: .5px dashed rgb(255, 255, 255);
     width: 2rem;
     aspect-ratio: 1/1;
     box-sizing: border-box;
