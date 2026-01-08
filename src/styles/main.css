@@ -1,6 +1,5 @@
 /* Standard Layout (≥1024) */
 @media screen and (min-width: 1024px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -69,7 +68,7 @@
     max-width: 600px;
     margin: 0rem 3rem 0rem 0rem;
   }
- 
+
   .myPhotoWrapper {
     position: absolute;
     width: 100%;
@@ -373,7 +372,6 @@
 
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -440,7 +438,7 @@
   .mainWrapper {
     flex: 1 1 400px;
     max-width: 600px;
-    margin: 2% 0% 20% 0%;;
+    margin: 2% 0% 20% 0%;
   }
   .myPhotoWrapper {
     position: absolute;
@@ -498,7 +496,7 @@
     transform: translate(150%, -150%);
   }
 
-/* Tablet - About section  */
+  /* Tablet - About section  */
   .aboutMeContainer {
     display: flex;
     flex-wrap: wrap;
@@ -687,7 +685,6 @@
 
 /* Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -723,6 +720,7 @@
   .mainWrapper {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     margin-top: 25%;
     margin-bottom: 20%;
     max-height: 13rem;
@@ -732,8 +730,7 @@
   .mainHeader {
     order: 2;
     font-size: x-large;
-    max-width: 50%;
-    margin-left: 5%;
+    max-width: 100% !important;
     margin-top: -2%;
   }
   .mainContent {
@@ -783,8 +780,13 @@
     left: 70%;
     min-width: 35%;
     margin-right: 1rem;
-    border: dashed;
-    background-image: none;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
+    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
+    background-position: top left, top right, bottom left, top left !important;
     aspect-ratio: 1/1;
     box-sizing: border-box;
   }
@@ -792,9 +794,7 @@
   /* Mobile - section divider accent */
   .dividerAccentWrapper {
     display: flex !important;
-    justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin: auto;
   }
   .dividerAccentLine {
     height: 0.1rem;
@@ -809,7 +809,13 @@
     margin-top: 1.5rem;
     margin-left: -1rem;
     width: 20%;
-    border: dashed;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
+    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
+    background-position: top left, top right, bottom left, top left !important;
     color: #fff;
   }
   .floatingDividerAccentBox {
@@ -818,21 +824,28 @@
     margin-top: 1.5rem;
     margin-left: 1.5rem;
     width: 20%;
-    border: dashed;
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%),
+      linear-gradient(to left, #fff 50%, transparent 50%),
+      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
+    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
+    background-position: top left, top right, bottom left, top left !important;
     color: #fff;
   }
 
   /* Mobile - About Me section */
   .aboutMeContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row !important;
     align-items: center;
     max-width: 95%;
     margin-left: 2%;
   }
-  .headerWrapper {
+  .aboutMeHheaderWrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap !important;
     width: 100%;
     justify-content: flex-start;
     gap: 0.5rem;
@@ -959,7 +972,6 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -1021,7 +1033,7 @@
     order: 4;
     margin-left: 5%;
   }
-/* 
+  /* 
   .photoAndBoxWrapper {
     order: 1;
     display: flex;
