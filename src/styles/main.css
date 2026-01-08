@@ -1,5 +1,6 @@
 /* Standard Layout (≥1024) */
 @media screen and (min-width: 1024px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -68,7 +69,7 @@
     max-width: 600px;
     margin: 0rem 3rem 0rem 0rem;
   }
-
+ 
   .myPhotoWrapper {
     position: absolute;
     width: 100%;
@@ -372,6 +373,7 @@
 
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -438,7 +440,7 @@
   .mainWrapper {
     flex: 1 1 400px;
     max-width: 600px;
-    margin: 2% 0% 20% 0%;
+    margin: 2% 0% 20% 0%;;
   }
   .myPhotoWrapper {
     position: absolute;
@@ -496,7 +498,7 @@
     transform: translate(150%, -150%);
   }
 
-  /* Tablet - About section  */
+/* Tablet - About section  */
   .aboutMeContainer {
     display: flex;
     flex-wrap: wrap;
@@ -685,6 +687,7 @@
 
 /* Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -741,7 +744,7 @@
   }
   .mainAccentLine {
     height: 0.1rem;
-    width: 40%;
+    width: 100% !important;
     background: #8a38f5;
     order: 4;
     margin-left: 5%;
@@ -777,16 +780,9 @@
   .photoAccentBox {
     position: absolute;
     top: 80%;
-    left: 70%;
+    left: 68% !important;
     min-width: 35%;
-    margin-right: 1rem;
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
-    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
-    background-position: top left, top right, bottom left, top left !important;
+    border: dashed;
     aspect-ratio: 1/1;
     box-sizing: border-box;
   }
@@ -809,13 +805,7 @@
     margin-top: 1.5rem;
     margin-left: -1rem;
     width: 20%;
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
-    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
-    background-position: top left, top right, bottom left, top left !important;
+    border: dashed;
     color: #fff;
   }
   .floatingDividerAccentBox {
@@ -824,13 +814,7 @@
     margin-top: 1.5rem;
     margin-left: 1.5rem;
     width: 20%;
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%),
-      linear-gradient(to left, #fff 50%, transparent 50%),
-      linear-gradient(to bottom, #fff 50%, transparent 50%) !important;
-    background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px !important;
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y !important;
-    background-position: top left, top right, bottom left, top left !important;
+    border: dashed;
     color: #fff;
   }
 
@@ -839,18 +823,18 @@
     display: flex;
     flex-direction: row !important;
     align-items: center;
-    max-width: 95%;
-    margin-left: 2%;
+    max-width: 100%;
+    margin: 2% 0% 0% 2% !important;
   }
   .aboutMeHheaderWrapper {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: nowrap !important;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    height: 2rem;
-    margin: 5% 0% 10% 0%;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    height: 2rem !important;
+    margin: 10% 0% 10% 0% !important;
   }
   .aboutMeHeader {
     font-size: x-large;
@@ -859,7 +843,7 @@
     height: 0.1rem;
     margin-top: 1.75rem;
     background: #8a38f5;
-    width: 25%;
+    width: 25% !important;
   }
   .floatingAccentBox3 {
     border: 1px dashed rgb(255, 255, 255);
@@ -869,12 +853,14 @@
   }
 
   /* Mobile - accent boxes to the left of about me paragraph */
-  .boxWrapper,
-  .aboutParagraphWrapper {
-    max-width: 100%;
+  .boxWrapper {
+    width: .5rem !important;
+    aspect-ratio: 1/1 !important;
+
   }
   .aboutParagraphWrapper {
     font-size: small;
+    max-width: 100%;
   }
   .aboutParagraphLineBreak {
     padding: 2%;
@@ -972,6 +958,7 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -1033,16 +1020,6 @@
     order: 4;
     margin-left: 5%;
   }
-  /* 
-  .photoAndBoxWrapper {
-    order: 1;
-    display: flex;
-    align-items: flex-start;
-    scale: 200%;
-    width: 48%;
-    margin-top: 50%;
-    max-height: 13rem;
-  } */
   .myPhotoWrapper {
     width: 110%;
     order: 1;
@@ -1109,19 +1086,17 @@
   /* Small mobile - About Me section */
   .aboutMeContainer {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    max-width: 95%;
-    margin-left: 2%;
+    max-width: 100%;
   }
-  .headerWrapper {
+  .aboutMeHeaderWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: flex-start;
     gap: 0.5rem;
     height: 2rem;
-    margin: 5% 0% 10% 0%;
+    margin: 10% 0% 0% 5%;
   }
   .aboutMeHeader {
     font-size: x-large;
@@ -1140,27 +1115,30 @@
   }
 
   /* Small mobile - accent boxes to the left of about me paragraph */
-  .boxWrapper,
-  .aboutParagraphWrapper {
-    max-width: 100%;
+  .boxWrapper {
+    max-width: 0%;
+    visibility: hidden;
   }
   .aboutParagraphWrapper {
     font-size: small;
+    margin: 0% 3% 0% 5%;
+    width: 100%;
   }
   .aboutParagraphLineBreak {
     padding: 2%;
   }
   .floatingAccentBox4 {
     display: none;
-    height: 0rem;
   }
   .bulletPointWrapper {
     margin: 5% 0% 5% 0%;
   }
   .toolsContainer {
     order: 9;
-    justify-content: flex-start;
-    margin: 5% 0% 15% 0%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 10% 0% 15% 0%;
   }
 
   /* Small mobile - Projects section */
@@ -1170,21 +1148,32 @@
     align-items: center;
     margin-left: 2%;
   }
+  .projectsHeaderWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    height: 2rem;
+    margin: 10% 0% 10% 0%;
+  }
   .projectsHeader {
     font-size: x-large;
   }
   .allProjectsContainer {
     display: flex;
     flex-direction: column;
+    
   }
 
   .projectContainer {
-    max-width: 98%;
+    max-width: 100%;
+    max-height: 26rem;
     flex-shrink: 0;
     border: solid 1px #fff;
     gap: 2rem;
     border: solid 1px #fff;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
   }
 
   .projectImage {
@@ -1221,6 +1210,7 @@
     align-items: center;
     gap: 0.75rem;
     aspect-ratio: 1/1;
+    margin-top: 4rem;
   }
   .toolIcon {
     width: 1.5rem;
