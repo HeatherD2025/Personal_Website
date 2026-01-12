@@ -105,7 +105,7 @@ export default function NavBar() {
                   >
                     {item.label === "cv" ? (
                       <>
-                       cv <i className="fa-solid fa-download"></i>
+                       resumé <i className="fa-solid fa-download"></i>
                       </>
                     ) : (
                       item.label
