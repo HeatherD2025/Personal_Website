@@ -232,12 +232,13 @@
   .toolsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 0.5rem;
     margin-top: 5%;
   }
   .toolIcon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    aspect-ratio: 1/1;
     object-fit: contain;
     margin-right: 0.5rem;
   }
@@ -572,12 +573,13 @@
   .toolsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 0.5rem;
     margin-top: 5%;
   }
   .toolIcon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    aspect-ratio: 1/1;
     object-fit: contain;
     margin-right: 0.5rem;
   }

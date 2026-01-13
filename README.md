@@ -1,1 +1,1 @@
-A site I built and designed to introduce myself, my current and past projects, as well as my cv.  Prospective employers may reach me via phone or email (provided on my cv) or send me a message using the email envelope icon.
+A site I built and designed to introduce myself, my current and past projects, as well as my resumé.  Prospective employers may reach me via phone or email (provided on my resumé) or send me a message using the email envelope icon.

@@ -15,7 +15,7 @@ export default function NavBar() {
   const navItems = [
     { label: "about-me", id: "about" },
     { label: "projects", id: "projects" },
-    { label: "cv", id: "cv-download" },
+    { label: "resumé", id: "resumé-download" },
   ];
 
   const hamNavItem = [
@@ -27,8 +27,8 @@ export default function NavBar() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // cv download helper code
-  const downloadCV = () => {
+  // resumé download helper code
+  const downloadResumé = () => {
     window.location.href =
       "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
   };
@@ -91,8 +91,8 @@ export default function NavBar() {
                     key={item.id}
                     className="navItem"
                     onClick={() => {
-                      if (item.id === "cv-download") {
-                        downloadCV();
+                      if (item.id === "resumé-download") {
+                        downloadResumé();
                         setIsOpen(false);
                       } else {
                         const el = document.getElementById(item.id);
@@ -103,7 +103,7 @@ export default function NavBar() {
                       }
                     }}
                   >
-                    {item.label === "cv" ? (
+                    {item.label === "resumé" ? (
                       <>
                        resumé <i className="fa-solid fa-download"></i>
                       </>
@@ -127,9 +127,9 @@ export default function NavBar() {
                         }
                       }} // Close the menu when clicked
                     >
-                      {item.label === "cv" ? (
+                      {item.label === "resumé" ? (
                         <>
-                          cv <i className="fa-solid fa-download"></i>
+                          resumé <i className="fa-solid fa-download"></i>
                         </>
                       ) : (
                         item.label
