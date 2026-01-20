@@ -16,11 +16,9 @@ export default function About() {
     return (
       <>
         <section id="about" className="section">
-          {/* <div className="sectionSpacer"></div> */}
 
             <div className="aboutMeContainer">
 
-               {/* <div className="aboutGrid"> */}
                 <div className="aboutMeHeaderWrapper">
                     <div className="aboutMeHeader">about-me</div>
                       <div className="headerAccentLine"></div>

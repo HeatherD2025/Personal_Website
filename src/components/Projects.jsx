@@ -74,8 +74,6 @@ export default function Projects() {
               <a
                 onClick={() => navigate("/QuarkyProjectDetail", scrollToTop())}
               >
-                {/* <div className="projectContainer"> */}
-                  {/* <img className="projectImage" src={QuarkyImg}></img> */}
 
                   <div className="firstDividerLine"></div>
                   <div className="firstInfoContainer">

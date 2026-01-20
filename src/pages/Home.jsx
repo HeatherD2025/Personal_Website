@@ -3,11 +3,10 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import "../styles/main.css";
 import myPortrait from "../assets/images/myPortrait.jpg";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Home() {
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {

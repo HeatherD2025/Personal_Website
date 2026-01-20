@@ -35,7 +35,6 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-      {/* <div className="navbarGrid"> */}
         <div className="navbarInner">
           {/* left side - my name. If home, use hash anchor, if not, use route */}
           {isHome ? (
@@ -166,7 +165,6 @@ export default function NavBar() {
               </>
             )}
           </div>
-        {/* </div> */}
       </div>
 
       {/* Fixed links on the left */}
