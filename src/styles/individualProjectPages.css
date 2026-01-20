@@ -269,8 +269,8 @@
     width: 80%;
     margin: 30% 0% 10% 5%;
   }
-  .projectDetailerHeaderLeft {
-  }
+  /* .projectDetailerHeaderLeft {
+  } */
   .projectDetailHeaderRight {
     color: #8a38f5;
   }
@@ -364,8 +364,8 @@
     align-items: flex-start;
     max-width: 100%;
   }
-  .allProjects {
-  }
+  /* .allProjects {
+  } */
 }
 
 /* Small Mobile (≤480px) */
@@ -477,6 +477,6 @@
     align-items: flex-start;
     max-width: 100%;
   }
-  .allProjects {
-  }
+  /* .allProjects {
+  } */
 }

@@ -15,7 +15,7 @@ export default function NavBar() {
   const navItems = [
     { label: "about-me", id: "about" },
     { label: "projects", id: "projects" },
-    { label: "resumé", id: "resumé-download" },
+    { label: "resume", id: "resume-download" },
   ];
 
   const hamNavItem = [
@@ -28,7 +28,7 @@ export default function NavBar() {
   };
 
   // resumé download helper code
-  const downloadResumé = () => {
+  const downloadResume = () => {
     window.location.href =
       "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
   };
@@ -92,7 +92,7 @@ export default function NavBar() {
                     className="navItem"
                     onClick={() => {
                       if (item.id === "resumé-download") {
-                        downloadResumé();
+                        downloadResume();
                         setIsOpen(false);
                       } else {
                         const el = document.getElementById(item.id);
@@ -103,9 +103,9 @@ export default function NavBar() {
                       }
                     }}
                   >
-                    {item.label === "resumé" ? (
+                    {item.label === "resume" ? (
                       <>
-                       resumé <i className="fa-solid fa-download"></i>
+                       resume <i className="fa-solid fa-download"></i>
                       </>
                     ) : (
                       item.label
@@ -127,7 +127,7 @@ export default function NavBar() {
                         }
                       }} // Close the menu when clicked
                     >
-                      {item.label === "resumé" ? (
+                      {item.label === "resume" ? (
                         <>
                           resumé <i className="fa-solid fa-download"></i>
                         </>

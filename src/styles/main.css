@@ -1,6 +1,5 @@
 /* Standard Layout (≥1024) */
 @media screen and (min-width: 1024px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -69,7 +68,7 @@
     max-width: 600px;
     margin: 0rem 3rem 0rem 0rem;
   }
- 
+
   .myPhotoWrapper {
     position: absolute;
     width: 100%;
@@ -374,7 +373,6 @@
 
 /* Tablet (≤1024px) */
 @media (max-width: 1024px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -441,7 +439,7 @@
   .mainWrapper {
     flex: 1 1 400px;
     max-width: 600px;
-    margin: 2% 0% 20% 0%;;
+    margin: 2% 0% 20% 0%;
   }
   .myPhotoWrapper {
     position: absolute;
@@ -499,7 +497,7 @@
     transform: translate(150%, -150%);
   }
 
-/* Tablet - About section  */
+  /* Tablet - About section  */
   .aboutMeContainer {
     display: flex;
     flex-wrap: wrap;
@@ -689,7 +687,6 @@
 
 /* Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -856,9 +853,8 @@
 
   /* Mobile - accent boxes to the left of about me paragraph */
   .boxWrapper {
-    width: .5rem !important;
+    width: 0.5rem !important;
     aspect-ratio: 1/1 !important;
-
   }
   .aboutParagraphWrapper {
     font-size: small;
@@ -960,7 +956,6 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -1165,7 +1160,6 @@
   .allProjectsContainer {
     display: flex;
     flex-direction: column;
-    
   }
 
   .projectContainer {
