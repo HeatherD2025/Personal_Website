@@ -30,7 +30,7 @@ export default function NavBar() {
   // resume download helper code
   const downloadResume = () => {
     window.location.href =
-      "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/edit?usp=sharing";
+      "https://drive.google.com/uc?export=download&id=1RoQEA44DSp5jkYGbTcJG-URja-pG0aWT/view?usp=drive_link";
   };
 
   return (
