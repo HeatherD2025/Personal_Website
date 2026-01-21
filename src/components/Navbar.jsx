@@ -27,7 +27,7 @@ export default function NavBar() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // resumé download helper code
+  // resume download helper code
   const downloadResume = () => {
     window.location.href =
       "https://docs.google.com/document/d/1sMDHGPfYmFvVnfFO6n02ZnM7NvdE6ST58TmYXRblYts/export?format=pdf";
@@ -128,7 +128,7 @@ export default function NavBar() {
                     >
                       {item.label === "resume" ? (
                         <>
-                          resumé <i className="fa-solid fa-download"></i>
+                          resume <i className="fa-solid fa-download"></i>
                         </>
                       ) : (
                         item.label

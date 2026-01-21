@@ -67,7 +67,8 @@ export default function OPSGProjectDetail() {
                       <img className="toolIcon" src={express} alt="expressJs logo"></img>
                       <img className="toolIcon" src={json} alt="json logo"></img>
                     </div>
-                  </div>
+
+                </div>
 
                   <img className="OPSGImage1" src={OPSG}></img>
 
@@ -78,8 +79,8 @@ export default function OPSGProjectDetail() {
                       classNme="OPSGImage2" 
                       src={OPSGContactForm}
                       style={{
-                        maxWidth: "35rem",
-                        margin: "0rem 5rem 0rem 0rem",
+                        maxWidth: "50%",
+                        maxHeight: "27rem",
                       }}
                     ></img>
 

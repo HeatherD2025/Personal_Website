@@ -39,7 +39,6 @@
     font-weight: 400;
     line-height: normal;
   }
-
   .OPSG-Container {
     display: flex;
     flex-direction: row;
@@ -54,6 +53,13 @@
   .OPSGIntroContainer {
     display: flex;
     flex-direction: row;
+    width: 100%;
+  }
+  .OPSGIntroContainer2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
   }
   .projectTitle2 {
     font-size: x-large;
@@ -63,8 +69,8 @@
   .projectDescription2 {
     color: #fff;
     font-size: medium;
-    width: 32rem;
-    margin: 2rem 2rem 2rem 0rem;
+    max-width: 52rem;
+    margin: 2rem 0rem 2rem 0rem;
   }
   .projectLink {
     font-size: 1rem;
@@ -95,19 +101,23 @@
   }
   .OPSGImage1 {
     max-width: 50rem;
-    aspect-ratio: inherit;
-    margin: 0rem 5rem 8rem 2rem;
+    margin: 0rem 2rem 8rem 2rem;
     padding: 10px;
   }
-
   .OPSGIntroContainer2 {
     display: flex;
     flex-direction: row;
     margin: 5rem 0rem 5rem 0rem;
   }
   .OPSGImage2 {
-    aspect-ratio: inherit;
+    max-width: 50rem;
   }
+  .projectDescription3 {
+    color: #fff;
+    font-size: medium;
+    width: 40rem;
+    margin: 2rem 0rem 2rem 4rem;
+  }   
   .projectsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -213,7 +223,7 @@
     flex-direction: row;
     gap: 10%;
   }
-  .firstSiteImage {
+  .OPSGImage1 {
     margin: 5% 0% 10% 0%;
     height: auto;
     width: 90%;
@@ -255,7 +265,7 @@
   }
 
   .allProjects {
-    order: 10;
+    order: 11;
   }
 }
 
@@ -269,17 +279,14 @@
     width: 80%;
     margin: 30% 0% 10% 5%;
   }
-  /* .projectDetailerHeaderLeft {
-  } */
-  .projectDetailHeaderRight {
-    color: #8a38f5;
-  }
   .verticalDividerLine {
     height: 1rem;
     width: 0.0625rem;
     background-color: #fff;
   }
-
+  .projectDetailHeaderRight {
+    color: #8a38f5;
+  }
   .OPSG-Container {
     display: flex;
     flex-direction: column;
@@ -317,8 +324,6 @@
   }
   .toolIcons,
   .toolIcon {
-    /* display: flex;
-    flex-direction: row; */
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
@@ -330,11 +335,17 @@
     flex-direction: row;
     gap: 10%;
   }
-  .firstSiteImage {
+  .OPSGImage1 {
     margin: 5% 0% 10% 0%;
     height: auto;
     width: 96%;
     order: 6;
+    border: 1px solid #fff;
+  }
+  .OPSGImage2 {
+    margin: 5% 5% 10% 0%;
+    height: auto;
+    order: 10;
     border: 1px solid #fff;
   }
   .projectDescription3 {
@@ -364,8 +375,6 @@
     align-items: flex-start;
     max-width: 100%;
   }
-  /* .allProjects {
-  } */
 }
 
 /* Small Mobile (≤480px) */
@@ -398,6 +407,13 @@
     max-width: 90%;
     margin: auto;
   }
+  .OPSGIntroContainer2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 90%;
+  }
   .projectTitle2 {
     visibility: hidden;
   }
@@ -425,18 +441,18 @@
     margin-top: 1rem;
     order: 4;
   }
+  .toolIcons2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+  }
   .toolIcon,
   .toolIcons {
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
-  }
-  .toolIcons2 {
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 80%;
   }
   .OPSGImage1 {
     margin: 5% 5% 10% 5%;
@@ -446,8 +462,6 @@
   }
   .OPSGImage2 {
     margin: 5% 5% 10% 5%;
-    height: auto;
-    width: 90% !important;
     border: 1px solid #fff;
   }
   .projectDescription3 {
