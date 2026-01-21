@@ -90,7 +90,7 @@ export default function NavBar() {
                     key={item.id}
                     className="navItem"
                     onClick={() => {
-                      if (item.id === "resumé-download") {
+                      if (item.id === "resume-download") {
                         downloadResume();
                         setIsOpen(false);
                       } else {
