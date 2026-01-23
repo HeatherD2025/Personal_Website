@@ -1,7 +1,7 @@
 import "../styles/individualProjectPages.css";
-import postgresql from "../assets/images/icons/postgresqlLogo.png";
-import prisma from "../assets/images/icons/prismalogo.png";
-import react from "../assets/images/icons/reactlogo.png";
+import postgresql from "../assets/images/icons/postgresqlLogo.webp";
+import prisma from "../assets/images/icons/prismalogo.webp";
+import react from "../assets/images/icons/reactlogo.webp";
 
 export default function QuarkyProjectDetail() {
   const scrollToTop = () => {

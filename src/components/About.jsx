@@ -1,15 +1,15 @@
 import "../styles/main.css";
-import html from "../assets/images/icons/html.png";
-import css from "../assets/images/icons/css.png";
-import javascript from "../assets/images/icons/javascript.png";
-import json from "../assets/images/icons/json.png";
-import nodeJs from "../assets/images/icons/nodeJs.png";
-import postgresql from "../assets/images/icons/postgresqlLogo.png";
-import prisma from "../assets/images/icons/prismalogo.png";
-import react from "../assets/images/icons/reactlogo.png";
-import reactRedux from "../assets/images/icons/react-redux.png";
-import express from "../assets/images/icons/expressJs.png";
-import vite from "../assets/images/icons/vite.png";
+import html from "../assets/images/icons/html.webp";
+import css from "../assets/images/icons/css.webp";
+import javascript from "../assets/images/icons/javascript.webp";
+import json from "../assets/images/icons/json.webp";
+import nodeJs from "../assets/images/icons/nodeJs.webp";
+import postgresql from "../assets/images/icons/postgresqlLogo.webp";
+import prisma from "../assets/images/icons/prismalogo.webp";
+import react from "../assets/images/icons/reactlogo.webp";
+import reactRedux from "../assets/images/icons/react-redux.webp";
+import express from "../assets/images/icons/expressJs.webp";
+import vite from "../assets/images/icons/vite.webp";
 
 export default function About() {
 

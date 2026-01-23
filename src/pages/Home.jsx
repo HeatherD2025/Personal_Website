@@ -2,7 +2,6 @@ import React from "react";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import "../styles/main.css";
-import myPortrait from "../assets/images/myPortrait.jpg";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -29,7 +28,7 @@ export default function Home() {
     <>
       <div className="background">
 
-        <section id="home" className="section"></section>
+        <section id="home" className="section">
 
         {/* Main header and photo */}
         <div className="mainContainer">
@@ -52,6 +51,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </section>
         {/* end of main */}
 
         {/* Accent elements below main*/}

@@ -379,7 +379,7 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-  .mobileTestContainer {
+  .mobileContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

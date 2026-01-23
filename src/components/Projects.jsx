@@ -1,12 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/main.css";
-import OPSG from "../assets/images/projects/OPSG/OPSG.png";
-import vite from "../assets/images/icons/vite.png";
-import express from "../assets/images/icons/expressJs.png";
-import postgresql from "../assets/images/icons/postgresqlLogo.png";
-import prisma from "../assets/images/icons/prismalogo.png";
-import react from "../assets/images/icons/reactlogo.png";
-import json from "../assets/images/icons/json.png";
+import OPSG from "../assets/images/projects/OPSG/OPSG.webp";
+import vite from "../assets/images/icons/vite.webp";
+import express from "../assets/images/icons/expressJs.webp";
+import postgresql from "../assets/images/icons/postgresqlLogo.webp";
+import prisma from "../assets/images/icons/prismalogo.webp";
+import react from "../assets/images/icons/reactlogo.webp";
+import json from "../assets/images/icons/json.webp";
 
 export default function Projects() {
   const location = useLocation();

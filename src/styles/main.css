@@ -83,7 +83,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url("../assets/images/myPortrait.jpg");
+    background-image: url("../assets/images/myPortrait.webp");
     background-size: cover;
     box-sizing: border-box;
   }
