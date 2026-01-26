@@ -6,7 +6,7 @@
 
 [dev]
   # Command to start the dev server
-  command = "vite"
+  command = "npx vite"
   # Port to serve frontend
   port = 8888
   # Framework detection helps Netlify Dev configure itself
