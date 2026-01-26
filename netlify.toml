@@ -1,0 +1,17 @@
+[build]
+  # Vite will output to the "dist" folder
+  publish = "dist"
+  # Command to build the frontend
+  command = "vite build"
+
+[dev]
+  # Command to start the dev server
+  command = "vite"
+  # Port to serve frontend
+  port = 8888
+  # Framework detection helps Netlify Dev configure itself
+  framework = "vite"
+
+[functions]
+  # Folder containing your serverless functions
+  directory = "netlify/functions"

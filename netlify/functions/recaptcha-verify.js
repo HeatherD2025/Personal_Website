@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
 export async function handler(event, context) {
-  console.log("🔥 recaptcha-verify function HIT");
+  console.log("recaptcha-verify function HIT");
 
   try {
     const { token } = JSON.parse(event.body);
