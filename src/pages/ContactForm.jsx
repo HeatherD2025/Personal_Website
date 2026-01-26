@@ -16,70 +16,68 @@ export default function ContactForm() {
     TOD: "",
   });
 
-  const [value, setValue] = useState(); 
+  const [value, setValue] = useState();
   const [loading, setLoading] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
-useEffect(() => {
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-}, []);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-const handleChange = (e) => {
-const { name, value } = e.target;
-setFormData((prev) => ({ ...prev, [name]: value }));
-};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-const handleSubmit = async (e) => {
-e.preventDefault();
-
-if (!recaptchaToken) {
-  setRecaptchaError("Please verify that you are not a robot");
-  return
-}
-
-setLoading(true);
-
-try {
-  // Verify token with Netlify function
-  const verify = await fetch("/.netlify/functions/recaptcha-verify", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ token }),
-  }).then((res) => res.json());
-
-  if (!verify.success) {
-    setRecaptchaError("reCAPTCHA verification failed. Please try again.");
-    setLoading(false);
-    return;
-  }
-
-  // Send email with EmailJS
-  await emailjs.send(
-    import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    {
-      name: formData.name,
-      email: formData.email,
-      phone: value || formData.phone,
-      message: formData.message,
-      TOD: formData.TOD,
+    if (!recaptchaToken) {
+      setRecaptchaError("Please verify that you are not a robot");
+      return;
     }
-  );
 
-  alert("Message sent successfully!");
-  setFormData({ name: "", email: "", phone: "", message: "", TOD: "" });
-  setValue("");
-  setRecaptchaError("");
-} catch (err) {
-  console.error("EmailJS / reCAPTCHA error:", err);
-  alert("Failed to send message. Please try again later.");
-} finally {
-  setLoading(false);
-}
+    setLoading(true);
 
-};
+    try {
+      // Verify token with Netlify function
+      const verify = await fetch("/.netlify/functions/recaptcha-verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token }),
+      }).then((res) => res.json());
+
+      if (!verify.success) {
+        setRecaptchaError("reCAPTCHA verification failed. Please try again.");
+        setLoading(false);
+        return;
+      }
+
+      // Send email with EmailJS
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: value || formData.phone,
+          message: formData.message,
+          TOD: formData.TOD,
+        },
+      );
+
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", phone: "", message: "", TOD: "" });
+      setValue("");
+      setRecaptchaError("");
+    } catch (err) {
+      console.error("EmailJS / reCAPTCHA error:", err);
+      alert("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -87,16 +85,17 @@ try {
         <div className="formContainer">
           <div className="container">
             <form onSubmit={handleSubmit}>
-              <div 
+              <div
                 className="contactFormGreeting"
                 style={{
                   marginBopttom: "2rem",
-                }}>
+                }}
+              >
                 I'd love to hear from you!
               </div>
 
               <div className="row">
-                  <label htmlFor="name">NAME</label>
+                <label htmlFor="name">NAME</label>
                 <div className="inputField">
                   <input
                     style={{
@@ -171,42 +170,42 @@ try {
                 </div>
               </div>
 
-                  <div className="row">
-                    <div className="col-25">
-                      <label className="form-label">TIME PREFERRED</label>
-                    </div>
-                    <SingleSelection
-                      value={formData.TOD}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          TOD: e.target.value,
-                        }))
-                      }
-                    />
-                  </div>
-
-                {recaptchaError && (
-                  <div className="text-danger mt-1">{recaptchaError}</div>
-                )}
-                <div className="row">
-                  <ReCAPTCHA 
-                    siteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                    onChange={(token) => setRecaptchaToken(token)}
-                  />
-                  <button
-                    className="submitButton"
-                    type="submit"
-                    disabled={loading}
-                    style={{
-                      color: "white",
-                      border: "solid 1px #8A38F5",
-                      marginTop: "2rem",
-                    }}
-                  >
-                    {loading ? "Sending..." : "Submit"}
-                  </button>
+              <div className="row">
+                <div className="col-25">
+                  <label className="form-label">TIME PREFERRED</label>
                 </div>
+                <SingleSelection
+                  value={formData.TOD}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      TOD: e.target.value,
+                    }))
+                  }
+                />
+              </div>
+
+              {recaptchaError && (
+                <div className="text-danger mt-1">{recaptchaError}</div>
+              )}
+              <div className="row">
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={(token) => setRecaptchaToken(token)}
+                />
+                <button
+                  className="submitButton"
+                  type="submit"
+                  disabled={loading}
+                  style={{
+                    color: "white",
+                    border: "solid 1px #8A38F5",
+                    marginTop: "2rem",
+                  }}
+                >
+                  {loading ? "Sending..." : "Submit"}
+                </button>
+              </div>
             </form>
           </div>
         </div>
