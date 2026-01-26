@@ -12,7 +12,7 @@ export async function handler(event, context) {
     }
 
     const projectId = process.env.GC_PROJECT_ID;
-    const apiKey = process.env.VITE_RECAPTCHA_API_KEY;
+    const apiKey = process.env.RECAPTCHA_API_KEY;
     const siteKey= process.env.VITE_RECAPTCHA_SITE_KEY;
     const expectedAction = 'contact_form';
 
