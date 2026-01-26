@@ -191,7 +191,7 @@ try {
                 )}
                 <div className="row">
                   <ReCAPTCHA 
-                    siteKey={import.meta.env.RECAPTCHA_SITE_KEY}
+                    siteKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     onChange={(token) => setRecaptchaToken(token)}
                   />
                   <button
