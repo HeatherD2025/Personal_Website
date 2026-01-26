@@ -22,6 +22,7 @@ export default function ContactForm() {
   useEffect(() => {
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
+    // append the script to document body for React - loads only when component mounted
     const script = document.createElement("script");
     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`;
     script.async = true;
@@ -33,11 +34,15 @@ export default function ContactForm() {
     };
   }, []);
 
+
+  // handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+
+  // global callback replaced with scoped handleSubmit function for on submission only
   const handleSubmit = async (e) => {
     e.preventDefault();
     setRecaptchaError("");
@@ -48,11 +53,13 @@ export default function ContactForm() {
         throw new Error("reCAPTCHA not loaded yet");
       }
 
-      // Execute v3 reCAPTCHA and get token
-      const token = await window.grecaptcha.enterprise
-        .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: "contact_form" });
+      // Execute reCAPTCHA v3 for this action
+      const token = await window.grecaptcha.enterprise.execute(
+        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+        { action: "contact_form" }
+      );
 
-      // Verify token with your Netlify function
+      // Verify token with your backend / Netlify function
       const verify = await fetch("/.netlify/functions/recaptcha-verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -78,6 +85,8 @@ export default function ContactForm() {
         }
       );
 
+
+      // reset form
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", phone: "", message: "", TOD: "" });
       setValue("");
@@ -179,8 +188,10 @@ export default function ContactForm() {
 
             <div className="row">
               <button
-                className="submitButton"
                 type="submit"
+                className="submitButton g-recaptcha"
+                data-sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                data-action="contact_form"
                 disabled={loading}
                 style={{ color: "white", border: "solid 1px #8A38F5", marginTop: "2rem" }}
               >
