@@ -19,6 +19,8 @@ export default function ContactForm() {
   const [value, setValue] = useState(); 
   const [loading, setLoading] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
 
 useEffect(() => {
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
@@ -31,15 +33,15 @@ setFormData((prev) => ({ ...prev, [name]: value }));
 
 const handleSubmit = async (e) => {
 e.preventDefault();
+
+if (!recaptchaToken) {
+  setRecaptchaError("Please verify that you are not a robot");
+  return
+}
+
 setLoading(true);
 
 try {
-  // Get reCAPTCHA v3 token
-  const token = await grecaptcha.execute(
-    import.meta.env.RECAPTCHA_SITE_KEY,
-    { action: "submit" }
-  );
-
   // Verify token with Netlify function
   const verify = await fetch("/.netlify/functions/recaptcha-verify", {
     method: "POST",
@@ -188,6 +190,10 @@ try {
                   <div className="text-danger mt-1">{recaptchaError}</div>
                 )}
                 <div className="row">
+                  <ReCAPTCHA 
+                    siteKey={import.meta.env.RECAPTCHA_SITE_KEY}
+                    onChange={(token) => setRecaptchaToken(token)}
+                  />
                   <button
                     className="submitButton"
                     type="submit"

@@ -78,12 +78,8 @@ export default function OPSGProjectDetail() {
                 <div className="OPSGIntroContainer2">
 
                     <img 
-                      classNme="OPSGImage2" 
+                      className="OPSGImage2" 
                       src={OPSGContactForm}
-                      style={{
-                        maxWidth: "50%",
-                        maxHeight: "27rem",
-                      }}
                     ></img>
 
                     <div className="projectDescription3">
