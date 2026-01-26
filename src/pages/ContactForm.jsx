@@ -56,7 +56,7 @@ export default function ContactForm() {
       // Execute reCAPTCHA v3 for this action
       const token = await window.grecaptcha.enterprise.execute(
         import.meta.env.VITE_RECAPTCHA_SITE_KEY,
-        { action: "contact_form" }
+        { expectedAction: "contact_form" }
       );
 
       // Verify token with your backend / Netlify function

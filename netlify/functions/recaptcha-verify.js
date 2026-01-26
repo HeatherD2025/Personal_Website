@@ -13,14 +13,12 @@ export async function handler(event, context) {
 
     const projectId = process.env.GC_PROJECT_ID;
     const apiKey = process.env.RECAPTCHA_API_KEY;
-    const siteKey= process.env.VITE_RECAPTCHA_SITE_KEY;
     const expectedAction = 'contact_form';
 
       const body = {
         event: {
           token,
           expectedAction,
-          siteKey
       },
     };
 
@@ -37,15 +35,19 @@ export async function handler(event, context) {
 
     const data = await response.json();
 
-    //check returned google score (likely human 0.0 - likely bot 1.0)
+    //check returned google score (likely bot 0.0 - likely human 1.0)
     const scoreThreshold = 0.5;
     const score = data?.riskAnalysis?.score || 0;
 
     if (score < scoreThreshold) {
 
     return {
-      statusCode: 200,
-      body: JSON.stringify(data)
+      statusCode: 403,
+      body: JSON.stringify({
+        success: false,
+        score,
+        reason: "Low reCAPTCHA score"
+      })
     };
   }
    return { statusCode: 200, body: JSON.stringify({success: true, score })};
