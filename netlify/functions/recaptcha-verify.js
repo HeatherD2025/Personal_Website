@@ -34,6 +34,8 @@ export async function handler(event, context) {
     );
 
     const data = await response.json();
+    console.log("reCAPTCHA full response:", JSON.stringify(data, null, 2));
+
 
     //check returned google score (likely bot 0.0 - likely human 1.0)
     const scoreThreshold = 0.5;
