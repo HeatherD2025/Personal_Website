@@ -189,11 +189,13 @@ export default function ContactForm() {
             <div className="row">
               <button
                 type="submit"
-                className="submitButton g-recaptcha"
-                data-sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                data-action="contact_form"
+                className="submitButton"
                 disabled={loading}
-                style={{ color: "white", border: "solid 1px #8A38F5", marginTop: "2rem" }}
+                style={{
+                  color: "white",
+                  border: "solid 1px #8A38F5",
+                  marginTop: "2rem",
+                }}
               >
                 {loading ? "Sending..." : "Submit"}
               </button>
