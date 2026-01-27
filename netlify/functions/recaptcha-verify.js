@@ -1,7 +1,18 @@
+
 export async function handler(event, context) {
   console.log("recaptcha-verify function HIT");
 
   try {
+    // DEV MODE!!! always returns success locally
+    if (process.env.NODE_ENV === "development") {
+      console.log("Mocks recaptcha verification (DEV)");
+      return {
+        statusCode: 200,
+        body: JSON.stringify({success: true, score: 1.0}),
+      };
+    }
+
+
     const { token } = JSON.parse(event.body);
 
     if (!token) {
@@ -37,7 +48,6 @@ export async function handler(event, context) {
     );
 
     const data = await response.json();
-    console.log("reCAPTCHA full response:", JSON.stringify(data, null, 2));
 
     //check returned google score (likely bot 0.0 - likely human 1.0)
     const scoreThreshold = 0.5;
@@ -55,6 +65,7 @@ export async function handler(event, context) {
     }
 
     return { statusCode: 200, body: JSON.stringify({ success: true, score }) };
+    
   } catch (err) {
     return {
       statusCode: 500,

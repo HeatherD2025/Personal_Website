@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-number-input";
-import "../styles/contactForm.css";
 import SingleSelection from "../components/singleSelection";
+import "../styles/contactForm.css";
 import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -14,25 +14,53 @@ export default function ContactForm() {
     message: "",
     TOD: "",
   });
-  const [value, setValue] = useState();
+  // const [value, setValue] = useState();
   const [loading, setLoading] = useState(false);
-  const [recaptchaError, setRecaptchaError] = useState("");
+  const [error, setError] = useState("");
+  // const [recaptchaError, setRecaptchaError] = useState("");
 
   // Dynamically load reCAPTCHA v3 script once
+  // useEffect(() => {
+  //   emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
+  // append the script to document body for React - loads only when component mounted
+  //   const script = document.createElement("script");
+  //   script.src = `https://www.google.com/recaptcha/enterprise.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`;
+  //   script.async = true;
+  //   script.defer = true;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
   useEffect(() => {
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
-    // append the script to document body for React - loads only when component mounted
-    const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`;
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
   }, []);
+
+  //   // DEV MODE: mock reCAPTCHA for localhost
+  //   if (process.env.NODE_ENV === "development") {
+  //     window.grecaptcha = {
+  //       enterprise: {
+  //         execute: async () => {
+  //           console.log("⚡ Mock reCAPTCHA executed");
+  //           return "MOCK_DEV_TOKEN"; // fake token for testing
+  //         },
+  //       },
+  //     };
+  //     return;
+  //   }
+
+  // PRODUCTION: append the real script
+  //   const script = document.createElement("script");
+  //   script.src = `https://www.google.com/recaptcha/enterprise.js?render=${import.meta.env.VITE_RECAPTCHA_SITE_KEY}`;
+  //   script.async = true;
+  //   script.defer = true;
+  //   document.body.appendChild(script);
+
+  //   return () => document.body.removeChild(script);
+  // }, []);
 
   // handle input changes
   const handleChange = (e) => {
@@ -41,35 +69,53 @@ export default function ContactForm() {
   };
 
   // global callback replaced with scoped handleSubmit function for on submission only
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setRecaptchaError("");
+  //   setLoading(true);
+
+  // try {
+  // if (!window.grecaptcha) {
+  //   throw new Error("reCAPTCHA not loaded yet");
+  // }
+
+  // Execute reCAPTCHA v3 for this action
+  // const token = await window.grecaptcha.enterprise.execute(
+  //   import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+  //   { expectedAction: "contact_form" },
+  // );
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setRecaptchaError("");
+    // setRecaptchaError("");
     setLoading(true);
+    setError("");
+
+    // try {
+    // Use mock token in DEV or real token in production
+    // const token = await (window.grecaptcha
+    //   ? window.grecaptcha.enterprise.execute(
+    //       import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+    //       { expectedAction: "contact_form" },
+    //     )
+    //   : "MOCK_DEV_TOKEN");
+
+    // console.log("Token sent to function:", token);
+
+    // Verify token with your backend / Netlify function
+    // const verify = await fetch("/.netlify/functions/recaptcha-verify", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ token }),
+    // }).then((res) => res.json());
+
+    // if (!verify.success) {
+    //   setRecaptchaError("reCAPTCHA verification failed. Please try again.");
+    //   setLoading(false);
+    //   return;
+    // }
 
     try {
-      if (!window.grecaptcha) {
-        throw new Error("reCAPTCHA not loaded yet");
-      }
-
-      // Execute reCAPTCHA v3 for this action
-      const token = await window.grecaptcha.enterprise.execute(
-        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
-        { expectedAction: "contact_form" },
-      );
-
-      // Verify token with your backend / Netlify function
-      const verify = await fetch("/.netlify/functions/recaptcha-verify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token }),
-      }).then((res) => res.json());
-
-      if (!verify.success) {
-        setRecaptchaError("reCAPTCHA verification failed. Please try again.");
-        setLoading(false);
-        return;
-      }
-
       // Send email with EmailJS
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -77,7 +123,8 @@ export default function ContactForm() {
         {
           name: formData.name,
           email: formData.email,
-          phone: value || formData.phone,
+          // phone: value || formData.phone,
+          phone: formData.phone,
           message: formData.message,
           TOD: formData.TOD,
         },
@@ -86,12 +133,14 @@ export default function ContactForm() {
       // reset form
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", phone: "", message: "", TOD: "" });
-      setValue("");
+      // setValue("");
     } catch (err) {
-      console.error("EmailJS / reCAPTCHA error:", err);
-      setRecaptchaError(
-        "Failed to verify reCAPTCHA or send message. Please try again.",
-      );
+      // console.error("EmailJS / reCAPTCHA error:", err);
+      console.error("EmailJS error:", err);
+      // setRecaptchaError(
+      //   "Failed to verify reCAPTCHA or send message. Please try again.",
+      // );
+      setError("Something went wrong. Please try again");
     } finally {
       setLoading(false);
     }
@@ -152,8 +201,11 @@ export default function ContactForm() {
                     defaultCountry="US"
                     id="phone"
                     name="phone"
-                    value={value}
-                    onChange={setValue}
+                    value={formData.phone}
+                    // onChange={setValue}
+                    onChange={(phone) =>
+                      setFormData((prev) => ({ ...prev, phone }))
+                    }
                   />
                 </div>
               </div>
@@ -187,9 +239,11 @@ export default function ContactForm() {
                 />
               </div>
 
-              {recaptchaError && (
+              {error && <p className="error">{error}</p>}
+
+              {/* {recaptchaError && (
                 <div className="text-danger mt-1">{recaptchaError}</div>
-              )}
+              )} */}
 
               <div className="row">
                 <button
@@ -211,9 +265,8 @@ export default function ContactForm() {
       </div>
 
       <div className="contactFooterContainer">
-          <div className="footer"></div>
+        <div className="footer"></div>
       </div>
-
     </div>
   );
 }
