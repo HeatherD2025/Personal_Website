@@ -1,5 +1,7 @@
 @media screen and (min-width: 768px) {
-
+.formBackground {
+  height: 65rem;
+}
 form {
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
@@ -19,6 +21,10 @@ form {
   color: #fff;
   display: flex;
   justify-content: center;
+}
+.contactFooterContainer {
+  margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 }
 
