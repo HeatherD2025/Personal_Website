@@ -5,7 +5,7 @@ import ContactForm from "./pages/ContactForm";
 import OPSGProjectDetail from "./pages/OPSGProjectDetail";
 import QuarkyProjectDetail from "./pages/QuarkyProjectDetail";
 import NavBar from "./components/Navbar";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       {routes}
     </>
   )

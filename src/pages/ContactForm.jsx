@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-number-input";
 import SingleSelection from "../components/singleSelection";
+import ScrollToTop from "../components/ScrollToTop";
 import "../styles/contactForm.css";
 import "react-phone-number-input/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -147,126 +148,129 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="formBackground">
-      <div className="container">
-        <div className="formContainer">
-          <div className="container">
-            <form onSubmit={handleSubmit}>
-              <div
-                className="contactFormGreeting"
-                style={{ marginBottom: "2rem" }}
-              >
-                I'd love to hear from you!
-              </div>
+    <>
+    <ScrollToTop />
+      <div className="formBackground">
+        <div className="container">
+          <div className="formContainer">
+            <div className="container">
+              <form onSubmit={handleSubmit}>
+                <div
+                  className="contactFormGreeting"
+                  style={{ marginBottom: "2rem" }}
+                >
+                  I'd love to hear from you!
+                </div>
 
-              <div className="row">
-                <label htmlFor="name">NAME</label>
-                <div className="inputField">
-                  <input
-                    style={{ width: "100%", margin: "0 0 1rem 0" }}
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
+                <div className="row">
+                  <label htmlFor="name">NAME</label>
+                  <div className="inputField">
+                    <input
+                      style={{ width: "100%", margin: "0 0 1rem 0" }}
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="row">
-                <div className="col-25">
-                  <label htmlFor="email">EMAIL</label>
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="email">EMAIL</label>
+                  </div>
+                  <div className="col-75">
+                    <input
+                      style={{ width: "100%", margin: "0 0 1rem 0" }}
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
-                <div className="col-75">
-                  <input
-                    style={{ width: "100%", margin: "0 0 1rem 0" }}
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
 
-              <div className="row">
-                <div className="col-25">
-                  <label htmlFor="phone">PHONE NUMBER</label>
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="phone">PHONE NUMBER</label>
+                  </div>
+                  <div className="col-75">
+                    <PhoneInput
+                      style={{ width: "100%", margin: "0 0 1rem 0" }}
+                      defaultCountry="US"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      // onChange={setValue}
+                      onChange={(phone) =>
+                        setFormData((prev) => ({ ...prev, phone }))
+                      }
+                    />
+                  </div>
                 </div>
-                <div className="col-75">
-                  <PhoneInput
-                    style={{ width: "100%", margin: "0 0 1rem 0" }}
-                    defaultCountry="US"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    // onChange={setValue}
-                    onChange={(phone) =>
-                      setFormData((prev) => ({ ...prev, phone }))
+
+                <div className="row">
+                  <div className="col-25">
+                    <label htmlFor="message">MESSAGE</label>
+                  </div>
+                  <div className="col-75">
+                    <textarea
+                      style={{ width: "100%", margin: "0 0 1rem 0" }}
+                      id="message"
+                      name="message"
+                      rows={7}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-25">
+                    <label className="form-label">TIME PREFERRED</label>
+                  </div>
+                  <SingleSelection
+                    value={formData.TOD}
+                    onChange={(e) =>
+                      setFormData((prev) => ({ ...prev, TOD: e.target.value }))
                     }
                   />
                 </div>
-              </div>
 
-              <div className="row">
-                <div className="col-25">
-                  <label htmlFor="message">MESSAGE</label>
+                {error && <p className="error">{error}</p>}
+
+                {/* {recaptchaError && (
+                  <div className="text-danger mt-1">{recaptchaError}</div>
+                )} */}
+
+                <div className="row">
+                  <button
+                    type="submit"
+                    className="submitButton"
+                    disabled={loading}
+                    style={{
+                      color: "white",
+                      border: "solid 1px #8A38F5",
+                      marginTop: "2rem",
+                    }}
+                  >
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
                 </div>
-                <div className="col-75">
-                  <textarea
-                    style={{ width: "100%", margin: "0 0 1rem 0" }}
-                    id="message"
-                    name="message"
-                    rows={7}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-25">
-                  <label className="form-label">TIME PREFERRED</label>
-                </div>
-                <SingleSelection
-                  value={formData.TOD}
-                  onChange={(e) =>
-                    setFormData((prev) => ({ ...prev, TOD: e.target.value }))
-                  }
-                />
-              </div>
-
-              {error && <p className="error">{error}</p>}
-
-              {/* {recaptchaError && (
-                <div className="text-danger mt-1">{recaptchaError}</div>
-              )} */}
-
-              <div className="row">
-                <button
-                  type="submit"
-                  className="submitButton"
-                  disabled={loading}
-                  style={{
-                    color: "white",
-                    border: "solid 1px #8A38F5",
-                    marginTop: "2rem",
-                  }}
-                >
-                  {loading ? "Sending..." : "Submit"}
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="contactFooterContainer">
-        <div className="footer"></div>
+        <div className="contactFooterContainer">
+          <div className="footer"></div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

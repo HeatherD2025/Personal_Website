@@ -7,7 +7,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function NavBar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const isHome = location.pathname === "/home";
   const isMobile = useIsMobile();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +19,29 @@ export default function NavBar() {
 
   const hamNavItem = [{ id: "github" }, { id: "linked-in" }];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const isHome = location.pathname === "/home" || location.pathname === "/";
+  // const isContactForm = location.pathname === "/contactForm";
+  // const isOPSGProjectDetail = location.pathname === "/OPSGProjectDetail";
+  // const isQuarkyProjectDetail = location.pathname === "/QuarkyProjectDetail";
+
+  // const cleanNavigationUrl = () => {
+
+  //   const plainUrl = window.location.href;
+  //   const urlIsHashed = window.location.hash.startsWith("#/");
+  //     if (!urlIsHashed) return ""; {
+  //       return window.location.hash.replace("#", "");
+  //     }
+
+  //     };
+
+  // const cleanedUrl = currentUrl
+  //   .replace("/home", "")
+  //   .replace("/contactForm", "")
+  //   .replace("/OPSGProjectDetail", "")
+  //   .replace("/QuarkyProjectDetail", "");
+
+  //   const urlBase = cleanedUrl.endsWith("/") ? cleanedUrl : cleanedUrl + "/";
+  //  }
 
   // resume download helper code
   const downloadResume = () => {
@@ -33,37 +52,17 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbarInner">
-        {/* left side - my name. If home, use hash anchor, if not, use route */}
-        {isHome ? (
-          <button
-            className="homeButton"
-            onClick={() => {
-              const el = document.getElementById("home");
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
-                setIsOpen(false);
-              }
-            }}
-          >
-            <div className="navbarBrand">
-              <div className="floatingAccentBox1"></div>
-              Heather DeLiso
-            </div>
-          </button>
-        ) : (
-          <button
-            className="homeButton"
-            onClick={() => {
-              navigate("/home");
-              scrollToTop();
-            }}
-          >
-            <div className="navbarBrand">
-              <div className="floatingAccentBox1"></div>
-              Heather DeLiso
-            </div>
-          </button>
-        )}
+        <button
+          className="homeButton"
+          onClick={() => {
+            navigate("/home");
+          }}
+        >
+          <div className="navbarBrand">
+            <div className="floatingAccentBox1"></div>
+            Heather DeLiso
+          </div>
+        </button>
 
         {/* right side - hamburger and nav items */}
         <div
@@ -81,59 +80,28 @@ export default function NavBar() {
 
         {/* Nav items */}
         <div className={`navItems ${isOpen ? "open" : ""}`}>
-          {isHome
-            ? navItems.map((item) => (
-                <button
-                  key={item.id}
-                  className="navItem"
-                  onClick={() => {
-                    if (item.id === "resume-download") {
-                      downloadResume();
-                      setIsOpen(false);
-                    } else {
-                      const el = document.getElementById(item.id);
-                      if (el) {
-                        el.scrollIntoView({ behavior: "smooth" });
-                        setIsOpen(false);
-                      }
-                    }
-                  }}
-                >
-                  {item.label === "resume" ? (
-                    <>
-                      resume <i className="fa-solid fa-download"></i>
-                    </>
-                  ) : (
-                    item.label
-                  )}
-                </button>
-              ))
-            : navItems.map((item) => {
-                const isActive = location.hash === `#${item.id}`;
-                return (
-                  <Link
-                    key={item.id}
-                    to={`/home#${item.id}`} // Links to the home page with the hash
-                    className={`navItem ${isActive ? "active" : ""}`}
-                    onClick={() => {
-                      const targetSection = document.getElementById(item.id);
-                      if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: "smooth" });
-                        setIsOpen(false);
-                      }
-                    }} // Close the menu when clicked
-                  >
-                    {item.label === "resume" ? (
-                      <>
-                        resume <i className="fa-solid fa-download"></i>
-                      </>
-                    ) : (
-                      item.label
-                    )}
-                  </Link>
-                );
-              })}
-
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              className="navItem"
+              onClick={() => {
+                setIsOpen(false);
+                navigate("/home#" + item.id || `"/${item.route}"`);
+                if (item.label === "resume") {
+                  downloadResume();
+                }
+              }}
+            >
+              {item.label === "resume" ? (
+                <>
+                  resume <i className="fa-solid fa-download"></i>
+                </>
+              ) : (
+                item.label
+              )}
+            </button>
+          ))}
+          ;
           {isMobile && (
             <>
               <a
