@@ -9,14 +9,13 @@ import react from "../assets/images/icons/reactlogo.webp";
 import vite from "../assets/images/icons/vite.webp";
 import OPSG from "../assets/images/projects/OPSG/OPSG.webp";
 import OPSGContactForm from "../assets/images/projects/OPSG/OPSGContactForm.webp";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function OPSGProjectDetail() {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
 
   return (
     <>
+     <ScrollToTop />
       <div className="projectSectionContainer">
 
         <div className="background">

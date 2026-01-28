@@ -2,14 +2,16 @@ import "../styles/individualProjectPages.css";
 import postgresql from "../assets/images/icons/postgresqlLogo.webp";
 import prisma from "../assets/images/icons/prismalogo.webp";
 import react from "../assets/images/icons/reactlogo.webp";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function QuarkyProjectDetail() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
    return (
       <>
+       <ScrollToTop />
         <div className="container">
           <div className="background">
             <div className="projectGrid">

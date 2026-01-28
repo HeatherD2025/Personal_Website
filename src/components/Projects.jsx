@@ -14,10 +14,6 @@ export default function Projects() {
   const isOnQuarkyPage = location.pathname === "/QuarkyPropjectDetail";
   const navigate = useNavigate();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <>
       <section id="projects" className="section">
