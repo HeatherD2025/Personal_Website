@@ -86,7 +86,7 @@ export default function NavBar() {
               className="navItem"
               onClick={() => {
                 setIsOpen(false);
-                navigate("/home#" + item.id || `"/${item.route}"`);
+                navigate("/home#" + item.id || `"/${item.route}"`)
                 if (item.label === "resume") {
                   downloadResume();
                 }
@@ -101,7 +101,6 @@ export default function NavBar() {
               )}
             </button>
           ))}
-          ;
           {isMobile && (
             <>
               <a
