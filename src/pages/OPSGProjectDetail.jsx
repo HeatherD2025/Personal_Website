@@ -47,7 +47,7 @@ export default function OPSGProjectDetail() {
 
                         <a
                           className="projectLink"
-                          href="https://onpointsolutions.netlify.app/#/"
+                          href="https://opsg-demo.netlify.app/#/"
                           target=" "
                         >
                           view site

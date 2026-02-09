@@ -8,14 +8,14 @@
     background-color: #100310;
     z-index: 9;
   }
-  .navbarInner {
+  .navbar-inner {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0% 5% 0% 10%;
     flex-shrink: 1;
   }
-  .navbarBrand {
+  .navbar-brand {
     font-family: "JetBrains Mono", monospace;
     font-size: large;
     color: #fff;
@@ -24,30 +24,30 @@
     align-items: center;
     gap: 1rem;
   }
-  .homeButton {
+  .home-button {
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
   }
-  .navbarBrand:hover {
+  .navbar-brand:hover {
     text-decoration: underline;
     color: #8a38f5;
   }
-  .floatingAccentBox1 {
+  .floating-accent-box1 {
     width: 3rem;
     aspect-ratio: 1/1;
     background-color: #fff;
   }
 
   /* Standard - right-side nav links */
-  .navItems {
+  .nav-items {
     font-size: large;
     display: flex;
     gap: 1rem;
     justify-content: right;
   }
-  .navItem {
+  .nav-item {
     background: none;
     border: none;
     text-decoration: none;
@@ -57,12 +57,12 @@
     font-family: "JetBrains Mono", monospace;
     cursor: pointer;
   }
-  .navItem:hover {
+  .nav-item:hover {
     background-color: #100310;
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItem.active {
+  .nav-item.active {
     color: #8a38f5;
     text-decoration: underline;
   }
@@ -75,14 +75,14 @@
     display: none;
     margin-left: auto;
   }
-   .hamNavItem {
+   .ham-nav-item {
     margin-left: 15%;
     color: #fff;
     padding-top: 10%;
   }
 
   /* Standard - left-side icon column  */
-  .linkBox {
+  .link-box {
     font-size: xx-large;
     position: fixed;
     top: 0rem;
@@ -96,7 +96,7 @@
     justify-content: space-between;
     z-index: 1;
   }
-  .downloadIcon {
+  .download-icon {
     background: none;
     border: none;
     color: #fff;
@@ -104,17 +104,17 @@
     width: 1rem;
     z-index: 1;
   }
-  .downloadIcon:hover {
+  .download-icon:hover {
     color: #8a38f5;
   }
-  .contactIcons {
+  .contact-icons {
     color: #fff;
     font-size: 1.5rem;
   }
-  .contactIcons:hover {
+  .contact-icons:hover {
     color: #8a38f5;
   }
-  .accentLine1 {
+  .accent-line1 {
     transform: translateY(-0.85rem);
     width: 0.2rem;
     height: 52rem;
@@ -135,14 +135,14 @@
     background-color: #100310;
     z-index: 9;
   }
-  .navbarInner {
+  .navbar-inner {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0% 7% 0% 7.5%;
     flex-shrink: 1;
   }
-  .navbarBrand {
+  .navbar-brand {
     font-family: "JetBrains Mono", monospace;
     font-size: x-large;
     color: #fff;
@@ -151,30 +151,30 @@
     align-items: center;
     gap: 1rem;
   }
-  .homeButton {
+  .home-button {
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
   }
-  .navbarBrand:hover {
+  .navbar-brand:hover {
     text-decoration: underline;
     color: #8a38f5;
   }
-  .floatingAccentBox1 {
+  .floating-accent-box1 {
     width: 1.5rem;
     aspect-ratio: 1/1;
     background-color: #fff;
   }
 
   /* Tablet - right-side nav links  */
-  .navItems {
+  .nav-items {
     font-size: x-large;
     display: flex;
     gap: 1rem;
     justify-content: right;
   }
-  .navItem {
+  .nav-item {
     background: none;
     border: none;
     text-decoration: none;
@@ -184,12 +184,12 @@
     font-family: "JetBrains Mono", monospace;
     cursor: pointer;
   }
-  .navItem:hover {
+  .nav-item:hover {
     background-color: #100310;
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItem.active {
+  .nav-item.active {
     color: #8a38f5;
     text-decoration: underline;
   }
@@ -204,7 +204,7 @@
   }
 
   /* Tablet - left-side icon column  */
-  .linkBox {
+  .link-box {
     position: fixed;
     top: 0rem;
     flex-shrink: 0;
@@ -217,7 +217,7 @@
     justify-content: space-between;
     z-index: 1;
   }
-  .downloadIcon {
+  .download-icon {
     background: none;
     border: none;
     color: #fff;
@@ -225,18 +225,18 @@
     width: 1rem;
     z-index: 1;
   }
-  .downloadIcon:hover {
+  .download-icon:hover {
     color: #8a38f5;
   }
-  .contactIcons {
+  .contact-icons {
     font-size: x-large;
     color: #fff;
     margin: 0.5rem 0;
   }
-  .contactIcons:hover {
+  .contact-icons:hover {
     color: #8a38f5;
   }
-  .accentLine1 {
+  .accent-line1 {
     transform: translateY(-0.85rem);
     width: 0.0625rem;
     height: 27.5rem;
@@ -255,11 +255,11 @@
     background-color: #100310;
     z-index: 9;
   }
-  .navbarInner {
+  .navbar-inner {
     padding: 0 1rem;
     gap: 6rem;
   }
-  .navbarBrand {
+  .navbar-brand {
     font-family: "JetBrains Mono", monospace;
     font-size: 1.125rem;
     color: #fff;
@@ -268,22 +268,22 @@
     align-items: center;
     gap: 1rem;
   }
-  .homeButton {
+  .navbar-brand:hover {
+    text-decoration: underline;
+    color: #8a38f5;
+  }
+  .home-button {
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
   }
-  .navbarBrand:hover {
-    text-decoration: underline;
-    color: #8a38f5;
-  }
-  .floatingAccentBox1 {
+  .floating-accent-box1 {
     display: none;
   }
 
   /* Mobile - right-side nav links  */
-  .navItems {
+  .nav-items {
     position: absolute;
     font-size: large;
     top: 6rem;
@@ -299,20 +299,20 @@
     transform: translateX(0); 
     z-index: 9999;
   }
-  .navItem {
+  .nav-item {
     width: 20%;
     text-align: left;
   }
-  .navItem:hover, .hamNavItem:hover {
+  .nav-item:hover, .ham-nav-item:hover {
     background-color: #100310;
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItem.active, .hamNavItem.active {
+  .nav-item.active, .ham-nav-item.active {
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItems.open {
+  .nav-items.open {
     display: flex;
   }
 
@@ -321,7 +321,7 @@
     display: block;
     margin: auto;
   }
-  .hamNavItem {
+  .ham-nav-item {
     margin-left: 13%;
     color: #fff;
     padding-top: 8%;
@@ -333,9 +333,9 @@
     top: 43.5%;
   }
   /* Mobile - hide left side column */
-  .floatingAccentBox1,
-  .linkBox,
-  .accentLine1 {
+  .floating-accent-box1,
+  .link-box,
+  .accent-line1 {
     display: none;
   }
 }
@@ -352,11 +352,11 @@
     background-color: #100310;
     z-index: 9;
   }
-  .navbarInner {
+  .navbar-inner {
     padding: 0 1rem;
     gap: 3rem;
   }
-  .navbarBrand {
+  .navbar-brand {
     font-family: "JetBrains Mono", monospace;
     font-size: 1.125rem;
     color: #fff;
@@ -365,25 +365,25 @@
     align-items: center;
     gap: 1rem;
   }
-  .homeButton {
+  .home-button {
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
     margin: 0% 8% 0% -7%;
   }
-  .navbarBrand:hover {
+  .navbar-brand:hover {
     text-decoration: underline;
     color: #8a38f5;
   }
-  .floatingAccentBox1 {
+  .floating-accent-box1 {
     width: 1.5rem;
     aspect-ratio: 1/1;
     background-color: #fff;
   }
 
   /* Small mobile - right-side nav links  */
-  .navItems {
+  .nav-items {
     position: absolute;
     top: 6rem;
     right: 22.5%; 
@@ -398,20 +398,20 @@
     transform: translateX(0); 
     z-index: 9999;
   }
-  .navItem {
+  .nav-item {
     max-width: 20%;
     text-align: left;
   }
-  .navItem:hover, .hamNavItem:hover {
+  .nav-item:hover, .ham-nav-item:hover {
     background-color: #100310;
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItem.active, .hamNavItem.active {
+  .nav-item.active, .ham-nav-item.active {
     color: #8a38f5;
     text-decoration: underline;
   }
-  .navItems.open {
+  .nav-items.open {
     display: flex;
     margin-right: -1%;
     width: 23%;
@@ -422,7 +422,7 @@
     display: block;
     margin: auto;
   }
-  .hamNavItem {
+  .ham-nav-item {
     margin-left: 13%;
     color: #fff;
     padding-top: 8%;
