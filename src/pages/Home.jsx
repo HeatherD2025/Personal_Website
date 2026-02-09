@@ -47,23 +47,23 @@ export default function Home() {
       <div className="background">
         <section id="home" className="section">
           {/* Main header and photo */}
-          <div className="mainContainer">
-            <div className="mainWrapper">
-              <div className="mainHeader">I'm Heather and I'm a nerd</div>
+          <div className="main-container">
+            <div className="main-wrapper">
+              <div className="main-header">I'm Heather and I'm a nerd</div>
 
-              <div className="mainContent">
+              <div className="main-content">
                 Always learning, always building — ready to contribute to
                 exciting, mission-driven teams
               </div>
 
-              <div className="mainAccentLine"></div>
+              <div className="main-accent-line"></div>
             </div>
 
-            <div className="photoAndBoxWrapper">
-              <div className="myPhotoWrapper">
-                <div className="myPhoto"></div>
+            <div className="photo-and-box-wrapper">
+              <div className="my-photo-wrapper">
+                <div className="my-photo"></div>
 
-                <div className="photoAccentBox"></div>
+                <div className="photo-accent-box"></div>
               </div>
             </div>
           </div>
@@ -71,27 +71,27 @@ export default function Home() {
         {/* end of main */}
 
         {/* Accent elements below main*/}
-        <div className="dividerAccentWrapper">
-          <div className="dividerAccentLine">
-            <div className="dividerAccentBox"></div>
-            <div className="floatingDividerAccentBox"></div>
+        <div className="divider-accent-wrapper">
+          <div className="divider-accent-line">
+            <div className="divider-accent-box"></div>
+            <div className="floating-divider-accent-box"></div>
           </div>
         </div>
 
         {/* About section */}
         <About />
 
-        <div className="dividerAccentWrapper">
-          <div className="dividerAccentLine">
-            <div className="dividerAccentBox"></div>
-            <div className="floatingDividerAccentBox"></div>
+        <div className="divider-accent-wrapper">
+          <div className="divider-accent-line">
+            <div className="divider-accent-box"></div>
+            <div className="floating-divider-accent-box"></div>
           </div>
         </div>
 
         {/* Projects section */}
         <Projects />
 
-        <div className="footerContainer">
+        <div className="footer-container">
           <div className="footer"></div>
         </div>
       </div>

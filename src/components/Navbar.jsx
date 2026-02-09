@@ -20,28 +20,6 @@ export default function NavBar() {
   const hamNavItem = [{ id: "github" }, { id: "linked-in" }];
 
   const isHome = location.pathname === "/home" || location.pathname === "/";
-  // const isContactForm = location.pathname === "/contactForm";
-  // const isOPSGProjectDetail = location.pathname === "/OPSGProjectDetail";
-  // const isQuarkyProjectDetail = location.pathname === "/QuarkyProjectDetail";
-
-  // const cleanNavigationUrl = () => {
-
-  //   const plainUrl = window.location.href;
-  //   const urlIsHashed = window.location.hash.startsWith("#/");
-  //     if (!urlIsHashed) return ""; {
-  //       return window.location.hash.replace("#", "");
-  //     }
-
-  //     };
-
-  // const cleanedUrl = currentUrl
-  //   .replace("/home", "")
-  //   .replace("/contactForm", "")
-  //   .replace("/OPSGProjectDetail", "")
-  //   .replace("/QuarkyProjectDetail", "");
-
-  //   const urlBase = cleanedUrl.endsWith("/") ? cleanedUrl : cleanedUrl + "/";
-  //  }
 
   // resume download helper code
   const downloadResume = () => {
@@ -51,15 +29,15 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="navbarInner">
+      <div className="navbar-inner">
         <button
-          className="homeButton"
+          className="home-button"
           onClick={() => {
             navigate("/home");
           }}
         >
-          <div className="navbarBrand">
-            <div className="floatingAccentBox1"></div>
+          <div className="navbar-brand">
+            <div className="floating-accent-box1"></div>
             Heather DeLiso
           </div>
         </button>
@@ -79,11 +57,11 @@ export default function NavBar() {
         </div>
 
         {/* Nav items */}
-        <div className={`navItems ${isOpen ? "open" : ""}`}>
+        <div className={`nav-items ${isOpen ? "open" : ""}`}>
           {navItems.map((item) => (
             <button
               key={item.id}
-              className="navItem"
+              className="nav-item"
               onClick={() => {
                 setIsOpen(false);
                 navigate("/home#" + item.id || `"/${item.route}"`)
@@ -104,7 +82,7 @@ export default function NavBar() {
           {isMobile && (
             <>
               <a
-                className="hamNavItem"
+                className="ham-nav-item"
                 href="https://github.com/HeatherD2025"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +92,7 @@ export default function NavBar() {
               </a>
 
               <a
-                className="hamNavItem"
+                className="ham-nav-item"
                 href="https://www.linkedin.com/in/heatherdeliso/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,7 +102,7 @@ export default function NavBar() {
               </a>
 
               <Link to="/contactForm">
-                <i className="hamNavItem fa-regular fa-envelope contactIcons"></i>
+                <i className="ham-nav-item fa-regular fa-envelope contact-icons"></i>
               </Link>
             </>
           )}
@@ -132,24 +110,24 @@ export default function NavBar() {
       </div>
 
       {/* Fixed links on the left */}
-      <div className="linkBox">
-        <div className="accentLine1"></div>
+      <div className="link-box">
+        <div className="accent-line1"></div>
         <a
           href="https://github.com/HeatherD2025"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa-brands fa-github contactIcons"></i>
+          <i className="fa-brands fa-github contact-icons"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/heatherdeliso/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa-brands fa-linkedin contactIcons"></i>
+          <i className="fa-brands fa-linkedin contact-icons"></i>
         </a>
         <Link to="/contactForm">
-          <i className="fa-regular fa-envelope contactIcons"></i>
+          <i className="fa-regular fa-envelope contact-icons"></i>
         </Link>
       </div>
     </nav>

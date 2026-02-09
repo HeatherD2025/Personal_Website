@@ -1,17 +1,17 @@
 /* Individual Projects */
-.OPSGImage2 {
+.OPSG-image2 {
   max-width: 50%;
   max-height: 27rem;
 }
 @media screen and (min-width: 768px) {
-  .projectSectionContainer {
+  .project-section-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     margin: 10rem 2rem 2rem 2rem;
   }
-  .projectDetailHeaderWrapper {
+  .project-detail-header-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -22,7 +22,7 @@
     margin: 0rem 0rem 2rem 3rem;
     width: max-content;
   }
-  .projectDetailHeaderLeft {
+  .project-detail-header-left {
     color: #fff;
     font-family: "JetBrains Mono";
     font-size: large;
@@ -30,12 +30,12 @@
     font-weight: 400;
     line-height: normal;
   }
-  .verticalDividerLine {
+  .vertical-divider-line {
     border: 0.75px solid #fff;
     height: 0.75rem;
     width: 0.0025rem;
   }
-  .projectDetailHeaderRight {
+  .project-detail-header-right {
     color: #8a38f5;
     font-family: "JetBrains Mono";
     font-size: large;
@@ -43,40 +43,40 @@
     font-weight: 400;
     line-height: normal;
   }
-  .OPSG-Container {
+  .OPSG-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 85rem;
     margin: 5rem 0rem 0rem 3.25rem;
   }
-  .OPSGIntro {
+  .OPSG-intro {
     display: flex;
     flex-direction: column;
   }
-  .OPSGIntroContainer {
+  .OPSG-intro-container {
     display: flex;
     flex-direction: row;
     width: 100%;
   }
-  .OPSGIntroContainer2 {
+  .OPSG-intro-container2 {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
   }
-  .projectTitle2 {
+  .project-title2 {
     font-size: x-large;
     width: 100%;
     color: #fff;
   }
-  .projectDescription2 {
+  .project-description2 {
     color: #fff;
     font-size: medium;
     max-width: 52rem;
     margin: 2rem 0rem 2rem 0rem;
   }
-  .projectLink {
+  .project-link {
     font-size: 1rem;
     color: #fff;
     margin-bottom: 2rem;
@@ -87,14 +87,14 @@
     text-underline-offset: auto;
     text-underline-position: from-font;
   }
-  .accentLine6 {
+  .accent-line6 {
     height: 0.0625rem;
     max-width: 40%;
     margin: 0rem 0rem 2rem 0rem;
     background: #8a38f5;
   }
-  .toolIcons2,
-  .toolIcon {
+  .tool-icons2,
+  .tool-icon {
     display: flex;
     flex-wrap: nowrap;
     gap: 1em;
@@ -103,32 +103,32 @@
     object-fit: contain;
     margin-bottom: 5%;
   }
-  .OPSGImage1 {
+  .OPSG-image1 {
     max-width: 50rem;
     margin: 0rem 2rem 8rem 2rem;
     padding: 10px;
   }
-  .OPSGIntroContainer2 {
+  .OPSG-intro-container2 {
     display: flex;
     flex-direction: row;
     margin: 5rem 0rem 5rem 0rem;
   }
-  .OPSGImage2 {
+  .OPSG-image2 {
     max-width: 50rem;
   }
-  .projectDescription3 {
+  .project-description3 {
     color: #fff;
     font-size: medium;
     width: 40rem;
     margin: 2rem 0rem 2rem 4rem;
   }   
-  .projectsContainer {
+  .projects-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2rem;
   }
-  .projectsHeaderWrapper2 {
+  .projects-header-wrapper2 {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -138,10 +138,10 @@
     justify-content: start;
     gap: 1rem;
   }
-  .emphasizedText {
+  .emphasized-text {
     color: #8a38f5;
   }
-  .firstInfoContainer2 {
+  .first-info-container2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -154,7 +154,7 @@
 
 /* Tablet (≤768px) */
 @media (max-width: 768px) {
-  .projectDetailHeaderWrapper {
+  .project-detail-header-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -166,7 +166,7 @@
     margin-bottom: 5%;
     width: max-content;
   }
-  .projectDetailHeaderLeft {
+  .project-detail-header-left {
     color: #fff;
     font-family: "JetBrains Mono";
     font-size: large;
@@ -174,37 +174,37 @@
     font-weight: 400;
     line-height: normal;
   }
-  .verticalDividerLine {
+  .vertical-divider-line {
     height: 1rem;
     width: 0.0625rem;
     background-color: #fff;
   }
-  .projectDetailHeaderRight {
+  .project-detail-header-right {
     color: #8a38f5;
   }
 
-  .OPSG-Container {
+  .OPSG-container {
     display: flex !important;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     margin: 0% 5% 5% 5%;
   }
-  .projectTitle2 {
+  .project-title2 {
     font-size: large;
     margin-bottom: 1%;
     order: 1;
   }
-  .projectDescription2 {
+  .project-description2 {
     order: 2;
     max-width: 90%;
   }
-  .projectLink {
+  .project-link {
     order: 3;
     margin-bottom: 2%;
   }
 
-  .accentLine6 {
+  .accent-line6 {
     height: 0.0625rem;
     width: 75%;
     background-color: #8a38f5;
@@ -212,48 +212,48 @@
     margin-top: 1rem;
     order: 4;
   }
-  .toolIcons,
-  .toolIcon {
+  .tool-icons,
+  .tool-icon {
     /* display: flex;
     flex-direction: row; */
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
   }
-  .toolIcons2 {
+  .tool-icons2 {
     order: 5;
     margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     gap: 10%;
   }
-  .OPSGImage1 {
+  .OPSG-image1 {
     margin: 5% 0% 10% 0%;
     height: auto;
     width: 90%;
     order: 6;
     border: 1px solid #fff;
   }
-  .OPSGImage2 {
+  .OPSG-image2 {
     margin: 5% 0% 10% 0%;
     height: auto;
     width: 90%;
     order: 6;
     border: 1px solid #fff;
   }
-  .projectDescription3 {
+  .project-description3 {
     order: 7;
     max-width: 90%;
   }
-  .paragraphSpacer {
+  .paragraph-spacer {
     height: 1rem;
   }
-  .projectDescription4 {
+  .project-description4 {
     order: 8;
     max-width: 90%;
   }
 
-  .projectDetailAccentWrapper {
+  .project-detail-accent-wrapper {
     position: relative;
     width: 100%;
     height: 1rem;
@@ -262,27 +262,27 @@
     margin-bottom: 3rem;
     order: 9;
   }
-  .accentLine3 {
+  .accent-line3 {
     position: absolute;
     left: 0;
     width: 50%;
     height: 0.1rem;
   }
-  .accentBox2 {
+  .accent-box2 {
     transform: translate(200%, -100%);
   }
-  .floatingAccentBox2 {
+  .floating-accent-box2 {
     transform: translate(150%, -150%);
   }
 
-  .allProjects {
+  .all-projects {
     order: 11;
   }
 }
 
 /*  Mobile Responsive (≤768px) */
 @media (max-width: 768px) {
-  .projectDetailHeaderWrapper {
+  .project-detail-header-wrapper {
     display: flex;
     justify-content: flex-start;
     gap: 0.5rem;
@@ -290,42 +290,42 @@
     width: 80%;
     margin: 30% 0% 10% 5%;
   }
-  .verticalDividerLine {
+  .vertical-divider-line {
     height: 1rem;
     width: 0.0625rem;
     background-color: #fff;
   }
-  .projectDetailHeaderRight {
+  .project-detail-header-right {
     color: #8a38f5;
   }
-  .OPSG-Container {
+  .OPSG-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 100%;
     margin-left: 2%;
   }
-  .projectTitle2 {
+  .project-title2 {
     font-size: large;
     margin-bottom: 1%;
     order: 1;
   }
-  .projectDescription2 {
+  .project-description2 {
     font-size: small;
     order: 2;
     max-width: 90%;
   }
-  .projectLink {
+  .project-link {
     order: 3;
     margin: 2% 0% 2% 0%;
     text-decoration: none;
     color: #8a38f5;
   }
-  .projectLink:hover {
+  .project-link:hover {
     text-decoration: underline;
   }
 
-  .accentLine6 {
+  .accent-line6 {
     height: 0.0625rem;
     width: 75%;
     background-color: #8a38f5;
@@ -333,46 +333,46 @@
     margin-top: 1rem;
     order: 4;
   }
-  .toolIcons,
-  .toolIcon {
+  .tool-icons,
+  .tool-icon {
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
   }
-  .toolIcons2 {
+  .tool-icons2 {
     order: 5;
     margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     gap: 10%;
   }
-  .OPSGImage1 {
+  .OPSG-image1 {
     margin: 5% 0% 10% 0%;
     height: auto;
     width: 96%;
     order: 6;
     border: 1px solid #fff;
   }
-  .OPSGImage2 {
+  .OPSG-image2 {
     margin: 5% 5% 10% 0%;
     height: auto;
     width: 96%;
     order: 10;
     border: 1px solid #fff;
   }
-  .projectDescription3 {
+  .project-description3 {
     order: 7;
     max-width: 90%;
   }
-  .paragraphSpacer {
+  .paragraph-spacer {
     height: 1rem;
   }
-  .projectDescription4 {
+  .project-description4 {
     order: 8;
     max-width: 90%;
   }
 
-  .projectDetailAccentWrapper {
+  .project-detail-accent-wrapper {
     position: relative;
     width: 100%;
     height: 1rem;
@@ -381,7 +381,7 @@
     margin-bottom: 3rem;
     order: 9;
   }
-  .projectsContainer {
+  .projects-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -391,27 +391,27 @@
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-  .mobileContainer {
+  .mobile-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
 
-  .projectDetailHeaderLeft {
+  .project-detail-header-left {
     margin: 0% 0% 0% 5%;
   }
-  .verticalDividerLine {
+  .vertical-divider-line {
     height: 1rem;
     width: 0.0625rem;
     background-color: #fff;
   }
-  .projectDetailHeaderRight {
+  .project-detail-header-right {
     color: #8a38f5;
     margin: 0% 0% 0% 5%;
   }
 
-  .OPSG-Container,
-  .OPSGIntroContainer {
+  .OPSG-container,
+  .OPSG-intro-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -419,33 +419,33 @@
     max-width: 90%;
     margin: auto;
   }
-  .OPSGIntroContainer2 {
+  .OPSG-intro-container2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     max-width: 90%;
   }
-  .projectTitle2 {
+  .project-title2 {
     visibility: hidden;
   }
-  .projectDescription2,
-  .projectDescription3 {
+  .project-description2,
+  .project-description3 {
     font-size: small;
     max-width: 94%;
     margin-bottom: 1rem;
   }
-  .projectLink {
+  .project-link {
     order: 3;
     margin: 3% 0% 2% 0% !important;
     text-decoration: none;
     color: #8a38f5;
   }
-  .projectLink:hover {
+  .project-link:hover {
     text-decoration: underline;
   }
 
-  .accentLine6 {
+  .accent-line6 {
     height: 0.0625rem;
     width: 75%;
     background-color: #8a38f5;
@@ -453,44 +453,44 @@
     margin-top: 1rem;
     order: 4;
   }
-  .toolIcons2 {
+  .tool-icons2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: auto;
     width: 80%;
   }
-  .toolIcon,
-  .toolIcons {
+  .tool-icon,
+  .tool-icons {
     width: 1.5rem;
     height: 1.5rem;
     object-fit: contain;
   }
-  .OPSGImage1 {
+  .OPSG-image1 {
     margin: 5% 5% 10% 5%;
     height: auto;
     width: 96%;
     border: 1px solid #fff;
   }
-  .OPSGImage2 {
+  .OPSG-image2 {
     margin: 5% 5% 10% 5%;
     height: auto;
     width: 96%;
     border: 1px solid #fff;
   }
-  .projectDescription3 {
+  .project-description3 {
     order: 7;
     max-width: 90%;
   }
-  .paragraphSpacer {
+  .paragraph-spacer {
     height: 1rem;
   }
-  .projectDescription4 {
+  .project-description4 {
     order: 8;
     max-width: 90%;
   }
 
-  .projectDetailAccentWrapper {
+  .project-detail-accent-wrapper {
     position: relative;
     width: 100%;
     height: 1rem;
@@ -499,12 +499,11 @@
     margin-bottom: 3rem;
     order: 9;
   }
-  .projectsContainer {
+  .projects-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 100%;
   }
-  /* .allProjects {
-  } */
+
 }

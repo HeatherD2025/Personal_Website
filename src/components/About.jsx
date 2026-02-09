@@ -17,49 +17,49 @@ export default function About() {
       <>
         <section id="about" className="section">
 
-            <div className="aboutMeContainer">
+            <div className="about-me-container">
 
-                <div className="aboutMeHeaderWrapper">
-                    <div className="aboutMeHeader">about-me</div>
-                      <div className="headerAccentLine"></div>
-                      <div className="floatingAccentBox3"></div>
+                <div className="about-me-header-wrapper">
+                    <div className="about-me-header">about-me</div>
+                      <div className="header-accent-line"></div>
+                      <div className="floating-accent-box3"></div>
                 </div>
             
                 {/* main section */}
-                <div className="boxWrapper">
-                  <div className="accentBox4">                    
-                    <div className="floatingAccentBox4"></div>
+                <div className="box-wrapper">
+                  <div className="accent-box4">                    
+                    <div className="floating-accent-box4"></div>
                   </div>
                 </div>
 
-                  <div className="aboutParagraphWrapper">
-                      <div className="aboutParagraph">
+                  <div className="about-paragraph-wrapper">
+                      <div className="about-paragraph">
                         I was a curious kid-passionate about technology and science, with a knack for visualizing functionality and aesthetics. 
                         Naturally inquisitive and excited to understand cause-and-effect processes, I've always had a persistent drive to learn something new.
 
-                        <div className="paragraphSpacer"></div>
+                        <div className="paragraph-spacer"></div>
 
                         After 12+ years leading teams and coordinating events, I was craving a new challenge, so I made the leap into web development 
                         through an immersive Fullstack Academy bootcamp. Now, as a full-stack developer with a background in design, operations, and hospitality,
                         I'm focused on building user-first applications with responsive design. Ready to join a new team helping create the extraordinary!
                       </div>
                       
-                       <div className="paragraphSpacer"></div>
+                       <div className="paragraph-spacer"></div>
 
-                       <div className="bulletPointWrapper">
-                          <div className="bulletPoint">Graduate of Fullstack Academy's immersive web development program</div>
-                            <div className="toolsContainer">
-                              <img className="toolIcon" src={html} alt="html logo"></img>
-                              <img className="toolIcon" src={css} alt="css logo"></img>
-                              <img className="toolIcon" src={javascript} alt="js logo"></img>
-                              <img className="toolIcon" src={json} alt="json logo"></img>
-                              <img className="toolIcon" src={react} alt="react logo"></img>
-                              <img className="toolIcon" src={reactRedux} alt="react-redux logo"></img>
-                              <img className="toolIcon" src={nodeJs} alt="nodeJs logo"></img>
-                              <img className="toolIcon" src={express} alt="expressJs logo"></img>
-                              <img className="toolIcon" src={postgresql} alt="postregsql logo"></img>
-                              <img className="toolIcon" src={prisma} alt="prisma logo"></img>
-                              <img className="toolIcon" src={vite} alt="vite logo"></img>
+                       <div className="bullet-point-wrapper">
+                          <div className="bullet-point">Graduate of Fullstack Academy's immersive web development program</div>
+                            <div className="tools-container">
+                              <img className="tool-icon" src={html} alt="html logo"></img>
+                              <img className="tool-icon" src={css} alt="css logo"></img>
+                              <img className="tool-icon" src={javascript} alt="js logo"></img>
+                              <img className="tool-icon" src={json} alt="json logo"></img>
+                              <img className="tool-icon" src={react} alt="react logo"></img>
+                              <img className="tool-icon" src={reactRedux} alt="react-redux logo"></img>
+                              <img className="tool-icon" src={nodeJs} alt="nodeJs logo"></img>
+                              <img className="tool-icon" src={express} alt="expressJs logo"></img>
+                              <img className="tool-icon" src={postgresql} alt="postregsql logo"></img>
+                              <img className="tool-icon" src={prisma} alt="prisma logo"></img>
+                              <img className="tool-icon" src={vite} alt="vite logo"></img>
                             </div>
                        </div>
                     </div>

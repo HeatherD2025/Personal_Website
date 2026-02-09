@@ -7,7 +7,7 @@ form {
   font-size: 1rem;
   color: #fff;
 }
-.formContainer {
+.form-container {
   max-width: 70%;
   margin-top: 10rem;
   margin-left: 25%;
@@ -16,13 +16,13 @@ form {
   color: #FFF;
   padding: 20px;
 }
-.contactFormGreeting {
+.contact-form-greeting {
   font-size: 1.5rem;
   color: #fff;
   display: flex;
   justify-content: center;
 }
-.contactFooterContainer {
+.contact-footer-container {
   margin-top: 15rem;
   margin-bottom: 5rem;
 }
@@ -35,7 +35,7 @@ form {
   font-size: 1rem;
   color: #fff;
 }
-.formContainer {
+.form-container {
   max-width: 70%;
   margin-top: 10rem;
   margin-left: 25%;
@@ -44,7 +44,7 @@ form {
   color: #FFF;
   padding: 20px;
 }
-.contactFormGreeting {
+.contact-form-greeting {
   font-size: 1.5rem;
   color: #fff;
   display: flex;
@@ -53,7 +53,7 @@ form {
 .col-75 {
   width: 100%;
 }
-.recaptchaContainer {
+.recaptcha-container {
   margin-right: 10%;
 }
 }
@@ -65,7 +65,7 @@ form {
   font-size: 1rem;
   color: #fff;
 }
-.formContainer {
+.form-container {
   max-width: 95%;
   margin-top: 35%;
   margin-left: 2%;
@@ -74,13 +74,13 @@ form {
   color: #FFF;
   padding: 20px;
 }
-.contactFormGreeting {
+.contact-form-greeting {
   font-size: x-large;
   color: #fff;
   display: flex;
   justify-content: center;
 }
-.checkboxContainer {
+.checkbox-container {
   margin-bottom: 5%;
 }
 }

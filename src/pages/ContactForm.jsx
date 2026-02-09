@@ -150,13 +150,13 @@ export default function ContactForm() {
   return (
     <>
     <ScrollToTop />
-      <div className="formBackground">
+      <div className="form-background">
         <div className="container">
-          <div className="formContainer">
+          <div className="form-container">
             <div className="container">
               <form onSubmit={handleSubmit}>
                 <div
-                  className="contactFormGreeting"
+                  className="contact-form-greeting"
                   style={{ marginBottom: "2rem" }}
                 >
                   I'd love to hear from you!
@@ -164,7 +164,7 @@ export default function ContactForm() {
 
                 <div className="row">
                   <label htmlFor="name">NAME</label>
-                  <div className="inputField">
+                  <div className="input-field">
                     <input
                       style={{ width: "100%", margin: "0 0 1rem 0" }}
                       type="text"
@@ -251,7 +251,7 @@ export default function ContactForm() {
                 <div className="row">
                   <button
                     type="submit"
-                    className="submitButton"
+                    className="submit-button"
                     disabled={loading}
                     style={{
                       color: "white",
@@ -267,7 +267,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="contactFooterContainer">
+        <div className="contact-footer-container">
           <div className="footer"></div>
         </div>
       </div>

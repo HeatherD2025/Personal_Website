@@ -7,7 +7,7 @@ function SingleSelection({value, onChange}) {
   return (
     <>
         <div className="col-75">
-          <div className="checkboxContainer">
+          <div className="checkbox-container">
             <input 
               style={{
                 marginRight: ".5rem",
@@ -19,10 +19,10 @@ function SingleSelection({value, onChange}) {
               checked={value === 'morning'}
               onChange={onChange}
               />
-            <label className="checkboxLabel">MORNING</label>
+            <label className="checkbox-label">MORNING</label>
           </div>
 
-          <div className="checkboxContainer">
+          <div className="checkbox-container">
             <input 
               style={{
                 marginRight: ".5rem",
@@ -34,10 +34,10 @@ function SingleSelection({value, onChange}) {
               checked={value === 'afternoon'}
               onChange={onChange}
             />
-            <label className="checkboxLabel">AFTERNOON</label>
+            <label className="checkbox-label">AFTERNOON</label>
           </div>
 
-          <div className="checkboxContainer">
+          <div className="checkbox-container">
             <input 
               style={{
                 marginRight: ".5rem",
@@ -49,7 +49,7 @@ function SingleSelection({value, onChange}) {
               checked={value === 'noPreference'}
               onChange={onChange}
             />
-            <label className="checkboxLabel">NO PREFERENCE</label>
+            <label className="checkbox-label">NO PREFERENCE</label>
           </div>
 
         </div>

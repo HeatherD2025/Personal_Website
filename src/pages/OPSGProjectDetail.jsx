@@ -16,28 +16,28 @@ export default function OPSGProjectDetail() {
   return (
     <>
      <ScrollToTop />
-      <div className="projectSectionContainer">
+      <div className="project-section-container">
 
         <div className="background">
 
-            <div className="mobileContainer">
+            <div className="mobile-container">
               
-                <div className="projectDetailHeaderWrapper">
-                  <div className="projectDetailHeaderLeft">projects</div>
-                  <div className="verticalDividerLine"></div>
-                  <div className="projectDetailHeaderRight">On Point Solutions Group</div>
+                <div className="project-detail-header-wrapper">
+                  <div className="project-detail-header-left">projects</div>
+                  <div className="vertical-divider-line"></div>
+                  <div className="project-detail-header-right">On Point Solutions Group</div>
                 </div>
 
             </div>
 
-            <div className="OPSG-Container">
-                <div className="OPSGIntroContainer">
+            <div className="OPSG-container">
+                <div className="OPSG-intro-container">
 
-                    <div className="OPSGIntro">
+                    <div className="OPSG-intro">
 
-                        <div className="projectTitle2">On Point Solutions Group</div>
+                        <div className="project-title2">On Point Solutions Group</div>
 
-                        <div className="projectDescription2">
+                        <div className="project-description2">
                           On Points Solutions Group is a medical staff credentialing
                           company. In collaboration with two other team members for our
                           fullstack bootcamp final project, we built and designed this site
@@ -46,59 +46,59 @@ export default function OPSGProjectDetail() {
                         </div>
 
                         <a
-                          className="projectLink"
+                          className="project-link"
                           href="https://opsg-demo.netlify.app/#/"
                           target=" "
                         >
                           view site
                         </a>
 
-                        <div className="accentLine6"></div>
+                        <div className="accent-line6"></div>
 
-                        <div className="toolIcons2">
-                          <img className="toolIcon" src={react} alt="react logo"></img>
-                          <img className="toolIcon" src={vite} alt="vite logo"></img>
-                          <img className="toolIcon" src={prisma} alt="prisma logo"></img>
+                        <div className="tool-icons2">
+                          <img className="tool-icon" src={react} alt="react logo"></img>
+                          <img className="tool-icon" src={vite} alt="vite logo"></img>
+                          <img className="tool-icon" src={prisma} alt="prisma logo"></img>
                           <img
-                            className="toolIcon"
+                            className="tool-icon"
                             src={postgresql}
                             alt="postgresql logo"
                           ></img>
-                          <img className="toolIcon" src={express} alt="expressJs logo"></img>
-                          <img className="toolIcon" src={json} alt="json logo"></img>
+                          <img className="tool-icon" src={express} alt="expressJs logo"></img>
+                          <img className="tool-icon" src={json} alt="json logo"></img>
                         </div>
 
                     </div>
 
-                  <img className="OPSGImage1" src={OPSG}></img>
+                  <img className="OPSG-image1" src={OPSG}></img>
 
                 </div>
          
-                <div className="OPSGIntroContainer2">
+                <div className="OPSG-intro-container2">
 
                     <img 
-                      className="OPSGImage2" 
+                      className="OPSG-image2" 
                       src={OPSGContactForm}
                     ></img>
 
-                    <div className="projectDescription3">
-                      Our fullstack app was built with a <strong className="emphasizedText">PostgreSQL</strong>{" "}
-                      database and <strong className="emphasizedText">Prisma</strong> for data consistency. For
-                      building out RESTful API endpoints, <strong className="emphasizedText">Express</strong>{" "}
+                    <div className="project-description3">
+                      Our fullstack app was built with a <strong className="emphasized-text">PostgreSQL</strong>{" "}
+                      database and <strong className="emphasized-text">Prisma</strong> for data consistency. For
+                      building out RESTful API endpoints, <strong className="emphasized-text">Express</strong>{" "}
                       offered the right tools to handle our requests in a consistent and
                       scalable fashion.
-                        <div className="paragraphSpacer"></div>
-                      <strong className="emphasizedText">React Router</strong> supports our
+                        <div className="paragraph-spacer"></div>
+                      <strong className="emphasized-text">React Router</strong> supports our
                       navigation with protected routes and allows for lazy loading.
-                      Hashing and salting through <strong className="emphasizedText">bcrypt</strong> provided
+                      Hashing and salting through <strong className="emphasize-text">bcrypt</strong> provided
                       security, as well as adaptive options for future security
                       assurance. 
-                        <div className="paragraphSpacer"></div>
-                      State was managed with <strong className="emphasizedText">Redux</strong> for
+                        <div className="paragraph-ppacer"></div>
+                      State was managed with <strong className="emphasized-text">Redux</strong> for
                       predictable data flow and ease of debugging. Throughout the
-                      UI design process, <strong className="emphasizedText">React-Bootstrap</strong> was
+                      UI design process, <strong className="emphasized-text">React-Bootstrap</strong> was
                       extremely useful for dashboard cards and other contained elements.
-                        <div className="paragraphSpacer"></div>
+                        <div className="paragraph-spacer"></div>
                         This experience reinforced the importance of delegation and goal
                       management. Utilizing GitHub project boards, our team assessed
                       first-, second-, and third-priority level elements to ensure
@@ -111,37 +111,37 @@ export default function OPSGProjectDetail() {
             </div> 
            {/* end of OPSG-Container */}
 
-                <div className="dividerAccentWrapper">
-                  <div className="dividerAccentLine">
-                  <div className="dividerAccentBox"></div>
-                  <div className="floatingDividerAccentBox"></div>
+                <div className="divider-accent-wrapper">
+                  <div className="divider-accent-line">
+                  <div className="divider-accent-box"></div>
+                  <div className="floating-divider-accent-box"></div>
                 </div>
         </div>
         {/* end of background div */}
           
-                <div className="projectsHeaderWrapper2">
-                  <div className="projectsHeader">projects</div>
-                  <div className="headerAccentLine"></div>
-                  <div className="floatingAccentBox3"></div>
+                <div className="projects-header-wrapper2">
+                  <div className="projects-header">projects</div>
+                  <div className="header-accent-line"></div>
+                  <div className="floating-accent-box3"></div>
                 </div>
 
-              <div className="firstInfoContainer2">
-                <div className="projectMiniTitle">coming soon</div>
-                <div className="projecMinitDescription">Quarky</div>
+              <div className="first-info-container2">
+                <div className="project-mini-title">coming soon</div>
+                <div className="project-mini-description">Quarky</div>
 
-                <div className="toolIconsMiniContainer">
+                <div className="tool-icons-mini-container">
                   <img
-                    className="toolIcon"
+                    className="tool-icon"
                     src={react}
                     alt="react logo"
                     ></img>
                     <img
-                    className="toolIcon"
+                    className="tool-icon"
                     src={prisma}
                     alt="prisma logo"
                     ></img>
                     <img
-                    className="toolIcon"
+                    className="tool-icon"
                     src={postgresql}
                     alt="postgresql logo"
                     ></img>
@@ -149,7 +149,7 @@ export default function OPSGProjectDetail() {
 
               </div>
 
-              <div className="footerContainer">
+              <div className="footer-container">
                   <div className="footer"></div>
               </div>
 

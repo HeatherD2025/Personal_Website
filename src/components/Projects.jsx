@@ -19,18 +19,18 @@ export default function Projects() {
       <section id="projects" className="section">
   
 
-        <div className="projectsContainer">
+        <div className="projects-container">
 
-            <div className="projectsHeaderWrapper">
-              <div className="projectsHeader">projects</div>
-              <div className="headerAccentLine"></div>
-              <div className="floatingAccentBox3"></div>
+            <div className="projects-header-wrapper">
+              <div className="projects-header">projects</div>
+              <div className="header-accent-line"></div>
+              <div className="floating-accent-box3"></div>
             </div>
 
-            <div className="allProjectsContainer">
+            <div className="all-projects-container">
 
             {/* bottom project links */}
-            <div className="projectsWrapper">
+            <div className="projects-wrapper">
               {isOnOPSGPage ? (
                 <div></div>
              ) : (
@@ -40,24 +40,24 @@ export default function Projects() {
                   scrollToTop();
                 }}
               >
-                <div className="projectContainer">
-                  <img className="projectImage" src={OPSG}></img>
+                <div className="project-container">
+                  <img className="project-image" src={OPSG}></img>
 
-                  <div className="firstDividerLine"></div>
+                  <div className="first-divider-line"></div>
 
-                  <div className="firstInfoContainer">
-                    <div className="projectTitle">On Point Solutions Group</div>
-                    <div className="projectDescription">
+                  <div className="first-info-container">
+                    <div className="project-title">On Point Solutions Group</div>
+                    <div className="project-description">
                       Medical credentialing company site and bill payment portal
                     </div>
 
-                    <div className="toolIcons">
-                      <img className="toolIcon" src={react} alt="react logo"></img>
-                      <img className="toolIcon" src={vite} alt="vite logo"></img>
-                      <img className="toolIcon" src={prisma} alt="prisma logo"></img>
-                      <img className="toolIcon" src={postgresql} alt="postgresql logo"></img>
-                      <img className="toolIcon" src={express} alt="expressJs logo"></img>
-                      <img className="toolIcon" src={json} alt="json logo"></img>
+                    <div className="tool-icons">
+                      <img className="tool-icon" src={react} alt="react logo"></img>
+                      <img className="tool-icon" src={vite} alt="vite logo"></img>
+                      <img className="tool-icon" src={prisma} alt="prisma logo"></img>
+                      <img className="tool-icon" src={postgresql} alt="postgresql logo"></img>
+                      <img className="tool-icon" src={express} alt="expressJs logo"></img>
+                      <img className="tool-icon" src={json} alt="json logo"></img>
                     </div>
                   </div>
                 </div>
@@ -71,25 +71,25 @@ export default function Projects() {
                 onClick={() => navigate("/QuarkyProjectDetail", scrollToTop())}
               >
 
-                  <div className="firstDividerLine"></div>
-                  <div className="firstInfoContainer">
-                    <div className="projectMiniTitle">coming soon</div>
-                    <div className="projecMinitDescription">
+                  <div className="first-divider-line"></div>
+                  <div className="first-info-container">
+                    <div className="projec-mini-title">coming soon</div>
+                    <div className="project-mini-description">
                       Quarky
                     </div>
-                    <div className="toolIconsMiniContainer">
+                    <div className="tool-icons-mini-container">
                       <img
-                        className="toolIcon"
+                        className="tool-icon"
                         src={react}
                         alt="react logo"
                       ></img>
                       <img
-                        className="toolIcon"
+                        className="tool-icon"
                         src={prisma}
                         alt="prisma logo"
                       ></img>
                       <img
-                        className="toolIcon"
+                        className="tool-icon"
                         src={postgresql}
                         alt="postgresql logo"
                       ></img>
