@@ -449,17 +449,21 @@ Individual Projects .OPSG-image2 {
     width: 100%;
     margin: 10rem 0rem 10rem 0rem;
   }
+  .divider-accent-wrapper2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10rem 0rem 10rem 0rem;
+  }
   .OPSG-image1,
   .OPSG-image3 {
     margin: 0rem 0rem 0rem 0rem;
     height: 100%;
     max-width: 660px;
-    border: 1px solid #fff;
   }
   .OPSG-image2 {
     height: 100%;
     max-width: 660px;
-    border: 1px solid #fff;
   }
   .emphasized-text {
     color: #8a38f5;
