@@ -64,7 +64,11 @@ export default function NavBar() {
               className="nav-item"
               onClick={() => {
                 setIsOpen(false);
-                navigate("/home#" + item.id || `"/${item.route}"`)
+                if (item.id) {
+                navigate(`/home#${item.id}`);
+                } else if (item.route) {
+                  navigate(item.route);
+                }
                 if (item.label === "resume") {
                   downloadResume();
                 }
@@ -102,7 +106,7 @@ export default function NavBar() {
               </a>
 
               <Link to="/contactForm">
-                <i className="ham-nav-item fa-regular fa-envelope contact-icons"></i>
+                <i className="ham-nav-item fa-regular fa-envelope"></i>
               </Link>
             </>
           )}

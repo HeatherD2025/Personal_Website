@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/main.css";
-import OPSG from "../assets/images/projects/OPSG/OPSG.webp";
+import landingPage from "../assets/images/projects/OPSG/landingPage.webp";
 import vite from "../assets/images/icons/vite.webp";
 import express from "../assets/images/icons/expressJs.webp";
 import postgresql from "../assets/images/icons/postgresqlLogo.webp";
@@ -14,18 +14,21 @@ export default function Projects() {
   const isOnQuarkyPage = location.pathname === "/QuarkyPropjectDetail";
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <section id="projects" className="section">
   
-
-        <div className="projects-container">
-
             <div className="projects-header-wrapper">
               <div className="projects-header">projects</div>
               <div className="header-accent-line"></div>
               <div className="floating-accent-box3"></div>
             </div>
+
+        {/* <div className="projects-container"> */}
 
             <div className="all-projects-container">
 
@@ -41,7 +44,7 @@ export default function Projects() {
                 }}
               >
                 <div className="project-container">
-                  <img className="project-image" src={OPSG}></img>
+                  <img className="project-image" src={landingPage}></img>
 
                   <div className="first-divider-line"></div>
 
@@ -51,7 +54,7 @@ export default function Projects() {
                       Medical credentialing company site and bill payment portal
                     </div>
 
-                    <div className="tool-icons">
+                    <div className="tools-container2">
                       <img className="tool-icon" src={react} alt="react logo"></img>
                       <img className="tool-icon" src={vite} alt="vite logo"></img>
                       <img className="tool-icon" src={prisma} alt="prisma logo"></img>
@@ -73,7 +76,7 @@ export default function Projects() {
 
                   <div className="first-divider-line"></div>
                   <div className="first-info-container">
-                    <div className="projec-mini-title">coming soon</div>
+                    <div className="project-mini-title">coming soon</div>
                     <div className="project-mini-description">
                       Quarky
                     </div>
@@ -103,7 +106,7 @@ export default function Projects() {
 
         </div>
 
-       </div>
+       {/* </div> */}
       </section>
     </>
   );

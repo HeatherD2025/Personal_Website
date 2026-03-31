@@ -157,7 +157,6 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit}>
                 <div
                   className="contact-form-greeting"
-                  style={{ marginBottom: "2rem" }}
                 >
                   I'd love to hear from you!
                 </div>
@@ -253,11 +252,6 @@ export default function ContactForm() {
                     type="submit"
                     className="submit-button"
                     disabled={loading}
-                    style={{
-                      color: "white",
-                      border: "solid 1px #8A38F5",
-                      marginTop: "2rem",
-                    }}
                   >
                     {loading ? "Sending..." : "Submit"}
                   </button>
@@ -267,8 +261,8 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="contact-footer-container">
-          <div className="footer"></div>
+        <div className="footer-container">
+          <div className="contact-footer"></div>
         </div>
       </div>
     </>

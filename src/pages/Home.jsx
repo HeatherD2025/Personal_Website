@@ -90,7 +90,6 @@ export default function Home() {
 
         {/* Projects section */}
         <Projects />
-
         <div className="footer-container">
           <div className="footer"></div>
         </div>
