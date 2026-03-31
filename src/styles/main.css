@@ -254,7 +254,7 @@ section {
 
   .footer {
     margin: auto;
-    margin-bottom: 5vh;
+    padding-bottom: 2rem;
     width: 70%;
     height: 0.1rem;
     background-color: #8a38f5;
@@ -334,12 +334,6 @@ section {
     height: 100%;
   }
 
-  /* .divider-accent-wrapper1 {
-    display: flex;
-    justify-content: center;
-    margin: 4.5rem 0rem 4.5rem 0rem;
-    height: 2rem;
-  } */
   .divider-accent-wrapper {
     display: flex;
     justify-content: center;
@@ -494,7 +488,7 @@ section {
 
   .footer {
     margin: auto;
-    margin-bottom: 7rem;
+    padding-bottom: 2rem;
     width: 70%;
     height: 0.1rem;
     background-color: #8a38f5;
@@ -515,16 +509,6 @@ section {
     max-width: 50%;
     margin: 0;
   }
-  /* .main-wrapper {
-    width: 100%;
-    max-width: 44vw;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-    justify-content: flex-start;
-    margin: 9rem 0vw 20rem 4vw;
-  } */
   .main-header {
     display: flex;
     font-size: clamp(1.75rem, 3vw, 2rem);
@@ -758,7 +742,7 @@ section {
   }
   .footer {
     margin-top: -3.5rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     height: 0.0625rem;
     background: #8a38f5;
     width: 50rem;
