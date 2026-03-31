@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/navbar.css";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import useIsMobile from "./useIsMobile";
@@ -10,6 +10,11 @@ export default function NavBar() {
   const isMobile = useIsMobile();
 
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Close the menu when the route changes
+    setIsOpen(false);
+  }, [location]);
 
   const navItems = [
     { label: "about-me", id: "about" },
