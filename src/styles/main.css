@@ -686,7 +686,7 @@ section {
   .project-container {
     flex: 1 1 300px;
     max-width: 400px;
-    height: 25rem;
+    height: auto;
     border: solid 1px #fff;
   }
   .first-info-container {
