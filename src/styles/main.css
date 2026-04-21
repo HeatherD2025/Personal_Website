@@ -49,12 +49,12 @@ body,
 .container {
   width: min(90%, 1440px);
   margin: 0 auto;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* Keep your original padding here so your spacing stays the same */
 section {
-  padding: 2rem 1rem; 
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
@@ -119,11 +119,11 @@ section {
     display: none;
   }
   .my-photo {
-    background-image: url("../assets/images/myPortrait.webp");
-    background-size: cover;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
+    background-image: url("../assets/images/HeatherPortrait.webp");
+    background-size: cover;
+    background-position: right 0px top -30px;
   }
 
   /* Divider Accent */
@@ -368,10 +368,11 @@ section {
     aspect-ratio: 1/1;
   }
   .my-photo {
-    background-image: url("../assets/images/myPortrait.webp");
-    background-size: cover;
     width: 100%;
     height: 100%;
+    background-image: url("../assets/images/HeatherPortrait.webp");
+    background-size: cover;
+    background-position: right 0px top -30px;
   }
 
   .divider-accent-wrapper {
@@ -580,9 +581,9 @@ section {
   .my-photo {
     width: 100%;
     height: 100%;
-    background-image: url("../assets/images/myPortrait.webp");
+    background-image: url("../assets/images/HeatherPortrait.webp");
     background-size: cover;
-    background-position: center;
+    background-position: right 0px top -30px;
   }
   .main-accent-line {
     height: 0.1rem;
