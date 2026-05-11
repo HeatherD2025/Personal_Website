@@ -30,12 +30,10 @@ export default function OPSGProjectDetail() {
               <div className="project-title2">On Point Solutions Group</div>
 
               <div className="project-description2">
-                On Points Solutions Group is a medical staff credentialing
-                company. In collaboration with two other team members for our
-                fullstack bootcamp final project, we built and designed this
-                site to attract new clients and to offer secure access for
-                existing and new accounts to view and pay outstanding invoices
-                through Intuit QuickBooks.
+                OnPoint Solutions Group, a medical credentialing firm, required a secure, 
+                scalable platform to streamline client onboarding and automate financial 
+                workflows. As part of a collaborative team, I focused on bridging the gap 
+                between sensitive medical data management and a user-friendly financial interface.
               </div>
 
               <a
@@ -92,22 +90,36 @@ export default function OPSGProjectDetail() {
 
             <div className="project-description-wrapper">
               <div className="project-description3">
-                Our fullstack app was built with a{" "}
+              We architected a full-stack application centered on security and 
+              seamless billing integration. I led the effort to integrate 
+              <span className="emphasized-text"> Intuit QuickBooks</span>, 
+              allowing clients to view and pay outstanding invoices directly through 
+              the platform, which significantly reduced administrative overhead.
+                {/* Our fullstack app was built with a{" "}
                 <span className="emphasized-text">PostgreSQL</span> database and{" "}
                 <span className="emphasized-text">Prisma</span> for data
                 consistency. For building out RESTful API endpoints,{" "}
                 <span className="emphasized-text">Express</span> offered the
                 right tools to handle our requests in a consistent and scalable
-                fashion.
+                fashion. */}
               </div>
 
               <div className="project-description4">
-                <span className="emphasized-text">React Router</span> supports
+                We developed a robust backend using 
+                <span className="emphasized-text"> Node.js</span> and 
+                <span className="emphasized-text"> Express</span>, utilizing 
+                <span className="emphasized-text"> bcrypt </span> 
+                for industry-standard authentication to protect sensitive medical provider data.
+                This project implemented a 
+                <span className="emphasized-text"> PostgreSQL</span> database managed via 
+                <span className="emphasized-text"> Prisma</span> ORM. This ensure consistent 
+                data flow across the administrative and client-facing dashboards.
+                {/* <span className="emphasized-text">React Router</span> supports
                 our navigation with protected routes and allows for lazy
                 loading. Hashing and salting through{" "}
                 <span className="emphasized-text">bcrypt</span> provided
                 security, as well as adaptive options for future security
-                assurance.
+                assurance. */}
                 <div className="paragraph-spacer"></div>
               </div>
             </div>
@@ -121,21 +133,22 @@ export default function OPSGProjectDetail() {
 
             <div className="project-description-wrapper2">
               <div className="project-description5">
-                State was managed with{" "}
-                <span className="emphasized-text">Redux</span> for predictable
-                data flow and ease of debugging. Throughout the UI design
-                process,{" "}
-                <span className="emphasized-text">React-Bootstrap</span> was
-                extremely useful for dashboard cards and other contained
-                elements.
+                Using <span className="emphasized-text">React-Bootstrap</span>,
+                 I designed sophisticated administrative and user dashboards featuring 
+                 modular cards and responsive data to simplify billing.
+                 We leveraged <span className="emphasized-text">Redux </span>
+                  to manage global state, ensuring consistency
+                  and predictable behavior as clients navigated through the dashboard and payment portal.
+                The UI was built using 
+                <span className="emphasized-text"> React (Vite)</span>, focusing on protected 
+                routing and "lazy loading" to optimize performance and ensure a secure user experience.
               </div>
 
               <div className="project-description6">
-                This experience reinforced the importance of delegation and goal
-                management. Utilizing GitHub project boards, our team assessed
-                first-, second-, and third-priority level elements to ensure
-                operational completion by our deadline with goals for future
-                improvements.
+                Beyond the code, I utilized my background in operations to manage 
+                our GitHub project boards, prioritizing features to meet strict deadlines. 
+                This role reinforced my ability to lead technical teams while remaining 
+                focused on the end-user’s need for a stable, secure, and intuitive product.
               </div>
             </div>
 

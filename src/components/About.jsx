@@ -31,18 +31,15 @@ export default function About() {
 
           <div className="about-paragraph-wrapper">
             <div className="about-paragraph">
-              I was a curious kid-passionate about technology and science, with
-              a knack for visualizing functionality and aesthetics. Naturally
-              inquisitive and excited to understand cause-and-effect processes,
-              I've always had a persistent drive to learn something new.
+              I was a curious kid—passionate about technology and science, with a knack for visualizing 
+              both functionality and aesthetics. That persistent drive to understand cause-and-effect 
+              processes eventually led me to a successful 11-year career in leadership and operations.
               <div className="paragraph-spacer"></div>
-              After 12+ years leading teams and coordinating events, I was
-              craving a new challenge, so I made the leap into web development
-              through an immersive Fullstack Academy bootcamp. Now, as a
-              full-stack developer with a background in design, operations, and
-              hospitality, I'm focused on building user-first applications with
-              responsive design. Ready to join a new team helping create the
-              extraordinary!
+              After mastering an intensive full-stack development program, I now bridge the gap between 
+              complex software and business value. By combining my experience in sales strategy with a 
+              modern technical toolkit, I translate sophisticated code into clear solutions. Whether as 
+              a Sales Engineer or Solutions Consultant, I am ready to help a forward-thinking team build 
+              and sell the extraordinary!
             </div>
 
             <div className="paragraph-spacer"></div>
