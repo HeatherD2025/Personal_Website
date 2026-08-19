@@ -3,7 +3,7 @@ import { useRoutes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import ContactForm from "./pages/ContactForm";
 import OPSGProjectDetail from "./pages/OPSGProjectDetail";
-import QuarkyProjectDetail from "./pages/QuarkyProjectDetail";
+import ExoplanetProjectDetail from "./pages/ExoplanetProjectDetail";
 import NavBar from "./components/Navbar";
 // import ScrollToTop from "./components/ScrollToTop";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -14,7 +14,7 @@ function App() {
     { path: "/home", element: <Home /> },
     { path: "/contactForm", element: <ContactForm /> },
     { path: "/OPSGProjectDetail", element: <OPSGProjectDetail />},
-    { path: "/QuarkyProjectDetail", element: <QuarkyProjectDetail />},
+    { path: "/ExoplanetProjectDetail", element: <ExoplanetProjectDetail />},
   ]);
 
   return (

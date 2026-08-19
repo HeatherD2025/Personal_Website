@@ -32,7 +32,7 @@ export default function Home() {
       .replace("/home", "")
       .replace("/contactForm", "")
       .replace("/OPSGProjectDetail", "")
-      .replace("/QuarkyProjectDetail", "");
+      .replace("/ExoplanetProjectDetail", "");
 
     // normalize trailing slash
     const baseUrl = cleanedUrl.endsWith("/") ? cleanedUrl : cleanedUrl + "/";
@@ -80,13 +80,6 @@ export default function Home() {
 
         {/* About section */}
         <About />
-
-        <div className="divider-accent-wrapper">
-          <div className="divider-accent-line">
-            <div className="divider-accent-box"></div>
-            <div className="floating-divider-accent-box"></div>
-          </div>
-        </div>
 
         {/* Projects section */}
         <Projects />
