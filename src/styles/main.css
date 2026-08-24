@@ -1,34 +1,9 @@
-/* html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
-}
-body,
-#root,
-.background {
-  min-height: 100vh;
-  background-color: #100310;
-  margin: auto;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: "JetBrains Mono", monospace;
-  color: #fff;
-  overflow-x: hidden;
-}
-.container {
-  width: min(90%, 1440px);
-  margin: 0 auto;
-}
-section {
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-} */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
   background-color: #100310; /* Prevents white flash on scroll */
 }
 
-/* Re-combining these so your dark theme and fonts return */
 body,
 #root,
 .background {
@@ -577,7 +552,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 12vw;
     margin: 10rem 7rem 6.5rem 7rem;
   }
   .main-wrapper {
@@ -635,7 +610,7 @@ section {
   .divider-accent-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 6rem;
   }
   .divider-accent-line {
@@ -648,18 +623,22 @@ section {
     width: 4rem;
     aspect-ratio: 1/1;
     margin-top: -4rem;
-    margin-left: 10rem;
+    margin-left: 12rem;
     border: 1px dashed rgb(255, 255, 255);
   }
   .floating-divider-accent-box {
     width: 4rem;
     aspect-ratio: 1 / 1;
     margin-top: -2rem;
-    margin-left: 8rem;
+    margin-left: 10rem;
     border: 1px dashed rgb(255, 255, 255);
   }
 
   /* Standard - About section  */
+  #about {
+    display: block;
+    margin: 0 7rem 0rem 7rem;
+  }
   .about-me-header-wrapper,
   .projects-header-wrapper {
     display: flex;
@@ -667,7 +646,10 @@ section {
     gap: 0.25vw;
   }
   .about-me-header-wrapper {
-    margin: 2rem 0rem 1rem 36.25rem;
+    grid-area: header;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25vw;
   }
   .projects-header-wrapper {
     margin: 0rem 0rem 1rem 6.8rem;
@@ -689,25 +671,38 @@ section {
     box-sizing: border-box;
   }
 
-  .about-me-container,
+  /* .about-me-container, */
   .all-projects-container {
     width: 86%;
     display: flex;
     flex-direction: row;
     margin: 0rem 7rem 10rem 7rem;
-  }
-  .all-projects-container {
     height: 36.35rem;
   }
-  .box-wrapper {
-    flex: 1 3 40rem;
-    aspect-ratio: 1/1;
-    margin: 0.5rem 5rem 0rem 0rem;
+  .about-me-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25rem 1fr; 
+    grid-template-areas:
+      ". header"
+      "box paragraph";
+    gap: 0.5rem 12rem; /* 0.5rem row gap, 12rem column gap */
+    margin-top: 2rem;
   }
+  .box-wrapper {
+    /* flex: 1 3 40rem;
+    aspect-ratio: 1/1;
+    margin: 0.5rem 5rem 0rem 0rem; */
+    grid-area: box;
+    width: 100%;
+    max-width: 22rem;
+    aspect-ratio: 1/1;
+  }
+
   .accent-box4 {
     position: relative;
-    width: 100%;
-    height: 30vw;
+    width: 30vw;
+    height: 100%;
     border: 1px solid #fff;
     box-sizing: border-box;
   }
@@ -722,6 +717,7 @@ section {
   }
 
   .about-paragraph-wrapper {
+    grid-area: paragraph;
     color: #fff;
     font-size: clamp(11px, 2.75vw, 14px);
     max-width: 37rem;

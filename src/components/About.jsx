@@ -93,12 +93,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="divider-accent-wrapper">
-          <div className="divider-accent-line">
-            <div className="divider-accent-box"></div>
-            <div className="floating-divider-accent-box"></div>
-          </div>
-        </div>
+        
 
       </section>
     </>
